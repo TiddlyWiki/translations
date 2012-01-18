@@ -1,256 +1,248 @@
 /***
-|''Name:''|RussianTranslationPlugin|
-|''Description:''|Translation of TiddlyWiki into Russian|
-|''Author:''|VitalyPetrov (v31337 (at) gmail (dot) com)|
-|''Author:''|Demid Lupin (v31337 (at) gmail (dot) com)|
-|''CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/ru/locale.ru.js |
-|''Version:''|0.0.3|
-|''Date:''|Nov 12, 2009|
-|''Comments:''|Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
-|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''~CoreVersion:''|2.5.2|
+|''Name:''|TiddlyWiki:rus|
+|''Version:''|0.9.7|
+|''Description:''|TiddlyWiki russian interface plugin. Supports core up to 2.6.2|
+|''Описание:''|Русификация TiddlyWiki. Поддерживает ядро до 2.6.2 включительно|
+|''CoreVersion:''|2.6.x|
+|''Version comment:''|Tested on v.2.6.0 and 2.6.1|
+|''Date:''|2010|
+|''Author:''|vmunt|
+|''Source:''|http://vmunt.dyndns.org|
+|''License:''|BSD open source license|
+|''Idea:''|Глеб Тржемецкий (Gleb Trzhemetski), http://www.glebsite.ru|
 ***/
-
 //{{{
-//--
-//-- Translateable strings
-//--
-
-// Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
-
-config.locale = "ru"; // W3C language tag
-
-if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "ÈìÿÏîëüçîâàòåëÿ"});
+//-- Строки для перевода
+// Строки в "двойных кавычках" должны быть переведены; строки в 'одиночных кавычках' должны быть оставлены как есть
 
 merge(config.tasks,{
-	save: {text: "ñîõðàíèòü", tooltip: "Ñîõðàíèòü èçìåíåíèÿ â òåêóùåé TiddlyWiki", action: saveChanges},
-	sync: {text: "ñèíõðîíèçèðîâàòü", tooltip: "Ñèíõðîíèçèðîâàòü âñå èçìåíåíèÿ ñ äðóãèìè ôàéëàìè è ñåðâåðàìè TiddlyWiki", content: '<<sync>>'},
-	importTask: {text: "èìïîðò", tooltip: "Èìïîðò çàïèñåé è äîïîëíåíèé èç äðóãèõ ôàéëîâ è ñåðâåðîâ TiddlyWiki", content: '<<importTiddlers>>'},
-	tweak: {text: "íàñòðîêè", tooltip: "Íàñòðîèòü âíåøíèé âèä è ïîâåäåíèå TiddlyWiki", content: '<<options>>'},
-	upgrade: {text: "îáíîâèòü", tooltip: "Îáíîâèòü îñíîâíîé êîä TiddlyWiki", content: '<<upgrade>>'},
-	plugins: {text: "äîïîëíåíèÿ", tooltip: "Óïðàâëåíèå óñòàíîâëåííûìè äîïîëíåíèÿìè", content: '<<plugins>>'}
-});
+	save: {text: "сохранить", tooltip: "Сохранить Ваши изменения в эту TiddlyWiki", action: saveChanges},
+	sync: {text: "синхронизация", tooltip: "Синхронизировать изменения с другим файлом или сервером TiddlyWiki", content: '<<sync>>'},
+	importTask: {text: "импорт", tooltip: "Импортировать заметки и модули из другого файла или сервера TiddlyWiki", content: '<<importTiddlers>>'},
+	tweak: {text: "настройка", tooltip: "Подстроить появление и поведение TiddlyWiki", content: '<<options>>'},
+	upgrade: {text: "обновление", tooltip: "Обновить код ядра TiddlyWiki", content: '<<upgrade>>'},
+	plugins: {text: "модули", tooltip: "Управление встроенными модулями", content: '<<plugins>>'} });
 
 // Options that can be set in the options panel and/or cookies
 merge(config.optionsDesc,{
-	txtUserName: "Èìÿ ïîëüçîâàòåëÿ äëÿ ïîäïèñè âàøèõ çàïèñåé",
-	chkRegExpSearch: "Ðàçðåøèòü èñïîëüçîâàíèå ðåãóëÿðíûõ âûðàæåíèé â ïîèñêå",
-	chkCaseSensitiveSearch: "Ïîèñê ñ ó÷¸òîì ðåãèñòðà",
-	chkIncrementalSearch: "Ïîèñê ïî ìåðå íàáîðà òåêñòà",
-	chkAnimate: "Ðàçðåøèòü àíèìàöèþ",
-	chkSaveBackups: "Ñîõðàíÿòü ðåçåðâíóþ êîïèþ ôàéëà ïðè ñîõðàíåíèè èçìåíåíèé",
-	chkAutoSave: "Àâòî-ñîõðàíåíèå èçìåíåíèé",
-	chkGenerateAnRssFeed: "Ãåíåðèðîâàòü äàííûå RSS-êàíàëà ïðè ñîõðàíåíèè èçìåíåíèé",
-	chkSaveEmptyTemplate: "Ãåíåíðèðîâàòü ïóñòîé øàáëîí ïðè ñîõðàíåíèè èçìåíåíèé",
-	chkOpenInNewWindow: "Îòêðûâàòü âíåøíèå ññûëêè â íîâîì îêíå",
-	chkToggleLinks: "Íàæèìàÿ íà ññûëêó äëÿ îòêðûòèÿ çàïèñè óêàçûâàòü ïðè÷èíû å¸ çàêðûòèÿ (Íå ïîíÿë êàê ïðàâèëüíî ïåðåâåñòè)",
-	chkHttpReadOnly: "Çàïðåùàòü ðåäàêòèðîâàíèå ïðè äîñòóïå ÷åðåç HTTP",
-	chkForceMinorUpdate: "íå îáíîâëÿòü èìÿ ïîëüçîâàòåëÿ è äàòó ïðè èçìåíåíèè çàïèñè",
-	chkConfirmDelete: "Âûäàâàòü çàïðîñ íà ïîäòâåðæäåíèå ïåðåä óäàëåíèåì çàïèñè",
-	chkInsertTabs: "Èñïîëüçîâàòü êëàâèøó tab äëÿ âñòàâêè ñèìâîëà òàáóëÿöèè âìåñòî ïåðåõîäà ìåæäó ïîëÿìè",
-	txtBackupFolder: "Êàòàëîã äëÿ ñîõðàíåíèÿ ðåçåðâíûõ êîïèé",
-	txtMaxEditRows: "Ìàêñèìàëüíîå êîëè÷åñòâî ñòðîê â ïîëÿõ ðåäàêòèðîâàíèÿ",
-    txtTheme: "Èìÿ èñïîëüçîâàííîé òåìû",
-	txtFileSystemCharSet: "Êîäèðîâêà ïî óìîë÷àíèþ (òîëüêî äëÿ Firefox/Mozilla)"});
+	txtUserName: "Имя пользователя для подписывания Ваших правок",
+	chkRegExpSearch: "Разрешить регулярные выражения при поиске",
+	chkCaseSensitiveSearch: "Регистро-зависимый поиск",
+	chkIncrementalSearch: "Последовательный поиск слово-за-словом",
+	chkAnimate: "Разрешить анимацию",
+	chkSaveBackups: "Сохранить старую копию при сохранении изменений",
+	chkAutoSave: "Автоматическое сохранение изменений",
+	chkGenerateAnRssFeed: "Генерировать RSS-ленту при сохранении изменений",
+	chkSaveEmptyTemplate: "Генерировать пустой шаблон при сохранении изменений",
+	chkOpenInNewWindow: "Открывать внешние ссылки в новом окне",
+	chkToggleLinks: "Нажатие на ссылках для открытия заметок также и закрывает их",
+	chkHttpReadOnly: "Скрывать возможности редактирования при обращении через протокол HTTP",
+	chkForceMinorUpdate: "Не обновлять автора изменений и дату редактирования заметок",
+	chkConfirmDelete: "Спрашивать подтверждение при удалении заметок",
+	chkInsertTabs: "Использовать клавишу табуляции для вставления символа табуляции вместо перехода по полям",
+	txtBackupFolder: "Имя папки для резервных копий",
+	txtMaxEditRows: "Максимальное количество строк в окне редактирования",
+	txtTheme: "Имя темы для использования",
+	txtFileSystemCharSet: "Кодировка символов в файле TiddlyWiki для сохранения изменений (только для Firefox/Mozilla)" });
 
 merge(config.messages,{
-	customConfigError: "Ïîÿâèëèñü ïðîáëåìû ïðè çàãðóçêå ïëàãèíîâ. Ñìîòðèòå ðàçäåë PluginManager äëÿ áîëåå ïîäðîáíûõ ñâåäåíèé",
-	pluginError: "Îøèáêà: %0",
-	pluginDisabled: "Äîïîëíåíèå íå áóäåò âûïîëíÿòüñÿ ïîòîìó êàê óñòàíîâëåíà ìåòêà 'systemConfigDisable'",
-	pluginForced: "Äîïîëíåíèå áóäåò âûïîëíÿòüñÿ ïðèíóäèòåëüíî ïîòîìó êàê óñòàíîâëåíà ìåòêà 'systemConfigForce'",
-	pluginVersionError: "Äîïîëíåíèå íå áóäåò âûïîëíÿòüñÿ òàê êàê òðåáóåò äðóãîé âåðñèè TiddlyWiki",
-	nothingSelected: "Íè÷åãî íå âûäåëåíî. Ñíà÷àëà âû äîëæíû âûäåëèòü îäíî èëè íåñêîëüêî çíà÷åíèé",
-	savedSnapshotError: "Ïîõîæå, ÷òî TiddlyWiki áûë ñîõðàíåí íåêîððåêòíî. Ñìîòðèòå http://www.tiddlywiki.com/#DownloadSoftware äëÿ áîëåå ïîäðîáíûõ ñâåäåíèé",
-	subtitleUnknown: "(íåèçâåñòíî)",
-	undefinedTiddlerToolTip: "Çàïèñü '%0' íå ñóùåñòâóåò",
-	shadowedTiddlerToolTip: "Çàïèñü '%0' íå ñóùåñòâóåò, íî èìååò ïðåäîïðåäåë¸ííîå ñêðûòîå çíà÷åíèå",
+	customConfigError: "Не удалось загрузить модуль. Подробнее смотрите в PluginManager",
+	pluginError: "Ошибка: %0",
+	pluginDisabled: "Не выполнено в связи с запретом, установленным меткой 'systemConfigDisable'",
+	pluginForced: "Executed because forced via 'systemConfigForce' tag",
+	pluginVersionError: "Не выполнено, так как этот модуль сделан для более новой версии TiddlyWiki",
+	nothingSelected: "Ничего не выбрано. Вы должны сначала выбрать один или несколько элементов",
+	savedSnapshotError: "Похоже, что эта TiddlyWiki была сохранена с ошибкой. Обратитесь к http://www.tiddlywiki.com/#Download за более детальной информацией",
+	subtitleUnknown: "(неизвестно)",
+	undefinedTiddlerToolTip: "Заметка '%0' пока не создана",
+	shadowedTiddlerToolTip: "Заметка '%0' пока не создана, но она имеет предопределённое служебное значение",
 	tiddlerLinkTooltip: "%0 - %1, %2",
-	externalLinkTooltip: "Âíåøíÿÿ ññûëêà íà %0",
-	noTags: "Íåò çàïèñåé ñ ïîäîáíîé ìåòêîé",
-	notFileUrlError: "Âû äîëæíû çàïèñàòü òåêóùóþ TiddlyWiki â ôàéë ïåðåä ñîõðàíåíèåì èçìåíåíèé",
-	cantSaveError: "Íåâîçìîæíî ñîõðàíèòü èçìåíåíèÿ. Âîçìîæíûå ïðè÷èíû:\n- Âàø áðàóçåð íå ïîääåðæèâàåò ñîõðàíåíèÿ (Â Firefox, Internet Explorer, Safari è â Opera åñòü ïîääåðæêà ñîõðàíåíèÿ)\n- Ïóòü ê âàøåìó ôàéëó TiddlyWiki ñîäåðæèò íåäîïóñòèìûå ñèìâîëû\n- HTML ôàéë TiddlyWiki áûë ïåðåìåù¸í èëè ïåðåèìåíîâàí",
-	invalidFileError: "Ôàéë '%0' íå ÿâëÿåòñÿ ñòàíäàðòíûì TiddlyWiki ôàéëîì",
-	backupSaved: "Ðåçåðâíàÿ êîïèÿ ñîõðàíåíà",
-	backupFailed: "Îøèáêà ñîõðàíåíèÿ ðåçåðâíîé êîïèè",
-	rssSaved: "Ôàéë RSS-êàíàëà ñîõðàí¸í",
-	rssFailed: "Îøèáêà ñîõðàíåíèÿ ôàéëà ñ RSS êàíàëîì",
-	emptySaved: "Ïóñòîé øàáëîí ñîõðàí¸í",
-	emptyFailed: "Îøèáêà ñîõðàíåíèÿ ïóñòîãî øàáëîíà",
-	mainSaved: "Îñíîâíîé ôàéë TiddlyWiki ñîõðàí¸í",
-	mainFailed: "Îøèáêà ñîõðàíåíèÿ îñíîâíîãî ôàéëà TiddlyWiki. Âàøè èçìåíåíèÿ íå áóäóò ñîõðàíåíû",
-	macroError: "Îøèáêà â ìàêðîñå <<\%0>>",
-	macroErrorDetails: "îøèáêà èñïîëíåíèÿ ìàêðîñà <<\%0>>:\n%1",
-	missingMacro: "Íåò ïîäîáíîãî ìàêðîñà",
-	overwriteWarning: "Çàïèñü ñ èìåíåì '%0' óæå ñóùåñòâóåò. Íàæìèòå OK äëÿ å¸ çàìåíû",
-	unsavedChangesWarning: "ÂÍÈÌÀÍÈÅ! Ñóùåñòâóþò íåñîõðàí¸ííûå èçìåíåíèÿ â TiddlyWiki\n\nÍàæìèòå OK äëÿ ñîõðàíåíèÿ\nÍàæìèòå CANCEL äëÿ îòìåíû",
-	confirmExit: "--------------------------------\n\nÑóùåñòâóþò íåñîõðàí¸ííûå èçìåíåíèÿ â TiddlyWiki. Ïðè ïðîäîëæåíèè áóäóò ïîòåðÿíû âñå íåñîõðàí¸ííûå èçìåíåíèÿ\n\n--------------------------------",
-	saveInstructions: "ÑîõðàíèòüÈçìåíåíèÿ",
-	unsupportedTWFormat: "Ôîðìàò '%0' íå ïîääåðæèâàåòñÿ TiddlyWiki",
-	tiddlerSaveError: "Îøèáêà ñîõðàíåíèÿ çàïèñè '%0'",
-	tiddlerLoadError: "Îøèáêà çàãðóçêè çàïèñè '%0'",
-	wrongSaveFormat: "Íå óäà¸òñÿ ñîõðàíèòü â ôîðìàòå '%0'. Èñïîëüçóéòå ñòàíäàðòíûé ôîðìàò äëÿ ñîõðàíåíèÿ.",
-	invalidFieldName: "Íåâåðíîå çíà÷åíèå â ïîëå %0",
-	fieldCannotBeChanged: "Ïîëå '%0' íå ìîæåò áûòü èçìåíåíî",
-	loadingMissingTiddler: "Ïûòàþñü ïîëó÷èòü çàïèñü '%0' ñ ñåðâåðà '%1':\n\n'%2' â ðàáî÷åé îáëàñòè '%3'",
-	upgradeDone: "Îáíîâëåíèå äî âåðñèè %0 çàâåðøåíî\n\nÍàæìèòå 'OK' äëÿ çàãðóçêè îáíîâë¸ííîé âåðñèè TiddlyWiki"});
+	externalLinkTooltip: "Внешняя ссылка на %0",
+	noTags: "Нет помеченных заметок",
+	notFileUrlError: "Вам нужно сначала сохранить эту TiddlyWiki в файл, прежде чем Вы сможете сохранять изменения",
+	cantSaveError: "Сохранить изменения невозможно. Возможные причины включают:\n- Ваша программа просмотра не поддерживает сохранение (Firefox, Internet Explorer, Safari и Opera все работают, но только тогда, когда правильно настроены)\n- путь к файлу TiddlyWiki содержит запрещённые символы\n- файл TiddlyWiki был перемещён, удалён или переименован",
+	invalidFileError: "Исходный файл '%0' не похож на правильную TiddlyWiki",
+	backupSaved: "Архивная копия сохранена",
+	backupFailed: "Не удалось сохранить архивную копию",
+	rssSaved: "RSS-лента сохранена",
+	rssFailed: "Не удалось сохранить файл с RSS-лентой",
+	emptySaved: "Пустой шаблон сохранён",
+	emptyFailed: "Не удалось сохранить файл с пустым шаблоном",
+	mainSaved: "Главный файл TiddlyWiki сохранён",
+	mainFailed: "Не удалось сохранить главный файл TiddlyWiki. Ваши изменения не сохранены",
+	macroError: "Ошибка в макросе <<\%0>>",
+	macroErrorDetails: "Ошибка при выполнении макроса <<\%0>>:\n%1",
+	missingMacro: "Нет такого макроса",
+	overwriteWarning: "Заметка с именем '%0' уже существует. Нажмите OK для перезаписи её содержимого",
+	unsavedChangesWarning: "ВНИМАНИЕ! В TiddlyWiki есть несохранённые изменения\n\nНажмите OK для сохранения\nНажмите CANCEL, если изменения не нужны",
+	confirmExit: "--------------------------------\n\nВ TiddlyWiki есть несохранённые изменения. Если Вы продолжите, Вы потеряете эти изменения\n\n--------------------------------",
+	saveInstructions: "SaveChanges",
+	unsupportedTWFormat: "Неподдерживаемый формат TiddlyWiki '%0'",
+	tiddlerSaveError: "Ошибка при сохранении заметки '%0'",
+	tiddlerLoadError: "Ошибка при загрузке заметки '%0'",
+	wrongSaveFormat: "Не могу сохранить с форматом хранения '%0'. Используйте стандартный формат для сохранения.",
+	invalidFieldName: "Неверное имя поля %0",
+	fieldCannotBeChanged: "Поле '%0' не может быть изменено",
+	loadingMissingTiddler: "Пытаюсь восстановить заметку '%0' с сервера '%1' по адресу:\n\n'%2' в 'рабочем пространстве' '%3'",
+	upgradeDone: "Обновление до версии %0 завершено\n\nНажмите 'OK' для перезагрузки новой обновлённой TiddlyWiki",
+	invalidCookie: "Испорченная cookie-переменная '%0'"}); // v.2.6.1
 
-merge(config.messages.messageClose,{
-	text: "çàêðûòü",
-	tooltip: "çàêðûòü äàííóþ èíôîðìàöèîííóþ îáëàñòü"});
+merge(config.messages.messageClose,{text: "[X]", tooltip: "закрыть эту область сообщения"});
 
 config.messages.backstage = {
-	open: {text: "äîïîëíèòåëüíî", tooltip: "Îòêðûòü äîïîëíèòåëüíóþ îáëàñòü ðåäàêòèðîâàíèÿ"},
-	close: {text: "ñêðûòü", tooltip: "Çàêðûòü äîïîëíèòåëüíóþ îáëàñòü"},
-	prompt: "äîïîëíèòåëüíî: ",
-	decal: {
-		edit: {text: "ðåäàêòèðîâàòü", tooltip: "Ðåäàêòèðîâàòü çàïèñü '%0'"}
-	}
-};
+	open: {text: "обслуживание", tooltip: "Откройте меню обслуживания для проведения сервисных задач"},
+	close: {text: "закрыть", tooltip: "Закрытие меню обслуживания"},
+	prompt: "Ослуживание: ",
+	decal: {edit: {text: "правка", tooltip: "Правка заметки '%0'"}}};
 
 config.messages.listView = {
-	tiddlerTooltip: "Íàæìèòå äëÿ ïðîñòîòðà çàïèñè öåëèêîì",
-	previewUnavailable: "(ïðåäïðîñìîòð íå ïîääåðæèâàåòñÿ)"
-};
+	tiddlerTooltip: "Щёлкните тут для просмотра полного текста этой заметки",
+	previewUnavailable: "(предварительный просмотр недоступен)"};
 
-config.messages.dates.months = ["ßíâàðü", "Ôåâðàëü", "Ìàðò", "Àïðåëü", "Ìàÿ", "Èþíü", "Èþëü", "Àâãóñò", "Ñåíòÿáðü", "Îêòÿáðü", "Íîÿáðü","Äåêàáðü"];
-config.messages.dates.days = ["Âîñêðåñåíüå", "Ïîíåäåëüíèê", "Âòîðíèê", "Ñðåäà", "×åòâåðã", "Ïÿòíèöà", "Ñóááîòà"];
-config.messages.dates.shortMonths = ["ßíâ", "Ôåâ", "Ìàð", "Àïð", "Ìàé", "Èþí", "Èþë", "Àâã", "Ñåí", "Îêò", "Íîÿ", "Äåê"];
-config.messages.dates.shortDays = ["Âñê", "Ïîí", "Âòð", "Ñðä", "×òâ", "Ïòí", "Ñáò"];
+config.messages.dates.months = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+config.messages.dates.days = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
+config.messages.dates.shortMonths = ["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"];
+config.messages.dates.shortDays = ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
-config.messages.dates.daySuffixes = ["îå","îå","üå","îå","îå","îå","îå","îå","îå","îå",
-		"îå","îå","îå","îå","îå","îå","îå","îå","îå","îå",
-		"îå","îå","üå","îå","îå","îå","îå","îå","îå","îå",
-		"st"];
-config.messages.dates.am = "óò";
-config.messages.dates.pm = "â÷";
-
-merge(config.messages.tiddlerPopup,{
-	});
+config.messages.dates.daySuffixes = [
+	"-е","-е","-е","-е","-е","-е","-е","-е","-е","-е",
+	"-е","-е","-е","-е","-е","-е","-е","-е","-е","-е",
+	"-е","-е","-е","-е","-е","-е","-е","-е","-е","-е",
+	"-е"];
+config.messages.dates.am = "утра";
+config.messages.dates.pm = "дня";
 
 merge(config.views.wikified.tag,{
-	labelNoTags: "íåò ìåòîê",
-	labelTags: "ìåòêè: ",
-	openTag: "Îòêðûòü ìåòêó '%0'",
-	tooltip: "Ïîêàçàòü çàïèñè ïîìå÷åííûå êàê '%0'",
-	openAllText: "Îòêðûòü âñ¸",
-	openAllTooltip: "Îòêðûòü âñå ýòè çàïèñè",
-	popupNone: "Íåò çàïèñåé ñ ìåòêîé '%0'"});
+	labelNoTags: "меток нет",
+	labelTags: "метки: ",
+	openTag: "Открыть метку '%0'",
+	tooltip: "Показать заметки, помеченные как '%0'",
+	openAllText: "Открыть всё",
+	openAllTooltip: "Открыть все эти заметки",
+	popupNone: "Нет других заметок, помеченных '%0'"});
 
 merge(config.views.wikified,{
-	defaultText: "Çàïèñü '%0' íå ñóùåñòâóåò. Ù¸ëêíèòå äâà ðàçà äëÿ å¸ ñîçäàíèÿ",
-	defaultModifier: "(ïîòåðÿíî)",
-	shadowModifier: "(ñîçäàíèå ñêðûòîé çàïèñè)",
-	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "ñîçäàíî"});
+	defaultText: "Заметка '%0' пока не создана. Создайте её двойным щелчком мышки",
+	defaultModifier: "(отсутствует)",
+	shadowModifier: "(встроенная служебная заметка)",
+	dateFormat: "DD.0MM.YYYY",
+	createdPrompt: "создана"});
 
 merge(config.views.editor,{
-	tagPrompt: "Ââåäèòå ìåòêè, ðàçäåëÿÿ èõ ïðîáåëàìè, [[èñïîëüçóÿ òàêèå êàâû÷êè]] ïðè íåîáõîäèìîñòè, èëè äîáàâüòå ñóùåñòâóþùèå",
-	defaultText: "Ââåäèòå òåêñò äëÿ '%0'"});
+	tagPrompt: "Введите метки, разделённые пробелами, в случае необходимости [[используйте двойные квадратные скобки|use double square brackets]], или добавьте существующие метки",
+	defaultText: "Введите текст для '%0'"});
 
 merge(config.views.editor.tagChooser,{
-	text: "ìåòêè",
-	tooltip: "Âûáðàòü ñóùåñòâóþùèå ìåòêè, äëÿ äîáàâëåíèÿ ê òåêóùåé çàïèñè",
-	popupNone: "Íåò îïðåäåë¸ííûõ ìåòîê",
-	tagTooltip: "Äîáàâèòü ìåòêó '%0'"});
+	text: "метки",
+	tooltip: "Выберите существующую метку для добавления к этой заметке",
+	popupNone: "Нет ни одной метки",
+	tagTooltip: "Добавьте метку для '%0'"});
 
 merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+	sizeTemplates: [
+		{unit: 1024*1024*1024, template: "%0\u00a0 Gb"},
+		{unit: 1024*1024, template: "%0\u00a0 Mb"},
+		{unit: 1024, template: "%0\u00a0 Kb"},
+		{unit: 1, template: "%0\u00a0 b"}]});
 
 merge(config.macros.search,{
-	label: "ïîèñê",
-	prompt: "Ïîèñê â òåêóùåé TiddlyWiki",
+	label: "поиск",
+	prompt: "Поиск в этой TiddlyWiki",
 	accessKey: "F",
-	successMsg: "%0 çàïèñè ñîîòâåòñâóþò %1",
-	failureMsg: "Íåò çàïèñåé ñîîòâåòñâóþùèõ %0"});
+	successMsg: "Найдено %0 заметок с текстом %1",
+	failureMsg: "Нет ни одной заметки с текстом %0"});
 
 merge(config.macros.tagging,{
-	label: "ïîìå÷åíî: ",
-	labelNotTag: "íåò ìåòîê",
-	tooltip: "Ñïèñîê çàïèñåé ñ ìåòêîé '%0'"});
+	label: "метки: ",
+	labelNotTag: "(нет меток)",
+	tooltip: "Список заметок, помеченных как '%0'"});
 
 merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+	dateFormat: "DD.0MM.YYYY"});
 
 merge(config.macros.allTags,{
-	tooltip: "Ïîêàçàòü çàïèñè ñ ìåòêîé '%0'",
-	noTags: "Íåò ïîìå÷åííûõ çàïèñåé"});
+	tooltip: "Показать заметки, помеченные как '%0'",
+	noTags: "Нет ни одной помеченной заметки"});
 
-config.macros.list.all.prompt = "Âñå çàïèñè â àëôàâèòíîì ïîðÿäêå";
-config.macros.list.missing.prompt = "Çàïèñè íà êîòîðûå ññûëàþòñÿ äðóãèå çàïèñè, íî îíè íå áûëè îïðåäåëåíû";
-config.macros.list.orphans.prompt = "Çàïèñè íà êîòîðûå íå ññûëàþòñÿ äðóãèå çàïèñè";
-config.macros.list.shadowed.prompt = "Ñêðûòûå çàïèñè ñ ñîäåðæèìûì ïî óìîë÷àíèþ";
-config.macros.list.touched.prompt = "Çàïèñè, èçìåí¸ííûå ëîêàëüíî";
+config.macros.list.all.prompt = "Все заметки в алфавитном порядке";
+config.macros.list.missing.prompt = "Отсутствующие заметки, на которые при этом есть ссылки с других заметок";
+config.macros.list.orphans.prompt = "Заметки, на которые нет ни одной ссылки из других заметок";
+config.macros.list.shadowed.prompt = "Служебные заметки";
+config.macros.list.touched.prompt = "Заметки, которые были изменены";
 
 merge(config.macros.closeAll,{
-	label: "çàêðûòü âñ¸",
-	prompt: "Çàêðûòü âñå îòîáðàæàþùèåñÿ çàïèñè (èñêëþ÷àÿ ðåäàêòèðóåìûå â äàííûé ìîìåíò)"});
+	label: "закрыть всё",
+	prompt: "Закрыть все отображённые заметки (за исключением заметок в состоянии правки)"});
 
 merge(config.macros.permaview,{
-	label: "ïðÿìàÿ ññûëêà",
-	prompt: "URL-ññûëêà. îòîáðàæàþùàÿ âñå îòêðûòûå â äàííûé ìîìåíò çàïèñè"});
+	label: "прямая ссылка",
+	prompt: "Создание адресной строки для открытия TiddlyWiki с текущими открытыми заметками"});
 
 merge(config.macros.saveChanges,{
-	label: "ñîõðàíèòü èçìåíåíèÿ",
-	prompt: "Ñîõðàíèòü âñå çàïèñè äëÿ ñîçäàíèÿ íîâîé TiddlyWiki",
+	label: "сохранить",
+	prompt: "Сохранение TiddlyWiki со всеми заметками",
 	accessKey: "S"});
 
 merge(config.macros.newTiddler,{
-	label: "íîâàÿ çàïèñü",
-	prompt: "Ñîçäàòü íîâóþ çàïèñü",
-	title: "Íîâàÿ çàïèñü",
+	label: "новая заметка",
+	prompt: "Создать новую заметку",
+	title: "Новая заметка",
 	accessKey: "N"});
 
 merge(config.macros.newJournal,{
-	label: "íîâàÿ çàïèñü â æóðíàëå",
-	prompt: "Ñîçäàòü íîâóþ çàïèñü ñ èñïîëüçîâàíèåì òåêóùèõ äàòû è âðåìåíè",
+	label: "новая запись",
+	prompt: "Создать новую заметку с текущей датой и временем",
 	accessKey: "J"});
 
 merge(config.macros.options,{
-	wizardTitle: "Íàñòðîèòü ðàñøèðåííûå îïöèè",
-	step1Title: "Äàííûå îïöèè áóäóò ñîõðàíåíû â cookies âàøåãî áðàóçåðà",
-	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Ïîêàçàòü íåèçâåñòíûå îïöèè</input>",
-	unknownDescription: "//(íåèçâåñòíî)//",
+	wizardTitle: "Расширенные пункты настройки",
+	step1Title: "Эти настройки Ваша программа просмотра сохраняет с помощью cookies",
+	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Показать настройки без описания</input>",
+	unknownDescription: "//(unknown)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Îïöèÿ", type: 'String'},
-			{name: 'Description', field: 'description', title: "Îïèñàíèå", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Èìÿ", type: 'String'}
-			],
-		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
+			{name: 'Option', field: 'option', title: "Возможности", type: 'String'},
+			{name: 'Description', field: 'description', title: "Описание", type: 'WikiText'},
+			{name: 'Name', field: 'name', title: "Имя", type: 'String'}],
+		rowClasses: [{className: 'lowlight', field: 'lowlight'} ]}
 	});
 
 merge(config.macros.plugins,{
-	wizardTitle: "Óïðàâëåíèå äîïîëíåíèÿìè",
-	step1Title: "Çàãðóæåííûå ñåé÷àñ äîïîëíåíèÿ",
+	wizardTitle: "Управление модулями",
+	step1Title: "Подключенные модули",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
-	skippedText: "(äàííîå äîïîëíåíèå íå ìîæåò áûòü âûïîëíåíûì, òàê êàê áûëî äîáàâëåíî ïîñëå çàïóñêà)",
-	noPluginText: "íåò óñòàíîâëåííûõ äîïîëíåíèé",
-	confirmDeleteText: "Ïîäòâåðäèòå óäàëåíèå ñëåäóþùèå äîïîëíåíèÿ:\n\n%0",
-	removeLabel: "óäàëèòü ìåòêó systemConfig",
-	removePrompt: "Óäàëèòü ìåòêó systemConfig",
-	deleteLabel: "óäàëèòü",
-	deletePrompt: "Óäàëèòü ýòè çàïèñè íàâñåãäà",
+	skippedText: "(Этот модуль не выполняется, так как после его добавления ещё не было перезапуска TiddlyWiki)",
+	noPluginText: "Нет установленных модулей",
+	confirmDeleteText: "Вы уверены, что хотите удалить эти модули:\n\n%0",
+	removeLabel: "удалить метку systemConfig",
+	removePrompt: "Удалить метку systemConfig",
+	deleteLabel: "удалить",
+	deletePrompt: "Удалить эту заметку навсегда",
 	listViewTemplate: {
 		columns: [
 			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Description", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Version", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Size", type: 'Size'},
+			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
+			{name: 'Description', field: 'Description', title: "Описание", type: 'String'},
+			{name: 'Version', field: 'Version', title: "Версия", type: 'String'},
+			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size'},
 			{name: 'Forced', field: 'forced', title: "Forced", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Disabled", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Loaded", type: 'Boolean', trueText: "Yes", falseText: "No"},
-			{name: 'Startup Time', field: 'startupTime', title: "Startup Time", type: 'String'},
-			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Error", falseText: "OK"},
+			{name: 'Disabled', field: 'disabled', title: "Запрещён", tag: 'systemConfigDisable', type: 'TagCheckbox'},
+			{name: 'Executed', field: 'executed', title: "Загружен", type: 'Boolean', trueText: "Да", falseText: "Нет"},
+			{name: 'Startup Time', field: 'startupTime', title: "Стартовый", type: 'String'},
+			{name: 'Error', field: 'error', title: "Состояние", type: 'Boolean', trueText: "Ошибка", falseText: "Норма"},
+			{name: 'Log', field: 'log', title: "Протокол", type: 'StringList'} ],
+		rowClasses: [
+			{className: 'error', field: 'error'},
+			{className: 'warning', field: 'warning'} ]},
+	listViewTemplateReadOnly: {
+		columns: [
+			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
+			{name: 'Description', field: 'Description', title: "Описание", type: 'String'},
+			{name: 'Version', field: 'Version', title: "Версия", type: 'String'},
+			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size'},
+			{name: 'Executed', field: 'executed', title: "Загружен", type: 'Boolean', trueText: "Да", falseText: "Нет"},
+			{name: 'Startup Time', field: 'startupTime', title: "Стартовый", type: 'String'},
+			{name: 'Error', field: 'error', title: "Состояние", type: 'Boolean', trueText: "Ошибка", falseText: "Норма"},
 			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
 			],
 		rowClasses: [
@@ -260,238 +252,225 @@ merge(config.macros.plugins,{
 	});
 
 merge(config.macros.toolbar,{
-	moreLabel: "áîëüøå",
-	morePrompt: "Ïîêàçàòü áîëüøå êîìàíä",
-    lessLabel: "ìåíüøås",
-	lessPrompt: "Ñïðÿòàòü äîïîëíèòåëüíûå êîìàíäû",
-	separator: "|"
-	});
+	moreLabel: "ещё",
+	morePrompt: "Показать дополнительные команды",
+	lessLabel: "кратко",
+	lessPrompt: "Скрыть дополнительные команды",
+	separator: "|" });
 
 merge(config.macros.refreshDisplay,{
-	label: "îáíîâèòü",
-	prompt: "Îáíîâèòü âñþ TiddlyWiki"
-	});
+	label: "обновить",
+	prompt: "Обновить отображение TiddlyWiki" });
 
 merge(config.macros.importTiddlers,{
-	readOnlyWarning: "Çàïðåùí èìïîðò â ôàéë TiddlyWiki äîñòóïíûé òîëüêî äëÿ ÷òåíèÿ. Ïîïðîáóéòå îòêðûòü ôàéë ÷åðåç ïðîòîêîë file://",
-	wizardTitle: "Èìïîðò çàïèñåé èç äðóãîãî ôàéëà èëè ñåðâåðà",
-	step1Title: "Øàã 1: Óêàæèòå ñåðâåð èëè ôàéë TiddlyWiki",
-	step1Html: "Óêàæèòå òèï ñåðâåðà: <select name='selTypes'><option value=''>Âûáîð...</option></select><br>Ââåäèòå URL èëè ïóòü çäåñü: <input type='text' size=50 name='txtPath'><br>...èëè âûáåðèòå ôàéë: <input type='file' size=50 name='txtBrowse'><br><hr>...èëè âûáåðèòå ïðåäîïðåäåë¸ííûé êàíàë: <select name='selFeeds'><option value=''>Âûáîð...</option></select>",
-	openLabel: "îòêðûòü",
-	openPrompt: "Îòêðûòü ñîåäèíåíèå ñ äàííûì ôàéëîì èëè ñåðâåðîì",
-	openError: "Ïðîèçîøëè ïðîáëåìû ïðè îòêðûòèè tiddlywiki ôàéëà",
-	statusOpenHost: "Îòêðûâàåì õîñò",
-	statusGetWorkspaceList: "Ïîëó÷àåì ñïèñîê äîñòóïíûõ ðàáî÷èõ îáëàñòåé",
-	step2Title: "Øàã 2: Âûáîð ðàáî÷èõ îáëàñòåé",
-	step2Html: "Ââåäèòå èìÿ ðàáî÷åé îáëàñòè: <input type='text' size=50 name='txtWorkspace'><br>...èëè âûáåðèòå ðàáî÷óþ îáëàñòü: <select name='selWorkspace'><option value=''>Âûáîð...</option></select>",
-	cancelLabel: "îòìåíà",
-	cancelPrompt: "Îòìåíà èìïîðòà",
-	statusOpenWorkspace: "Îòêðûâàåì ðàáî÷óþ îáëàñòü",
-	statusGetTiddlerList: "Ïîëó÷àåì ñïèñîê äîñòóïíûõ çàïèñåé",
-	errorGettingTiddlerList: "Îøèáêà ïðè ïîëó÷åíèè ñïèñêà äîñòóïíûõ çàïèñåé, íàæìèòå Îòìåíà äëÿ ïîâòîðíîé ïîïûòêè",
-	step3Title: "Øàã 3: Âûáåðèòå çàïèñè äëÿ èìïîðòà",
-	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Ñîõðàíèòü ñâÿçü äàííûõ çàïèñåé ñ ýòèì ñåðâåðîì, äëÿ ïîñëåäóþùåé ñèíõðîíèçàöèè</input><br><input type='checkbox' name='chkSave'>Ñîõðàíèòü èíôîðìàöèþ îá ýòîì ñåðâåðå â çàïèñè 'systemServer' âûçîâîì:</input> <input type='text' size=25 name='txtSaveTiddler'>",
-	importLabel: "èìïîðò",
-	importPrompt: "Èìïîðò âûáðàííûõ çàïèñåé",
-	confirmOverwriteText: "Ïîääòâåðäèòå ïåðåçàïèñü ñëåäóþùèõ çàïèñåé:\n\n%0",
-	step4Title: "Øàã 4: Èìïîðò çàïèñè %0",
+	readOnlyWarning: "Вы не можете добавлять что-либо в открытую только для чтения TiddlyWiki. Попробуйте открыть её как файл (через обращение file://)",
+	wizardTitle: "Импорт заметок из другого файла или сервера",
+	step1Title: "Шаг 1: Найдите сервер или файл TiddlyWiki",
+	step1Html: "Укажите тип сервера: <select name='selTypes'><option value=''>Выберите...</option></select><br>введите адрес или путь к файлу тут: <input type='text' size=50 name='txtPath'><br>...или найдите файл: <input type='file' size=50 name='txtBrowse'><br><hr>...или выберите заготовку: <select name='selFeeds'><option value=''>Выберите...</option></select>",
+	openLabel: "открыть",
+	openPrompt: "Подключиться к этому файлу или серверу",
+	openError: "Возникли проблемы с получением файла TiddlyWiki", // v.2.6.0, removed in v.2.6.1
+	statusOpenHost: "Открытие узла",
+	statusGetWorkspaceList: "Получение списка доступных рабочих областей",
+	step2Title: "Шаг 2: Выберите рабочую область",
+	step2Html: "Введите имя рабочей области: <input type='text' size=50 name='txtWorkspace'><br>...или выберите рабочую область: <select name='selWorkspace'><option value=''>Выберите...</option></select>",
+	cancelLabel: "отмена",
+	cancelPrompt: "Отмена этого импорта",
+	statusOpenWorkspace: "Открытие рабочего пространства",
+	statusGetTiddlerList: "Получение списка разрешённых заметок",
+	errorGettingTiddlerList: "Ошибка при получении списка заметок, нажмите Отмену и попробуйте снова",
+	step3Title: "Шаг 3: Выберите импортируемые заметки",
+	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Оставить эти заметки связанными с этим сервером для облегчения последующих синхронизаций</input><br><input type='checkbox' name='chkSave'>Сохранить параметры этого сервера в заметке с названием 'systemServer':</input> <input type='text' size=25 name='txtSaveTiddler'>",
+	importLabel: "импорт",
+	importPrompt: "Импортировать эти заметки",
+	confirmOverwriteText: "Вы действительно хотите заменить эти заметки:\n\n%0",
+	step4Title: "Шаг 4: Импортируется заметок: %0",
 	step4Html: "<input type='hidden' name='markReport'></input>", // DO NOT TRANSLATE
-	doneLabel: "ãîòîâî",
-	donePrompt: "Çàêðûòü ìàñòåð",
-	statusDoingImport: "Èìïîðò çàïèñåé",
-	statusDoneImport: "Âñå çàïèñè èìïîðòèðîâàíû",
-	systemServerNamePattern: "%2 íà %1",
+	doneLabel: "завершить",
+	donePrompt: "Закрыть этот мастер-диалог",
+	statusDoingImport: "Импортирование заметок",
+	statusDoneImport: "Все заметки импортированы",
+	systemServerNamePattern: "%2 из %1",
 	systemServerNamePatternNoWorkspace: "%1",
-	confirmOverwriteSaveTiddler: "Çàïèñü '%0' óæå ñóùåñòâóåò. Íàæìèòå 'OK' äëÿ ïåðåçàïèñè å¸ âìåñòå ñ èíôîðìàöèé îá ýòîì ñåðâåðå, èëè 'Îòìåíà' äëÿ âûõîäà áåç ñîõðàíåíèÿ èçìåíåíèé",
-	serverSaveTemplate: "|''Òèï:''|%0|\n|''URL:''|%1|\n|''Ðàáî÷àé îáëàñòü:''|%2|\n\nÄàííàÿ çàïèñü ñîçäàíà àâòîìàòè÷åñêè, äëÿ ñîõðàíåíèÿ èíôîðìàöèè î ñåðâåðå",
-	serverSaveModifier: "(Ñèñòåìà)",
+	confirmOverwriteSaveTiddler: "Заметка '%0' уже существует. Нажмите 'OK' для замены её на заметку с указанного сервера, или нажмите 'Cancel' для оставления её неизменной",
+	serverSaveTemplate: "|''Введите:''|%0|\n|''Адрес:''|%1|\n|''Рабочее пространство:''|%2|\n\nЭта заметка будет автоматически создана для записи параметров этого сервера",
+	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
 			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Çàïèñü", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Ðàçìåð", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Ìåòêè", type: 'Tags'}
-			],
-		rowClasses: [
-			]}
-	});
+			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
+			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size'},
+			{name: 'Tags', field: 'tags', title: "Метки", type: 'Tags'} ],
+		rowClasses: []
+	} });
 
 merge(config.macros.upgrade,{
-	wizardTitle: "Îáíîâèòü îñíîâíîé êîä TiddlyWiki",
-	step1Title: "Îáíîâèòü èëè âîññòàíîâèòü TiddlyWiki äî ïîñëåäíåãî âûïóñêà",
-	step1Html: "Âû ñîáèðàåòåñü îáíîâèòü îñíîâíîé êîä TiddlyWiki äî ïîñëåäíåãî âûïóñêà (èç <a href='%0' class='externalLink' target='_blank'>%1</a>). Âàøè äàííûå áóäóò ñîõðàíåíû ïðè îáíîâëåíèè<br><br>Çàìåòèì, ÷òî ïðè îáíîâëåíèè îñíîâíîãî êîäà áóäóò ó÷òåíû óñòàíîâëåííûå ïðåæäå äîïîëíåíèÿ. Åñëè ó Âàñ ïîÿâèëèñü ïðîáëåìû ñ îáíîâë¸ííûì ôàéëîì, ñìîòðèòå <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
-	errorCantUpgrade: "Íåâîçìîæíî îáíîâèòü òåêóùóþ TiddlyWiki. Âû ìîæäåòå îáíîâèòü òîëüêî TiddlyWiki ôàéëû êîòîðûõ õðàíÿòñÿ ó âàñ ëîêàëüíî",
-	errorNotSaved: "Âû äîëæíû ñîõðàíèòü âñå èçìåíåíèÿ ïåðåä îáíîâëåíèåì",
-	step2Title: "Ïîäòâåðæäåíèå ïîäðîáíîñòåé îáíîâëåíèÿ",
-	step2Html_downgrade: "Âû æåëàåòå ïîíèçèòü âåðñèþ TiddlyWiki äî %0 ñ %1.<br><br>Ñíèæåíèå âåðñèè îñíîâíîãî êîäà íå ðåêîìåíäóåòñÿ",
-	step2Html_restore: "Äàííàÿ TiddlyWiki óæå èñïîëüçóåò ïîñëåäíþþ âåðñèþ îñíîâíîãî êîäà (%0).<br><br>Òåì íå ìåíåå âû ìîæåòå ïðîäîëæèòü îáíîâëåíèå, äëÿ îáåñïå÷åíèÿ òîãî, ÷òîáû îñíîâíîé êîä íå áûë ïîâðåæä¸í",
-	step2Html_upgrade: "Âû æåëàåòå îáíîâèòü TiddlyWiki äî âåðñèè %0 ñ %1",
-	upgradeLabel: "îáíîâèòü",
-	upgradePrompt: "Ïîäãîòîâêà ê ïðîöåññó îáíîâëåíèÿ",
-	statusPreparingBackup: "Ïîäãîòîâêà ê ñîçäàíèþ ðåçåðâíîé êîïèè",
-	statusSavingBackup: "Ñîõðàíåíèå ôàéëà ðåçåðâíîé êîïèè",
-	errorSavingBackup: "Ïîÿâèëèñü ïðîáëåìû ïðè ñîõðàíåíèè ôàéë ñ ðåçåðâíîé êîïèåé",
-	statusLoadingCore: "çàãðóçêà îñíîâíîãî êîäà",
-	errorLoadingCore: "Îøèáêà çàãðóçêè îñíîâíîãî êîäà",
-	errorCoreFormat: "Îøèáêà â îáíîâë¸ííîì îñíîâíîì êîäå",
-	statusSavingCore: "Ñîõðàíåíèå îáíîâëåííîãî îñíîâíîãî êîäà",
-	statusReloadingCore: "Ïåðåçàãðóçêà îáíîâëåííîãî îñíîâíîãî êîäà",
-	startLabel: "ñòàðò",
-	startPrompt: "Íà÷àòü ïðîöåññ îáíîâëåíèÿ",
-	cancelLabel: "îòìåíà",
-	cancelPrompt: "Îòìåíà îáíîâëåíèÿ",
-	step3Title: "Îáíîâëåíèå îòìåíåíî",
-	step3Html: "Âû îòìåíèëè îáíîâëåíèå ïðîãðàììû"
+	wizardTitle: "Обновление кода ядра TiddlyWiki",
+	step1Title: "Обновление или восстановление этой TiddlyWiki до последней версии",
+	step1Html: "Вы готовы обновить код ядра TiddlyWiki до последней версии (с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). Информационное наполнение этого файла будет сохранено.<br><br>Заметьте, что обновление кода ядра может вызвать конфликт с уже подключенными старыми модулями. Если у Вас появились проблемы с обновлённым файлом, почитайте здесь: <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+	errorCantUpgrade: "Не могу обновить эту TiddlyWiki. Вы можете производить обновление TiddlyWiki-файлов, сохранённых только локально",
+	errorNotSaved: "Вы должны сохранить изменения, прежде чем производить обновление",
+	step2Title: "Подтвердите параметры обновления",
+	step2Html_downgrade: "У Вас получается ухудшение версии файла TiddlyWiki с версии %1 до версии %0.<br><br>Замена версии кода ядра на более раннюю не рекомендуется",
+	step2Html_restore: "Похоже, что эта TiddlyWiki уже использует последнюю версию кода ядра (%0).<br><br>Вы можете продолжить замену кода ядра в любом случае для того, чтобы быть уверенными, что код ядра не повреждён и не испорчен",
+	step2Html_upgrade: "Вы готовы обновить версию TiddlyWiki с %1 до %0?",
+	upgradeLabel: "обновление",
+	upgradePrompt: "Приготовьтесь к процессу обновления",
+	statusPreparingBackup: "Делается резервная копия",
+	statusSavingBackup: "Сохраняется резервная копия",
+	errorSavingBackup: "Возникла проблема с сохранением файла резервной копии",
+	statusLoadingCore: "Загрузка кода ядра",
+	errorLoadingCore: "Ошибка при загрузке кода ядра",
+	errorCoreFormat: "Ошибка в новом коде ядра",
+	statusSavingCore: "Сохранение нового кода ядра",
+	statusReloadingCore: "Повторная загрузка нового кода ядра",
+	startLabel: "пуск",
+	startPrompt: "Запуск процесса обновления",
+	cancelLabel: "отмена",
+	cancelPrompt: "Отмена процесса обновления",
+	step3Title: "Процесс обновления прерван",
+	step3Html: "Вы отменили процесс обновления TiddlyWiki"
 	});
 
 merge(config.macros.sync,{
 	listViewTemplate: {
 		columns: [
 			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Çàïèñü", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Òèï ñåðâåðà", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Èìÿ ñåðâåðà", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Ðàáî÷àÿ îáëàñòü ñåðâåðà", type: 'String'},
-			{name: 'Status', field: 'status', title: "Ñòàòóñ ñèíõðîíèçàöèè", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "URL ñåðâåðà", text: "Âèä", type: 'Link'}
-			],
-		rowClasses: [
-			],
-		buttons: [
-			{caption: "Ñèíõðîíèçèðîâàòü âûáðàííûå çàïèñè", name: 'sync'}
-			]},
-	wizardTitle: "Ñèíõðîíèçàöèÿ ñ âíåøíèìè ñåðâåðàìè è ôàéëàìè",
-	step1Title: "Âûáåðèòå çàïèñè, êîòîðûå âû æåëàåòå ñèíõðîíèçèðîâàòü",
+			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
+			{name: 'Server Type', field: 'serverType', title: "Тип сервера", type: 'String'},
+			{name: 'Server Host', field: 'serverHost', title: "Хранилище сервера (host)", type: 'String'},
+			{name: 'Server Workspace', field: 'serverWorkspace', title: "Рабочее пространство сервера", type: 'String'},
+			{name: 'Status', field: 'status', title: "Состояние синхронизации", type: 'String'},
+			{name: 'Server URL', field: 'serverUrl', title: "Адресная строка", text: "View", type: 'Link'} ],
+		rowClasses: [],
+		buttons: [{caption: "Синхронизировать эти заметки", name: 'sync'}] },
+	wizardTitle: "Синхронизировать с внешним сервером или файлом",
+	step1Title: "Выберите заметки, которые Вы хотите синхронизировать",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
-	syncLabel: "ñèíõðîíèçèðîâàòü",
-	syncPrompt: "Ñèíõðîíèçèðîâàòü âûáðàííûå çàïèñè",
-	hasChanged: "Èçìåíåíî ëîêàëüíî",
-	hasNotChanged: "Áåç èçìåíåíèÿ ëîêàëüíî",
+	syncLabel: "синхронизация",
+	syncPrompt: "Синхронизировать эти заметки",
+	hasChanged: "Изменены с момента последней синхронизации",
+	hasNotChanged: "Нет изменений с момента последней синхронизации",
 	syncStatusList: {
-		none: {text: "...", color: "ïðîçðà÷íîñòü", display:null},
-		changedServer: {text: "Èçìåíåíèÿ íà ñåðâåðå", color: '#8080ff', display:null},
-		changedLocally: {text: "Èçìåíåíî ëîêàëüíî", color: '#80ff80', display:null},
-		changedBoth: {text: "Èçìåíåíî ëîêàëüíî è íà ñåðâåðå", color: '#ff8080', display:null},
-		notFound: {text: "Ñåðâåð íå íàéäåí", color: '#ffff80', display:null},
-		putToServer: {text: "Îáíîâë¸ííàÿ âåðñèÿ ñîõðàíåíà íà ñåðâåðå", color: '#ff80ff', display:null},
-		gotFromServer: {text: "Ïîëó÷åíèå îáíîâëåíèÿ ñ ñåðâåðà", color: '#80ffff', display:null}
-		}
-	});
+		none: {text: "...", display:'none', className:'notChanged'},
+		changedServer: {text: "Изменены на сервере", display:null, className:'changedServer'},
+		changedLocally: {text: "Изменены локально", display:null, className:'changedLocally'},
+		changedBoth: {text: "Изменены в обоих местах сразу", display:null, className:'changedBoth'},
+		notFound: {text: "Отсутствует на сервере", display:null, className:'notFound'},
+		putToServer: {text: "Обновление сохранено на сервер", display:null, className:'putToServer'},
+		gotFromServer: {text: "Обновления получены с сервера", display:null, className:'gotFromServer'} } });
+
+merge(config.macros.annotations,{});
 
 merge(config.commands.closeTiddler,{
-	text: "çàêðûòü",
-	tooltip: "Çàêðûòü äàííóþ çàïèñü"});
+	text: "закрыть",
+	tooltip: "Закрыть эту заметку"});
 
 merge(config.commands.closeOthers,{
-	text: "çàêðûòü îñòàëüíûå",
-	tooltip: "Çàêðûòü âñå çàïèñè êðîìå äàííîé"});
+	text: "закрыть другие",
+	tooltip: "Закрыть все другие заметки"});
 
 merge(config.commands.editTiddler,{
-	text: "ðåäàêòèðîâàòü",
-	tooltip: "Ðåäàêòèðîâàòü çàïèñü",
-	readOnlyText: "âèä",
-	readOnlyTooltip: "Ïðîñìîòðåòü èñõîäíèê çàïèñè"});
+	text: "правка",
+	tooltip: "Исправить эту заметку",
+	readOnlyText: "просмотр",
+	readOnlyTooltip: "Просмотр исходного текста этой заметки"});
 
 merge(config.commands.saveTiddler,{
-	text: "ãîòîâî",
-	tooltip: "Ñîõðàíèòü çàïèñü"});
+	text: "сохранить",
+	tooltip: "Сохранить изменения этой заметки"});
 
 merge(config.commands.cancelTiddler,{
-	text: "îòìåíà",
-	tooltip: "îòìåíèòü âñå èçìåíåíèÿ çàïèñè",
-	warning: "Âû äåéñòâèòåëüíî õîòèòå îòêàçàòüñÿ îò èçìåíåíèÿ '%0'?",
-	readOnlyText: "ãîòîâî",
-	readOnlyTooltip: "Ïðîñìîòð çàïèñè â íîðìàëüíîì ðåæèìå"});
+	text: "отмена",
+	tooltip: "Отменить изменение этой заметки",
+	warning: "Вы действительно уверены, что Вы хотите потерять все Ваши изменения заметки '%0'?",
+	readOnlyText: "возврат",
+	readOnlyTooltip: "Просмотр этой заметки в нормальном режиме"});
 
 merge(config.commands.deleteTiddler,{
-	text: "óäàëèòü",
-	tooltip: "Óäàëèòü òåêóùóþ çàïèñü",
-	warning: "Âû äåéñòâèòåëüíî æåëàåòå óäàëèòü çàïèñü '%0'?"});
+	text: "удалить",
+	tooltip: "Удалить эту заметку",
+	warning: "Вы уверены, что хотите удалить '%0'?"});
 
 merge(config.commands.permalink,{
-	text: "ïðÿìàÿ ññûëêà",
-	tooltip: "Ïðÿìàÿ ññûëêà íà äàííóþ çàïèñü"});
+	text: "прямая ссылка",
+	tooltip: "Адресная строка для этой заметки"});
 
 merge(config.commands.references,{
-	text: "ññûëêè",
-	tooltip: "Ïîêàçàòü çàïèñè ññûëàþùèåñÿ íà äàííóþ",
-	popupNone: "Íåò ññûëîê"});
+	text: "ссылки",
+	tooltip: "Показать все заметки, которые ссылаются на эту заметку",
+	popupNone: "Нет ссылок"});
 
 merge(config.commands.jump,{
-	text: "ïåðåõîä",
-	tooltip: "Ïåðåéòè ê äðóãîé îòêðûòîé çàïèñè"});
+	text: "переход",
+	tooltip: "Переход на другую открытую заметку"});
 
 merge(config.commands.syncing,{
-	text: "ñèíõðîíèçàöèÿ",
-	tooltip: "Êîíòðîëèðîâàòü ñèíõðîíèçàöèþ äàííîé çàïèñè ñ âíåøíèìè ñåðâåðàìè è çàïèñÿìè",
-	currentlySyncing: "<div>Â íàñòîÿùåå âðåìÿ ñèíõðîíèçèðîâàíî ñ <span class='popupHighlight'>'%0'</span> to:</"+"div><div>host: <span class='popupHighlight'>%1</span></"+"div><div>ðàáî÷àÿ îáëàñòü: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
-	notCurrentlySyncing: "Íå ñèíõðîíèçèðîâàíî â íàñòîÿùåå âðåìÿ",
-	captionUnSync: "Îòñàâíîèòü ñèíõðîíèçàöèþ äàííîé çàïèñè",
-	chooseServer: "Ñèíõðîíèçèðîâàòü äàííóþ çàïèñü ñ äðóãèì ñåðâåðîì:",
+	text: "синхронизация",
+	tooltip: "Управление синхронизацией этой заметки с сервером или внешним файлом",
+	currentlySyncing: "<div>Синхронизирую с помощью <span class='popupHighlight'>'%0'</span> с:</"+"div><div>хранилищем: <span class='popupHighlight'>%1</span></"+"div><div>рабочее пространство: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	notCurrentlySyncing: "Пока не синхронизировано",
+	captionUnSync: "Остановить синхронизацию этой заметки",
+	chooseServer: "Привести в соответствие эту заметку с другим сервером:",
 	currServerMarker: "\u25cf ",
 	notCurrServerMarker: "  "});
 
 merge(config.commands.fields,{
-	text: "ïîëÿ",
-	tooltip: "Ïîêàçàòü äîïîëíèòåëüíûå ïîëÿ äàííîé çàïèñè",
-	emptyText: "íåò ðàñøèðåííûõ ïîëåé äëÿ äàííîé çàïèñè",
+	text: "поля",
+	tooltip: "Отображение расширенных параметров этой заметки",
+	emptyText: "У этой заметки нет расширенных параметров",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Ïîëå", type: 'String'},
-			{name: 'Value', field: 'value', title: "Çíà÷åíèå", type: 'String'}
-			],
-		rowClasses: [
-			],
-		buttons: [
-			]}});
+			{name: 'Field', field: 'field', title: "Поле", type: 'String'},
+			{name: 'Value', field: 'value', title: "Значение", type: 'String'} ],
+		rowClasses: [],
+		buttons: [] } });
 
 merge(config.shadowTiddlers,{
-	DefaultTiddlers: "[[Ñ÷åãîÍà÷àòü]]",
-	MainMenu: "[[Ñ÷åãîÍà÷àòü]]\n\n\n^^~TiddlyWiki âåðñèÿ <<version>>\n© 2009 [[UnaMesa|http://www.unamesa.org/]]^^",
-	Ñ÷åãîÍà÷àòü: "×òîáû íà÷àòü ðàáîòó ñ ïóñòîé TiddlyWiki, âû äîëæíû èçìåíèòü íåêîòîðûå çàïèñè:\n* SiteTitle & SiteSubtitle: Çàãîëîâîê è ïîäçàãîëîâîê ñàéòà, êàê ïîêàçàíî âûøå (ïîñëå ñîõðàíåíèÿ îíè òàêæå áóäóò ïîêàçàíû â çàãîëîâêå ñàéòà)\n* MainMenu: Ãëàâíîå ìåíþ (Îáû÷íî ðàñïîëîæåíî ñëåâà)\n* DefaultTiddlers: Çàïèñè êîòîðûå âû áû õîòåëè âèäåòü ïðè çàïóñêå TiddlyWiki\nÂû äîëæíû ââåñòè âàøå èìÿ äëÿ îáîçíà÷åíèÿ àâòîðà çàïèñåé: <<option txtUserName>>",
-	SiteTitle: "Ìîÿ TiddlyWiki",
-	SiteSubtitle: "íåëèíåéíûé ïåðñîíàëüíûé WEB-áëîêíîò",
-	SiteUrl: "http://www.tiddlywiki.com/",
-	OptionsPanel: "Äàííûé èíòåðôåéñ ïîñçâîëÿåò èçìåíÿòü íàñòðîéêè TiddlyWiki ñîõðàíÿåìûå â âàøåì áðàóçåðå\n\nÂàøèì èìåíåì áóäóò ïîäïèñàíû âàøè çàïèñè. Çàïèøèòå åãî, êàê â WikiWord (íàïðèìåð JoeBloggs)\n<<option txtUserName>>\n\n<<option chkSaveBackups>> Ñîõðàíÿòü ðåçåðâíûå êîïèè\n<<option chkAutoSave>> Àâòî ñîõðàíåíèå\n<<option chkRegExpSearch>> Ïîèñê ñ èñïîëüçîâàíèåì ðåãóëÿðíûõ âûðàæåíèé\n<<option chkCaseSensitiveSearch>> Ïîèñê ñ ó÷¸òîì ðåãèñòðà\n<<option chkAnimate>> Ðàçðåøèòü àíèìàöèþ\n\n----\nÑìîòðèòå òàêæå [[ðàñøèðåííûå îïèöèè|AdvancedOptions]]",
-	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY" "æóðíàë">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "îïöèè \u00bb" "Èçìåíèòü ðàñøèðåííûå îïöèè TiddlyWiki">>',
-	SideBarTabs: '<<tabs txtMainTab "Õðîíîëîãèÿ" "Õðîíîëîãèÿ" TabTimeline "Âñå" "Âñå çàïèñè" TabAll "Ìåòêè" "Âñå ìåòêè" TabTags "Åù¸" "Åù¸ ñïèñêè" TabMore>>',
-	TabMore: '<<tabs txtMoreTab "Ïîòåðÿííûå" "Ïîòåðÿííûå çàïèñè" TabMoreMissing "Ñèðîòû" "Îñèðîòåâøèå çàïèñè" TabMoreOrphans "Ñêðûòûå" "Ñêðûòûå çàïèñè" TabMoreShadowed>>'
-	});
+	DefaultTiddlers: "[[GettingStarted]]",
+	MainMenu: "[[GettingStarted]]",
+	SiteTitle: "Моя TiddlyWiki",
+	SiteSubtitle: "гипертекстовая записная книжка",
+	SiteUrl: "",
+	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD.0MM.YYYY" "journal">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "настройки \u00bb" "Изменение настроек TiddlyWiki">>',
+	SideBarTabs: '<<tabs txtMainTab "история" "История" TabTimeline "все" "Все заметки" TabAll "метки" "Все метки" TabTags "ещё" "Другие списки" TabMore>>',
+	TabMore: '<<tabs txtMoreTab "нет" "Отсутствующие заметки" TabMoreMissing "потери" "Потерянные заметки" TabMoreOrphans "служебные" "Служебные заметки" TabMoreShadowed>>' });
 
 merge(config.annotations,{
-	AdvancedOptions: "Äàííàÿ çàïèñü ïðåäîñòàâëÿåò äîñòóï ê ðàñøèðåííûì íàñòðîéêàì",
-	ColorPalette: "Èçìåíÿÿ çíà÷åíèÿ äàííîé çàïèñè âû ñìîæåòå èçìåíÿòü öâåòîâóþ ñõåìó îôîðìëåíèÿ ~TiddlyWiki",
-	DefaultTiddlers: "Çàïèñè ïåðå÷èñëåííûå çäåñü àâòîìàòè÷åñêè ïîêàçûâàþòñÿ ïðè çàïóñêå ~TiddlyWiki",
-	EditTemplate: "HTML øàáëîí â ýòîé çàïèñè îïðåäåëÿåò êàê áóäóò âûãëÿäåòü çàïèñè ïðè èõ ðåäàêòèðîâàíèè",
-	GettingStarted: "Çäåñü ïåðå÷èñëåíû áàçîâûå èíñòðóêöèè ïî èñïîëüçîâàíèþ ïðîãðàììû",
-	ImportTiddlers: "Èñïîëüçóÿ ýòó çàïèñü âû ñìîæåòå èìïîðòèðîâàòü äðóãèå çàïèñè",
-	MainMenu: "Çäåñü ïåðå÷èñëåíî ñîäåðæèìîå ãëàâíîãî ìåíþ, îòîáðàæàåìîãî ñëåâà íà ýêðàíå",
-	MarkupPreHead: "Ýòà çàïèñü áóäåò âñòàâëåíà â âåðøèíó ñåêöèè <head> HTML ôàéëà TiddlyWiki",
-	MarkupPostHead: "Ýòà çàïèñü áóäåò âñòàâëåíà ñíèçó ñåêöèè <head> HTML ôàéëà TiddlyWiki",
-	MarkupPreBody: "Ýòà çàïèñü áóäåò âñòàâëåíà â âåðøèíó ñåêöèè <body> HTML ôàéëà TiddlyWiki",
-	MarkupPostBody: "Ýòà çàïèñü áóäåò âñòàâëåíà ñíèçó ñåêöèè <body> HTML ôàéëà TiddlyWiki ïîñëå áþëîêà ñêðèïòîâ",
-	OptionsPanel: "Çäåñü îïðåäåëíî ñîäåðæèìîå âûïàäàþùåé ñïðàâà ïàíåëè íàñòðîåê",
-	PageTemplate: "HTML øàáëîí âíóòðè ýòîé çàïèñè îïðåäåëÿåò îáùèé ìàêåò ~TiddlyWiki",
-	PluginManager: "Äîñòóï ê ïàíåëè óïðàâëåíèÿ äîïîëíåíèÿìè",
-	SideBarOptions: "Ïîçâîëÿåò îòðåäàêòèðîâàòü ñîäåðæèìîå ïàíåëè îïöèé ñïðàâà",
-	SideBarTabs: "Ñîäåðæèìîå ïàíåëè çàêëàäîê ñïðàâà",
-	SiteSubtitle: "Ñîäåðæèìîå ïîäçàãîëîâêà ñàéòà",
-	SiteTitle: "Ñîäåðæèìîå çàãîëîâêà ñàéòà",
-	SiteUrl: "URL ñàéòà äëÿ ïóáëèêàöèè",
-	StyleSheetColors: "Ñîäåðæèìîå CSS îïðåäåëÿþùèé öâåòà ýëåìåíòîâ ñòðàíèöû. ''ÍÅ ÐÅÄÀÊÒÈÐÓÉÒÅ ÝÒÓ ÇÀÏÈÑÜ'', âíîñèòå ñâîè èçìåíåíèÿ â ñêðûòóþ çàïèñü StyleSheet",
-	StyleSheet: "Ýòà çàïèñü îïðåäåëÿåò ïîëüçîâàòåëñêèé CSS",
-	StyleSheetLayout: "Ñîäæåðæèò CSS îïðåäåëÿþùèé ðàñïîëîæåíèå ýëåìåíòîâ íà ñòðàíèöå. ''ÍÅ ÐÅÄÀÊÒÈÐÓÉÒÅ ÝÒÓ ÇÀÏÈÑÜ'', âíîñèòå ñâîè èçìåíåíèÿ â ñêðûòóþ çàïèñü StyleSheet",
-	StyleSheetLocale: "Ñîäåðæèò CSS îïðåäåëÿþùèé îñîáåííîñòè ïåðâîäà",
-	StyleSheetPrint: "Ñîäåðæèò CSS îïðåäåëÿþùèé ïàðààìåòðû ïå÷àòè",
-	TabAll: "Ñîäåðæèìîå âêëàäêè 'Âñ¸' íà ïðàâîé íà ïðàâîé áîêîâé ïàíåëè",
-	TabMore: "Ñîäåðæèìîå âêëàäêè 'Åù¸' íà ïðàâîé íà ïðàâîé áîêîâé ïàíåëè",
-	TabMoreMissing: "Ñîäåðæèìîå âêëàäêè 'Ïîòåðÿííûå' íà ïðàâîé íà ïðàâîé áîêîâé ïàíåëè",
-	TabMoreOrphans: "Ñîäåðæèìîå âêëàäêè 'Ñèðîòû' íà ïðàâîé íà ïðàâîé áîêîâé ïàíåëè",
-	TabMoreShadowed: "Ñîäåðæèìîå âêëàäêè 'Ñêðûòûå' íà ïðàâîé íà ïðàâîé áîêîâé ïàíåëè",
-	TabTags: "Ñîäåðæèìîå âêëàäêè 'Ìåòêè' íà ïðàâîé íà ïðàâîé áîêîâé ïàíåëè",
-	TabTimeline: "Ñîäåðæèìîå âêëàäêè 'Õðîíîëîãèÿ' íà ïðàâîé íà ïðàâîé áîêîâé ïàíåëè",
-	ToolbarCommands: "Îïðåäåëÿåò êîìàíäû ïàíåëè èíñòðóìåíòîâ",
-	ViewTemplate: "HTML øàáëîí â ýòîé çàïèñè îïðåäåëÿåò êàê áóäóò îòîáðàæàòüñÿ çàïèñè"
-	});
+	AdvancedOptions: "Эта служебная заметка обеспечивает доступ к некоторым дополнительным настройкам",
+	ColorPalette: "Значения из этой служебной заметки определяют цветовую схему пользовательского интерфейса TiddlyWiki",
+	DefaultTiddlers: "Заметки, перечисленные в этой служебной заметке, будут автоматически открываться при каждом запуске TiddlyWiki",
+	EditTemplate: "Шаблон HTML в этой служебной заметке определяет, как заметки будут выглядеть, пока они редактируются",
+	GettingStarted: "Эта служебная заметка содержит инструкции по начальному использованию",
+	ImportTiddlers: "Эта служебная заметка обеспечивает доступ к импортированным заметкам",
+	MainMenu: "Эта служебная заметка используется для хранения содержимого главного меню (//обычно отображается в левой колонке экрана//)",
+	MarkupPreHead: "Эта заметка вставляется в начало раздела <head> этого HTML-файла c TiddlyWiki",
+	MarkupPostHead: "Эта заметка вставляется в конец раздела <head> этого HTML-файла c TiddlyWiki",
+	MarkupPreBody: "Эта заметка вставляется в начало раздела <body> этого HTML-файла c TiddlyWiki",
+	MarkupPostBody: "Эта заметка вставляется в конец раздела <body> этого HTML-файла с TiddlyWiki сразу же после блока кода",
+	OptionsPanel: "Эта служебная заметка используется для хранения скрываемой панели Настроек, расположенной на боковой панели",
+	PageTemplate: "HTML-шаблон в этой служебной заметке определяет общий вид TiddlyWiki",
+	PluginManager: "Эта служебная заметка обеспечивает доступ к управлению модулями",
+	SideBarOptions: "Эта служебная заметка используется для хранения панели поиска и настроек на боковой панели",
+	SideBarTabs: "Эта служебная заметка содержит начинку панели со списком служебных заметок на боковой панели",
+	SiteSubtitle: "Эта служебная  заметка содержит вторую часть заголовка страницы",
+	SiteTitle: "Эта служебная заметка содержит первую часть заголовка страницы",
+	SiteUrl: "В эту служебную заметку должен быть занесён полный URL публикации этой TiddlyWiki",
+	StyleSheetColors: "Эта служебная заметка содержит CSS-описания, относящиеся к цветам элементов страницы. ''НЕ ИЗМЕНЯЙТЕ ЭТУ ЗАМЕТКУ''. Все изменения делайте в служебной заметке StyleSheet",
+	StyleSheet: "Эта заметка может содержать Ваши определения и изменения стилей CSS",
+	StyleSheetLayout: "Эта служебная заметка содержит СSS-описания, относящиеся к расположению элементов страниц.''НЕ ИЗМЕНЯЙТЕ ЭТУ ЗАМЕТКУ''. Все изменения делайте в служебной заметке StyleSheet",
+	StyleSheetLocale: "Эта служебная заметка содержит CSS-описания, относящиеся к переводу на местный язык",
+	StyleSheetPrint: "Эта служебная заметка содержит CSS-описания для печати",
+	SystemSettings: "Эта заметка используется для хранения параметров настройки этой TiddlyWiki",
+	TabAll: "Эта служебная заметка содержит начинку закладки 'Все' на боковой панели",
+	TabMore: "Эта служебная заметка содержит начинку закладки 'Ещё' на боковой панели",
+	TabMoreMissing: "Эта служебная заметка содержит начинку закладки 'Нет' на боковой панели",
+	TabMoreOrphans: "Эта служебная заметка содержит начинку закладки 'Потери' на боковой панели",
+	TabMoreShadowed: "Эта служебная заметка содержит начинку закладки 'Служебные' на боковой панели",
+	TabTags: "Эта служебная заметка содержит начинку закладки 'Метки' на боковой панели",
+	TabTimeline: "Эта служебная заметка содержит начинку закладки 'История' на боковой панели",
+	ToolbarCommands: "Эта служебная заметка определяет, какие команды будут показываться в меню заметки",
+	ViewTemplate: "HTML-шаблон в этой сервисной заметке определяет, как будет выглядеть заметка",
+	WindowTitle: "Эта служебная заметка содержит полный вид заголовка страницы" });
 
 //}}}
