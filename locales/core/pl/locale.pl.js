@@ -1,57 +1,88 @@
 /***
 |''Name:''|PolishTranslationPlugin|
 |''Description:''|Translation of TiddlyWiki into Polish|
-|''Author:''|Marcin Gedlek (psorek23 (at) gmail (dot) com)|
-|''Source:''|http://members.lycos.co.uk/psorek/|
-|''Subversion:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/pl/locale.pl.js|
+|''Author:''|Ryszard Niewisiewicz (*ziemiowid* *at* *gmail* *dot* *com*)|
+|''CodeRepository:''|https://github.com/ziemiowid/translations/blob/master/locales/core/pl/locale.pl.js |
 |''Version:''|0.9.0|
-|''Date:''|Jan 14, 2007|
+|''Date:''|Jan 08, 2012|
 |''Comments:''|Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev|
-|''License:''|[[Creative Commons Attribution-ShareAlike 2.5 License|http://creativecommons.org/licenses/by-sa/2.5/]]|
-|''~CoreVersion:''|2.1.0|
+|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|''~CoreVersion:''|2.6.0|
 
-// Na podstawie wersji (based on version):
-// TiddlyWiki 2.1.2a - German Translation (r811)
-// Maintainer: Besim Karadeniz besim (at) karadeniz (dot ) de
-// Web: www.karadeniz.de/tiddlywiki/
+// Based on english translation by MartinBudden (mjbudden (at) gmail (dot) com)
+// https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js (commit 966556b66a)
+// using previous polish translation by Marcin Gedlek (psorek23 (at) gmail (dot) com)
+// https://github.com/TiddlyWiki/translations/blob/master/locales/core/pl/locale.pl.js (commit 966556b66a)
+
+Kilka decyzji tłumacza:
+* tiddler        - notatka
+* shadow tiddler - notatka podmienna
+* plugin         - wtyczka
+* tag            - tag
+* core code      - kod podstawowy
+* backstage     - zaplecze
 ***/
 
-/*{{{*/
-// Translateable strings
-// ---------------------
+//{{{
+//--
+//-- Translateable strings
+//--
 
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "pl"; // W3C language tag
 
-if (config.options.txtUserName == "YourName")
-	merge(config.options,{txtUserName: "TwojeImie"});
+if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
+	merge(config.options,{txtUserName: "TwojeImię"});
 
-config.tasks = {
-	tidy: {text: "tidy up", tooltip: "Make bulk changes across groups of tiddlers", content: 'Coming soon...\n\nThis tab will allow bulk operations on tiddlers, and tags. It will be a generalised, extensible version of the plugins tab'},
-	sync: {text: "sync", tooltip: "Synchronise changes with other TiddlyWiki files and servers", content: '<<sync>>'},
-	importTask: {text: "import", tooltip: "Import tiddlers and plugins from other TiddlyWiki files and servers", content: '<<importTiddlers>>'},
-	copy: {text: "copy", tooltip: "Copy tiddlers to other TiddlyWiki files and servers", content: 'Coming soon...\n\nThis tab will allow tiddlers to be copied to remote servers'},
-	plugins: {text: "plugins", tooltip: "Manage installed plugins", content: '<<plugins>>'}
-};
+merge(config.tasks,{
+	save: {text: "Zapisz", tooltip: "Zapisz zmiany", action: saveChanges},
+	sync: {text: "Synchronizuj", tooltip: "Synchronizuj zmiany z plikami i serwerami TiddlyWiki", content: '<<sync>>'},
+	importTask: {text: "Importuj", tooltip: "Importuj notatki i wtyczki z plików i serwerów TiddlyWiki", content: '<<importTiddlers>>'},
+	tweak: {text: "Dostosuj", tooltip: "Dostosuj wygląd i zachowanie TiddlyWiki", content: '<<options>>'},
+        upgrade: {text: "Zaktualizuj", tooltip: "Aktualizuj podstawowy kod TiddlyWiki", content: '<<upgrade>>'}, // TODO Czy można znaleźć słowo lepsze niż Aktualizuj
+	plugins: {text: "Wtyczki", tooltip: "Zarządzaj zainstalowanymi wtyczkami", content: '<<plugins>>'}
+});
+
+// Options that can be set in the options panel and/or cookies
+merge(config.optionsDesc,{
+	txtUserName: "Nazwa użytkownika którą będziesz podpisywał swoje zmiany",
+	chkRegExpSearch: "Włącz wyszukiwanie przy pomocy wyrażeń regularnych",
+	chkCaseSensitiveSearch: "Wyszukiwanie z uwzględnieniem wielkości liter",
+	chkIncrementalSearch: "Dynamiczne wyszukiwanie w czasie wpisywania",
+	chkAnimate: "Włącz animacje",
+	chkSaveBackups: "Zapisując zmiany twórz kopie zapasowe",
+	chkAutoSave: "Automatycznie zapisuj zmiany",
+	chkGenerateAnRssFeed: "Zapisując zmiany generuj kanał RSS",
+	chkSaveEmptyTemplate: "Zapisując zmiany generuj pusty szablon",
+	chkOpenInNewWindow: "Odnośniki zewnętrzne otwieraj w nowym oknie",
+	chkToggleLinks: "Klikanie na linkach otwierających notatki powoduje ich zamknięcie",
+	chkHttpReadOnly: "Ukryj możliwość edytowania przy przeglądaniu przez HTTP",
+	chkForceMinorUpdate: "Nie aktualizuj nazwy użytkownika i daty modyfikacji w czasie edycji notatek",
+	chkConfirmDelete: "Potwierdzaj usuwanie notatek",
+	chkInsertTabs: "Klawisz tabulacji wstawia znaki tabulacji zamiast przemieszczać kursor pomiędzy polami",
+	txtBackupFolder: "Nazwa katalogu kopii zapasowych",
+	txtMaxEditRows: "Maksymalna ilość wierszy w okienku edycji",
+	txtTheme: "Nazwa tematu",
+	txtFileSystemCharSet: "Domyślne kodowanie użyte do zapisania zmian (tylko Firefox/Mozilla)"});
 
 merge(config.messages,{
-	customConfigError: "Wystąpiły problemy podczas wczytywania pluginów. Zobacz więcej szczegółów w PluginManager ",
+	customConfigError: "Wystąpiły problemy podczas wczytywania wtyczek. Zobacz więcej szczegółów w PluginManager",
 	pluginError: "Błąd: %0",
-	pluginDisabled: "Nie uruchomione, wyłączone w tagu 'systemConfigDisable'",
-	pluginForced: "Uruchomione, wymuszone poprzez tag 'systemConfigForce'",
-	pluginVersionError: "Nie uruchomione, ten plugin wymaga nowszej wersji TiddlyWiki",
+	pluginDisabled: "Nie uruchomiona, wyłączone w tagu 'systemConfigDisable'",
+	pluginForced: "Uruchomiona, wymuszone poprzez tag 'systemConfigForce'",
+	pluginVersionError: "Nie uruchomiona, ta wtyczka wymaga nowszej wersji TiddlyWiki",
 	nothingSelected: "Nic nie zaznaczono. Musisz zaznaczyć jedną lub więcej rzeczy",
 	savedSnapshotError: "TiddlyWiki została najprawdopodobniej niepoprawnie zapisana. Zobacz http://www.tiddlywiki.com/#DownloadSoftware",
 	subtitleUnknown: "(nieznany)",
 	undefinedTiddlerToolTip: "Notatka '%0' jeszcze nie istnieje",
-	shadowedTiddlerToolTip: "Notatka '%0' jeszcze nie istnieje, ale jej nazwa jest zarezerowowana",
+	shadowedTiddlerToolTip: "Notatka '%0' jeszcze nie istnieje, ale ma określoną treść podmienną",
 	tiddlerLinkTooltip: "%0 - %1, %2",
 	externalLinkTooltip: "Zewnętrzny link do %0",
 	noTags: "Brak tagów w notatkach",
 	notFileUrlError: "Musisz najpierw zapisać TiddlyWiki aby wprowadzać zmiany",
 	cantSaveError: "Nie można zapisać zmian. Możliwe przyczyny:\n- Twoja przeglądarka nie obsługuje zapisywania (Firefox, Internet Explorer, Safari i Opera powinny działać)\n- ścieżka do twojej TiddlyWiki zawiera niepoprawne znaki\n- Plik TiddlyWiki został przeniesiony lub zmienił nazwe",
-	invalidFileError: "Orginalny plik '%0' nie jest prawidłowym plikiem TiddlyWiki",
+	invalidFileError: "Oryginalny plik '%0' nie jest prawidłowym plikiem TiddlyWiki",
 	backupSaved: "Kopia zapasowa zapisana",
 	backupFailed: "Nie udało się zapisać kopii zapasowej",
 	rssSaved: "RSS zapisane",
@@ -60,68 +91,96 @@ merge(config.messages,{
 	emptyFailed: "Nie udało się zapisać pustego pliku",
 	mainSaved: "Plik TiddlyWiki zapisany",
 	mainFailed: "Nie udało się zapisać pliku TiddlyWiki. Twoje zmiany nie zostały zapisane",
-	macroError: "Błąd w makro <<%0>>",
-	macroErrorDetails: "Błąd wykonywania makro <<%0>>:\n%1",
+	macroError: "Błąd w makro <<\%0>>",
+	macroErrorDetails: "Błąd wykonywania makro <<\%0>>:\n%1",
 	missingMacro: "Nie ma takiego makro",
 	overwriteWarning: "Notatka '%0' już istnieje. Kliknij OK aby ją zastąpić",
-	unsavedChangesWarning: "UWAGA! Niezapisane zmiany w TiddlyWiki\n\n kliknij OK aby zapisać\nChoose ANULUJ aby niezapisywać",
+	unsavedChangesWarning: "UWAGA! Niezapisane zmiany w TiddlyWiki\n\n kliknij OK aby zapisać\nWybierz ANULUJ aby nie zapisywać",
 	confirmExit: "--------------------------------\n\nNiezapisane zmiany w TiddlyWiki. jeżeli będziesz kontynuował stracisz je\n\n--------------------------------",
 	saveInstructions: "ZapiszZmiany",
 	unsupportedTWFormat: "Nieobsługiwany format TiddlyWiki '%0'",
 	tiddlerSaveError: "Błąd przy zapisywaniu notatki '%0'",
 	tiddlerLoadError: "Błąd podczas wczytywania notatki '%0'",
-	wrongSaveFormat: "Nie można zapisać przy pomocy tego formatu '%0'. Zapisywanie w standardowym formacie.",
-	invalidFieldName: "Zła nazwa pliku %0",
-	fieldCannotBeChanged: "Błąd '%0' nie może być zmieniony",
-	backstagePrompt: "backstage: "});
+	wrongSaveFormat: "Nie można zapisać w formacie '%0'. Zapisywanie w formacie standardowym.",
+	invalidFieldName: "Zła nazwa pola %0",
+	fieldCannotBeChanged: "Pole '%0' nie może zostać zmienione",
+	loadingMissingTiddler: "Próba pobrania notatki '%0' z serwera '%1' o adresie:\n\n'%2' w przestrzeni roboczej '%3'",
+	upgradeDone: "Aktualizacja do wersji %0 została zakończona\n\nKliknij 'OK' by wczytać aktualizowaną TiddlyWiki",
+	invalidCookie: "Nieprawidłowe cookie '%0'"});
 
 merge(config.messages.messageClose,{
-	text: "Zapisano",
-	tooltip: "TiddlyWiki zapisano"});
+	text: "Zamknij",
+	tooltip: "zamknij ten komunikat"});
 
-config.messages.dates.months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Paźdźiernik", "Listopad","Grudzień"];
-config.messages.dates.days = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
-config.messages.dates.shortMonths = ["Sty", "Lut", "Mar", "Kwi", "Maj", "Cze", "Lip", "Sie", "Wrz", "Paź", "Lis", "Gru"];
-config.messages.dates.shortDays = ["Ndz", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob"];
+config.messages.backstage = {
+	open: {text: "Zaplecze", tooltip: "Otwórz obszar konfiguracyjny by wykonać zadania edycyjne"},
+	close: {text: "Zamknij", tooltip: "Zamknij obszar konfiguracji"},
+	prompt: "Obszar konfiguracji: ",
+	decal: {
+		edit: {text: "Edytuj", tooltip: "Edytuj notatkę '%0'"}
+	}
+};
+
+config.messages.listView = {
+	tiddlerTooltip: "Kliknij by zobaczyć pełny tekst tej notatki",
+	previewUnavailable: "(brak podglądu)"
+};
+
+config.messages.dates.months = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad","grudzień"];
+config.messages.dates.days = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
+config.messages.dates.shortMonths = ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paź", "lis", "gru"];
+config.messages.dates.shortDays = ["niedz.", "pon.", "wt.", "śr.", "czw.", "pt.", "sob."];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
-config.messages.dates.daySuffixes = ["st","nd","rd","th","th","th","th","th","th","th",
-		"th","th","th","th","th","th","th","th","th","th",
-		"st","nd","rd","th","th","th","th","th","th","th",
-		"st"];
-config.messages.dates.am = "am";
-config.messages.dates.pm = "pm";
+//config.messages.dates.daySuffixes = ["st","nd","rd","th","th","th","th","th","th","th",
+//		"th","th","th","th","th","th","th","th","th","th",
+//		"st","nd","rd","th","th","th","th","th","th","th",
+//		"st"];
+//config.messages.dates.am = "am";
+//config.messages.dates.pm = "pm";
+
+merge(config.messages.tiddlerPopup,{
+	});
 
 merge(config.views.wikified.tag,{
 	labelNoTags: "brak tagów",
 	labelTags: "tagi: ",
 	openTag: "Otwórz tag '%0'",
-	tooltip: "Pokarz notatki z tagiem '%0'",
-	openAllText: "Otwórz wszystko",
-	openAllTooltip: "Otwórz wszystko z tej notatki",
+	tooltip: "Pokaż notatki z tagiem '%0'",
+	openAllText: "Otwórz wszystkie",
+	openAllTooltip: "Otwórz wszystkie z tych notatek",
 	popupNone: "Żadna inna notatka nie ma tagu '%0'"});
 
 merge(config.views.wikified,{
-	defaultText: "Notatka '%0' nie istnieje. kliknij dwukrotnie aby ją utworzyć",
+	defaultText: "Notatka '%0' nie istnieje. Kliknij dwukrotnie aby ją utworzyć",
 	defaultModifier: "(brakujący)",
-	shadowModifier: "(wbudowana notatka)",
-	dateFormat: "DD MMM YYYY",
+	shadowModifier: "(wbudowana notatka podmienna)",
+	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
 	createdPrompt: "utworzono"});
 
 merge(config.views.editor,{
-	tagPrompt: "Wprowadź tagi oddzielone spacjami, [[użyj podwójnych nawiasów]]",
+	tagPrompt: "Wprowadź tagi oddzielone spacjami, w razie potrzeby [[używając podwójnych nawiasów]], lub dodaj istniejące tagi",
 	defaultText: "Wprowadź tekst dla '%0'"});
 
 merge(config.views.editor.tagChooser,{
 	text: "tagi",
-	tooltip: "Wybierz tag aby go dodać do notatki",
+	tooltip: "Wybierz istniejący tag aby go dodać do notatki",
 	popupNone: "Brak zdefiniowanych tagów",
 	tagTooltip: "Dodaj tag '%0'"});
 
+merge(config.messages,{
+	sizeTemplates:
+		[
+		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
+		{unit: 1024*1024, template: "%0\u00a0MB"},
+		{unit: 1024, template: "%0\u00a0KB"},
+		{unit: 1, template: "%0\u00a0B"}
+		]});
+
 merge(config.macros.search,{
-	label: "szukaj",
-	prompt: "Przeszukaj TiddlyWiki",
+	label: "Szukaj",
+	prompt: "Szukaj w TiddlyWiki",
 	accessKey: "F",
-	successMsg: "%0 Znaleziono notatkę pasującą do %1",
+	successMsg: "Znaleziono %0 notatek pasujących do %1",
 	failureMsg: "Brak pasującej notatki %0"});
 
 merge(config.macros.tagging,{
@@ -130,16 +189,17 @@ merge(config.macros.tagging,{
 	tooltip: "Lista notatek oznaczonych tagiem '%0'"});
 
 merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});
+	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
 
 merge(config.macros.allTags,{
-	tooltip: "Pokarz notatki z tagami '%0'",
-	noTags: "Brak notatek z tagami"});
+	tooltip: "Pokaż notatki z tagiem '%0'",
+	noTags: "Brak notatek z tagiem"});
 
 config.macros.list.all.prompt = "Notatki w porządku alfabetycznym";
 config.macros.list.missing.prompt = "Notatki do których prowadzi jakiś link ale nie istnieją";
 config.macros.list.orphans.prompt = "Notatki do których nie istnieje odwołanie";
-config.macros.list.shadowed.prompt = "Notatki z domyślnymi ustawieniami";
+config.macros.list.shadowed.prompt = "Notatki podmienne z domyślną treścią";
+config.macros.list.touched.prompt = "Notatki które zostały lokalnie zmodyfikowane";
 
 merge(config.macros.closeAll,{
 	label: "Zamknij wszystkie",
@@ -147,42 +207,77 @@ merge(config.macros.closeAll,{
 
 merge(config.macros.permaview,{
 	label: "Stały widok",
-	prompt: "Pozwala otworzyć TiddlyWiki w takim stanie w jakim znajduje się obecnie"});
+	prompt: "Link otwierający wszystkie otwarte teraz notatki"});
 
 merge(config.macros.saveChanges,{
-	label: "zapisz zmiany",
+	label: "Zapisz zmiany",
 	prompt: "Zapisuje wszystkie notatki w TiddlyWiki",
 	accessKey: "S"});
 
 merge(config.macros.newTiddler,{
-	label: "nowa notatka",
+	label: "Nowa notatka",
 	prompt: "Tworzy nową notatkę",
 	title: "Nowa Notatka",
 	accessKey: "N"});
 
 merge(config.macros.newJournal,{
-	label: "nowy dziennik",
+	label: "Nowa notatka dziennika",
 	prompt: "Tworzy nową notatkę z aktualną datą i godziną",
 	accessKey: "J"});
 
+merge(config.macros.options,{
+	wizardTitle: "Dostosuj opcje zaawansowane",
+	step1Title: "Te opcje są zapisane przy pomocy cookie przeglądarki",
+	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Pokaż nieznane opcje</input>",
+	unknownDescription: "//(nieznana)//",
+	listViewTemplate: {
+		columns: [
+			{name: 'Option', field: 'option', title: "Opcja", type: 'String'},
+			{name: 'Description', field: 'description', title: "Opis", type: 'WikiText'},
+			{name: 'Name', field: 'name', title: "Nazwa", type: 'String'}
+			],
+		rowClasses: [
+			{className: 'lowlight', field: 'lowlight'}
+			]}
+	});
+
 merge(config.macros.plugins,{
-	wizardTitle: "Zarządzaj pluginami",
-	step1Title: "Aktualnie załadowane pluginy",
+	wizardTitle: "Zarządzaj wtyczkami",
+	step1Title: "Aktualnie załadowane wtyczki",
 	step1Html: "<input type='hidden' name='markList'></input>",
-	skippedText: "(Ten plugin nie jest uruchomiony ponieważ dopiero co został dodany)",
-	noPluginText: "Brak zainstalowanych pluginów",
-	confirmDeleteText: "Czy jesteś pewien że chcesz usunąć te pluginy:\n\n%0",
-	removeLabel: "usuń tag systemConfig",
-	removePrompt: "Usunąć tag systemConfig",
-	deleteLabel: "usuń",
-	deletePrompt: "Usunąć notatke?",
-	listViewTemplate : {
+	skippedText: "(Ta wtyczka nie jest uruchomiona ponieważ właśnie została dodana)",
+	noPluginText: "Brak zainstalowanych wtyczek",
+	confirmDeleteText: "Czy jesteś pewien że chcesz usunąć te wtyczki?:\n\n%0",
+	removeLabel: "Usuń tag systemConfig",
+	removePrompt: "Czy usunąć tag systemConfig",
+	deleteLabel: "Usuń",
+	deletePrompt: "Usuń te notatki na zawsze",
+	listViewTemplate: {
 		columns: [
 			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Title', field: 'title', tiddlerLink: 'title', title: "Title", type: 'TiddlerLink'},
-			{name: 'Forced', field: 'forced', title: "Forced", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Disabled", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Loaded", type: 'Boolean', trueText: "Tak", falseText: "Nie"},
+			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
+			{name: 'Description', field: 'Description', title: "Opis", type: 'String'},
+			{name: 'Version', field: 'Version', title: "Wersja", type: 'String'},
+			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size'},
+			{name: 'Forced', field: 'forced', title: "Wymuszona", tag: 'systemConfigForce', type: 'TagCheckbox'},
+			{name: 'Disabled', field: 'disabled', title: "Wyłączona", tag: 'systemConfigDisable', type: 'TagCheckbox'},
+			{name: 'Executed', field: 'executed', title: "Wykonana", type: 'Boolean', trueText: "Tak", falseText: "Nie"},
+			{name: 'Startup Time', field: 'startupTime', title: "Czas wykonywania", type: 'String'},
+			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Błąd", falseText: "OK"},
+			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
+			],
+		rowClasses: [
+			{className: 'error', field: 'error'},
+			{className: 'warning', field: 'warning'}
+			]},
+	listViewTemplateReadOnly: {
+		columns: [
+			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
+			{name: 'Description', field: 'Description', title: "Opis", type: 'String'},
+			{name: 'Version', field: 'Version', title: "Wersja", type: 'String'},
+			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size'},
+			{name: 'Executed', field: 'executed', title: "Wykonana", type: 'Boolean', trueText: "Tak", falseText: "Nie"},
+			{name: 'Startup Time', field: 'startupTime', title: "Czas wykonywania", type: 'String'},
 			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Błąd", falseText: "OK"},
 			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
 			],
@@ -192,123 +287,238 @@ merge(config.macros.plugins,{
 			]}
 	});
 
+merge(config.macros.toolbar,{
+	moreLabel: "Więcej",
+	morePrompt: "Pokaż dodatkowe polecenia",
+	lessLabel: "Mniej",
+	lessPrompt: "Ukryj dodatkowe polecenia",
+	separator: "|"
+	});
+
 merge(config.macros.refreshDisplay,{
-	label: "aktualisieren",
-	prompt: "Gesamte TiddlyWiki-Ansicht aktualisieren"
+	label: "Odśwież",
+	prompt: "Odśwież wygląd TiddlyWiki"
 	});
 
 merge(config.macros.importTiddlers,{
-	defaultPath: "http://www.tiddlywiki.com/index.html",
-	fetchLabel: "ściągnij",
-	fetchPrompt: "Ściąga dane z TiddlyWiki",
-	fetchError: "Wystąpiły problemy podczas ściągania pliku TiddlyWiki",
-	confirmOverwriteText: "Czy jesteś pewien że chcesz zastąpić te notatki:\n\n%0",
+	readOnlyWarning: "Nie możesz importować do pliku TiddlyWiki tylko do odczytu. Proszę spróbuj otworzyć go przy użyciu URL file://",
 	wizardTitle: "Importuj notatki z innej TiddlyWiki",
-	step1: "Krok 1: Zlokalizuj plik TiddlyWiki",
-	step1prompt: "Wprowadź URL lub ścieżkę z nazwą: ",
-	step1promptFile: "...lub przeglądaj w poszukiwaniu pliku: ",
-	step1promptFeeds: "...lub wybierz wartość zdefiniowaną wcześniej: ",
-	step1feedPrompt: "Ściągnij",
-	step2: "Krok 2: TiddlyWiki- wczytywanie danych",
-	step2Text: "Proszę czekać. Wczytuję plik z: %0",
-	step3: "Krok 3: Wybierz notatki do zaimportowania",
-	step4: "%0 Importuje notatki",
-	step5: "Importuj",
+	step1Title: "Krok 1: Odnajdź serwer lub plik TiddlyWiki",
+	step1Html: "Określ typ serwera: <select name='selTypes'><option value=''>Wybierz...</option></select><br>Wprowadź ścieżkę lub URL: <input type='text' size=50 name='txtPath'><br>...lub wybierz plik: <input type='file' size=50 name='txtBrowse'><br><hr>...lub wybierz zdefiniowany kanał: <select name='selFeeds'><option value=''>Wybierz...</option></select>",
+	openLabel: "Otwórz",
+	openPrompt: "Otwórz połączenie do tego pliku lub serwera",
+	statusOpenHost: "Otwórz serwer",
+	statusGetWorkspaceList: "Pobieranie listy dostępnych przestrzeni roboczych",
+	step2Title: "Krok 2: Wybierz przestrzeń roboczą",
+	step2Html: "Wprowadź nazwę przestrzeni roboczej: <input type='text' size=50 name='txtWorkspace'><br>...lub wybierz przestrzeń roboczą : <select name='selWorkspace'><option value=''>Wybierz...</option></select>",
+	cancelLabel: "Przerwij",
+	cancelPrompt: "Przerwij ten import",
+	statusOpenWorkspace: "Otwieranie przestrzeni roboczej",
+	statusGetTiddlerList: "Pobieranie listy dostępnych notatek",
+	errorGettingTiddlerList: "Błąd w czasie pobierania dostępnych notatek, kliknij Przerwij by ponowić próbę",
+	step3Title: "Krok 3: Wybierz notatki do zaimportowania",
+	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Zachowaj połączenie tych notatek do serwera tak by możliwe było pobieranie póżniejszych zmian</input><br><input type='checkbox' name='chkSave'>Zapisz szczegóły serwera w notatce 'systemServer' nazwanej:</input> <input type='text' size=25 name='txtSaveTiddler'>",
+	importLabel: "Importuj",
+	importPrompt: "Importuj te notatki",
+	confirmOverwriteText: "Czy jesteś pewien że chcesz nadpisać te notatki:\n\n%0",
+	step4Title: "Krok 4: Importowanie %0 notatek",
+	step4Html: "<input type='hidden' name='markReport'></input>", // DO NOT TRANSLATE
+	doneLabel: "zakończone",
+	donePrompt: "Zamknij to okno",
+	statusDoingImport: "Importowanie notatek",
+	statusDoneImport: "Wszystkie notatki zostały zaimportowane",
+	systemServerNamePattern: "%2 na %1",
+	systemServerNamePatternNoWorkspace: "%1",
+	confirmOverwriteSaveTiddler: "Notatka '%0' już istnieje. Kliknij 'OK' by zastąpić ją danymi serwera, lub 'Przerwij' by pozostawić ją niezmienioną",
+	serverSaveTemplate: "|''Typ:''|%0|\n|''URL:''|%1|\n|''Przestrzeń robocza:''|%2|\n\nTa notatka została automatycznie utworzona by zarejestrować dane tego serwera",
+	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
 			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Title', field: 'title', title: "Nazwa", type: 'String'},
-			{name: 'Snippet', field: 'text', title: "Fragment", type: 'String'},
-			{name: 'Tags', field: 'tags', title: "Tag", type: 'Tags'}
+			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
+			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size'},
+			{name: 'Tags', field: 'tags', title: "Tagi", type: 'Tags'}
 			],
 		rowClasses: [
-			],
-		actions: [
-			{caption: "Czekaj...", name: ''},
-			{caption: "Importuj te notatki", name: 'import'}
 			]}
+	});
+
+merge(config.macros.upgrade,{
+	wizardTitle: "Aktualizuj podstawowy kod TiddlyWiki",
+	step1Title: "Aktualizuj lub napraw tą TiddlyWiki do najnowszego wydania",
+	step1Html: "Jesteś o krok od aktualizacji do ostatniego wydania podstawowego kodu TiddlyWiki (z <a href='%0' class='externalLink' target='_blank'>%1</a>). Aktualizacja nie zmieni treści twoich notatek.<br><br>Weź pod uwagę, że, jak wiadomo, aktualizacje podstawowego kodu wpływają na działanie starszych wtyczek. Jeżeli napotkasz problemy po aktualizacji, sprawdź <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+	errorCantUpgrade: "Nie jest możliwa aktualizacja tej TiddlyWiki. Możliwa jest jedynie aktualizacja plików TiddlyWiki które są przechowywane lokalnie",
+	errorNotSaved: "Przed wykonaniem aktualizacji musisz zapisać zmiany",
+	step2Title: "Potwierdź szczegóły aktualizacji",
+	step2Html_downgrade: "Jesteś o krok od dezaktualizacji TiddlyWiki z wersji %1 do wersji %1.<br><br>Dezaktualizacja do wcześniejszej wersji kodu podstawowego nie jest polecana",
+	step2Html_restore: "Ta TiddlyWiki używa już ostatniej wersji kodu podstawowego (%0).<br><br>Możesz jednak dokończyć uaktualnienie by być pewnym, że kod podstawowy nie został zakłócony lub uszkodzony",
+	step2Html_upgrade: "Jesteś o krok od aktualizacji TiddlyWiki z wersji %1 do wersji %0",
+	upgradeLabel: "Aktualizacja",
+	upgradePrompt: "Przygotuj się do procesu aktualizacji",
+	statusPreparingBackup: "Przygotowanie kopii zapasowej",
+	statusSavingBackup: "Zapis kopii zapasowej",
+	errorSavingBackup: "Napotkano problem w czasie zapisywania kopii zapasowej",
+	statusLoadingCore: "Ładowanie kodu podstawowego",
+	errorLoadingCore: "Błąd w czasie ładowania kodu podstawowego",
+	errorCoreFormat: "Problem z nowym kodem podstawowym",
+	statusSavingCore: "Zapisywanie nowego kodu podstawowego",
+	statusReloadingCore: "Przeładowywanie nowego kodu podstawowego",
+	startLabel: "Rozpocznij",
+	startPrompt: "Rozpocznij proces aktualizacji",
+	cancelLabel: "Przerwij",
+	cancelPrompt: "Przerywa proces aktualizacji",
+	step3Title: "Aktualizacja przerwana",
+	step3Html: "Przerwałeś proces aktualizacji"
 	});
 
 merge(config.macros.sync,{
 	listViewTemplate: {
 		columns: [
 			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Title', field: 'title', tiddlerLink: 'title', title: "Title", type: 'TiddlerLink'},
-			{name: 'Local Status', field: 'localStatus', title: "Changed on your computer?", type: 'String'},
-			{name: 'Server Status', field: 'serverStatus', title: "Changed on server?", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "Server URL", text: "View", type: 'Link'}
+			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
+			{name: 'Server Type', field: 'serverType', title: "Typ serwera", type: 'String'},
+			{name: 'Server Host', field: 'serverHost', title: "Server host", type: 'String'},
+			{name: 'Server Workspace', field: 'serverWorkspace', title: "Przestrzeń robocza", type: 'String'},
+			{name: 'Status', field: 'status', title: "Status synchronizacji", type: 'String'},
+			{name: 'Server URL', field: 'serverUrl', title: "URL serwera", text: "Zobacz", type: 'Link'}
 			],
 		rowClasses: [
 			],
 		buttons: [
-			{caption: "Sync these tiddlers", name: 'sync'}
+			{caption: "Synchronizuj te notatki", name: 'sync'}
 			]},
-	wizardTitle: "Synchronize your content with external servers and feeds",
-	step1Title: "Choose the tiddlers you want to synchronize",
+	wizardTitle: "Synchronizuj treść z zewnętrznymi serwerami i kanałami",
+	step1Title: "Wybierz notatki które chcesz synchronizować",
 	step1Html: '<input type="hidden" name="markList"></input>',
-	syncLabel: "sync",
-	syncPrompt: "Sync these tiddlers"
-});
+	syncLabel: "Synchronizuj",
+	syncPrompt: "Synchronizuj te notatki",
+	hasChanged: "Changed while unplugged",
+	hasNotChanged: "Unchanged while unplugged",
+	syncStatusList: {
+		none: {text: "...", display:'brak', className:'notChanged'},
+		changedServer: {text: "Zmienione na serwerze", display:null, className:'changedServer'},
+		changedLocally: {text: "Zmienione lokalnie", display:null, className:'changedLocally'},
+		changedBoth: {text: "Zmienione lokalnie i na serwerze", display:null, className:'changedBoth'},
+		notFound: {text: "Brak na serwerze", display:null, className:'notFound'},
+		putToServer: {text: "Aktualizacja zapisana na serwerze", display:null, className:'putToServer'},
+		gotFromServer: {text: "Aktualizacja pobrana z serwera", display:null, className:'gotFromServer'}
+		}
+	});
 
 merge(config.commands.closeTiddler,{
-	text: "zamknij",
+	text: "Zamknij",
 	tooltip: "Zamknij tą notatkę"});
 
 merge(config.commands.closeOthers,{
-	text: "zamknij inne",
-	tooltip: "zamyka wszystkie notatki oprócz tej"});
+	text: "Zamknij inne",
+	tooltip: "Zamyka wszystkie notatki oprócz tej"});
 
 merge(config.commands.editTiddler,{
-	text: "edytuj",
-	tooltip: "Edytuj tą notatkę",
+	text: "Edytuj",
+	tooltip: "Edytuj tę notatkę",
 	readOnlyText: "widok",
 	readOnlyTooltip: "Zobacz źródło notatki"});
 
 merge(config.commands.saveTiddler,{
-	text: "gotowe",
+	text: "Gotowe",
 	tooltip: "Zapisuje zmiany w tej notatce"});
 
 merge(config.commands.cancelTiddler,{
-	text: "anuluj",
-	tooltip: "Wyjdź i nie zapisuj zmian",
-	warning: "Nie chcesz zapisać zmian w '%0'?",
+	text: "Anuluj",
+	tooltip: "Wyjdź nie zapisując zmian",
+	warning: "Porzucić zmiany w '%0'?",
 	readOnlyText: "gotowe",
 	readOnlyTooltip: "Powrót do normalnego widoku"});
 
 merge(config.commands.deleteTiddler,{
-	text: "usuń",
+	text: "Usuń",
 	tooltip: "Usuwa tą notatkę",
 	warning: "Chcesz usunąć '%0'?"});
 
 merge(config.commands.permalink,{
-	text: "stały widok",
+	text: "Stały widok",
 	tooltip: "Adres tej notatki"});
 
 merge(config.commands.references,{
-	text: "odwołania",
+	text: "Odwołania",
 	tooltip: "Pokazuje notatki które się odwołują do tej",
 	popupNone: "Brak odwołań"});
 
 merge(config.commands.jump,{
-	text: "skocz",
+	text: "Skocz",
 	tooltip: "Skacze do kolejnej otwartej notatki"});
+
+merge(config.commands.syncing,{
+	text: "Synchronizowanie",
+	tooltip: "Kontrola synchronizacji tej notatki z serwerem lub plikiem zewnętrznym",
+	currentlySyncing: "<div>Synchronizowana przez <span class='popupHighlight'>'%0'</span> z:</"+"div><div>serwer: <span class='popupHighlight'>%1</span></"+"div><div>przestrzeń robocza: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	notCurrentlySyncing: "Niesynchronizowana",
+	captionUnSync: "Przerwij synchronizowanie tej notatki",
+	chooseServer: "Zsynchronizuj tę notatkę z serwerem:",
+	currServerMarker: "\u25cf ",
+	notCurrServerMarker: "  "});
+
+merge(config.commands.fields,{
+	text: "Pola",
+	tooltip: "Pokaż rozszerzone pola tej notatki",
+	emptyText: "Brak rozszerzonych pól tej notatki",
+	listViewTemplate: {
+		columns: [
+			{name: 'Field', field: 'field', title: "Pole", type: 'String'},
+			{name: 'Value', field: 'value', title: "Wartość", type: 'String'}
+			],
+		rowClasses: [
+			],
+		buttons: [
+			]}});
 
 merge(config.shadowTiddlers,{
 	DefaultTiddlers: "[[SzybkiStart]]",
 	MainMenu: "[[SzybkiStart]]",
+	// TranslatedGettingStarted: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n* SiteTitle & SiteSubtitle: The title and subtitle of the site, as shown above (after saving, they will also appear in the browser title bar)\n* MainMenu: The menu (usually on the left)\n* DefaultTiddlers: Contains the names of the tiddlers that you want to appear when the TiddlyWiki is opened\nYou'll also need to enter your username for signing your edits: <<option txtUserName>>",
 	SiteTitle: "[[TiddlyWiki|SiteTitle]]",
-	SiteSubtitle: "[[osobisty nieliniowy notatnik wielokrotnego użytku|SiteSubtitle]]",
-	SiteUrl: "http://www.tiddlywiki.com/",
-	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "opcje »" "Zmień opcje">>',
+	SiteSubtitle: "[[Osobisty nieliniowy notatnik wielokrotnego użytku|SiteSubtitle]]",
+	SiteUrl: "",
+	OptionsPanel: "Te ustawienia interfejsu służące do konfiguracji ~TiddlyWiki są przechowywane przez twoją przeglądarkę\n\nNazwa użytkownika którym będą oznaczone twoje zmiany. Napisz ją jako WikiSłowo (np. JanBloger)\n<<option txtUserName>>\n\n<<option chkSaveBackups>> Twórz kopie zapasowe\n<<option chkAutoSave>> Zapisuj automatycznie\n<<option chkRegExpSearch>> Wyszukiwanie wyrażeń regularnych\n<<option chkCaseSensitiveSearch>> Wyszukiwanie wg wielkości liter\n<<option chkAnimate>> Pozwól na animacje\n\n----\nPatrz także [[Opcje zaawansowane|AdvancedOptions]]",
+	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "Opcje »" "Zmień opcje">>',
 	SideBarTabs: '<<tabs txtMainTab "Czas" "Czas" TabTimeline "A-Z" "Wszystkie notatki" TabAll "Tagi" "Wszystkie tagi" TabTags "Więcej" "Więcej info" TabMore>>',
-	TabTimeline: '<<timeline>>',
-	TabAll: '<<list all>>',
-	TabTags: '<<allTags excludeLists>>',
-	TabMore: '<<tabs txtMoreTab "Brakujące" "Brakujące notatki" TabMoreMissing "Sieroty" "Notatki bez odwołań" TabMoreOrphans "Systemowe" "Systemowe notatki" TabMoreShadowed>>',
-	TabMoreMissing: '<<list missing>>',
-	TabMoreOrphans: '<<list orphans>>',
-	TabMoreShadowed: '<<list shadowed>>',
-	PluginManager: '<<plugins>>',
-	ImportTiddlers: '<<importTiddlers>>'});
+	TabMore: '<<tabs txtMoreTab "Brakujące" "Brakujące notatki" TabMoreMissing "Sieroty" "Notatki bez odwołań" TabMoreOrphans "Podmienne" "Notatki podmienne" TabMoreShadowed>>'
+        });
 
-/*}}}*/
+merge(config.annotations,{
+	AdvancedOptions: "Ta zakładka podmienna zapewnia dostęp do pewnych opcji zaawansowanych",
+	ColorPalette: "Wartości w tej notatce podmiennej określają schemat kolorów interfejsu użytkownika TiddlyWiki",
+	DefaultTiddlers: "Notatki wymienione w tej notatce podmiennej będą automatycznie wyświetlone przy starcie TiddlyWiki",
+	EditTemplate: "Szablon HTML tej notatki podmiennej określa wygląd notatek w czasie edycji",
+	GettingStarted: "Ta notatka podmienna zawiera podstawowe informacje o używaniu TiddlyWiki",
+	ImportTiddlers: "Ta notatka podmienna umożliwia importowanie notatek",
+	MainMenu: "Ta notatka podmienna jest używana jako treść głównego menu w lewej kolumnie ekranu",
+	MarkupPreHead: "Ta notatka jest wstawiona na początku sekcji <head> pliku HTML TiddlyWiki",
+	MarkupPostHead: "Ta notatka jest wstawiona na końcu sekcji <head> pliku HTML TiddlyWiki",
+	MarkupPreBody: "Ta notatka jest wstawiona na początku sekcji <body> pliku HTML TiddlyWiki",
+	MarkupPostBody: "Ta notatka jest wstawiona na końcu sekcji <body> pliku HTML TiddlyWiki, bezpośrednio o bloku skryptów",
+	OptionsPanel: "Ta notatka podmienna jest używana jako treść penelu opcji w prawej kolumnie",
+	PageTemplate: "Szablon HTML tej notatki podmiennej określa ogólny układ TiddlyWiki",
+	PluginManager: "Ta notatka podmienna zapewnia dostęp do managera wtyczek",
+	SideBarOptions: "Ta notatka podmienna jest używana jako treść  panelu opcji w prawej kolumnie",
+	SideBarTabs: "Ta notatka podmienna używana jest jako treść panelu zakładek w prawej kolumnie",
+	SiteSubtitle: "Ta notatka podmienna używana jest jako druga część tytułu strony",
+	SiteTitle: "Ta notatka podmienna używana jest jako pierwsza część tytułu strony",
+	SiteUrl: "Ta notatka podmienna powinna wskazywać pełny adres URL publikacji",
+	StyleSheetColors: "Ta notatka podmienna zawiera definicje CSS związane z kolorami elementów strony. ''NIE EDYTUJ TEJ NOTATKI'', swoje zmiany wprowadź w notatce podmiennej StyleSheet",
+	StyleSheet: "Ta notatka może zawierać definicje CSS użytkownika",
+	StyleSheetLayout: "Ta notatka podmienna zawiera definicje CSS związane z układem elementów strony. ''NIE EDYTUJ TEJ NOTATKI'', swoje zmiany wprowadź w notatce podmiennej StyleSheet",
+	StyleSheetLocale: "Ta notatka podmienna zawiera definicje CSS związane z tłumaczeniem",
+	StyleSheetPrint: "Ta notatka podmienna zawiera definicje CSS używane przy wydruku",
+	SystemSettings: "Ta notatka jest używana do zapisywania konfiguracji tego dokumentu TiddlyWiki",
+	TabAll: "Ta notatka podmienna zawiera treść zakładki 'Wszystkie' w prawej kolumnie",
+	TabMore: "Ta notatka podmienna zawiera treść zakładki 'Więcej' w prawej kolumnie",
+	TabMoreMissing: "Ta notatka podmienna zawiera treść zakładki 'Brakujące' w prawej kolumnie",
+	TabMoreOrphans: "Ta notatka podmienna zawiera treść zakładki 'Sieroty' w prawej kolumnie",
+	TabMoreShadowed: "Ta notatka podmienna zawiera treść zakładki 'Podmienne' w prawej kolumnie",
+	TabTags: "Ta notatka podmienna zawiera treść zakładki 'Tagi' w prawej kolumnie",
+	TabTimeline: "Ta notatka podmienna zawiera treść zakładki 'Linia czasu' w  tab in the right-hand sidebar",
+	ToolbarCommands: "Ta notatka podmienna określa które polecenia są widoczne w pasku narzędziowym notatki",
+	ViewTemplate: "Szablon HTML w tej notatce podmiennej określa jak wyglądają notatki"
+	});
+//}}}
