@@ -475,7 +475,7 @@ merge(config.commands.fields,{
 merge(config.shadowTiddlers,{
 	DefaultTiddlers: "[[SzybkiStart]]",
 	MainMenu: "[[SzybkiStart]]",
-	// TranslatedGettingStarted: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n* SiteTitle & SiteSubtitle: The title and subtitle of the site, as shown above (after saving, they will also appear in the browser title bar)\n* MainMenu: The menu (usually on the left)\n* DefaultTiddlers: Contains the names of the tiddlers that you want to appear when the TiddlyWiki is opened\nYou'll also need to enter your username for signing your edits: <<option txtUserName>>",
+	SzybkiStart: "By rozpocząć pracę z pustą TiddlyWiki, musisz zmodyfikować następujące notatki:\n* SiteTitle &amp; SiteSubtitle: tytuł i podtytuł strony, które widzisz powyżej (po zapisaniu będą widoczne w pasku tytułowym przeglądarki)\n* MainMenu: główne menu (zwykle widoczne z lewej strony)\n* DefaultTiddlers: zawiera nazwy notatek, które będą wyświetlane po otwarciu TiddlyWiki\nPowinieneś również wprowadzić swoją nazwę użytkownika, którą będziesz podpisywał swoje zmiany: <<option txtUserName>>",
 	SiteTitle: "[[TiddlyWiki|SiteTitle]]",
 	SiteSubtitle: "[[Osobisty nieliniowy notatnik wielokrotnego użytku|SiteSubtitle]]",
 	SiteUrl: "",
@@ -483,14 +483,14 @@ merge(config.shadowTiddlers,{
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "Opcje »" "Zmień opcje">>',
 	SideBarTabs: '<<tabs txtMainTab "Czas" "Czas" TabTimeline "A-Z" "Wszystkie notatki" TabAll "Tagi" "Wszystkie tagi" TabTags "Więcej" "Więcej info" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "Brakujące" "Brakujące notatki" TabMoreMissing "Sieroty" "Notatki bez odwołań" TabMoreOrphans "Podmienne" "Notatki podmienne" TabMoreShadowed>>'
-        });
+	});
 
 merge(config.annotations,{
 	AdvancedOptions: "Ta zakładka podmienna zapewnia dostęp do pewnych opcji zaawansowanych",
 	ColorPalette: "Wartości w tej notatce podmiennej określają schemat kolorów interfejsu użytkownika TiddlyWiki",
 	DefaultTiddlers: "Notatki wymienione w tej notatce podmiennej będą automatycznie wyświetlone przy starcie TiddlyWiki",
 	EditTemplate: "Szablon HTML tej notatki podmiennej określa wygląd notatek w czasie edycji",
-	GettingStarted: "Ta notatka podmienna zawiera podstawowe informacje o używaniu TiddlyWiki",
+	SzybkiStart: "Ta notatka podmienna zawiera podstawowe informacje o używaniu TiddlyWiki",
 	ImportTiddlers: "Ta notatka podmienna umożliwia importowanie notatek",
 	MainMenu: "Ta notatka podmienna jest używana jako treść głównego menu w lewej kolumnie ekranu",
 	MarkupPreHead: "Ta notatka jest wstawiona na początku sekcji <head> pliku HTML TiddlyWiki",
