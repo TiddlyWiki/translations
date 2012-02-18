@@ -11,7 +11,7 @@ How to create or update a translation of TiddlyWiki
 
 1. First, check below to see if the translation you need already exists.
 2. Download a fresh copy of TiddlyWiki from  http://www.tiddlywiki.com/
-3. In another window, visit  https://github.com/TiddlyWiki/tiddlywiki/blob/master/locales/core/en/locale.en.js and copy all the text to the clipboard
+3. In another window, visit  https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js and copy all the text to the clipboard
 4. Go back to the TiddlyWiki file and create a tiddler named after the language you are translating
 5. Paste the clipboard into the body of the new tiddler
 6. Add the tag "systemConfig" to the tiddler
