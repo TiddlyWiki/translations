@@ -434,7 +434,7 @@ merge(config.shadowTiddlers,{
 	SiteUrl: "",
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD.0MM.YYYY" "journal">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "настройки \u00bb" "Изменение настроек TiddlyWiki">>',
 	SideBarTabs: '<<tabs txtMainTab "история" "История" TabTimeline "все" "Все заметки" TabAll "метки" "Все метки" TabTags "ещё" "Другие списки" TabMore>>',
-	TabMore: '<<tabs txtMoreTab "нет" "Отсутствующие заметки" TabMoreMissing "потери" "Потерянные заметки" TabMoreOrphans "служебные" "Служебные заметки" TabMoreShadowed>>' });
+	TabMore: '<<tabs txtMoreTab "нет" "Отсутствующие заметки" TabMoreMissing "одиночки" "Потерянные заметки" TabMoreOrphans "служебные" "Служебные заметки" TabMoreShadowed>>' });
 
 merge(config.annotations,{
 	AdvancedOptions: "Эта служебная заметка обеспечивает доступ к некоторым дополнительным настройкам",
