@@ -3,7 +3,7 @@ Translating TiddlyWiki
 
 Are you you thinking of writing a translation for TiddlyWiki? That is fantastic: it will make a real difference to the community. This page is here to get you going.
 
-If you have any questions you would like addressed, please contact translations@tiddlywiki.org.
+If you have any questions you would like addressed, please please ask at https://groups.google.com/group/TiddlyWikiClassic.
 
 
 How to create or update a translation of TiddlyWiki
