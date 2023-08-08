@@ -527,4 +527,5 @@ merge(config.shadowTiddlers,{
 	HideEditingFeatures: "Ist diese Funktion aktiviert, werden die Bearbeitungsfunktionen ausgeblendet, wenn das TiddlyWiki über HTTP aufgerufen wird. Der Benutzer hat dann die Möglichkeit, den Tiddler zwar betrachten zu können, aber nicht zu bearbeiten.",
 	MinorChanged: "Manchmal ist es sinnvoll, dass bei kleinen Änderungen der Tiddler in der Zeitachse nicht automatisch an den Anfang gesetzt wird. Mit Aktivierung dieser Funktion werden alle Bearbeitungen von Tiddlern als kleine Änderungen betrachtet und das Änderungsdatum nicht geändert.",
 	ConfirmBeforeDeleting: "Bei Aktivierung dieser Funktion fordert TiddlyWiki eine Bestätigung des Benutzers an, wenn ein Tiddler gelöscht werden soll."});
+//}}}
 	
