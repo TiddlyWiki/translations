@@ -1,4 +1,4 @@
-﻿/***
+/***
 |''Name:''|Tradução do TiddliWiki pt-BR|
 |''Description:''|Translation of TiddlyWiki 2.6.0 in Brazilian Portuguese|
 |''Author:''|Frederico José Andries Lopes (frelopes (at) gmail (dot) com)|
@@ -505,3 +505,4 @@ merge(config.annotations,{
 	});
 
 delete config.shadowTiddlers.GettingStarted;
+//}}}
