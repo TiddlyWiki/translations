@@ -1,15 +1,14 @@
 /***
 |Name        |EnglishTranslationPlugin|
 |Description |Translation of TiddlyWiki into English|
-|Author      |MartinBudden (mjbudden (at) gmail (dot) com)|
 |Source      |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
+|Author      |MartinBudden (mjbudden (at) gmail (dot) com)|
+|~CoreVersion|2.6.0|
 |Version     |0.4.3|
 |Date        |Nov 22, 2010|
 |Feedback    |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License     |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|~CoreVersion|2.6.0|
 ***/
-
 //{{{
 //--
 //-- Translateable strings
