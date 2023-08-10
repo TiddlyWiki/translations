@@ -21,18 +21,18 @@
 config.locale = "id"; // W3C language tag
 
 if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "NamaAnda"});
+	merge(config.options, { txtUserName: "NamaAnda" });
 
-merge(config.tasks,{
-	save: {text: "simpan", tooltip: "Simpan perubahan di dokumen wiki", action: saveChanges},
-	sync: {text: "sinkronisasi", tooltip: "Sinkronisasi perubahan-perubahan yang Anda lakukan dengan file-file TiddlyWiki atau dengan server-server di lain tempat", content: '<<sync>>'},
-	importTask: {text: "impor", tooltip: "Impor tiddler-tiddler dan plugin-plugin dari file-file TiddlyWiki atau dengan server-server di lain tempat", content: '<<importTiddlers>>'},
-	tweak: {text: "pilihan selera", tooltip: "Sesuaikan penampilan dan perilaku TiddlyWiki", content: '<<options>>'},
-	plugins: {text: "plugin-plugin", tooltip: "Kelola plugin-plugin yang terinstall", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "simpan", tooltip: "Simpan perubahan di dokumen wiki", action: saveChanges },
+	sync: { text: "sinkronisasi", tooltip: "Sinkronisasi perubahan-perubahan yang Anda lakukan dengan file-file TiddlyWiki atau dengan server-server di lain tempat", content: '<<sync>>' },
+	importTask: { text: "impor", tooltip: "Impor tiddler-tiddler dan plugin-plugin dari file-file TiddlyWiki atau dengan server-server di lain tempat", content: '<<importTiddlers>>' },
+	tweak: { text: "pilihan selera", tooltip: "Sesuaikan penampilan dan perilaku TiddlyWiki", content: '<<options>>' },
+	plugins: { text: "plugin-plugin", tooltip: "Kelola plugin-plugin yang terinstall", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "Nama untuk menandai perubahan-perubahan Anda",
 	chkRegExpSearch: "Aktifkan regular expression untuk pencarian",
 	chkCaseSensitiveSearch: "Pencarian Peka-Huruf-Besar (//Case-Sensitive//)",
@@ -49,9 +49,9 @@ merge(config.optionsDesc,{
 	chkInsertTabs: "Gunakan kunci tabulasi (tab) untuk menyisipkan tabulasi sebagai ganti perpindahan di antara kotak masukan",
 	txtBackupFolder: "Nama folder untuk meyimpan cadangan-cadangan (//backup//)",
 	txtMaxEditRows: "Jumlah baris maksimum untuk kotak masukan",
-	txtFileSystemCharSet: "Kumpulan-huruf (//character set//) default  untuk menyimpan perubahan-perubahan (Hanya Firefox/Mozilla)"});
+	txtFileSystemCharSet: "Kumpulan-huruf (//character set//) default  untuk menyimpan perubahan-perubahan (Hanya Firefox/Mozilla)" });
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "Ditemukan masalah saat memuat plugin-plugin. Silahkan membuka PluginManager untuk mengetahui lebih rinci",
 	pluginError: "Kesalahan: %0",
 	pluginDisabled: "Tidak dijalankan karena dilumpuhkan dengan cap 'systemConfigDisable' ",
@@ -89,18 +89,18 @@ merge(config.messages,{
 	wrongSaveFormat: "Tidak bisa menyimpan dengan format penyimpanan '%0'. Menggunakan bentuk standar untuk menyimpan.",
 	invalidFieldName: "Nama field tidak sah %0",
 	fieldCannotBeChanged: "Field '%0' tidak bisa diubah",
-	loadingMissingTiddler: "Mencoba untuk mendapatkan kembali tiddler '%0' dari server '%1' pada:\n\n'%2' di ruang kerja (workspace) '%3'"});
+	loadingMissingTiddler: "Mencoba untuk mendapatkan kembali tiddler '%0' dari server '%1' pada:\n\n'%2' di ruang kerja (workspace) '%3'" });
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "tutup",
-	tooltip: "tutup area pesan ini"});
+	tooltip: "tutup area pesan ini" });
 
 config.messages.backstage = {
-	open: {text: "di belakang layar", tooltip: "Buka area di belakang layar untuk melakukan penulisan dan penyuntingan tugas-tugas (task)"},
-	close: {text: "tutup", tooltip: "Tutup area di belakang layar"},
+	open: { text: "di belakang layar", tooltip: "Buka area di belakang layar untuk melakukan penulisan dan penyuntingan tugas-tugas (task)" },
+	close: { text: "tutup", tooltip: "Tutup area di belakang layar" },
 	prompt: "di belakang layar: ",
 	decal: {
-		edit: {text: "edit", tooltip: "Edit tiddler '%0'"}
+		edit: { text: "edit", tooltip: "Edit tiddler '%0'" }
 	}
 };
 
@@ -109,74 +109,76 @@ config.messages.listView = {
 	previewUnavailable: "(preview tidak tersedia)"
 };
 
-config.messages.dates.months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November","Desember"];
+config.messages.dates.months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 config.messages.dates.days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 config.messages.dates.shortMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 config.messages.dates.shortDays = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
-config.messages.dates.daySuffixes = ["st","nd","rd","th","th","th","th","th","th","th",
-		"th","th","th","th","th","th","th","th","th","th",
-		"st","nd","rd","th","th","th","th","th","th","th",
-		"st"];
+config.messages.dates.daySuffixes = [
+	"st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th",
+	"th", "th", "th", "th", "th", "th", "th", "th", "th", "th",
+	"st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th",
+	"st"
+];
 config.messages.dates.am = "siang";
 config.messages.dates.pm = "malam";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "tidak ada cap",
 	labelTags: "cap: ",
 	openTag: "Buka cap '%0'",
 	tooltip: "Tampilkan tiddler dengan cap '%0'",
 	openAllText: "Buka semua",
 	openAllTooltip: "Buka semua tiddler-tiddler berikut",
-	popupNone: "Tidak ada tiddler dengan cap '%0'"});
+	popupNone: "Tidak ada tiddler dengan cap '%0'" });
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "Tiddler '%0' belum pernah ada. Klik-ganda (double-click) untuk membuatnya",
 	defaultModifier: "(hilang)",
 	shadowModifier: "(tiddler bayangan built-in)",
 	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "telah dibuat"});
+	createdPrompt: "telah dibuat" });
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "Ketikkan cap-cap dipisahkan dengan spasi, [[gunakan kurung ganda]] jika diperlukan, atau tambahkan dari yang sudah ada",
-	defaultText: "Ketikkan teks untuk '%0'"});
+	defaultText: "Ketikkan teks untuk '%0'" });
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "cap-cap",
 	tooltip: "Pilih cap-cap yang sudah ada untuk ditambahkan di tiddler ini",
 	popupNone: "Tidak ada cap-cap yang di definisikan",
-	tagTooltip: "Tambahkan cap '%0'"});
+	tagTooltip: "Tambahkan cap '%0'" });
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	] });
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "cari",
 	prompt: "Cari TiddlyWiki ini",
 	accessKey: "F",
 	successMsg: "%0 tiddler-tiddler menemukan kecocokan dengan %1",
-	failureMsg: "Tidak ada tiddler-tiddler yang cocok dengan %0"});
+	failureMsg: "Tidak ada tiddler-tiddler yang cocok dengan %0" });
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "mencap: ",
 	labelNotTag: "tidak ada cap",
-	tooltip: "Daftar tiddler-tiddler yang dicap dengan '%0'"});
+	tooltip: "Daftar tiddler-tiddler yang dicap dengan '%0'" });
 
-merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+merge(config.macros.timeline, {
+	// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+	dateFormat: "DD MMM YYYY" });
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "Tampilkan tiddler-tiddler yang dicap dengan '%0'",
-	noTags: "Tidak ada tiddler-tiddler yang dicap"});
+	noTags: "Tidak ada tiddler-tiddler yang dicap" });
 
 config.macros.list.all.prompt = "Semua tiddler-tiddler dalam urutan secara alfabet";
 config.macros.list.missing.prompt = "Tiddler-tiddler yang memiliki tautan-tautan menuju dia, tapi belum terdefinisikan";
@@ -184,47 +186,48 @@ config.macros.list.orphans.prompt = "Tiddler-tiddler yang tidak memiliki tautan 
 config.macros.list.shadowed.prompt = "Tiddler-tiddler yang dibayangi dengan isi default";
 config.macros.list.touched.prompt = "Tiddler-tiddler yang telah dimodifikasi secara lokal";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "tutup semua",
-	prompt: "Tutup semua tiddler-tiddler yang ditampilkan (kecuali beberapa yang sedang disunting)"});
+	prompt: "Tutup semua tiddler-tiddler yang ditampilkan (kecuali beberapa yang sedang disunting)" });
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "permaview",
-	prompt: "Tautan ke suatu URL yang mendapatkan kembali semua tiddler-tiddler yang ditampilkan"});
+	prompt: "Tautan ke suatu URL yang mendapatkan kembali semua tiddler-tiddler yang ditampilkan" });
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "simpan perubahan",
 	prompt: "Simpan semua tiddler-tiddler untuk membuat sebuah TiddlyWiki yang baru",
-	accessKey: "S"});
+	accessKey: "S" });
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "tiddler baru",
 	prompt: "Buat sebuah tiddler baru",
 	title: "Tiddler Baru",
-	accessKey: "N"});
+	accessKey: "N" });
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "jurnal baru",
 	prompt: "Buat sebuah tiddler dari tanggal dan waktu saat ini",
-	accessKey: "J"});
+	accessKey: "J" });
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "Sesuaikan pilihan-pilihan tingkat lanjut",
 	step1Title: "Pilihan-pilihan ini akan disimpan di cookies di browser Anda",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Tampilkan pilihan-pilihan yang tak dikenal </input>",
 	unknownDescription: "//(tak dikenal)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Pilihan", type: 'String'},
-			{name: 'Description', field: 'description', title: "Deskripsi", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Nama", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "Pilihan", type: 'String' },
+			{ name: 'Description', field: 'description', title: "Deskripsi", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "Nama", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'} 
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "Kelola plugin-plugin",
 	step1Title: "Plugin-plugin yang saat ini termuat",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -237,33 +240,34 @@ merge(config.macros.plugins,{
 	deletePrompt: "Hapus tiddler-tiddler berikut selamanya",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Ukuran", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "Dipaksakan", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Dilumpuhkan", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Dimuat", type: 'Boolean', trueText: "Yes", falseText: "No"},
-			{name: 'Startup Time', field: 'startupTime', title: "Waktu Permulaan (Startup)", type: 'String'},
-			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Kesalahan", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Ukuran", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "Dipaksakan", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "Dilumpuhkan", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "Dimuat", type: 'Boolean', trueText: "Yes", falseText: "No" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Waktu Permulaan (Startup)", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Kesalahan", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "Log", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "lagi",
 	morePrompt: "Perlihatkan perintah-perintah lainnya"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "penyegaran (refresh)",
 	prompt: "Gambar ulang seluruh tampilan TiddlyWiki"
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "Anda tidak bisa mengimpor ke suatu file TiddlyWiki yang hanya bisa dibaca (read-only). Coba ulangi membukanya dari URL file://",
 	wizardTitle: "Impor tiddler-tiddler dari file atau server lain",
 	step1Title: "Langkah 1: Tentukan server atau file TiddlyWiki",
@@ -297,31 +301,33 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Ukuran", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Cap", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Ukuran", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "Cap", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Tipe Server", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Host Server", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Ruang-kerja (workspace) Server", type: 'String'},
-			{name: 'Status', field: 'status', title: "Status Sinkronisasi", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "URL Server", text: "Tampilkan", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "Tipe Server", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "Host Server", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "Ruang-kerja (workspace) Server", type: 'String' },
+			{ name: 'Status', field: 'status', title: "Status Sinkronisasi", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "URL Server", text: "Tampilkan", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "Sinkronisasi tiddler-tiddler ini", name: 'sync'}
-			]},
+			{ caption: "Sinkronisasi tiddler-tiddler ini", name: 'sync' }
+		]
+	},
 	wizardTitle: "Sinkronisasi dengan server-server dan file-file eksternal",
 	step1Title: "Pilih beberapa tiddler yang ingin disinkronisasikan",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -330,84 +336,86 @@ merge(config.macros.sync,{
 	hasChanged: "Berubah pada saat tidak terhubung",
 	hasNotChanged: "Tidak berubah pada saat tidak terhubung",
 	syncStatusList: {
-		none: {text: "...", color: "tidak ada"},
-		changedServer: {text: "Berubah di server", color: '#80ff80'},
-		changedLocally: {text: "Berubah pada saat tidak terhubung", color: '#80ff80'},
-		changedBoth: {text: "Berubah pada saat tidak terhubung dan pada server", color: '#ff8080'},
-		notFound: {text: "Tidak ditemukan pada server", color: '#ffff80'},
-		putToServer: {text: "Simpan perubahan pada server", color: '#ff80ff'},
-		gotFromServer: {text: "Ambil perubahan dari server", color: '#80ffff'}
-		}
-	});
+		none: { text: "...", color: "tidak ada" },
+		changedServer: { text: "Berubah di server", color: '#80ff80' },
+		changedLocally: { text: "Berubah pada saat tidak terhubung", color: '#80ff80' },
+		changedBoth: { text: "Berubah pada saat tidak terhubung dan pada server", color: '#ff8080' },
+		notFound: { text: "Tidak ditemukan pada server", color: '#ffff80' },
+		putToServer: { text: "Simpan perubahan pada server", color: '#ff80ff' },
+		gotFromServer: { text: "Ambil perubahan dari server", color: '#80ffff' }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "tutup",
-	tooltip: "Tutup tiddler ini"});
+	tooltip: "Tutup tiddler ini" });
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "tutup lainnya",
-	tooltip: "Tutup semua tiddler lain"});
+	tooltip: "Tutup semua tiddler lain" });
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "sunting",
 	tooltip: "Sunting tiddler ini",
 	readOnlyText: "tampilkan",
-	readOnlyTooltip: "Tampilkan sumber dari tiddler ini"});
+	readOnlyTooltip: "Tampilkan sumber dari tiddler ini" });
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "selesai",
-	tooltip: "Simpan perubahan-perubahan di tiddler ini"});
+	tooltip: "Simpan perubahan-perubahan di tiddler ini" });
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "batalkan",
 	tooltip: "Batalkan perubahan-perubahan di tiddler ini",
 	warning: "Apakah Anda yakin ingin mengabaikan perubahan-perubahan Anda ke '%0'?",
 	readOnlyText: "selesai",
-	readOnlyTooltip: "Tampilkan tiddler ini secara normal"});
+	readOnlyTooltip: "Tampilkan tiddler ini secara normal" });
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "hapus",
 	tooltip: "Hapus tiddler ini",
-	warning: "Apakah Anda yakin ingin menghapus '%0'?"});
+	warning: "Apakah Anda yakin ingin menghapus '%0'?" });
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "permalink",
-	tooltip: "Link permanen untuk tiddler ini"});
+	tooltip: "Link permanen untuk tiddler ini" });
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "rujukan-rujukan",
 	tooltip: "Tampilkan tiddler-tiddler yang memiliki tautan ke tiddler ini",
-	popupNone: "Tidak ada rujukan"});
+	popupNone: "Tidak ada rujukan" });
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "lompat",
-	tooltip: "Lompat ke tiddler lainnya"});
+	tooltip: "Lompat ke tiddler lainnya" });
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "sinkronisasi",
 	tooltip: "Kendalikan proses sinkronisasi tiddler ini dengan sebuah server atau file eksternal",
-	currentlySyncing: "<div>Saat ini sedang melakukan proses sinkronisasi melalui <span class='popupHighlight'>'%0'</span> to:</"+"div><div>host: <span class='popupHighlight'>%1</span></"+"div><div>ruang-kerja (workspace): <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Saat ini sedang melakukan proses sinkronisasi melalui <span class='popupHighlight'>'%0'</span> to:</" + "div><div>host: <span class='popupHighlight'>%1</span></" + "div><div>ruang-kerja (workspace): <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "Saat ini tidak sedang melakukan proses sinkronisasi",
 	captionUnSync: "Hentikan proses sinkronisasi tiddler ini",
 	chooseServer: "Sinkronisasikan tiddler ini dengan server lainnya:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  " });
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "isian-isian",
 	tooltip: "Tampilkan isian-isian lanjutan untuk tiddler ini",
 	emptyText: "Tidak ada isian-isian lanjutan untuk tiddler ini",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Isian", type: 'String'},
-			{name: 'Value', field: 'value', title: "Nilai", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "Isian", type: 'String' },
+			{ name: 'Value', field: 'value', title: "Nilai", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	}
+});
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[BelajarMemulai]]",
 	MainMenu: "[[BelajarMemulai]]\n\n\n^^~TiddlyWiki versi <<version>>\n © 2007 [[UnaMesa|http://www.unamesa.org/]]^^",
 	BelajarMemulai: "Untuk memulai dengan TiddlyWiki kosong ini, Anda perlu memodifikasi beberapa tiddler berikut:\n* JudulSitus & SubJudulSitus: Judul dan subjudul dari situs ini, sebagaimana ditampilkan di atas (setelah menyimpan, mereka akan juga tampil di palang judul (title bar) milik browser)\n* MenuUtama: Sajian menu (biasanya tampil di sebelah kiri)\n* DefaultTiddlers: Berisi nama-nama beberapa tiddler yang ingin Anda tampilkan ketika TiddlyWiki dibuka\nAnda juga perlu untuk mengetikkan nama Anda untuk menandai perubahan-perubahan yang Anda lakukan: <<option txtUserName>>",
@@ -417,9 +425,10 @@ merge(config.shadowTiddlers,{
 	OptionsPanel: "Pilihan-pilihan Antarmuka untuk menyesuaikan TiddlyWiki telah disimpan di browser Anda. \n\nTulislah username untuk menandai perubahan-perubahan Anda sebagai KataWiki (WikiWord) (contoh: AbdShomad, bukan Abd Shomad)\n<<option txtUserName>>\n\n<<option chkSaveBackups>> Simpan cadangan-cadangan (//backup//)\n<<option chkAutoSave>> Simpan secara otomatis\n<<option chkRegExpSearch>> Pencarian dengan menggunakan Regexp\n<<option chkCaseSensitiveSearch>> Pencarian Peka-Huruf-Besar (Case sensitive) \n<<option chkAnimate>> Perbolehkan animasi\n\n----\nLihat juga [[Pilihan Pilihan Lanjutan|AdvancedOptions]]",
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "Pilihan Selera »" "Ubah pilihan selera tampilan lanjutan TiddlyWiki">>',
 	SideBarTabs: '<<tabs txtMainTab "Garis-waktu" "Garis-waktu" TabTimeline "Semua" "Semua tiddler" TabAll "Cap" "Semua Cap" TabTags "Lagi" "Daftar lainnya" TabMore>>',
-	TabMore: '<<tabs txtMoreTab "Yang Hilang" "Tiddler-tiddler yang hilang" TabMoreMissing "Yatim Piatu" "Tiddler-tiddler yang yatim piatu" TabMoreOrphans "Bayangan" "Tiddler-tiddler bayangan" TabMoreShadowed>>'});
+	TabMore: '<<tabs txtMoreTab "Yang Hilang" "Tiddler-tiddler yang hilang" TabMoreMissing "Yatim Piatu" "Tiddler-tiddler yang yatim piatu" TabMoreOrphans "Bayangan" "Tiddler-tiddler bayangan" TabMoreShadowed>>'
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "Tiddler bayangan ini menyediakan akses ke pilihan-pilihan lanjutan",
 	ColorPalette: "Nilai-nilai di tiddler bayangan ini menentukan skema warna antar muka ~TiddlyWiki",
 	DefaultTiddlers: "Tiddler-tiddler yang terdaftar di tiddler bayangan ini akan ditampilkan secara otomatis pada saat ~TiddlyWiki dibuka pertama kali",
@@ -452,6 +461,6 @@ merge(config.annotations,{
 	TabTags: "Tiddler bayangan ini adalah isi dari tab 'Cap' di kolom bagian kanan",
 	TabTimeline: "Tiddler bayangan ini adalah isi dari tab 'GarisWaktu' di kolom bagian kanan",
 	ViewTemplate: "Template HTML di tiddler bayangan ini menentukan bagaimana rupa tiddler-tiddler saat ditampilkan"
-	});
+});
 
 //}}}

@@ -121,7 +121,8 @@ config.messages.dates.daySuffixes = [
 	"st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th",
 	"th", "th", "th", "th", "th", "th", "th", "th", "th", "th",
 	"st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th",
-	"st"];
+	"st"
+];
 config.messages.dates.am = "am";
 config.messages.dates.pm = "pm";
 

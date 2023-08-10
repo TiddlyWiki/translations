@@ -22,19 +22,19 @@
 config.locale = "es"; // W3C language tag
 
 if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "SuNombre"});
+	merge(config.options, { txtUserName: "SuNombre" });
 
-merge(config.tasks,{
-	save: {text: "guardar", tooltip: "Guardar los cambios hechos en este TiddlyWiki", action: saveChanges},
-	sync: {text: "sincronizar", tooltip: "Sincronizar los cambios hechos con otros servidores y archivos TiddlyWiki", content: '<<sync>>'},
-	importTask: {text: "importar", tooltip: "Importar tiddlers y plugins de otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>'},
-	tweak: {text: "configurar", tooltip: "Cambiar la apariencia y comportamiento de TiddlyWiki", content: '<<options>>'},
-	upgrade: {text: "actualizar", tooltip: "Actualizar el código del núcleo de TiddlyWiki", content: '<<upgrade>>'},	
-	plugins: {text: "complementos", tooltip: "Gestionar los complementos instalados", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "guardar", tooltip: "Guardar los cambios hechos en este TiddlyWiki", action: saveChanges },
+	sync: { text: "sincronizar", tooltip: "Sincronizar los cambios hechos con otros servidores y archivos TiddlyWiki", content: '<<sync>>' },
+	importTask: { text: "importar", tooltip: "Importar tiddlers y plugins de otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>' },
+	tweak: { text: "configurar", tooltip: "Cambiar la apariencia y comportamiento de TiddlyWiki", content: '<<options>>' },
+	upgrade: { text: "actualizar", tooltip: "Actualizar el código del núcleo de TiddlyWiki", content: '<<upgrade>>' },
+	plugins: { text: "complementos", tooltip: "Gestionar los complementos instalados", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "Nombre de usuario con el que firmará lo editado",
 	chkRegExpSearch: "Permitir expresiones regulares en la búsqueda",
 	chkCaseSensitiveSearch: "Distinguir mayúscula/minúscula en la búsqueda",
@@ -53,9 +53,9 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "Nombre del directorio en que se guardan las copias de seguridad",
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
 	txtTheme: "Nombre de tema para utilizar",
-	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)"});
+	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)" });
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "Hubo problemas al cargar los complementos. Mire el Gestor de Complementos para más detalles",
 	pluginError: "Error: %0",
 	pluginDisabled: "No ejecutado porque está inhabilitado en la etiqueta 'systemConfigDisable'",
@@ -95,18 +95,18 @@ merge(config.messages,{
 	fieldCannotBeChanged: "El apartado '%0' no se puede cambiar",
 	loadingMissingTiddler: "Intentando descargar el tiddler '%0' desde el servidor '%1' en:\n\n'%2' en el espacio de trabajo '%3'",
 	upgradeDone: "Actualización a la versión %0 completada\n\nPulse 'OK' para cargar la nueva versión de TiddlyWiki",
-	invalidCookie: "Cookie no válido '%0'"});
+	invalidCookie: "Cookie no válido '%0'" });
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "cerrar",
-	tooltip: "cerrar el mensaje"});
+	tooltip: "cerrar el mensaje" });
 
 config.messages.backstage = {
-	open: {text: "bastidores", tooltip: "Acceder a bastidores para gestionar TiddlyWiki"},
-	close: {text: "cerrar", tooltip: "Salir de bastidores"},
+	open: { text: "bastidores", tooltip: "Acceder a bastidores para gestionar TiddlyWiki" },
+	close: { text: "cerrar", tooltip: "Salir de bastidores" },
 	prompt: "bastidores: ",
 	decal: {
-		edit: {text: "editar", tooltip: "Editar el tiddler '%0'"}
+		edit: { text: "editar", tooltip: "Editar el tiddler '%0'" }
 	}
 };
 
@@ -115,74 +115,76 @@ config.messages.listView = {
 	previewUnavailable: "(Vista previa no disponible)"
 };
 
-config.messages.dates.months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre","Diciembre"];
+config.messages.dates.months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 config.messages.dates.days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 config.messages.dates.shortMonths = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
 config.messages.dates.shortDays = ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"];
 // suffixes for dates, eg "1ro","2do","3ro"..."30ro","31ro"
-config.messages.dates.daySuffixes = ["ro","do","ro","to","to","to","mo","vo","no","mo",
-		"ro","do","ro","to","to","to","mo","vo","no","mo",
-		"ro","do","ro","to","to","to","mo","vo","no","mo",
-		"ro"];
+config.messages.dates.daySuffixes = [
+	"ro", "do", "ro", "to", "to", "to", "mo", "vo", "no", "mo",
+	"ro", "do", "ro", "to", "to", "to", "mo", "vo", "no", "mo",
+	"ro", "do", "ro", "to", "to", "to", "mo", "vo", "no", "mo",
+	"ro"
+];
 config.messages.dates.am = "am";
 config.messages.dates.pm = "pm";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "sin etiquetas",
 	labelTags: "etiquetas: ",
 	openTag: "Abrir etiqueta '%0'",
 	tooltip: "Mostrar tiddlers que tengan la etiqueta '%0'",
 	openAllText: "Abrir todos",
 	openAllTooltip: "Abrir todos estos tiddlers",
-	popupNone: "No abrir tiddlers que tengan por etiqueta '%0'"});
+	popupNone: "No abrir tiddlers que tengan por etiqueta '%0'" });
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "El tiddler '%0' no existe todavía. Haga doble click para crearlo",
 	defaultModifier: "(perdido)",
 	shadowModifier: "(tiddler oculto interno)",
 	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "creado"});
+	createdPrompt: "creado" });
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "Escriba etiquetas separadas por espacios, [[use dobles corchetes]] si es necesario, o añada alguna existente",
-	defaultText: "Escriba el texto para '%0'"});
+	defaultText: "Escriba el texto para '%0'" });
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "etiquetas",
 	tooltip: "Elija etiquetas ya existentes para añadirlas a este artículo",
 	popupNone: "No hay etiquetas definidas",
-	tagTooltip: "Añadir la etiqueta '%0'"});
+	tagTooltip: "Añadir la etiqueta '%0'" });
 
-merge(config.messages,{
+merge(config.messages, {
 	sizeTemplates:
 		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+			{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+			{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+			{ unit: 1024, template: "%0\u00a0KB" },
+			{ unit: 1, template: "%0\u00a0B" }
+		] });
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "búsqueda",
 	prompt: "Búsqueda en este TiddlyWiki",
 	accessKey: "F",
 	successMsg: "%0 tiddlers encontrados que concuerden con %1",
-	failureMsg: "No hay tiddlers que concuerden con %0"});
+	failureMsg: "No hay tiddlers que concuerden con %0" });
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "etiquetado: ",
 	labelNotTag: "Sin etiquetas",
-	tooltip: "Listado de tiddlers etiquetados con '%0'"});
+	tooltip: "Listado de tiddlers etiquetados con '%0'" });
 
-merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+merge(config.macros.timeline, {
+	dateFormat: "DD MMM YYYY" });// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "Mostrar los tiddlers etiquetados con '%0'",
-	noTags: "No hay tiddlers sin etiquetas"});
+	noTags: "No hay tiddlers sin etiquetas" });
 
 config.macros.list.all.prompt = "Todos los tiddlers ordenados alfabéticamente";
 config.macros.list.missing.prompt = "Tiddlers que tienen enlaces a ellos pero no están definidos";
@@ -190,47 +192,47 @@ config.macros.list.orphans.prompt = "Tiddlers que no están enlazados con otros,
 config.macros.list.shadowed.prompt = "Tiddlers ocultos con contenidos predefinidos";
 config.macros.list.touched.prompt = "Tiddlers que no han sido modificados localmente";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "cerrar todo",
-	prompt: "Cerrar todos los tiddlers mostrados (excepto los que estén siendo editados)"});
+	prompt: "Cerrar todos los tiddlers mostrados (excepto los que estén siendo editados)" });
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "vistapermanente",
-	prompt: "Enlazar con una URL que recoge todos los tiddlers mostrados actualmente"});
+	prompt: "Enlazar con una URL que recoge todos los tiddlers mostrados actualmente" });
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "guardar cambios",
 	prompt: "Guardar todos los tiddlers editados previamente",
-	accessKey: "S"});
+	accessKey: "S" });
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "nuevo tiddler",
 	prompt: "Crear un nuevo tiddler",
 	title: "Nuevo Tiddler",
-	accessKey: "N"});
+	accessKey: "N" });
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "nuevo tiddler con fecha de hoy",
 	prompt: "Crear un nuevo tiddler con la fecha y hora actual",
-	accessKey: "J"});
+	accessKey: "J" });
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "Configurar opciones avanzadas",
 	step1Title: "Estas opciones se guardarán en una cookie en su navegador",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Mostrar opciones desconocidas</input>",
 	unknownDescription: "//(desconocido)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Opción", type: 'String'},
-			{name: 'Description', field: 'description', title: "Descripción", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Nombre", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "Opción", type: 'String' },
+			{ name: 'Description', field: 'description', title: "Descripción", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "Nombre", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'} 
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		] }
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "Configurar complementos",
 	step1Title: "Complementos que están activados",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -243,38 +245,38 @@ merge(config.macros.plugins,{
 	deletePrompt: "Borrar estos artículos para siempre",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Descripción", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Versión", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Tamaño", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "Forzado", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Deshabilitado", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Cargado", type: 'Boolean', trueText: "Si", falseText: "No"},
-			{name: 'Startup Time', field: 'startupTime', title: "Al inicio", type: 'String'},
-			{name: 'Error', field: 'error', title: "Estado", type: 'Boolean', trueText: "Error", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "Registro", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "Descripción", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "Versión", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Tamaño", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "Forzado", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "Deshabilitado", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "Cargado", type: 'Boolean', trueText: "Si", falseText: "No" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Al inicio", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Estado", type: 'Boolean', trueText: "Error", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "Registro", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		] }
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "más",
 	morePrompt: "Mostrar más comandos",
 	lessLabel: "menos",
 	lessPrompt: "Ocultar comandos adicionales",
 	separator: "|"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "actualizar",
 	prompt: "Actualizar la vista de todo TiddlyWiki"
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "No puede importar a un archivo TiddlyWiki de sólo lectura. Pruebe a abrirlo desde un archivo:// URL",
 	wizardTitle: "Importar tiddlers de otro archivo o servidor",
 	step1Title: "Primer paso: Localice el servidor o el archivo TiddlyWiki",
@@ -308,16 +310,16 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(Sistema)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Tamaño", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Etiquetas", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Tamaño", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "Etiquetas", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		] }
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "Actualizar el código del núcleo de TiddlyWiki",
 	step1Title: "Actualizar o reparar TiddlyWiki a la última versión",
 	step1Html: "Está a punto de actualizar el código del núcleo de TiddlyWiki ala última versión (desde <a href='%0' class='externalLink' target='_blank'>%1</a>). El contenido de TiddlyWiki permanecerá tras la actualización.<br><br>Las actualizaciones del núcleo interfieren con complementos antiguos. Si tiene problemas tras la actualización, mire <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -343,24 +345,24 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "Cancelar la actualización",
 	step3Title: "Actualización cancelada",
 	step3Html: "Ha cancelado el proceso de actualización"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Tipo de servidor", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Servidor anfitrión", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Espacio de trabajo en el servidor", type: 'String'},
-			{name: 'Status', field: 'status', title: "Estado de la sincronización", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "URL del servidor", text: "Ver", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "Tipo de servidor", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "Servidor anfitrión", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "Espacio de trabajo en el servidor", type: 'String' },
+			{ name: 'Status', field: 'status', title: "Estado de la sincronización", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "URL del servidor", text: "Ver", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "Sincronizar estos tiddlers", name: 'sync'}
-			]},
+			{ caption: "Sincronizar estos tiddlers", name: 'sync' }
+		] },
 	wizardTitle: "Sincronizar con servidores externos y archivos",
 	step1Title: "Elija los tiddlers que quieres sincronizar",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -369,84 +371,84 @@ merge(config.macros.sync,{
 	hasChanged: "Modificado mientras no estaba desconectado",
 	hasNotChanged: "Sin cambios mientras estaba desconectado",
 	syncStatusList: {
-		none: {text: "...", display:null, className:'notChanged'},
-		changedServer: {text: "Modificado en el servidor", display:null, className:'changedServer'},
-		changedLocally: {text: "Modificado mientras estaba desconectado", display:null, className:'changedLocally'},
-		changedBoth: {text: "Modificado mientras estaba desconectado y también en el servidor", display:null, className:'changedBoth'},
-		notFound: {text: "No está en el servidor", display:null, className:'notFound'},
-		putToServer: {text: "Guardada la actualización en el servidor", display:null, className:'putToServer'},
-		gotFromServer: {text: "Actualización obtenida del servidor", display:null, className:'gotFromServer'}
-		}
-	});
+		none: { text: "...", display: null, className: 'notChanged' },
+		changedServer: { text: "Modificado en el servidor", display: null, className: 'changedServer' },
+		changedLocally: { text: "Modificado mientras estaba desconectado", display: null, className: 'changedLocally' },
+		changedBoth: { text: "Modificado mientras estaba desconectado y también en el servidor", display: null, className: 'changedBoth' },
+		notFound: { text: "No está en el servidor", display: null, className: 'notFound' },
+		putToServer: { text: "Guardada la actualización en el servidor", display: null, className: 'putToServer' },
+		gotFromServer: { text: "Actualización obtenida del servidor", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "cerrar",
-	tooltip: "Cerrar este tiddler"});
+	tooltip: "Cerrar este tiddler" });
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "cerrar otros",
-	tooltip: "Cerrar todos los otros tiddlers"});
+	tooltip: "Cerrar todos los otros tiddlers" });
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "editar",
 	tooltip: "Editar este tiddler",
 	readOnlyText: "ver",
-	readOnlyTooltip: "Ver el código de este tiddler"});
+	readOnlyTooltip: "Ver el código de este tiddler" });
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "hecho",
-	tooltip: "Guardar los cambios hechos en este tiddler"});
+	tooltip: "Guardar los cambios hechos en este tiddler" });
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "cancelar",
 	tooltip: "Cancelar los cambios hechos en este tiddler",
 	warning: "¿Está seguro que quiere salir sin guardar los cambios en '%0'?",
 	readOnlyText: "hecho",
-	readOnlyTooltip: "Vista normal de este tiddler"});
+	readOnlyTooltip: "Vista normal de este tiddler" });
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "borrar",
 	tooltip: "Borrar este tiddler",
-	warning: "¿Está seguro de que quiere borrar '%0'?"});
+	warning: "¿Está seguro de que quiere borrar '%0'?" });
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "enlacepermanente",
-	tooltip: "Enlace permanente para este tiddler"});
+	tooltip: "Enlace permanente para este tiddler" });
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "referencias",
 	tooltip: "Mostrar tiddlers que enlazan con éste",
-	popupNone: "Sin referencias"});
+	popupNone: "Sin referencias" });
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "ir a",
-	tooltip: "Ir a otro tiddler abierto"});
+	tooltip: "Ir a otro tiddler abierto" });
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "sinc",
 	tooltip: "Controlar la sincronización de este tiddler con un servidor o archivo externo",
-	currentlySyncing: "<div>Sincronizando ahora mediante  <span class='popupHighlight'>'%0'</span> a:</"+"div><div>anfitrión: <span class='popupHighlight'>%1</span></"+"div><div>espacio de trabajo: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Sincronizando ahora mediante  <span class='popupHighlight'>'%0'</span> a:</" + "div><div>anfitrión: <span class='popupHighlight'>%1</span></" + "div><div>espacio de trabajo: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "Ahora no se está sincronizando",
 	captionUnSync: "Parar la sincronización para este tiddler",
 	chooseServer: "Sincronizar este tiddler con otro servidor:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  " });
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "apartados",
 	tooltip: "Mostrar los apartados extras de este tiddler",
 	emptyText: "No hay apartados extras para este tiddler",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Apartado", type: 'String'},
-			{name: 'Value', field: 'value', title: "Valor", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "Apartado", type: 'String' },
+			{ name: 'Value', field: 'value', title: "Valor", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		] } });
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[ParaEmpezar]]",
 	MainMenu: "[[ParaEmpezar]]\n\n\n^^~TiddlyWiki versión <<version>>\n© 2010 [[UnaMesa|http://www.unamesa.org/]]^^",
 	ParaEmpezar: "Para empezar con este archivo TiddlyWiki vacío, necesitará modificar los siguientes tiddlers (en este contexto podemos entender que un tiddler es un artículo):\n* SiteTitle & SiteSubtitle: El título y subtítulo del sitio, como se muestra arriba (tras guardalo, también aparecerá en el título de la ventana del navegador)\n* MainMenu: El menú (normalmente a la izquierda)\n* DefaultTiddlers: Contiene los nombres de los tiddlers que por defecto quiere que se muestren cuando TiddlyWiki se abre\nTambién debería cambiar el nombre de usuario con el que firmará sus escritos: <<option txtUserName>>",
@@ -457,9 +459,9 @@ merge(config.shadowTiddlers,{
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "opciones \u00bb" "Cambiar las opciones avanzadas de TiddlyWiki">>',
 	SideBarTabs: '<<tabs txtMainTab "Historial" "Historial" TabTimeline "Todo" "Todos los tiddlers" TabAll "Etiquetas" "Todas las etiquetas" TabTags "Más" "Más listados" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "Perdidos" "Tiddlers perdidos" TabMoreMissing "Huérfanos" "Tiddlers huérfanos" TabMoreOrphans "Ocultos" "Tiddlers ocultos" TabMoreShadowed>>'
-	});
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "Este tiddler oculto permite controlar bastantes opciones avanzadas",
 	ColorPalette: "Los valores en este tiddler oculto configuran el esquema de colores de la interfaz de ~TiddlyWiki",
 	DefaultTiddlers: "Los tiddlers listados en este tiddler oculto son que se mostrarán por defecto cuando se abre ~TiddlyWiki",
@@ -491,8 +493,8 @@ merge(config.annotations,{
 	TabMoreShadowed: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Ocultos' de la barra de la derecha",
 	TabTags: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Etiquetas' de la barra de la derecha",
 	TabTimeline: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Historial' de la barra de la derecha",
-	ToolbarCommands: "Este tiddler oculto indica los comandos que deben mostrarse en la barra de herramientas de cualquier tiddler",	
+	ToolbarCommands: "Este tiddler oculto indica los comandos que deben mostrarse en la barra de herramientas de cualquier tiddler",
 	ViewTemplate: "Este tiddler oculto contiene la plantilla HTML que indica cómo se muestran los tiddlers"
-	});
+});
 
 //}}}
