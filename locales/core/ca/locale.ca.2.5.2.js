@@ -52,7 +52,8 @@ merge(config.optionsDesc, {
 	txtBackupFolder: "Nom de la carpeta per als arxius de còpia",
 	txtMaxEditRows: "Màxim nombre de línies d'una capsa d'edició tiddler",
 	txtTheme: "Nom del tema",
-	txtFileSystemCharSet: "Codificació de caractèrs per desar els (només per Firefox/Mozilla)" });
+	txtFileSystemCharSet: "Codificació de caractèrs per desar els (només per Firefox/Mozilla)"
+});
 
 merge(config.messages, {
 	customConfigError: "S'han trobat problemes en carregar els connectors. Veieu el PluginManager per a més detalls",
@@ -93,11 +94,13 @@ merge(config.messages, {
 	invalidFieldName: "El nom del camp no és vàlid vàlid %0",
 	fieldCannotBeChanged: "No es pot modificar el camp '%0'",
 	loadingMissingTiddler: "Intentant recuperar el '%0' del servidor '%1' a:\n\n'%2' a l'espai de treball '%3'",
-	upgradeDone: "S'ha completat l'actualització a la versió %0\n\nCliqueu 'D'acord' per tornar a carregar el nou TiddlyWiki actualitzat" });
+	upgradeDone: "S'ha completat l'actualització a la versió %0\n\nCliqueu 'D'acord' per tornar a carregar el nou TiddlyWiki actualitzat"
+});
 
 merge(config.messages.messageClose, {
 	text: "tanca",
-	tooltip: "tanca aquest tiddler" });
+	tooltip: "tanca aquest tiddler"
+});
 
 config.messages.backstage = {
 	open: { text: "bastidors", tooltip: "Obre els bastidors per les tasques d'autor i editor" },
@@ -113,7 +116,10 @@ config.messages.listView = {
 	previewUnavailable: "(no es pot preveure)"
 };
 
-config.messages.dates.months = ["de gener de", "de febrer de", "de març de", "d'abril de", "de maig de", "de juny de", "de juliol de", "d'agost de", "de setembre de", "d'octubre de", "de novembre de", "de desembre de"];
+config.messages.dates.months = [
+	"de gener de", "de febrer de", "de març de", "d'abril de", "de maig de", "de juny de",
+	"de juliol de", "d'agost de", "de setembre de", "d'octubre de", "de novembre de", "de desembre de"
+];
 config.messages.dates.days = ["Diumenge", "Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"];
 config.messages.dates.shortMonths = ["Gen", "Feb", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Des"];
 config.messages.dates.shortDays = ["Diu", "Dil", "Dma", "Dcr", "Dij", "Div", "Dis"];
@@ -137,24 +143,28 @@ merge(config.views.wikified.tag, {
 	tooltip: "Obre els tiddlers etiquetats amb '%0'",
 	openAllText: "obre tots",
 	openAllTooltip: "Obre tots aquests tiddlers",
-	popupNone: "No hi ha altres tiddlers etiquetats amb '%0'" });
+	popupNone: "No hi ha altres tiddlers etiquetats amb '%0'"
+});
 
 merge(config.views.wikified, {
 	defaultText: "El tiddler '%0' no existeix. Cliqueu dos cops per començar-lo",
 	defaultModifier: "(falta)",
 	shadowModifier: "(tiddler ombra pre-definit)",
 	dateFormat: "DD MMM YYYY",
-	createdPrompt: "creat el" });
+	createdPrompt: "creat el"
+});
 
 merge(config.views.editor, {
 	tagPrompt: "Afegiu les etiquetes separades per espais, [[feu servir corxets]] si cal, o afegiu-ne",
-	defaultText: "Entreu el text per a '%0'.'" });
+	defaultText: "Entreu el text per a '%0'.'"
+});
 
 merge(config.views.editor.tagChooser, {
 	text: "etiquetes",
 	tooltip: "Tria entre les etiquetes actuals per afegir a aquest tiddler",
 	popupNone: "No hi ha etiquetes definides",
-	tagTooltip: "Afegeix l'etiqueta '%0'" });
+	tagTooltip: "Afegeix l'etiqueta '%0'"
+});
 
 merge(config.messages, {
 	sizeTemplates: [
@@ -162,26 +172,32 @@ merge(config.messages, {
 		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
 		{ unit: 1024, template: "%0\u00a0KB" },
 		{ unit: 1, template: "%0\u00a0B" }
-	] });
+	]
+});
 
 merge(config.macros.search, {
 	label: "cerca",
 	prompt: "Cerca en aquest TiddlyWiki",
 	accessKey: "F",
 	successMsg: "S'han trobat %0 tiddlers que contenen: '%1'",
-	failureMsg: "No s'ha trobat cap tiddler amb: '%0'" });
+	failureMsg: "No s'ha trobat cap tiddler amb: '%0'"
+});
 
 merge(config.macros.tagging, {
 	label: "etiquetes:",
 	labelNotTag: "cap etiqueta",
-	tooltip: "Llista de tiddlers etiquetats amb '%0'" });
+	tooltip: "Llista de tiddlers etiquetats amb '%0'"
+});
 
 merge(config.macros.timeline, {
-	dateFormat: "DD MMM YYYY" });// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+	// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+	dateFormat: "DD MMM YYYY"
+});
 
 merge(config.macros.allTags, {
 	tooltip: "Mostra tiddlers com a etiqueta '%0'",
-	noTags: "No hi ha tiddlers amb etiquetes" });
+	noTags: "No hi ha tiddlers amb etiquetes"
+});
 
 config.macros.list.all.prompt = "Tots els tiddlers per ordre alfabètic";
 config.macros.list.missing.prompt = "Tiddlers que tenen enllaços cap a ells, però no estàn definits";
@@ -191,27 +207,32 @@ config.macros.list.touched.prompt = "Tiddlers que heu modificat localment";
 
 merge(config.macros.closeAll, {
 	label: "tanca tots",
-	prompt: "Tanca tots els tiddlers oberts (excepte els que s'estàn editant)" });
+	prompt: "Tanca tots els tiddlers oberts (excepte els que s'estàn editant)"
+});
 
 merge(config.macros.permaview, {
 	label: "torna vista",
-	prompt: "Enllaça a una URL que torni tots els tiddlers que es mostren ara" });
+	prompt: "Enllaça a una URL que torni tots els tiddlers que es mostren ara"
+});
 
 merge(config.macros.saveChanges, {
 	label: "desa els canvis",
 	prompt: "Desa tots els canvis a un arxiu",
-	accessKey: "S" });
+	accessKey: "S"
+});
 
 merge(config.macros.newTiddler, {
 	label: "nou tiddler",
 	prompt: "Obre un nou tiddler",
 	title: "Nou tiddler",
-	accessKey: "N" });
+	accessKey: "N"
+});
 
 merge(config.macros.newJournal, {
 	label: "nou diari",
 	prompt: "Obre un nou tiddler amb la data i hora actuals",
-	accessKey: "J" });
+	accessKey: "J"
+});
 
 merge(config.macros.options, {
 	wizardTitle: "Opcions avançades",
@@ -385,46 +406,55 @@ merge(config.macros.sync, {
 
 merge(config.commands.closeTiddler, {
 	text: "tanca",
-	tooltip: "Tanca aquest tiddler" });
+	tooltip: "Tanca aquest tiddler"
+});
 
 merge(config.commands.closeOthers, {
 	text: "tanca altres",
-	tooltip: "Tanca tots els altres tiddlers" });
+	tooltip: "Tanca tots els altres tiddlers"
+});
 
 merge(config.commands.editTiddler, {
 	text: "edita",
 	tooltip: "Edita aquest tiddler",
 	readOnlyText: "mostra",
-	readOnlyTooltip: "Mostra el codi d'aquest tiddler" });
+	readOnlyTooltip: "Mostra el codi d'aquest tiddler"
+});
 
 merge(config.commands.saveTiddler, {
 	text: "desa",
-	tooltip: "Desa els canvis d'aquest tiddler" });
+	tooltip: "Desa els canvis d'aquest tiddler"
+});
 
 merge(config.commands.cancelTiddler, {
 	text: "anul·la",
 	tooltip: "Anul·la els canvis a aquest tiddler",
 	warning: "Segur que voleu anul·lar els canvis a '%0'?",
 	readOnlyText: "fet",
-	readOnlyTooltip: "Torna a l'aspecte normal" });
+	readOnlyTooltip: "Torna a l'aspecte normal"
+});
 
 merge(config.commands.deleteTiddler, {
 	text: "suprimeix",
 	tooltip: "Suprimeix aquest tiddler",
-	warning: "Segur que voleu suprimir '%0'?" });
+	warning: "Segur que voleu suprimir '%0'?"
+});
 
 merge(config.commands.permalink, {
 	text: "enllaç permanent",
-	tooltip: "Enllaç permanent d'aquest tiddler" });
+	tooltip: "Enllaç permanent d'aquest tiddler"
+});
 
 merge(config.commands.references, {
 	text: "referències",
 	tooltip: "Obre els tiddlers que enllacen a aquest",
-	popupNone: "sense referències" });
+	popupNone: "sense referències"
+});
 
 merge(config.commands.jump, {
 	text: "salta",
-	tooltip: "Salta a un altre tiddler obert" });
+	tooltip: "Salta a un altre tiddler obert"
+});
 
 merge(config.commands.syncing, {
 	text: "sincronitzant",
@@ -434,7 +464,8 @@ merge(config.commands.syncing, {
 	captionUnSync: "Atura la sincronització d'aquest tiddler",
 	chooseServer: "Sincronitza aquest tiddler amb un altre servidor:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  " });
+	notCurrServerMarker: "  "
+});
 
 merge(config.commands.fields, {
 	text: "camps",
@@ -449,7 +480,8 @@ merge(config.commands.fields, {
 		],
 		buttons: [
 		]
-	} });
+	}
+});
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[ComComençar]]",
