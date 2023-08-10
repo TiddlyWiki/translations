@@ -33,19 +33,19 @@ Kilka decyzji tłumacza:
 config.locale = "pl"; // W3C language tag
 
 if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "TwojeImię"});
+	merge(config.options, { txtUserName: "TwojeImię" });
 
-merge(config.tasks,{
-	save: {text: "Zapisz", tooltip: "Zapisz zmiany", action: saveChanges},
-	sync: {text: "Synchronizuj", tooltip: "Synchronizuj zmiany z plikami i serwerami TiddlyWiki", content: '<<sync>>'},
-	importTask: {text: "Importuj", tooltip: "Importuj notatki i wtyczki z plików i serwerów TiddlyWiki", content: '<<importTiddlers>>'},
-	tweak: {text: "Dostosuj", tooltip: "Dostosuj wygląd i zachowanie TiddlyWiki", content: '<<options>>'},
-        upgrade: {text: "Zaktualizuj", tooltip: "Aktualizuj podstawowy kod TiddlyWiki", content: '<<upgrade>>'}, // TODO Czy można znaleźć słowo lepsze niż Aktualizuj
-	plugins: {text: "Wtyczki", tooltip: "Zarządzaj zainstalowanymi wtyczkami", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "Zapisz", tooltip: "Zapisz zmiany", action: saveChanges },
+	sync: { text: "Synchronizuj", tooltip: "Synchronizuj zmiany z plikami i serwerami TiddlyWiki", content: '<<sync>>' },
+	importTask: { text: "Importuj", tooltip: "Importuj notatki i wtyczki z plików i serwerów TiddlyWiki", content: '<<importTiddlers>>' },
+	tweak: { text: "Dostosuj", tooltip: "Dostosuj wygląd i zachowanie TiddlyWiki", content: '<<options>>' },
+	upgrade: { text: "Zaktualizuj", tooltip: "Aktualizuj podstawowy kod TiddlyWiki", content: '<<upgrade>>' }, // TODO Czy można znaleźć słowo lepsze niż Aktualizuj
+	plugins: { text: "Wtyczki", tooltip: "Zarządzaj zainstalowanymi wtyczkami", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "Nazwa użytkownika którą będziesz podpisywał swoje zmiany",
 	chkRegExpSearch: "Włącz wyszukiwanie przy pomocy wyrażeń regularnych",
 	chkCaseSensitiveSearch: "Wyszukiwanie z uwzględnieniem wielkości liter",
@@ -64,9 +64,9 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "Nazwa katalogu kopii zapasowych",
 	txtMaxEditRows: "Maksymalna ilość wierszy w okienku edycji",
 	txtTheme: "Nazwa tematu",
-	txtFileSystemCharSet: "Domyślne kodowanie użyte do zapisania zmian (tylko Firefox/Mozilla)"});
+	txtFileSystemCharSet: "Domyślne kodowanie użyte do zapisania zmian (tylko Firefox/Mozilla)" });
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "Wystąpiły problemy podczas wczytywania wtyczek. Zobacz więcej szczegółów w PluginManager",
 	pluginError: "Błąd: %0",
 	pluginDisabled: "Nie uruchomiona, wyłączone w tagu 'systemConfigDisable'",
@@ -106,18 +106,18 @@ merge(config.messages,{
 	fieldCannotBeChanged: "Pole '%0' nie może zostać zmienione",
 	loadingMissingTiddler: "Próba pobrania notatki '%0' z serwera '%1' o adresie:\n\n'%2' w przestrzeni roboczej '%3'",
 	upgradeDone: "Aktualizacja do wersji %0 została zakończona\n\nKliknij 'OK' by wczytać aktualizowaną TiddlyWiki",
-	invalidCookie: "Nieprawidłowe cookie '%0'"});
+	invalidCookie: "Nieprawidłowe cookie '%0'" });
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "Zamknij",
-	tooltip: "zamknij ten komunikat"});
+	tooltip: "zamknij ten komunikat" });
 
 config.messages.backstage = {
-	open: {text: "Zaplecze", tooltip: "Otwórz obszar konfiguracyjny by wykonać zadania edycyjne"},
-	close: {text: "Zamknij", tooltip: "Zamknij obszar konfiguracji"},
+	open: { text: "Zaplecze", tooltip: "Otwórz obszar konfiguracyjny by wykonać zadania edycyjne" },
+	close: { text: "Zamknij", tooltip: "Zamknij obszar konfiguracji" },
 	prompt: "Obszar konfiguracji: ",
 	decal: {
-		edit: {text: "Edytuj", tooltip: "Edytuj notatkę '%0'"}
+		edit: { text: "Edytuj", tooltip: "Edytuj notatkę '%0'" }
 	}
 };
 
@@ -126,7 +126,7 @@ config.messages.listView = {
 	previewUnavailable: "(brak podglądu)"
 };
 
-config.messages.dates.months = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad","grudzień"];
+config.messages.dates.months = ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"];
 config.messages.dates.days = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
 config.messages.dates.shortMonths = ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paź", "lis", "gru"];
 config.messages.dates.shortDays = ["niedz.", "pon.", "wt.", "śr.", "czw.", "pt.", "sob."];
@@ -138,62 +138,62 @@ config.messages.dates.shortDays = ["niedz.", "pon.", "wt.", "śr.", "czw.", "pt.
 //config.messages.dates.am = "am";
 //config.messages.dates.pm = "pm";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "brak tagów",
 	labelTags: "tagi: ",
 	openTag: "Otwórz tag '%0'",
 	tooltip: "Pokaż notatki z tagiem '%0'",
 	openAllText: "Otwórz wszystkie",
 	openAllTooltip: "Otwórz wszystkie z tych notatek",
-	popupNone: "Żadna inna notatka nie ma tagu '%0'"});
+	popupNone: "Żadna inna notatka nie ma tagu '%0'" });
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "Notatka '%0' nie istnieje. Kliknij dwukrotnie aby ją utworzyć",
 	defaultModifier: "(brakujący)",
 	shadowModifier: "(wbudowana notatka podmienna)",
 	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "utworzono"});
+	createdPrompt: "utworzono" });
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "Wprowadź tagi oddzielone spacjami, w razie potrzeby [[używając podwójnych nawiasów]], lub dodaj istniejące tagi",
-	defaultText: "Wprowadź tekst dla '%0'"});
+	defaultText: "Wprowadź tekst dla '%0'" });
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "tagi",
 	tooltip: "Wybierz istniejący tag aby go dodać do notatki",
 	popupNone: "Brak zdefiniowanych tagów",
-	tagTooltip: "Dodaj tag '%0'"});
+	tagTooltip: "Dodaj tag '%0'" });
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	] });
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "Szukaj",
 	prompt: "Szukaj w TiddlyWiki",
 	accessKey: "F",
 	successMsg: "Znaleziono %0 notatek pasujących do %1",
-	failureMsg: "Brak pasującej notatki %0"});
+	failureMsg: "Brak pasującej notatki %0" });
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "tagi: ",
 	labelNotTag: "brak taggów",
-	tooltip: "Lista notatek oznaczonych tagiem '%0'"});
+	tooltip: "Lista notatek oznaczonych tagiem '%0'" });
 
-merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+merge(config.macros.timeline, {
+	// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+	dateFormat: "DD MMM YYYY" });
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "Pokaż notatki z tagiem '%0'",
-	noTags: "Brak notatek z tagiem"});
+	noTags: "Brak notatek z tagiem" });
 
 config.macros.list.all.prompt = "Notatki w porządku alfabetycznym";
 config.macros.list.missing.prompt = "Notatki do których prowadzi jakiś link ale nie istnieją";
@@ -201,47 +201,48 @@ config.macros.list.orphans.prompt = "Notatki do których nie istnieje odwołanie
 config.macros.list.shadowed.prompt = "Notatki podmienne z domyślną treścią";
 config.macros.list.touched.prompt = "Notatki które zostały lokalnie zmodyfikowane";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "Zamknij wszystkie",
-	prompt: "Zamyka wszystkie widoczne notatki (poza tymi które są edytowane)"});
+	prompt: "Zamyka wszystkie widoczne notatki (poza tymi które są edytowane)" });
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "Stały widok",
-	prompt: "Link otwierający wszystkie otwarte teraz notatki"});
+	prompt: "Link otwierający wszystkie otwarte teraz notatki" });
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "Zapisz zmiany",
 	prompt: "Zapisuje wszystkie notatki w TiddlyWiki",
-	accessKey: "S"});
+	accessKey: "S" });
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "Nowa notatka",
 	prompt: "Tworzy nową notatkę",
 	title: "Nowa Notatka",
-	accessKey: "N"});
+	accessKey: "N" });
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "Nowa notatka dziennika",
 	prompt: "Tworzy nową notatkę z aktualną datą i godziną",
-	accessKey: "J"});
+	accessKey: "J" });
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "Dostosuj opcje zaawansowane",
 	step1Title: "Te opcje są zapisane przy pomocy cookie przeglądarki",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Pokaż nieznane opcje</input>",
 	unknownDescription: "//(nieznana)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Opcja", type: 'String'},
-			{name: 'Description', field: 'description', title: "Opis", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Nazwa", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "Opcja", type: 'String' },
+			{ name: 'Description', field: 'description', title: "Opis", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "Nazwa", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "Zarządzaj wtyczkami",
 	step1Title: "Aktualnie załadowane wtyczki",
 	step1Html: "<input type='hidden' name='markList'></input>",
@@ -254,53 +255,55 @@ merge(config.macros.plugins,{
 	deletePrompt: "Usuń te notatki na zawsze",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Opis", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Wersja", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "Wymuszona", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Wyłączona", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Wykonana", type: 'Boolean', trueText: "Tak", falseText: "Nie"},
-			{name: 'Startup Time', field: 'startupTime', title: "Czas wykonywania", type: 'String'},
-			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Błąd", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "Opis", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "Wersja", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "Wymuszona", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "Wyłączona", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "Wykonana", type: 'Boolean', trueText: "Tak", falseText: "Nie" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Czas wykonywania", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Błąd", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "Log", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]},
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	},
 	listViewTemplateReadOnly: {
 		columns: [
-			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Opis", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Wersja", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size'},
-			{name: 'Executed', field: 'executed', title: "Wykonana", type: 'Boolean', trueText: "Tak", falseText: "Nie"},
-			{name: 'Startup Time', field: 'startupTime', title: "Czas wykonywania", type: 'String'},
-			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Błąd", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
-			],
+			{ name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "Opis", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "Wersja", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size' },
+			{ name: 'Executed', field: 'executed', title: "Wykonana", type: 'Boolean', trueText: "Tak", falseText: "Nie" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Czas wykonywania", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Błąd", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "Log", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "Więcej",
 	morePrompt: "Pokaż dodatkowe polecenia",
 	lessLabel: "Mniej",
 	lessPrompt: "Ukryj dodatkowe polecenia",
 	separator: "|"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "Odśwież",
 	prompt: "Odśwież wygląd TiddlyWiki"
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "Nie możesz importować do pliku TiddlyWiki tylko do odczytu. Proszę spróbuj otworzyć go przy użyciu URL file://",
 	wizardTitle: "Importuj notatki z innej TiddlyWiki",
 	step1Title: "Krok 1: Odnajdź serwer lub plik TiddlyWiki",
@@ -334,16 +337,17 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Tagi", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Wielkość", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "Tagi", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "Aktualizuj podstawowy kod TiddlyWiki",
 	step1Title: "Aktualizuj lub napraw tą TiddlyWiki do najnowszego wydania",
 	step1Html: "Jesteś o krok od aktualizacji do ostatniego wydania podstawowego kodu TiddlyWiki (z <a href='%0' class='externalLink' target='_blank'>%1</a>). Aktualizacja nie zmieni treści twoich notatek.<br><br>Weź pod uwagę, że, jak wiadomo, aktualizacje podstawowego kodu wpływają na działanie starszych wtyczek. Jeżeli napotkasz problemy po aktualizacji, sprawdź <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -369,24 +373,25 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "Przerywa proces aktualizacji",
 	step3Title: "Aktualizacja przerwana",
 	step3Html: "Przerwałeś proces aktualizacji"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Typ serwera", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Server host", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Przestrzeń robocza", type: 'String'},
-			{name: 'Status', field: 'status', title: "Status synchronizacji", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "URL serwera", text: "Zobacz", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Notatka", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "Typ serwera", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "Server host", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "Przestrzeń robocza", type: 'String' },
+			{ name: 'Status', field: 'status', title: "Status synchronizacji", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "URL serwera", text: "Zobacz", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "Synchronizuj te notatki", name: 'sync'}
-			]},
+			{ caption: "Synchronizuj te notatki", name: 'sync' }
+		]
+	},
 	wizardTitle: "Synchronizuj treść z zewnętrznymi serwerami i kanałami",
 	step1Title: "Wybierz notatki które chcesz synchronizować",
 	step1Html: '<input type="hidden" name="markList"></input>',
@@ -395,84 +400,85 @@ merge(config.macros.sync,{
 	hasChanged: "Changed while unplugged",
 	hasNotChanged: "Unchanged while unplugged",
 	syncStatusList: {
-		none: {text: "...", display:'brak', className:'notChanged'},
-		changedServer: {text: "Zmienione na serwerze", display:null, className:'changedServer'},
-		changedLocally: {text: "Zmienione lokalnie", display:null, className:'changedLocally'},
-		changedBoth: {text: "Zmienione lokalnie i na serwerze", display:null, className:'changedBoth'},
-		notFound: {text: "Brak na serwerze", display:null, className:'notFound'},
-		putToServer: {text: "Aktualizacja zapisana na serwerze", display:null, className:'putToServer'},
-		gotFromServer: {text: "Aktualizacja pobrana z serwera", display:null, className:'gotFromServer'}
-		}
-	});
+		none: { text: "...", display: 'brak', className: 'notChanged' },
+		changedServer: { text: "Zmienione na serwerze", display: null, className: 'changedServer' },
+		changedLocally: { text: "Zmienione lokalnie", display: null, className: 'changedLocally' },
+		changedBoth: { text: "Zmienione lokalnie i na serwerze", display: null, className: 'changedBoth' },
+		notFound: { text: "Brak na serwerze", display: null, className: 'notFound' },
+		putToServer: { text: "Aktualizacja zapisana na serwerze", display: null, className: 'putToServer' },
+		gotFromServer: { text: "Aktualizacja pobrana z serwera", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "Zamknij",
-	tooltip: "Zamknij tą notatkę"});
+	tooltip: "Zamknij tą notatkę" });
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "Zamknij inne",
-	tooltip: "Zamyka wszystkie notatki oprócz tej"});
+	tooltip: "Zamyka wszystkie notatki oprócz tej" });
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "Edytuj",
 	tooltip: "Edytuj tę notatkę",
 	readOnlyText: "widok",
-	readOnlyTooltip: "Zobacz źródło notatki"});
+	readOnlyTooltip: "Zobacz źródło notatki" });
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "Gotowe",
-	tooltip: "Zapisuje zmiany w tej notatce"});
+	tooltip: "Zapisuje zmiany w tej notatce" });
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "Anuluj",
 	tooltip: "Wyjdź nie zapisując zmian",
 	warning: "Porzucić zmiany w '%0'?",
 	readOnlyText: "gotowe",
-	readOnlyTooltip: "Powrót do normalnego widoku"});
+	readOnlyTooltip: "Powrót do normalnego widoku" });
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "Usuń",
 	tooltip: "Usuwa tą notatkę",
-	warning: "Chcesz usunąć '%0'?"});
+	warning: "Chcesz usunąć '%0'?" });
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "Stały widok",
-	tooltip: "Adres tej notatki"});
+	tooltip: "Adres tej notatki" });
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "Odwołania",
 	tooltip: "Pokazuje notatki które się odwołują do tej",
-	popupNone: "Brak odwołań"});
+	popupNone: "Brak odwołań" });
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "Skocz",
-	tooltip: "Skacze do kolejnej otwartej notatki"});
+	tooltip: "Skacze do kolejnej otwartej notatki" });
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "Synchronizowanie",
 	tooltip: "Kontrola synchronizacji tej notatki z serwerem lub plikiem zewnętrznym",
-	currentlySyncing: "<div>Synchronizowana przez <span class='popupHighlight'>'%0'</span> z:</"+"div><div>serwer: <span class='popupHighlight'>%1</span></"+"div><div>przestrzeń robocza: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Synchronizowana przez <span class='popupHighlight'>'%0'</span> z:</" + "div><div>serwer: <span class='popupHighlight'>%1</span></" + "div><div>przestrzeń robocza: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "Niesynchronizowana",
 	captionUnSync: "Przerwij synchronizowanie tej notatki",
 	chooseServer: "Zsynchronizuj tę notatkę z serwerem:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  " });
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "Pola",
 	tooltip: "Pokaż rozszerzone pola tej notatki",
 	emptyText: "Brak rozszerzonych pól tej notatki",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Pole", type: 'String'},
-			{name: 'Value', field: 'value', title: "Wartość", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "Pole", type: 'String' },
+			{ name: 'Value', field: 'value', title: "Wartość", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	} });
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[SzybkiStart]]",
 	MainMenu: "[[SzybkiStart]]",
 	SzybkiStart: "By rozpocząć pracę z pustą TiddlyWiki, musisz zmodyfikować następujące notatki:\n* SiteTitle &amp; SiteSubtitle: tytuł i podtytuł strony, które widzisz powyżej (po zapisaniu będą widoczne w pasku tytułowym przeglądarki)\n* MainMenu: główne menu (zwykle widoczne z lewej strony)\n* DefaultTiddlers: zawiera nazwy notatek, które będą wyświetlane po otwarciu TiddlyWiki\nPowinieneś również wprowadzić swoją nazwę użytkownika, którą będziesz podpisywał swoje zmiany: <<option txtUserName>>",
@@ -483,9 +489,9 @@ merge(config.shadowTiddlers,{
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "Opcje »" "Zmień opcje">>',
 	SideBarTabs: '<<tabs txtMainTab "Czas" "Czas" TabTimeline "A-Z" "Wszystkie notatki" TabAll "Tagi" "Wszystkie tagi" TabTags "Więcej" "Więcej info" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "Brakujące" "Brakujące notatki" TabMoreMissing "Sieroty" "Notatki bez odwołań" TabMoreOrphans "Podmienne" "Notatki podmienne" TabMoreShadowed>>'
-	});
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "Ta zakładka podmienna zapewnia dostęp do pewnych opcji zaawansowanych",
 	ColorPalette: "Wartości w tej notatce podmiennej określają schemat kolorów interfejsu użytkownika TiddlyWiki",
 	DefaultTiddlers: "Notatki wymienione w tej notatce podmiennej będą automatycznie wyświetlone przy starcie TiddlyWiki",
@@ -520,5 +526,5 @@ merge(config.annotations,{
 	TabTimeline: "Ta notatka podmienna zawiera treść zakładki 'Linia czasu' w  tab in the right-hand sidebar",
 	ToolbarCommands: "Ta notatka podmienna określa które polecenia są widoczne w pasku narzędziowym notatki",
 	ViewTemplate: "Szablon HTML w tej notatce podmiennej określa jak wyglądają notatki"
-	});
+});
 //}}}

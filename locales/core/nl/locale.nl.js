@@ -32,19 +32,19 @@
 config.locale = "nl"; // W3C language tag
 
 if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next
-        merge(config.options,{txtUserName: "JouwNaam"}); 
+	merge(config.options, { txtUserName: "JouwNaam" });
 
-merge(config.tasks,{
-	save: {text: "opslaan", tooltip: "Opslaan van alle wijzigingen in deze TiddlyWiki", action: saveChanges},
-	sync: {text: "sync", tooltip: "Synchroniseer wijzigingen met andere TiddlyWiki bestanden en servers", content: '<<sync>>'},
-	importTask: {text: "import", tooltip: "Importeer tiddlers en plugins uit andere TiddlyWiki bestanden en servers", content: '<<importTiddlers>>'},
-	tweak: {text: "opties", tooltip: "Aanpassen van verschijning en gedrag van TiddlyWiki", content: '<<options>>'},
-	upgrade: {text: "upgrade", tooltip: "Bijwerken TiddlyWiki kernprogramma", content: '<<upgrade>>'},
-	plugins: {text: "plugins", tooltip: "Beheer de geïnstalleerde plugins", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "opslaan", tooltip: "Opslaan van alle wijzigingen in deze TiddlyWiki", action: saveChanges },
+	sync: { text: "sync", tooltip: "Synchroniseer wijzigingen met andere TiddlyWiki bestanden en servers", content: '<<sync>>' },
+	importTask: { text: "import", tooltip: "Importeer tiddlers en plugins uit andere TiddlyWiki bestanden en servers", content: '<<importTiddlers>>' },
+	tweak: { text: "opties", tooltip: "Aanpassen van verschijning en gedrag van TiddlyWiki", content: '<<options>>' },
+	upgrade: { text: "upgrade", tooltip: "Bijwerken TiddlyWiki kernprogramma", content: '<<upgrade>>' },
+	plugins: { text: "plugins", tooltip: "Beheer de geïnstalleerde plugins", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "Jouw naam voor het signeren van je wijzigingen",
 	chkRegExpSearch: "JavaScript expressies toestaan in zoekopdrachten",
 	chkCaseSensitiveSearch: "Hoofdlettergevoelig zoeken",
@@ -63,9 +63,9 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "Mapnaam om backups in op te slaan",
 	txtMaxEditRows: "Maximum aantal regels in het wijzigingsvenster",
 	txtTheme: "Naam van het te gebruiken thema",
-	txtFileSystemCharSet: "Default characterset bij het opslaan (alleen voor Firefox/Mozilla)"});
+	txtFileSystemCharSet: "Default characterset bij het opslaan (alleen voor Firefox/Mozilla)" });
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "Problemen bij het laden van plugins. Zie PluginManager voor details",
 	pluginError: "Fout: %0",
 	pluginDisabled: "Niet uitgevoerd, want uitgeschakeld middels het 'systemConfigDisable' label",
@@ -105,18 +105,18 @@ merge(config.messages,{
 	fieldCannotBeChanged: "Veld '%0' kan niet worden gewijzigd",
 	loadingMissingTiddler: "Bezig om tiddler '%0' op te halen van de '%1' server op:\n\n'%2' in werkruimte '%3'",
 	upgradeDone: "Het bijwerken naar versie %0 is gelukt\n\nKlik 'OK' om de nieuwe bijgewerkte TiddlyWiki te herladen",
-	invalidCookie: "Ongeldige cookie '%0'"});
+	invalidCookie: "Ongeldige cookie '%0'" });
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "sluit",
-	tooltip: "sluit dit berichtvenster"});
+	tooltip: "sluit dit berichtvenster" });
 
 config.messages.backstage = {
-	open: {text: "managementmenu", tooltip: "Open het managementmenu voor redactionele taken"},
-	close: {text: "sluit", tooltip: "Sluit het managementmenu"},
+	open: { text: "managementmenu", tooltip: "Open het managementmenu voor redactionele taken" },
+	close: { text: "sluit", tooltip: "Sluit het managementmenu" },
 	prompt: "managementmenu: ",
 	decal: {
-		edit: {text: "wijzig", tooltip: "Wijzig de inhoud van deze tiddler '%0'"}
+		edit: { text: "wijzig", tooltip: "Wijzig de inhoud van deze tiddler '%0'" }
 	}
 };
 
@@ -125,74 +125,76 @@ config.messages.listView = {
 	previewUnavailable: "(preview niet beschikbaar)"
 };
 
-config.messages.dates.months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november","december"];
+config.messages.dates.months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
 config.messages.dates.days = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"];
 config.messages.dates.shortMonths = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
 config.messages.dates.shortDays = ["zon", "maa", "din", "woe", "don", "vri", "zat"];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
-config.messages.dates.daySuffixes = ["e","e","e","e","e","e","e","e","e","e",
-		"e","e","e","e","e","e","e","e","e","e",
-		"e","e","e","e","e","e","e","e","e","e",
-		"e"];
+config.messages.dates.daySuffixes = [
+	"e", "e", "e", "e", "e", "e", "e", "e", "e", "e",
+	"e", "e", "e", "e", "e", "e", "e", "e", "e", "e",
+	"e", "e", "e", "e", "e", "e", "e", "e", "e", "e",
+	"e"
+];
 config.messages.dates.am = "am";
 config.messages.dates.pm = "pm";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "geen labels",
 	labelTags: "labels: ",
 	openTag: "Open label '%0'",
 	tooltip: "Bekijk tiddlers met label '%0'",
 	openAllText: "Open alle",
 	openAllTooltip: "Open al deze tiddlers",
-	popupNone: "Geen andere tiddlers met label '%0'"});
+	popupNone: "Geen andere tiddlers met label '%0'" });
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "De tiddler '%0' bestaat nog niet. Dubbel-klik om hem te maken",
 	defaultModifier: "(ontbreekt)",
 	shadowModifier: "(ingebouwde schaduw-tiddler)",
 	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "aangemaakt"});
+	createdPrompt: "aangemaakt" });
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "Typ labels gescheiden door spaties (gebruik dubbele rechte haakjes voor non-WikiWord-labels), of gebruik bestaande",
-	defaultText: "Typ de tekst voor '%0'"});
+	defaultText: "Typ de tekst voor '%0'" });
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "labels",
 	tooltip: "Kies bestaande labels om aan deze tiddler toe te voegen",
 	popupNone: "Er zijn geen labels gedefinieerd",
-	tagTooltip: "Voeg het label '%0' toe"});
+	tagTooltip: "Voeg het label '%0' toe" });
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	] });
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "zoek",
 	prompt: "Zoek binnen deze TiddlyWiki",
 	accessKey: "F",
 	successMsg: "%0 tiddlers gevonden met de tekst %1",
-	failureMsg: "Geen tiddlers gevonden met de tekst %0"});
+	failureMsg: "Geen tiddlers gevonden met de tekst %0" });
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "labelverwijzingen: ",
 	labelNotTag: "geen labelverwijzingen",
-	tooltip: "Lijst van tiddlers gelabeld met '%0'"});
+	tooltip: "Lijst van tiddlers gelabeld met '%0'" });
 
-merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+merge(config.macros.timeline, {
+	// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+	dateFormat: "DD MMM YYYY" });
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "Bekijk tiddlers gelabeld met '%0'",
-	noTags: "Er zijn geen gelabelde tiddlers"});
+	noTags: "Er zijn geen gelabelde tiddlers" });
 
 config.macros.list.all.prompt = "Alle tiddlers in alfabetische volgorde";
 config.macros.list.missing.prompt = "Tiddlers waarnaar wordt gelinkt maar die niet bestaan";
@@ -200,47 +202,48 @@ config.macros.list.orphans.prompt = "Tiddlers waarnaar vanuit geen enkele andere
 config.macros.list.shadowed.prompt = "Schaduw-tiddlers met standaard (default) inhoud";
 config.macros.list.touched.prompt = "Tiddlers die lokaal zijn gewijzigd";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "sluit alles",
-	prompt: "Sluit alle weergegeven tiddlers (behalve die open staan voor wijziging)"});
+	prompt: "Sluit alle weergegeven tiddlers (behalve die open staan voor wijziging)" });
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "permaview",
-	prompt: "Link naar een URL die alle tiddlers ophaalt die nu open staan"});
+	prompt: "Link naar een URL die alle tiddlers ophaalt die nu open staan" });
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "wijzigingen opslaan",
 	prompt: "Opslaan van alle wijzigingen in deze TiddlyWiki",
-	accessKey: "S"});
+	accessKey: "S" });
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "nieuwe tiddler",
 	prompt: "Maak een nieuwe tiddler",
 	title: "Nieuwe tiddler",
-	accessKey: "N"});
+	accessKey: "N" });
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "nieuwe blog-tiddler",
 	prompt: "Maak een nieuwe tiddler met de datum van vandaag",
-	accessKey: "J"});
+	accessKey: "J" });
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "Geavanceerde opties aanpassen",
 	step1Title: "Deze opties worden bewaard in een cookie in je browser",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Bekijk onbekende opties</input>",
 	unknownDescription: "//(onbekend)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Optie", type: 'String'},
-			{name: 'Description', field: 'description', title: "Beschrijving", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Naam", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "Optie", type: 'String' },
+			{ name: 'Description', field: 'description', title: "Beschrijving", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "Naam", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "Beheer plugins",
 	step1Title: "Thans geladen plugins",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -253,38 +256,39 @@ merge(config.macros.plugins,{
 	deletePrompt: "Verwijder deze tiddlers definitief",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Beschrijving", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Versie", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Grootte", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "Verplicht", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Uitgeschakeld", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Geladen", type: 'Boolean', trueText: "Ja", falseText: "Nee"},
-			{name: 'Startup Time', field: 'startupTime', title: "Startup Tijd", type: 'String'},
-			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Fout", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "Beschrijving", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "Versie", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Grootte", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "Verplicht", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "Uitgeschakeld", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "Geladen", type: 'Boolean', trueText: "Ja", falseText: "Nee" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Startup Tijd", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Fout", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "Log", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "meer",
 	morePrompt: "Laat extra commando's zien",
 	lessLabel: "minder",
 	lessPrompt: "Verberg extra commando's",
 	separator: "|"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "ververs",
 	prompt: "Beeld de gehele TiddlyWiki opnieuw af"
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "Je kunt niet importeren in een alleen-lezen TiddlyWiki bestand. Open je TiddlyWiki met een file://-URL",
 	wizardTitle: "Importeer tiddlers vanuit een ander bestand of server",
 	step1Title: "Stap 1: Stel vast waar de server of het TiddlyWiki bestand zich bevindt",
@@ -318,16 +322,17 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Grootte", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Labels", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Grootte", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "Labels", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "Bijwerken van het TiddlyWiki kernprogramma",
 	step1Title: "Deze TiddlyWiki bijwerken of repareren volgens de jongste versie",
 	step1Html: "Je staat op het punt om het TiddlyWiki kernprogramma bij te werken naar de jongste versie (vanaf <a href='%0' class='externalLink' target='_blank'>%1</a>). Tijdens het bijwerken zal je eigen TW-inhoud bewaard blijven.<br><br>Bedenk dat kernprogramma wijzigingen soms invloed hebben op oudere plugins. Als je problemen ondervindt met je bijgewerkte TiddlyWiki, kijk dan op <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -353,24 +358,25 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "Annuleer het proces van bijwerken",
 	step3Title: "Bijwerken geannuleerd",
 	step3Html: "Je hebt het proces van bijwerken geannuleerd"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Server type", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Server host", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Server werkruimte", type: 'String'},
-			{name: 'Status', field: 'status', title: "Synchronisatie status", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "Server URL", text: "Bekijk", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "Server type", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "Server host", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "Server werkruimte", type: 'String' },
+			{ name: 'Status', field: 'status', title: "Synchronisatie status", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "Server URL", text: "Bekijk", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "Synchroniseer deze tiddlers", name: 'sync'}
-			]},
+			{ caption: "Synchroniseer deze tiddlers", name: 'sync' }
+		]
+	},
 	wizardTitle: "Synchroniseer met externe servers en bestanden",
 	step1Title: "Kies de tiddlers die je wilt synchroniseren",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -379,84 +385,85 @@ merge(config.macros.sync,{
 	hasChanged: "Gewijzigd zonder verbinding",
 	hasNotChanged: "Ongewijzigd zonder verbinding",
 	syncStatusList: {
-		none: {text: "...", display:null, className:'notChanged'},
-		changedServer: {text: "Gewijzigd op de server", display:null, className:'changedServer'},
-		changedLocally: {text: "Gewijzigd zonder verbinding", display:null, className:'changedLocally'},
-		changedBoth: {text: "Gewijzigd op de server zonder verbinding", display:null, className:'changedBoth'},
-		notFound: {text: "Niet gevonden op de server", display:null, className:'notFound'},
-		putToServer: {text: "Wijziging opgeslagen op de server", display:null, className:'putToServer'},
-		gotFromServer: {text: "Wijziging van de server opgehaald", display:null, className:'gotFromServer'}
-		}
-	});
+		none: { text: "...", display: null, className: 'notChanged' },
+		changedServer: { text: "Gewijzigd op de server", display: null, className: 'changedServer' },
+		changedLocally: { text: "Gewijzigd zonder verbinding", display: null, className: 'changedLocally' },
+		changedBoth: { text: "Gewijzigd op de server zonder verbinding", display: null, className: 'changedBoth' },
+		notFound: { text: "Niet gevonden op de server", display: null, className: 'notFound' },
+		putToServer: { text: "Wijziging opgeslagen op de server", display: null, className: 'putToServer' },
+		gotFromServer: { text: "Wijziging van de server opgehaald", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "sluit",
-	tooltip: "Sluit deze tiddler"});
+	tooltip: "Sluit deze tiddler" });
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "sluit andere",
-	tooltip: "Sluit alle andere tiddlers"});
+	tooltip: "Sluit alle andere tiddlers" });
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "wijzig",
 	tooltip: "Wijzig de inhoud van deze tiddler",
 	readOnlyText: "bekijk",
-	readOnlyTooltip: "Bekijk de broncode van deze tiddler"});
+	readOnlyTooltip: "Bekijk de broncode van deze tiddler" });
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "bewaar",
-	tooltip: "Bewaar de wijzigingen in deze tiddler"});
+	tooltip: "Bewaar de wijzigingen in deze tiddler" });
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "annuleer",
 	tooltip: "Negeer de wijzigingen in deze tiddler",
 	warning: "Weet je zeker dat de wijzigingen in '%0' niet moeten worden opgeslagen?",
 	readOnlyText: "klaar",
-	readOnlyTooltip: "Bekijk deze tiddler weer in de normale weergave"});
+	readOnlyTooltip: "Bekijk deze tiddler weer in de normale weergave" });
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "verwijder",
 	tooltip: "Verwijder deze tiddler",
-	warning: "Weet je zeker dat je tiddler '%0' permanent wilt verwijderen?"});
+	warning: "Weet je zeker dat je tiddler '%0' permanent wilt verwijderen?" });
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "permalink",
-	tooltip: "Een URL die rechtstreeks naar deze tiddler verwijst"});
+	tooltip: "Een URL die rechtstreeks naar deze tiddler verwijst" });
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "verwijzingen",
 	tooltip: "Bekijk tiddlers die naar deze tiddler verwijzen",
-	popupNone: "Geen verwijzingen"});
+	popupNone: "Geen verwijzingen" });
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "spring",
-	tooltip: "Spring naar een andere open tiddler"});
+	tooltip: "Spring naar een andere open tiddler" });
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "synchroniseren",
 	tooltip: "Beheer de synchronisatie van deze tiddler met een server of extern bestand",
-	currentlySyncing: "<div>Bezig met synchroniseren via <span class='popupHighlight'>'%0'</span> naar:</"+"div><div>host: <span class='popupHighlight'>%1</span></"+"div><div>werkruimte: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Bezig met synchroniseren via <span class='popupHighlight'>'%0'</span> naar:</" + "div><div>host: <span class='popupHighlight'>%1</span></" + "div><div>werkruimte: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "Geen synchronisatie aan de gang",
 	captionUnSync: "Annuleer de synchronisatie van deze tiddler",
 	chooseServer: "Synchroniseer deze tiddler met een andere server:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  " });
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "velden",
 	tooltip: "Bekijk de speciale velden van deze tiddler",
 	emptyText: "Er zijn geen speciale velden voor deze tiddler",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Veld", type: 'String'},
-			{name: 'Value', field: 'value', title: "Waarde", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "Veld", type: 'String' },
+			{ name: 'Value', field: 'value', title: "Waarde", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	} });
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[HierBeginnen]]",
 	MainMenu: "[[HierBeginnen]]\n\n\n^^~TiddlyWiki versie <<version>>\n© 2010 [[UnaMesa|http://www.unamesa.org/]]^^",
 	HierBeginnen: "Om te beginnen met deze blanco TiddlyWiki, vul je hierachter je naam in, zodat vanaf dat moment al jouw wijzigingen daarmee zullen worden gesigneerd: <<option txtUserName>>\n\nVervolgens kun je de onderstaande tiddlers gaan aanpassen:\n* SiteTitle & SiteSubtitle: De naam en ondertitel van de site, zoals hierboven wordt weergegeven (na het bewaren, zullen ze ook in de titelbalk van de browser verschijnen)\n* MainMenu: Het hoofdmenu (gebruikelijk aan de linkerkant)\n* DefaultTiddlers: Bevat de namen van alle tiddlers die je wilt laten verschijnen zodra deze TiddlyWiki wordt geopend.\n\nNatuurlijk kun je bovenstaande tiddlers ook later nog steeds aanpassen.\n\nEn nu ben je klaar om je eigen inhoud aan deze website te gaan geven.\nKlik bijvoorbeeld maar eens in de rechter kolom op ''nieuwe tiddler'' en typ een eigen stukje tekst in het venster dat wordt geopend.\nKlik vervolgens op ''bewaar'' daar vlak boven, en kijk, je eerste hoofdstukje (tiddler) is gemaakt (compleet met jouw naam en de datum)!\n\nZo simpel is nou het werken met TiddlyWiki.",
@@ -469,7 +476,7 @@ merge(config.shadowTiddlers,{
 	TabMore: '<<tabs txtMoreTab "Ontbrekend" "Ontbrekende tiddlers" TabMoreMissing "Wezen" "Tiddlers waar niets naar verwijst" TabMoreOrphans "Schaduw" "Schaduw-tiddlers" TabMoreShadowed>>'
 });
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "Deze schaduw-tiddler geeft toegang tot diverse geavanceerde TiddlyWiki opties",
 	ColorPalette: "De waarden in deze schaduw-tiddler bepalen het kleuren-schema van de ~TiddlyWiki gebruikers-interface",
 	DefaultTiddlers: "De tiddlers genoemd in deze schaduw-tiddler worden automatisch weergegeven als ~TiddlyWiki opstart",
@@ -503,6 +510,6 @@ merge(config.annotations,{
 	TabTimeline: "Deze schaduw-tiddler bevat de inhoud van de 'Op datum'-tab in de rechter zijkolom",
 	ToolbarCommands: "Deze schaduw-tiddler bepaalt welke opdrachten worden vermeld in tiddler commandoregels",
 	ViewTemplate: "De HTML template in deze schaduw-tiddler bepaalt hoe tiddlers er uit zien"
-	});
+});
 
 //}}}

@@ -118,7 +118,8 @@ config.messages.dates.daySuffixes = [
 	"ais", "ais", "ais", "tais", "tais", "tais", "tais", "tais", "tais", "tais",
 	"tais", "tais", "tais", "tais", "tais", "tais", "tais", "tais", "tais", "tais",
 	"ais", "ais", "ais", "tais", "tais", "tais", "tais", "tais", "tais", "tais",
-	"ais"];
+	"ais"
+];
 config.messages.dates.am = "priekšpusd.";
 config.messages.dates.pm = "pēcpusd.";
 

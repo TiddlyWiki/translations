@@ -22,18 +22,18 @@ config.locale = 'zh-Hant'; // W3C language tag
 config.options.txtFileSystemCharSet = 'BIG5';
 
 if (config.options.txtUserName == 'YourName' || !config.options.txtUserName) // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "YourName"});
+	merge(config.options, { txtUserName: "YourName" });
 
-merge(config.tasks,{
-	save: {text: "儲存", tooltip: "儲存變更至此 TiddlyWiki", action: saveChanges},
-	sync: {text: "同步", tooltip: "將你的資料內容與外部伺服器與檔案同步", content: '<<sync>>'},
-	importTask: {text: "導入", tooltip: "自其他檔案或伺服器導入文章或套件", content: '<<importTiddlers>>'},
-	tweak: {text: "選項", tooltip: "改變此 TiddlyWiki 的顯示與行為的設定", content: '<<options>>'},
-	upgrade: {text: "更新", tooltip: "更新 TiddlyWiki 核心程式", content: '<<upgrade>>'},
-	plugins: {text: "套件管理", tooltip: "管理已安裝的套件", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "儲存", tooltip: "儲存變更至此 TiddlyWiki", action: saveChanges },
+	sync: { text: "同步", tooltip: "將你的資料內容與外部伺服器與檔案同步", content: '<<sync>>' },
+	importTask: { text: "導入", tooltip: "自其他檔案或伺服器導入文章或套件", content: '<<importTiddlers>>' },
+	tweak: { text: "選項", tooltip: "改變此 TiddlyWiki 的顯示與行為的設定", content: '<<options>>' },
+	upgrade: { text: "更新", tooltip: "更新 TiddlyWiki 核心程式", content: '<<upgrade>>' },
+	plugins: { text: "套件管理", tooltip: "管理已安裝的套件", content: '<<plugins>>' }
 });
 
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "編輯文章所使用之作者署名",
 	chkRegExpSearch: "啟用正規式搜尋",
 	chkCaseSensitiveSearch: "搜尋時，區分大小寫",
@@ -52,10 +52,10 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "存放備份檔案的資料夾",
 	txtMaxEditRows: "編輯模式中顯示列數",
 	txtTheme: "使用的佈景名稱",
-	txtFileSystemCharSet: "指定儲存文件所在之檔案系統之字集 (僅適用於 Firefox/Mozilla only)"});
+	txtFileSystemCharSet: "指定儲存文件所在之檔案系統之字集 (僅適用於 Firefox/Mozilla only)" });
 
 // Messages
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "套件載入發生錯誤，詳細請參考 PluginManager",
 	pluginError: "發生錯誤: %0",
 	pluginDisabled: "未執行，因標籤設為 'systemConfigDisable'",
@@ -95,143 +95,149 @@ merge(config.messages,{
 	fieldCannotBeChanged: "無法變更欄位：'%0'",
 	loadingMissingTiddler: "正從伺服器 '%1' 的：\n\n工作區 '%3' 中的 '%2' 擷取文章 '%0'",
 	upgradeDone: "已更新至 %0 版\n\n點擊 '確定' 重新載入更新後的 TiddlyWiki",
-	invalidCookie: "無效的 cookie '%0'"});
+	invalidCookie: "無效的 cookie '%0'" });
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "關閉",
-	tooltip: "關閉此訊息"});
+	tooltip: "關閉此訊息" });
 
-merge(config.messages,{
+merge(config.messages, {
 	backstage: {
-		open: {text: "控制台", tooltip: "開啟控制台執行編寫工作"},
-		close: {text: "關閉", tooltip: "關閉控制台"},
+		open: { text: "控制台", tooltip: "開啟控制台執行編寫工作" },
+		close: { text: "關閉", tooltip: "關閉控制台" },
 		prompt: "控制台：",
 		decal: {
-			edit: {text: "編輯", tooltip: "編輯 '%0'"}
-		}}});
+			edit: { text: "編輯", tooltip: "編輯 '%0'" }
+		}
+	} });
 
-merge(config.messages,{
+merge(config.messages, {
 	listView: {
 		tiddlerTooltip: "檢視全文",
-		previewUnavailable: "(無法預覽)"}});
+		previewUnavailable: "(無法預覽)"
+	}
+});
 
-merge(config.messages,{
+merge(config.messages, {
 	dates: {
-	months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-	days: ["星期日", "星期一","星期二", "星期三", "星期四", "星期五", "星期六"],
-	shortMonths: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],
-	shortDays: ["日", "一","二", "三", "四", "五", "六"],
-	daySuffixes: ["st","nd","rd","th","th","th","th","th","th","th",
-		"th","th","th","th","th","th","th","th","th","th",
-		"st","nd","rd","th","th","th","th","th","th","th",
-		"st"],
-	am: "上午",
-	pm: "下午"}});
+		months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+		shortMonths: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],
+		shortDays: ["日", "一", "二", "三", "四", "五", "六"],
+		daySuffixes: [
+			"st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th",
+			"th", "th", "th", "th", "th", "th", "th", "th", "th", "th",
+			"st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th",
+			"st"],
+		am: "上午",
+		pm: "下午"
+	}
+});
 
-merge(config.messages.tiddlerPopup,{ 
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "未設標籤",
 	labelTags: "標籤: ",
 	openTag: "開啟標籤 '%0'",
 	tooltip: "顯示標籤為 '%0' 的文章",
 	openAllText: "開啟以下所有文章",
 	openAllTooltip: "開啟以下所有文章",
-	popupNone: "僅此文標籤為 '%0'"});
+	popupNone: "僅此文標籤為 '%0'" });
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "",
 	defaultModifier: "(未完成)",
 	shadowModifier: "(預設)",
 	dateFormat: "YYYY年0MM月0DD日",
-	createdPrompt: "建立於"});
+	createdPrompt: "建立於" });
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "設定標籤之間以空白區隔，[[標籤含空白時請使用雙中括弧]]，或點選現有之標籤加入",
-	defaultText: ""});
+	defaultText: "" });
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "標籤",
 	tooltip: "點選現有之標籤加至本文章",
 	popupNone: "未設定標籤",
-	tagTooltip: "加入標籤 '%0'"});
+	tagTooltip: "加入標籤 '%0'" });
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	] });
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: " 尋找",
 	prompt: "搜尋本 Wiki",
 	accessKey: "F",
 	successMsg: " %0 篇符合條件: %1",
-	failureMsg: " 無符合條件: %0"});
+	failureMsg: " 無符合條件: %0" });
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "引用標籤:",
 	labelNotTag: "無引用標籤",
-	tooltip: "列出標籤為 '%0' 的文章"});
+	tooltip: "列出標籤為 '%0' 的文章" });
 
-merge(config.macros.timeline,{
-	dateFormat: "YYYY年0MM月0DD日"});
+merge(config.macros.timeline, {
+	dateFormat: "YYYY年0MM月0DD日" });
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "顯示文章- 標籤為'%0'",
-	noTags: "沒有標籤"});
+	noTags: "沒有標籤" });
 
 config.macros.list.all.prompt = "依字母排序";
 config.macros.list.missing.prompt = "被引用且內容空白的文章";
 config.macros.list.orphans.prompt = "未被引用的文章";
 config.macros.list.shadowed.prompt = "這些隱藏的文章已預設內容";
-config.macros.list.touched.prompt = "自下載或新增後被修改過的文章"; 
+config.macros.list.touched.prompt = "自下載或新增後被修改過的文章";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "全部關閉",
-	prompt: "關閉所有開啟中的 tiddler (編輯中除外)"});
+	prompt: "關閉所有開啟中的 tiddler (編輯中除外)" });
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "引用連結",
-	prompt: "可存取現有開啟之文章的連結位址"});
+	prompt: "可存取現有開啟之文章的連結位址" });
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "儲存變更",
 	prompt: "儲存所有文章，產生新的版本",
-	accessKey: "S"});
+	accessKey: "S" });
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "新增文章",
 	prompt: "新增 tiddler",
 	title: "新增文章",
-	accessKey: "N"});
+	accessKey: "N" });
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "新增日誌",
 	prompt: "新增 jounal",
-	accessKey: "J"});
+	accessKey: "J" });
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "增訂的進階選項",
 	step1Title: "增訂的選項儲存於瀏覽器的 cookies",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>顯示未知選項</input>",
 	unknownDescription: "//(未知)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "選項", type: 'String'},
-			{name: 'Description', field: 'description', title: "說明", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "名稱", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "選項", type: 'String' },
+			{ name: 'Description', field: 'description', title: "說明", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "名稱", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "擴充套件管理",
 	step1Title: "- 已載入之套件",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -243,40 +249,41 @@ merge(config.macros.plugins,{
 	deleteLabel: "刪除",
 	deletePrompt: "永遠刪除所選套件",
 
-	listViewTemplate : {
+	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "套件", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "說明", type: 'String'},
-			{name: 'Version', field: 'Version', title: "版本", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "大小", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "強制執行", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "停用", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "已載入", type: "Boolean", trueText: "是", falseText: "否"},
-			{name: 'Startup Time', field: 'startupTime', title: "載入時間", type: 'String'},
-			{name: 'Error', field: 'error', title: "載入狀態", type: 'Boolean', trueText: "錯誤", falseText: "正常"},
-			{name: 'Log', field: 'log', title: "紀錄", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "套件", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "說明", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "版本", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "大小", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "強制執行", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "停用", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "已載入", type: "Boolean", trueText: "是", falseText: "否" },
+			{ name: 'Startup Time', field: 'startupTime', title: "載入時間", type: 'String' },
+			{ name: 'Error', field: 'error', title: "載入狀態", type: 'Boolean', trueText: "錯誤", falseText: "正常" },
+			{ name: 'Log', field: 'log', title: "紀錄", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "+",
 	morePrompt: "顯示更多工具列命令",
 	lessLabel: "-",
 	lessPrompt: "隱藏部份工具列命令",
 	separator: "|"
-	});
-	
-merge(config.macros.refreshDisplay,{
+});
+
+merge(config.macros.refreshDisplay, {
 	label: "刷新",
 	prompt: "刷新此 TiddlyWiki 顯示"
-	});
-	
-merge(config.macros.importTiddlers,{
+});
+
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "TiddlyWiki 於唯讀模式下，不支援導入文章。請由本機（file://）開啟 TiddlyWiki 文件",
 	wizardTitle: "自其他檔案或伺服器導入文章",
 	step1Title: "步驟一：指定伺服器或來源文件",
@@ -293,7 +300,7 @@ merge(config.macros.importTiddlers,{
 	statusOpenWorkspace: "正在開啟工作區",
 	statusGetTiddlerList: "正在取得可用之文章清單",
 	step3Title: "步驟三：選擇欲導入之文章",
-	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>保持這些文章與伺服器的連結，便於同步後續的變更。</input><br><input type='checkbox' name='chkSave'>儲存此伺服器的詳細資訊於標籤為 'systemServer' 的文章名為：</input> <input type='text' size=25 name='txtSaveTiddler'>", 
+	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>保持這些文章與伺服器的連結，便於同步後續的變更。</input><br><input type='checkbox' name='chkSave'>儲存此伺服器的詳細資訊於標籤為 'systemServer' 的文章名為：</input> <input type='text' size=25 name='txtSaveTiddler'>",
 	importLabel: "導入",
 	importPrompt: "導入所選文章",
 	confirmOverwriteText: "確定要覆寫這些文章：\n\n%0",
@@ -311,16 +318,17 @@ merge(config.macros.importTiddlers,{
 
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "文章", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "大小", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "標籤", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "文章", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "大小", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "標籤", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "更新 TiddlyWiki 核心程式",
 	step1Title: "更新或修補此 TiddlyWiki 至最新版本",
 	step1Html: "您將更新至最新版本的 TiddlyWiki 核心程式 (自 <a href='%0' class='externalLink' target='_blank'>%1</a>)。 在更新過程中，您的資料將被保留。<br><br>請注意：更新核心可能不相容於其他套件。若對更新的檔案有問題，詳見 <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -346,24 +354,25 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "取消更新作業",
 	step3Title: "已取消更新作業",
 	step3Html: "您已取消更新作業"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "文章", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "伺服器類型", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "伺服器主機", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "伺服器工作區", type: 'String'},
-			{name: 'Status', field: 'status', title: "同步情形", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "伺服器網址", text: "檢視", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "文章", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "伺服器類型", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "伺服器主機", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "伺服器工作區", type: 'String' },
+			{ name: 'Status', field: 'status', title: "同步情形", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "伺服器網址", text: "檢視", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "同步更新這些文章", name: 'sync'}
-			]},
+			{ caption: "同步更新這些文章", name: 'sync' }
+		]
+	},
 	wizardTitle: "將你的資料內容與外部伺服器與檔案同步",
 	step1Title: "選擇欲同步的文章",
 	step1Html: '<input type="hidden" name="markList"></input>', // DO NOT TRANSLATE
@@ -372,87 +381,88 @@ merge(config.macros.sync,{
 	hasChanged: "已更動",
 	hasNotChanged: "未更動",
 	syncStatusList: {
-		none: {text: "...", display:null, className:'notChanged'},
-		changedServer: {text: "伺服器資料已更動", display:null, className:'changedServer'},
-		changedLocally: {text: "本機資料已更動", display:null, className:'changedLocally'},
-		changedBoth: {text: "已同時更新本機與伺服器上的資料", display:null, className:'changedBoth'},
-		notFound: {text: "伺服器無此資料", display:null, className:'notFound'},
-		putToServer: {text: "已儲存更新資料至伺服器", display:null, className:'putToServer'},
-		gotFromServer: {text: "已從伺服器擷取更新資料", display:null, className:'gotFromServer'}
-		}
-	});
+		none: { text: "...", display: null, className: 'notChanged' },
+		changedServer: { text: "伺服器資料已更動", display: null, className: 'changedServer' },
+		changedLocally: { text: "本機資料已更動", display: null, className: 'changedLocally' },
+		changedBoth: { text: "已同時更新本機與伺服器上的資料", display: null, className: 'changedBoth' },
+		notFound: { text: "伺服器無此資料", display: null, className: 'notFound' },
+		putToServer: { text: "已儲存更新資料至伺服器", display: null, className: 'putToServer' },
+		gotFromServer: { text: "已從伺服器擷取更新資料", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.macros.annotations,{
-	});
+merge(config.macros.annotations, {
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "關閉",
-	tooltip: "關閉本文"});
+	tooltip: "關閉本文" });
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "關閉其他",
-	tooltip: "關閉其他文章"});
+	tooltip: "關閉其他文章" });
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "編輯",
 	tooltip: "編輯本文",
 	readOnlyText: "檢視",
-	readOnlyTooltip: "檢視本文之原始內容"});
+	readOnlyTooltip: "檢視本文之原始內容" });
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "完成",
-	tooltip: "確定修改"});
+	tooltip: "確定修改" });
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "取消",
 	tooltip: "取消修改",
 	warning: "確定取消對 '%0' 的修改嗎?",
 	readOnlyText: "完成",
-	readOnlyTooltip: "返回正常顯示模式"});
+	readOnlyTooltip: "返回正常顯示模式" });
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "刪除",
 	tooltip: "刪除文章",
-	warning: "確定刪除 '%0'?"});
+	warning: "確定刪除 '%0'?" });
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "引用連結",
-	tooltip: "本文引用連結"});
+	tooltip: "本文引用連結" });
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "引用",
 	tooltip: "引用本文的文章",
-	popupNone: "本文未被引用"});
+	popupNone: "本文未被引用" });
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "捲頁",
-	tooltip: "捲頁至其他已開啟的文章"});
+	tooltip: "捲頁至其他已開啟的文章" });
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "同步",
 	tooltip: "本文章與伺服器或其他外部檔案的同步資訊",
-	currentlySyncing: "<div>同步類型：<span class='popupHighlight'>'%0'</span></"+"div><div>與伺服器：<span class='popupHighlight'>%1 同步</span></"+"div><div>工作區：<span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>同步類型：<span class='popupHighlight'>'%0'</span></" + "div><div>與伺服器：<span class='popupHighlight'>%1 同步</span></" + "div><div>工作區：<span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "無進行中的同步動作",
 	captionUnSync: "停止同步此文章",
 	chooseServer: "與其他伺服器同步此文章:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  " });
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "欄位",
 	tooltip: "顯示此文章的擴充資訊",
 	emptyText: "此文章沒有擴充欄位",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "擴充欄位", type: 'String'},
-			{name: 'Value', field: 'value', title: "內容", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "擴充欄位", type: 'String' },
+			{ name: 'Value', field: 'value', title: "內容", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	} });
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[GettingStarted]]",
 	GettingStarted: "使用此 TiddlyWiki 的空白範本之前，請先修改以下預設文章：\n* SiteTitle 及 SiteSubtitle：網站的標題和副標題，顯示於頁面上方<br />（在儲存變更後，將顯示於瀏覽器視窗的標題列）。\n* MainMenu：主選單（通常在頁面左側）。\n* DefaultTiddlers：內含一些文章的標題，可於載入TiddlyWiki 後的預設開啟。\n請輸入您的大名，作為所建立/ 編輯的文章署名：<<option txtUserName>>",
 	MainMenu: "[[使用說明|GettingStarted]]\n\n\n版本：<<version>>",
@@ -466,7 +476,7 @@ merge(config.shadowTiddlers,{
 	TabMore: '<<tabs txtMoreTab "未完成" "內容空白的文章" TabMoreMissing "未引用" "未被引用的文章" TabMoreOrphans "預設文章" "已預設內容的隱藏文章" TabMoreShadowed>>'
 });
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "此預設文章可以存取一些進階選項。",
 	ColorPalette: "此預設文章裡的設定值，將決定 ~TiddlyWiki 使用者介面的配色。",
 	DefaultTiddlers: "當 ~TiddlyWiki 在瀏覽器中開啟時，此預設文章裡列出的文章，將被自動顯示。",
@@ -500,5 +510,5 @@ merge(config.annotations,{
 	TabTimeline: "此預設文章的內容，為於螢幕右側副選單中的「最近更新」頁籤的內容",
 	ToolbarCommands: "此預設文章的內容，為顯示於文章工具列之命令",
 	ViewTemplate: "此預設文章裡的 HTML template 決定文章顯示的樣子"
-	});
+});
 //}}}

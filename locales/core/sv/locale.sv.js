@@ -21,19 +21,19 @@
 config.locale = "sv"; // W3C language tag
 
 if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "DittNamn"});
+	merge(config.options, { txtUserName: "DittNamn" });
 
-merge(config.tasks,{
-	save: {text: "spara", tooltip: "Spara dina ändringar för denna TiddlyWiki", action: saveChanges},
-	sync: {text: "synka", tooltip: "Synkronisera ändringar med andra TiddlyWiki-filer och servrar", content: '<<sync>>'},
-	importTask: {text: "importera", tooltip: "Importera tiddler och insticksprogram från andra Tiddlywiki-filer och servrar", content: '<<importTiddlers>>'},
-	tweak: {text: "anpassa", tooltip: "Anpassa TiddlyWikis utseend och beteende", content: '<<options>>'},
-	upgrade: {text: "uppgradera", tooltip: "Uppgradera TiddlyWikis kärnkod", content: '<<upgrade>>'},
-	plugins: {text: "instick", tooltip: "Hantera installera insticksprogram", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "spara", tooltip: "Spara dina ändringar för denna TiddlyWiki", action: saveChanges },
+	sync: { text: "synka", tooltip: "Synkronisera ändringar med andra TiddlyWiki-filer och servrar", content: '<<sync>>' },
+	importTask: { text: "importera", tooltip: "Importera tiddler och insticksprogram från andra Tiddlywiki-filer och servrar", content: '<<importTiddlers>>' },
+	tweak: { text: "anpassa", tooltip: "Anpassa TiddlyWikis utseend och beteende", content: '<<options>>' },
+	upgrade: { text: "uppgradera", tooltip: "Uppgradera TiddlyWikis kärnkod", content: '<<upgrade>>' },
+	plugins: { text: "instick", tooltip: "Hantera installera insticksprogram", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "Användarnamn för signering av ändringar",
 	chkRegExpSearch: "Slå på reguljärar uttryck för sökningar",
 	chkCaseSensitiveSearch: "Skiftlägeskänslig sökning",
@@ -51,9 +51,9 @@ merge(config.optionsDesc,{
 	chkInsertTabs: "Använd tab-tangenten för att tabulera istället för att flytta mellan fält",
 	txtBackupFolder: "Katalognamn att använda för säkerhetskopior",
 	txtMaxEditRows: "Maximalt antal rader i redigeringsboxar",
-	txtFileSystemCharSet: "Standard teckenkodning vid sparning av ändringar (endast Firefox/Mozilla)"});
+	txtFileSystemCharSet: "Standard teckenkodning vid sparning av ändringar (endast Firefox/Mozilla)" });
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "Problem uppstod vid laddning av insticksprogram. Se PluginManager för detaljer",
 	pluginError: "Fel: %0",
 	pluginDisabled: "Ej exekverad då det är avslaget via märkordet 'systemConfigDisable'",
@@ -92,18 +92,18 @@ merge(config.messages,{
 	invalidFieldName: "Ogiltigt fältnamn %0",
 	fieldCannotBeChanged: "Fältet '%0' kan inte ändras",
 	loadingMissingTiddler: "Försöker att hämta tiddlern '%0' från servern '%1':\n\n'%2' i arbetsyta '%3'",
-	upgradeDone: "Uppgraderingen till version %0 är nu fullständig\n\nKlicka på 'OK' för att ladda om den uppgraderade TiddlyWiki"});
+	upgradeDone: "Uppgraderingen till version %0 är nu fullständig\n\nKlicka på 'OK' för att ladda om den uppgraderade TiddlyWiki" });
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "stäng",
-	tooltip: "stäng denna meddelandearea"});
+	tooltip: "stäng denna meddelandearea" });
 
 config.messages.backstage = {
-	open: {text: "backstage", tooltip: "Öppnar backstage-arean för att utföra författande och redigering"},
-	close: {text: "stäng", tooltip: "Stäng backstage-arean"},
+	open: { text: "backstage", tooltip: "Öppnar backstage-arean för att utföra författande och redigering" },
+	close: { text: "stäng", tooltip: "Stäng backstage-arean" },
 	prompt: "backstage: ",
 	decal: {
-		edit: {text: "redigera", tooltip: "Redigera tiddlern '%0'"}
+		edit: { text: "redigera", tooltip: "Redigera tiddlern '%0'" }
 	}
 };
 
@@ -112,74 +112,75 @@ config.messages.listView = {
 	previewUnavailable: "(förhandsgranskning inte tillgänglig)"
 };
 
-config.messages.dates.months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November","December"];
+config.messages.dates.months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
 config.messages.dates.days = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
 config.messages.dates.shortMonths = ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"];
 config.messages.dates.shortDays = ["Sön", "Mån", "Tis", "Ons", "Tor", "Fre", "Lör"];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
-config.messages.dates.daySuffixes = [":a",":a",":e",":e",":e",":e",":e",":e",":e",":e",
-		":e",":e",":e",":e",":e",":e",":e",":e",":e",":e",
-		":a",":a",":e",":e",":e",":e",":e",":e",":e",":e",
-		":a"];
+config.messages.dates.daySuffixes = [
+	":a", ":a", ":e", ":e", ":e", ":e", ":e", ":e", ":e", ":e",
+	":e", ":e", ":e", ":e", ":e", ":e", ":e", ":e", ":e", ":e",
+	":a", ":a", ":e", ":e", ":e", ":e", ":e", ":e", ":e", ":e",
+	":a"
+];
 config.messages.dates.am = "dagtid";
 config.messages.dates.pm = "nattetid";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "inga märkord",
 	labelTags: "märkord: ",
 	openTag: "Öppna märkord '%0'",
 	tooltip: "Visa tiddler märka med '%0'",
 	openAllText: "Öppna alla",
 	openAllTooltip: "Öppna alla dessa tiddler",
-	popupNone: "Inga andra tiddler är märkta med '%0'"});
+	popupNone: "Inga andra tiddler är märkta med '%0'" });
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "Tiddlern '%0' existerar inte ännu. Dubbel-klicka för att skapa den",
 	defaultModifier: "(saknas)",
 	shadowModifier: "(inbyggd skugg-tiddler)",
 	dateFormat: "YYYY MM DD", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "skapad"});
+	createdPrompt: "skapad" });
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "Skriv märkord separerade med mellanslag, [[använd dubbla klammrar]] om nödvändigt, eller lägg till existerande",
-	defaultText: "Skriv texten för '%0'"});
+	defaultText: "Skriv texten för '%0'" });
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "märkord",
 	tooltip: "Välj existerande märkord att lägga till denna tiddler",
 	popupNone: "Det finns inga märkord definierade",
-	tagTooltip: "Lägg till märkordet '%0'"});
+	tagTooltip: "Lägg till märkordet '%0'" });
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	] });
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "sök",
 	prompt: "Sök i denna TiddlyWiki",
 	accessKey: "S",
 	successMsg: "%0 tiddler matchar %1",
-	failureMsg: "Inga tiddler matchar %0"});
+	failureMsg: "Inga tiddler matchar %0" });
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "märkning: ",
 	labelNotTag: "ingen märkning",
-	tooltip: "Lista över alla tiddler märka med '%0'"});
+	tooltip: "Lista över alla tiddler märka med '%0'" });
 
-merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+merge(config.macros.timeline, {
+	dateFormat: "DD MMM YYYY" });// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "Visa tiddler märkta med '%0'",
-	noTags: "Det finns inga märkta tiddler"});
+	noTags: "Det finns inga märkta tiddler" });
 
 config.macros.list.all.prompt = "Alla tiddler i alfabetisk ordning";
 config.macros.list.missing.prompt = "Tiddler som länkas till men inte är definierade";
@@ -187,47 +188,48 @@ config.macros.list.orphans.prompt = "Tiddler som inte länkas till från någon 
 config.macros.list.shadowed.prompt = "Tiddler som skuggas med standardinnnehåll";
 config.macros.list.touched.prompt = "Tiddler som har modifierats lokalt";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "stäng alla",
-	prompt: "Stäng alla visade tiddler (utom de som redigeras)"});
+	prompt: "Stäng alla visade tiddler (utom de som redigeras)" });
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "permalänk",
-	prompt: "Länk till en URL som hämtar alla de nu visade tiddlerna"});
+	prompt: "Länk till en URL som hämtar alla de nu visade tiddlerna" });
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "spara ändringar",
 	prompt: "Spara alla tidller och att skapa en ny TiddlyWiki",
-	accessKey: "S"});
+	accessKey: "S" });
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "ny tiddler",
 	prompt: "Skapa en ny tiddler",
 	title: "Ny Tiddler",
-	accessKey: "N"});
+	accessKey: "N" });
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "ny journal",
 	prompt: "Skapa en ny tiddler med nuvarande datum och tid",
-	accessKey: "J"});
+	accessKey: "J" });
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "Anpassa avancerade inställningar",
 	step1Title: "Dessa inställningar sparas i kakor i din webbläsare",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Visa okända inställningar</input>",
 	unknownDescription: "//(okänd)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Inställning", type: 'String'},
-			{name: 'Description', field: 'description', title: "Beskrivning", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Namn", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "Inställning", type: 'String' },
+			{ name: 'Description', field: 'description', title: "Beskrivning", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "Namn", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "Hantera insticksprogram",
 	step1Title: "Nu inladdade insticksprogram",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -240,33 +242,34 @@ merge(config.macros.plugins,{
 	deletePrompt: "Ta bort dessa tiddler för alltid",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Storlek", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "Tvingad", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Avslagen", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Laddad", type: 'Boolean', trueText: "Ja", falseText: "Nej"},
-			{name: 'Startup Time', field: 'startupTime', title: "Starttid", type: 'String'},
-			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Fel", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "Logg", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Storlek", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "Tvingad", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "Avslagen", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "Laddad", type: 'Boolean', trueText: "Ja", falseText: "Nej" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Starttid", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Fel", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "Logg", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "mer",
 	morePrompt: "Visa fler kommando"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "Uppdatera",
 	prompt: "Uppdatera visningen av hela TiddlyWiki"
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "Du kan inte importera i en TiddlyWiki som bara kan läsas. Försök att öppna från en file:// URL",
 	wizardTitle: "Importera tiddler från en annan fil eller server",
 	step1Title: "Steg 1: Hitta servern eller TiddlyWiki-filen",
@@ -301,16 +304,17 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Storlek", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Märkord", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Storlek", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "Märkord", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "Uppgradera TiddlyWikins kärnkod",
 	step1Title: "Uppdatera eller reparera denna TiddlyWiki till senast publicerade versionen",
 	step1Html: "Du håller på att uppgradera till den senast publicerade versionen av TiddlyWikis kärnkod (från <a href='%0' class='externalLink' target='_blank'>%1</a>). Ditt innehåller kommer att bevaras under uppgraderingen.<br><br>Notera att kärnkodsuppgraderingar är kända att störa ändre insticksprogram. Om du upplever problem med den uppgraderade filen, se <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -336,24 +340,25 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "Avbryt uppgraderingsprocessen",
 	step3Title: "Uppgradering avbruten",
 	step3Html: "Du har avbrutit uppgraderingsprocessen"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Server typ", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Server namn", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Server arbetsyta", type: 'String'},
-			{name: 'Status', field: 'status', title: "Synkroniseringsstatus", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "Server URL", text: "View", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "Server typ", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "Server namn", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "Server arbetsyta", type: 'String' },
+			{ name: 'Status', field: 'status', title: "Synkroniseringsstatus", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "Server URL", text: "View", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "Synka dessa tiddler", name: 'sync'}
-			]},
+			{ caption: "Synka dessa tiddler", name: 'sync' }
+		]
+	},
 	wizardTitle: "Synkronisera med externa servrar och filer",
 	step1Title: "Välj de tiddler du vill synkronisera",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -362,84 +367,85 @@ merge(config.macros.sync,{
 	hasChanged: "Ändrade medan oansluten",
 	hasNotChanged: "Oförändrade medan oansluten",
 	syncStatusList: {
-		none: {text: "...", color: "transparent", display:null},
-		changedServer: {text: "Ändrade på servern", color: '#8080ff', display:null},
-		changedLocally: {text: "Ändrad medan oansluten", color: '#80ff80', display:null},
-		changedBoth: {text: "Ändrade medan oansluten samt på servern", color: '#ff8080', display:null},
-		notFound: {text: "Ej funnen på servern", color: '#ffff80', display:null},
-		putToServer: {text: "Sparade uppdatering på servern", color: '#ff80ff', display:null},
-		gotFromServer: {text: "Hämtade uppdatering från servern", color: '#80ffff', display:null}
-		}
-	});
+		none: { text: "...", color: "transparent", display: null },
+		changedServer: { text: "Ändrade på servern", color: '#8080ff', display: null },
+		changedLocally: { text: "Ändrad medan oansluten", color: '#80ff80', display: null },
+		changedBoth: { text: "Ändrade medan oansluten samt på servern", color: '#ff8080', display: null },
+		notFound: { text: "Ej funnen på servern", color: '#ffff80', display: null },
+		putToServer: { text: "Sparade uppdatering på servern", color: '#ff80ff', display: null },
+		gotFromServer: { text: "Hämtade uppdatering från servern", color: '#80ffff', display: null }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "stäng",
-	tooltip: "Stäng denna tiddler"});
+	tooltip: "Stäng denna tiddler" });
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "stäng andra",
-	tooltip: "Stäng alla andra tiddler"});
+	tooltip: "Stäng alla andra tiddler" });
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "redigera",
 	tooltip: "Redigera denna tiddler",
 	readOnlyText: "visa",
-	readOnlyTooltip: "Visa denna tiddlers källa"});
+	readOnlyTooltip: "Visa denna tiddlers källa" });
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "klar",
-	tooltip: "Spara ändringar för denna tiddler"});
+	tooltip: "Spara ändringar för denna tiddler" });
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "avbryt",
 	tooltip: "Ångra ändringarna för denna tiddler",
 	warning: "Är du säker på att du vill överge dina ändringar av '%0'?",
 	readOnlyText: "klar",
-	readOnlyTooltip: "Visa denna tiddler normalt"});
+	readOnlyTooltip: "Visa denna tiddler normalt" });
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "ta bort",
 	tooltip: "Ta bort denna tiddler",
-	warning: "Är du säker på att du vill ta bort '%0'?"});
+	warning: "Är du säker på att du vill ta bort '%0'?" });
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "permalänk",
-	tooltip: "Permalänk för denna tiddler"});
+	tooltip: "Permalänk för denna tiddler" });
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "referenser",
 	tooltip: "Visa tiddler som länkar till denna",
-	popupNone: "Inga referenser"});
+	popupNone: "Inga referenser" });
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "hoppa",
-	tooltip: "Hoppa till en annan öppen tiddler"});
+	tooltip: "Hoppa till en annan öppen tiddler" });
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "synkar",
 	tooltip: "Kontrollera synkroniserav av denna tiddler med en server eller extern fil",
-	currentlySyncing: "<div>Synkar nu via <span class='popupHighlight'>'%0'</span> till:</"+"div><div>server: <span class='popupHighlight'>%1</span></"+"div><div>arbetsyta: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Synkar nu via <span class='popupHighlight'>'%0'</span> till:</" + "div><div>server: <span class='popupHighlight'>%1</span></" + "div><div>arbetsyta: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "Synkar inte nu",
 	captionUnSync: "Sluta synkronisera denna tiddler",
 	chooseServer: "Synkronisera denna tiddler med en annan server:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  " });
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "fält",
 	tooltip: "Visa de utökade fälten för denna tiddler",
 	emptyText: "Det finns inga utökade fält för denna tiddler",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Fält", type: 'String'},
-			{name: 'Value', field: 'value', title: "Värde", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "Fält", type: 'String' },
+			{ name: 'Value', field: 'value', title: "Värde", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	} });
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[KomIgång]]",
 	MainMenu: "[[KomIgång]]\n\n\n^^~TiddlyWiki version <<version>>\n© 2007 [[UnaMesa|http://www.unamesa.org/]]^^",
 	TranslatedGettingStarted: "För att komma igång med denna tomma TiddlyWiki, måste du ändra följande tiddler:\n* SiteTitle & SiteSubtitle: Titel och undertitel för platsen, så som visas ovan (efter att du sparat, visas de även i din webbläsares titelrad)\n* MainMenu: Menyn (vanligtvid till vänster)\n* DefaultTiddlers: Innehåller namnen på de tiddler som du vill ska visas när TiddlyWiki öppnas\nDu behöver också ange ditt användarnamn för signering av dina redigeringar: <<option txtUserName>>",
@@ -450,9 +456,9 @@ merge(config.shadowTiddlers,{
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY" "journal">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "inställningar \u00bb" "Ändra TiddlyWikis avancerade inställningar">>',
 	SideBarTabs: '<<tabs txtMainTab "Tidslinje" "Tidslinje" TabTimeline "Alla" "Alla tiddler" TabAll "Märkord" "Alla märkord" TabTags "Fler" "Fler listor" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "Saknade" "Saknade tiddler" TabMoreMissing "Föräldralösa" "Föräldralösa tiddler" TabMoreOrphans "Skuggade" "Skuggade tiddler" TabMoreShadowed>>'
-	});
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "Denna skugg-tiddler möjliggör tillgågn till flera avancerade inställningar",
 	ColorPalette: "Dessa värden i denna skugg-tiddler bestämmer färgschemat för ~TiddlyWikis användargränssnitt",
 	DefaultTiddlers: "De tiddlers som listas i denna skugg-tiddler kommer automatiskt att visas när ~TiddlyWiki startar",
@@ -486,6 +492,6 @@ merge(config.annotations,{
 	TabTimeline: "Denna skugg-tiddler innehåller innehållet för fliken 'Tidslinje' i högerkanten",
 	ToolbarCommands: "Denna skugg-tiddler bestämmer vilka kommando som syns i tiddler-verktygsrader",
 	ViewTemplate: "HTML-mallen i denna skugg-tiddler bestämmer hur tiddler ser ut"
-	});
+});
 
 //}}}

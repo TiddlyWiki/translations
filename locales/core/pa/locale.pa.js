@@ -20,19 +20,19 @@
 config.locale = "pa"; // W3C language tag
 
 if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "ਤੁਹਾਡਾਨਾਮ"});
+	merge(config.options, { txtUserName: "ਤੁਹਾਡਾਨਾਮ" });
 
-merge(config.tasks,{
-	save: {text: "ਸੇਵ", tooltip: "ਇਸ ਟਿਡਲੀਵਿਕੀ ਦੇ ਬਦਲਾਓ ਸੇਵ ਕਰੋ", action: saveChanges},
-	sync: {text: "ਸੁਮੇਲੋ", tooltip: "ਬਦਲਾਵਾਂ ਨੂ ਬਾਕੀ ਟਿਡਲੀਵਿਕੀ ਫਾਈਲਾਂ ਤੇ ਸਰਵਰਾਂ ਨਾਲ ਸੁਮੇਲੋ", content: '<<sync>>'},
-	importTask: {text: "ਇੰਪੋਰਟ", tooltip: "ਟਿਡਲਰਾਂ ਅਤੇ ਪਲੱਗਿਨਾਂ ਨੂੰ ਦੂਜੀਆਂ ਟਿਡਲੀਵਿਕੀ ਫਾਈਲਾਂ ਅਤੇ ਸਰਵਰਾਂ ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ", content: '<<importTiddlers>>'},
-	tweak: {text: "ਟ੍ਵੀਕ", tooltip: "ਟਿਡਲੀਵਿਕੀ ਦੀ ਦਿਖ ਅਤੇ ਵਿਓਹਾਰ ਨੂੰ ਟ੍ਵੀਕੋ", content: '<<options>>'},
-	upgrade: {text: "ਅਪਗ੍ਰੇਡ", tooltip: "ਟਿਡਲੀਵਿਕੀ ਦੇ ਕੋਰ-ਕੋਡ ਨੂੰ ਅਪਗ੍ਰੇਡ ਕਰੋ", content: '<<upgrade>>'},
-	plugins: {text: "ਪਲੱਗਿਨ", tooltip: "ਇੰਸਟਾਲ ਹੋਏ ਹੋਏ ਪਲੱਗਿਨਾਂ ਨੂੰ ਮੈਨੇਜ ਕਰੋ", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "ਸੇਵ", tooltip: "ਇਸ ਟਿਡਲੀਵਿਕੀ ਦੇ ਬਦਲਾਓ ਸੇਵ ਕਰੋ", action: saveChanges },
+	sync: { text: "ਸੁਮੇਲੋ", tooltip: "ਬਦਲਾਵਾਂ ਨੂ ਬਾਕੀ ਟਿਡਲੀਵਿਕੀ ਫਾਈਲਾਂ ਤੇ ਸਰਵਰਾਂ ਨਾਲ ਸੁਮੇਲੋ", content: '<<sync>>' },
+	importTask: { text: "ਇੰਪੋਰਟ", tooltip: "ਟਿਡਲਰਾਂ ਅਤੇ ਪਲੱਗਿਨਾਂ ਨੂੰ ਦੂਜੀਆਂ ਟਿਡਲੀਵਿਕੀ ਫਾਈਲਾਂ ਅਤੇ ਸਰਵਰਾਂ ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ", content: '<<importTiddlers>>' },
+	tweak: { text: "ਟ੍ਵੀਕ", tooltip: "ਟਿਡਲੀਵਿਕੀ ਦੀ ਦਿਖ ਅਤੇ ਵਿਓਹਾਰ ਨੂੰ ਟ੍ਵੀਕੋ", content: '<<options>>' },
+	upgrade: { text: "ਅਪਗ੍ਰੇਡ", tooltip: "ਟਿਡਲੀਵਿਕੀ ਦੇ ਕੋਰ-ਕੋਡ ਨੂੰ ਅਪਗ੍ਰੇਡ ਕਰੋ", content: '<<upgrade>>' },
+	plugins: { text: "ਪਲੱਗਿਨ", tooltip: "ਇੰਸਟਾਲ ਹੋਏ ਹੋਏ ਪਲੱਗਿਨਾਂ ਨੂੰ ਮੈਨੇਜ ਕਰੋ", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "ਤੁਹਾਡੇ ਸੰਪਾਦਨਾਂ ਲਈ ਯੂਜ਼ਰ-ਨੇਮ",
 	chkRegExpSearch: "ਖੋਜਾਂ ਲਈ ਰੈਗੂਲਰ-ਐਕਸਪ੍ਰੈਸ਼ਨ ਚਾਲੂ ਕਰੋ",
 	chkCaseSensitiveSearch: "ਕੇਸ-ਸੰਵੇਦਨਸ਼ੀਲ ਖੋਜ",
@@ -51,9 +51,9 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "ਬੈਕਅਪਾਂ ਵਾਸਤੇ ਪ੍ਰਯੋਗ ਕੀਤੇ ਜਾਣ ਵਾਲੇ ਫੋਲਡਰ ਦਾ ਨਾਮ",
 	txtMaxEditRows: "ਸੰਪਾਦਨ ਖਾਨਿਆਂ ਵਿਚ ਵਧ ਤੋਂ ਵਧ ਸਤਰਾਂ",
 	txtTheme: "ਪ੍ਰਯੋਗ ਹੋਣ ਵਾਲੇ ਥੀਮ ਦਾ ਨਾਮ",
-	txtFileSystemCharSet: "ਬਦਲਾਵ ਸੇਵ ਕਰਣ ਲਈ ਡਿਫਾਲਟ ਕਰੈਕਟਰ-ਸੈੱਟ (ਕੇਵਲ ਫਾਇਰਫਾਕਸ/ਮੌਜੀਲਾ ਲਈ)"});
+	txtFileSystemCharSet: "ਬਦਲਾਵ ਸੇਵ ਕਰਣ ਲਈ ਡਿਫਾਲਟ ਕਰੈਕਟਰ-ਸੈੱਟ (ਕੇਵਲ ਫਾਇਰਫਾਕਸ/ਮੌਜੀਲਾ ਲਈ)" });
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "ਪਲੱਗਿਨ ਲੋਡ ਕਰਦਿਆਂ ਸਮੱਸਿਆਵਾਂ ਦਾ ਸਾਹਮਣਾ ਹੋਇਆ. ਵੇਰਵੇ ਲਈ ਪਲੱਗਿਨ-ਮਨੇਜਰ ਦੇਖੋ",
 	pluginError: "ਐਰਰ: %0",
 	pluginDisabled: "ਐਗਜ਼ੀਕਿਊਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਕਿਉਂਕਿ 'systemConfigDisable' ਟੈਗ ਨਾਲ ਕਿਰਿਆਹੀਣ ਕੀਤਾ ਗਿਆ",
@@ -93,18 +93,18 @@ merge(config.messages,{
 	fieldCannotBeChanged: "ਫੀਲਡ '%0' ਨੂੰ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ",
 	loadingMissingTiddler: "'%0' ਟਿਡਲਰ ਨੂੰ '%3' ਵਰਕਸਪੇਸ ਵਿਚੋਂ ਅਤੇ '%2' ਤੇ ਸਥਿਤ '%1' ਸਰਵਰ ਤੋਂ ਪੁਨ-ਪ੍ਰਾਪਤ ਕਰਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ",
 	upgradeDone: "%0 ਵਰਜ਼ਨ ਤੱਕ ਅਪਗ੍ਰੇਡ ਹੁਣ ਸਮਪੂਰਣ ਹੋ ਗਿਆ\n\nਨਵੀਂ ਅਤੇ ਅਪਗ੍ਰੇਡ ਹੋਈ ਟਿਡਲੀਵਿਕੀ ਨੂੰ ਪੁਨਰ-ਲੋਡ ਕਰਣ ਲਈ 'OK' ਦੱਬੋ",
-	invalidCookie: "ਅਵੈਧ ਕੁਕੀ '%0'"});
+	invalidCookie: "ਅਵੈਧ ਕੁਕੀ '%0'" });
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "ਬੰਦ",
-	tooltip: "ਇਸ ਸੁਨੇਹੇ ਸਥਾਨ ਨੂੰ ਬੰਦ ਕਰੋ"});
+	tooltip: "ਇਸ ਸੁਨੇਹੇ ਸਥਾਨ ਨੂੰ ਬੰਦ ਕਰੋ" });
 
 config.messages.backstage = {
-	open: {text: "ਬੈਕ ਸਟੇਜ", tooltip: "ਬੈਕ ਸਟੇਜ ਏਰੀਏ ਨੂੰ ਲੇਖਣ ਅਤੇ ਸੰਪਾਦਨ ਕਾਰਜਾਂ ਵਾਸਤੇ ਖੋਲੋ"},
-	close: {text: "ਬੰਦ", tooltip: "ਬੈਕ ਸਟੇਜ ਏਰੀਏ ਨੂੰ ਬੰਦ ਕਰੋ"},
+	open: { text: "ਬੈਕ ਸਟੇਜ", tooltip: "ਬੈਕ ਸਟੇਜ ਏਰੀਏ ਨੂੰ ਲੇਖਣ ਅਤੇ ਸੰਪਾਦਨ ਕਾਰਜਾਂ ਵਾਸਤੇ ਖੋਲੋ" },
+	close: { text: "ਬੰਦ", tooltip: "ਬੈਕ ਸਟੇਜ ਏਰੀਏ ਨੂੰ ਬੰਦ ਕਰੋ" },
 	prompt: "ਬੈਕ ਸਟੇਜ: ",
 	decal: {
-		edit: {text: "ਸੰਪਾਦਨ", tooltip: "'%0' ਟਿਡਲਰ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰੋ"}
+		edit: { text: "ਸੰਪਾਦਨ", tooltip: "'%0' ਟਿਡਲਰ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰੋ" }
 	}
 };
 
@@ -113,71 +113,74 @@ config.messages.listView = {
 	previewUnavailable: "(ਪ੍ਰੀਵਿਊ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੈ)"
 };
 
-config.messages.dates.months = ["ਜਨਵਰੀ", "ਫਰਵਰੀ", "ਮਾਰਚ", "ਅਪ੍ਰੈਲ", "ਮਈ", "ਜੂਨ", "ਜੁਲਾਈ", "ਅਗਸਤ", "ਸਤੰਬਰ", "ਅਕਤੂਬਰ", "ਨਵੰਬਰ","ਦਿਸੰਬਰ"];
+config.messages.dates.months = ["ਜਨਵਰੀ", "ਫਰਵਰੀ", "ਮਾਰਚ", "ਅਪ੍ਰੈਲ", "ਮਈ", "ਜੂਨ", "ਜੁਲਾਈ", "ਅਗਸਤ", "ਸਤੰਬਰ", "ਅਕਤੂਬਰ", "ਨਵੰਬਰ", "ਦਿਸੰਬਰ"];
 config.messages.dates.days = ["ਐਤਵਾਰ", "ਸੋਮਵਾਰ", "ਮੰਗਲਵਾਰ", "ਬੁਧਵਾਰ", "ਵੀਰਵਾਰ", "ਸ਼ੁਕਰਵਾਰ", "ਸ਼ਨੀਵਾਰ"];
 config.messages.dates.shortMonths = ["ਜਨ", "ਫਰ", "ਮਾਰ", "ਅਪ੍ਰੈ", "ਮਈ", "ਜੂਨ", "ਜੁਲਾ", "ਅਗ", "ਸਤੰ", "ਅਕ", "ਨਵੰ", "ਦਿਸੰ"];
 config.messages.dates.shortDays = ["ਐਤ", "ਸੋਮ", "ਮੰਗਲ", "ਬੁਧ", "ਵੀਰ", "ਸ਼ੁਕਰ", "ਸ਼ਨੀ"];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
-config.messages.dates.daySuffixes = ["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""];
+config.messages.dates.daySuffixes = [
+	"", "", "", "", "", "", "", "", "", "",
+	"", "", "", "", "", "", "", "", "", "",
+	"", "", "", "", "", "", "", "", "", "",
+	""];
 config.messages.dates.am = "am";
 config.messages.dates.pm = "pm";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "ਕੋਈ ਟੈਗ ਨਹੀਂ",
 	labelTags: "ਟੈਗ: ",
 	openTag: "'%0' ਟੈਗ ਖੋਲੋ",
 	tooltip: "'%0' ਨਾਲ ਟੈਗ ਕੀਤੇ ਟਿਡਲਰ ਦਿਖਾਓ",
 	openAllText: "ਸਾਰੇ ਖੋਲੋ",
 	openAllTooltip: "ਇਹ ਸਾਰੇ ਟਿਡਲਰ ਖੋਲੋ",
-	popupNone: "'%0' ਨਾਲ ਟੈਗ ਕੀਤੇ ਹੋਰ ਕੋਈ ਟਿਡਲਰ ਨਹੀਂ ਹਨ"});
+	popupNone: "'%0' ਨਾਲ ਟੈਗ ਕੀਤੇ ਹੋਰ ਕੋਈ ਟਿਡਲਰ ਨਹੀਂ ਹਨ" });
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "'%0'ਟਿਡਲਰ ਹਾਲੇ ਹੋਂਦ ਵਿਚ ਨਹੀਂ ਹੈ. ਸਿਰਜਣ ਵਾਸਤੇ ਡਬਲ-ਕਲਿੱਕ ਕਰੋ.",
 	defaultModifier: "(ਲਾਪਤਾ)",
 	shadowModifier: "(ਅੰਤਰ-ਨਿਰਮਿਤ ਪਰਛਾਵਾਂ ਟਿਡਲਰ)",
 	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "ਸਿਰਜਿਆ"});
+	createdPrompt: "ਸਿਰਜਿਆ" });
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "ਖਾਲੀ ਥਾਂ ਨਾਲ ਵਿਛੋੜ ਕੇ ਟੈਗ ਟਾਈਪ ਕਰੋ, ਲੋੜ ਪਵੇ ਤਾਂ [[ ਡਬਲ ਬਰੈਕਟ ]] ਦੀ ਵਰਤੋਂ ਕਰੋ , ਜਾਂ ਮੌਜੂਦਾ ਟੈਗਸ ਨੂੰ ਸ਼ਾਮਿਲ ਕਰੋ",
-	defaultText: "'%0' ਲਈ ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ"});
+	defaultText: "'%0' ਲਈ ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ" });
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "ਟੈਗ",
 	tooltip: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਲਾਉਣ ਲਈ ਮੌਜੋਦਾ ਟੈਗ ਚੁਣੋ",
 	popupNone: "ਕੋਈ ਵੀ ਟੈਗ ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ",
-	tagTooltip: "'%0' ਟੈਗ ਲਾਓ"});
+	tagTooltip: "'%0' ਟੈਗ ਲਾਓ" });
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	] });
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "ਖੋਜ",
 	prompt: "ਇਸ ਟਿਡਲੀਵਿਕੀ ਵਿਚ ਖੋਜੋ",
 	accessKey: "F",
 	successMsg: "%1 ਨਾਲ ਰਲਦੇ %0 ਟਿਡਲਰ ਮਿਲੇ",
-	failureMsg: "%0 ਨਾਲ ਰਲਦਾ ਕੋਈ ਟਿਡਲਰ ਨਹੀਂ ਮਿਲਿਆ"});
+	failureMsg: "%0 ਨਾਲ ਰਲਦਾ ਕੋਈ ਟਿਡਲਰ ਨਹੀਂ ਮਿਲਿਆ" });
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "ਟੈਗ ਕਰਦਾ ਹੈ: ",
 	labelNotTag: "ਟੈਗ ਨਹੀ ਕਰਦਾ",
-	tooltip: "'%0' ਨਾਲ ਟੈਗ ਕੀਤੇ ਟਿਡਲਰਾਂ ਦੀ ਸੂਚੀ"});
+	tooltip: "'%0' ਨਾਲ ਟੈਗ ਕੀਤੇ ਟਿਡਲਰਾਂ ਦੀ ਸੂਚੀ" });
 
-merge(config.macros.timeline,{
-	dateFormat: "DD MMM YYYY"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+merge(config.macros.timeline, {
+	dateFormat: "DD MMM YYYY" });// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "'%0' ਨਾਲ ਟੈਗ ਕੀਤੇ ਟਿਡਲਰ ਦਿਖਾਓ",
-	noTags: "ਕੋਈ ਵੀ ਟੈਗ ਕੀਤੇ ਟਿਡਲਰ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹਨ"});
+	noTags: "ਕੋਈ ਵੀ ਟੈਗ ਕੀਤੇ ਟਿਡਲਰ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹਨ" });
 
 config.macros.list.all.prompt = "ਸਾਰੇ ਟਿਡਲਰ ਵਰਣਕਰਮ ਅਨੁਸਾਰ";
 config.macros.list.missing.prompt = "ਟਿਡਲਰ ਜਿਹਨਾਂ ਦੇ ਲਿੰਕ ਪ੍ਰਾਪਤ ਹਨ ਪਰ ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ ਕੀਤੇ ਹੋਏ";
@@ -185,47 +188,48 @@ config.macros.list.orphans.prompt = "ਟਿਡਲਰ ਜਿਹੜੇ ਕਿਸ�
 config.macros.list.shadowed.prompt = "ਟਿਡਲਰ ਜਿਹੜੇ ਡਿਫਾਲਟ ਸਮਗਰੀ ਨਾਲ ਪਰਛਾਵਾਂ-ਯੁਕਤ ਕੀਤੇ ਹੋਏ ਹਨ";
 config.macros.list.touched.prompt = "ਟਿਡਲਰ ਜਿਹੜੇ ਸਥਾਨਕ ਪਧਰ ਤੇ ਪਰਿਵਰਤਿਤ ਕੀਤੇ ਗਏ ਹਨ";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "ਸਾਰੇ ਬੰਦ ਕਰੋ",
-	prompt: "ਸਾਰੇ ਪ੍ਰਦਰਸ਼ਿਤ ਟਿਡਲਰ ਬੰਦ ਕਰੋ (ਸੰਪਾਦਿਤ ਕੀਤੇ ਜਾ ਰਹਿਆਂ ਨੂੰ ਛੱਡ ਕੇ )"});
+	prompt: "ਸਾਰੇ ਪ੍ਰਦਰਸ਼ਿਤ ਟਿਡਲਰ ਬੰਦ ਕਰੋ (ਸੰਪਾਦਿਤ ਕੀਤੇ ਜਾ ਰਹਿਆਂ ਨੂੰ ਛੱਡ ਕੇ )" });
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "ਸਥਾਈ-ਦ੍ਰਿਸ਼ ",
-	prompt: "ਇਸ ਵਕਤ ਪ੍ਰਦਰਸ਼ਿਤ ਟਿਡਲਰਾਂ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰਣ ਲਈ URL ਲਿੰਕ"});
+	prompt: "ਇਸ ਵਕਤ ਪ੍ਰਦਰਸ਼ਿਤ ਟਿਡਲਰਾਂ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰਣ ਲਈ URL ਲਿੰਕ" });
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "ਬਦਲਾਓ ਸੇਵ ਕਰੋ",
 	prompt: "ਸਾਰੇ ਟਿਡਲਰਾਂ ਨੂੰ ਇੱਕ ਨਵੀਂ ਟਿਡਲੀਵਿਕੀ 'ਚ ਸੇਵ ਕਰੋ",
-	accessKey: "S"});
+	accessKey: "S" });
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "ਨਵਾਂ ਟਿਡਲਰ",
 	prompt: "ਨਵਾਂ ਟਿਡਲਰ ਸਿਰਜੋ",
 	title: "ਨਵਾਂ ਟਿਡਲਰ",
-	accessKey: "N"});
+	accessKey: "N" });
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "ਨਵਾਂ ਰੋਜ਼ਨਾਮਚਾ",
 	prompt: "ਇਸ ਵਕਤ ਦੀ ਮਿਤੀ ਤੇ ਸਮੇਂ ਤੋਂ ਨਵਾਂ ਟਿਡਲਰ ਸਿਰਜੋ",
-	accessKey: "J"});
+	accessKey: "J" });
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "ਅਗਲੇਰੇ ਵਿਕਲਪ ਟ੍ਵੀਕੋ",
 	step1Title: "ਇਹ ਵਿਕਲਪ ਤੁਹਾਡੇ ਬਰਾਉਸਰ ਵਿਚ ਕੂਕੀਜ਼ ਵਿਚ ਸੇਵ ਕੀਤੇ ਜਾਂਦੇ ਹਨ",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>ਅਗਿਆਤ ਵਿਕਲਪ ਦਿਖਾਓ </input>",
 	unknownDescription: "//(ਅਗਿਆਤ)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Option", type: 'String'},
-			{name: 'Description', field: 'description', title: "Description", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Name", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "Option", type: 'String' },
+			{ name: 'Description', field: 'description', title: "Description", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "Name", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "ਪਲੱਗਿਨਾਂ ਨੂੰ ਮੈਨੇਜ ਕਰੋ",
 	step1Title: "ਇਸ ਵਕਤ ਲੋਡ ਕੀਤੇ ਹੋਏ ਪਲੱਗਿਨ",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -238,38 +242,39 @@ merge(config.macros.plugins,{
 	deletePrompt: "ਇਹਨਾਂ ਟਿਡਲਰਾਂ ਨੂੰ ਸਦਾ ਲਈ ਡਿਲੀਟ ਕਰੋ",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Description", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Version", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Size", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "Forced", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Disabled", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Loaded", type: 'Boolean', trueText: "Yes", falseText: "No"},
-			{name: 'Startup Time', field: 'startupTime', title: "Startup Time", type: 'String'},
-			{name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Error", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "Description", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "Version", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Size", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "Forced", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "Disabled", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "Loaded", type: 'Boolean', trueText: "Yes", falseText: "No" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Startup Time", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Status", type: 'Boolean', trueText: "Error", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "Log", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "ਜ਼ਿਆਦਾ",
 	morePrompt: "ਵਧੇਰੀਆਂ ਕਮਾਂਡਾਂ ਦਿਖਾਓ",
 	lessLabel: "ਥੋੜਾ",
 	lessPrompt: "ਵਧੇਰੀਆਂ ਕਮਾਂਡਾਂ ਛੁਪਾਓ",
 	separator: "|"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "ਰਿਫਰੈਸ਼",
 	prompt: "ਪੂਰੇ ਟਿਡਲੀਵਿਕੀ ਪ੍ਰਦਰਸ਼ਨ ਨੂੰ ਪੁਨਰ-ਚਿਤ੍ਰਿਤ ਕਰੋ"
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "ਤੁਸੀਂ ਕੇਵਲ-ਪੜ੍ਹਨ ਵਾਲੀ ਟਿਡਲੀਵਿਕੀ ਵਿਚ ਇਮਪੋਰਟ ਨਹੀਂ ਕਰ ਸਕਦੇ. file:// URL ਤੋਂ ਉਸਨੂੰ ਖੋਲਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰਕੇ ਵੇਖ ਲਵੋ",
 	wizardTitle: "ਕਿਸੇ ਹੋਰ ਫਾਈਲ ਜਾਂ ਸਰਵਰ ਤੋਂ ਟਿਡਲਰ ਇਮਪੋਰਟ ਕਰੋ",
 	step1Title: "ਪਹਿਲਾ ਚਰਣ (੧): ਸਰਵਰ ਜਾਂ ਟਿਡਲੀਵਿਕੀ ਫਾਈਲ ਦਾ ਸਥਾਨ ਨਿਰਧਾਰਨ ਕਰੋ",
@@ -303,16 +308,17 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Size", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Tags", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Size", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "Tags", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "ਟਿਡਲੀਵਿਕੀ ਦੇ ਕੋਰ-ਕੋਡ ਨੂੰ ਅਪਗ੍ਰੇਡ ਕਰੋ",
 	step1Title: "ਇਸ ਟਿਡਲੀਵਿਕੀ ਨੂੰ ਨਵੀਨਤਮ ਪ੍ਰਕਾਸ਼ਨ ਮੁਤਾਬਿਕ ਅਪਡੇਟ ਜਾਂ ਰਿਪੇਅਰ ਕਰੋ",
 	step1Html: "ਤੁਸੀਂ ਟਿਡਲੀਵਿਕੀ ਦੇ ਕੋਰ-ਕੋਡ ਦੇ ਨਵੀਨਤਮ ਪ੍ਰਕਾਸ਼ਨ ਤੱਕ ਅਪਗ੍ਰੇਡ ਕਰਣ ਜਾ ਰਹੇ ਹੋ (from <a href='%0' class='externalLink' target='_blank'>%1</a>). ਤੁਹਾਡੀ ਸਮੱਗਰੀ ਅਪਗ੍ਰੇਡ ਦੇ ਪਾਰ ਵੀ ਸੁਰੱਖਿਅਤ ਰਹੇਗੀ.<br><br>ਧਿਆਨ ਦਿਓ, ਕੋਰ ਅਪਗ੍ਰੇਡ ਦਾ ਪੁਰਾਣੇ ਪਲੱਗਿੰਨਾਂ ਦੇ ਚੱਲਣ ਵਿੱਚ ਕਈ ਵਾਰੀ ਵਿਘਨਕਾਰੀ ਹੋਣ ਦਾ ਪਤਾ ਲਗਦਾ ਹੈ. ਜੇ ਅਪਗ੍ਰੇਡ ਕੀਤੀ ਹੋਈ ਫਾਈਲ ਨਾਲ ਸਮੱਸਿਆ ਆਵੇ ਤਾਂ ਇਥੇ ਦੇਖੋ: <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -338,24 +344,25 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "ਅਪਗ੍ਰੇਡ ਪ੍ਰਕਿਰਿਆ ਕੈਂਸਲ ਕਰੋ",
 	step3Title: "ਅਪਗ੍ਰੇਡ ਕੈਂਸਲ ਕਰ ਦਿੱਤਾ ਗਿਆ",
 	step3Html: "ਤੁਸੀਂ ਅਪਗ੍ਰੇਡ ਪ੍ਰਕਿਰਿਆ ਕੈਂਸਲ ਕਰ ਦਿੱਤੀ ਹੈ"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Server type", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Server host", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Server workspace", type: 'String'},
-			{name: 'Status', field: 'status', title: "Synchronisation status", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "Server URL", text: "View", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "Server type", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "Server host", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "Server workspace", type: 'String' },
+			{ name: 'Status', field: 'status', title: "Synchronisation status", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "Server URL", text: "View", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "ਇਹਨਾਂ ਟਿਡਲਰਾਂ ਨੂੰ ਸੁਮੇਲੋ", name: 'sync'}
-			]},
+			{ caption: "ਇਹਨਾਂ ਟਿਡਲਰਾਂ ਨੂੰ ਸੁਮੇਲੋ", name: 'sync' }
+		]
+	},
 	wizardTitle: "ਬਾਹਰਲੇ ਸਰਵਰ ਤੇ ਫਾਈਲ ਨਾਲ ਸੁਮੇਲ ਕਰੋ",
 	step1Title: "ਸੁਮੇਲਣ ਲਈ ਟਿਡਲਰ ਚੁਣੋ",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -364,84 +371,85 @@ merge(config.macros.sync,{
 	hasChanged: "Changed while unplugged",
 	hasNotChanged: "Unchanged while unplugged",
 	syncStatusList: {
-		none: {text: "...", display:null, className:'notChanged'},
-		changedServer: {text: "Changed on server", display:null, className:'changedServer'},
-		changedLocally: {text: "Changed while unplugged", display:null, className:'changedLocally'},
-		changedBoth: {text: "Changed while unplugged and on server", display:null, className:'changedBoth'},
-		notFound: {text: "Not found on server", display:null, className:'notFound'},
-		putToServer: {text: "Saved update on server", display:null, className:'putToServer'},
-		gotFromServer: {text: "Retrieved update from server", display:null, className:'gotFromServer'}
-		}
-	});
+		none: { text: "...", display: null, className: 'notChanged' },
+		changedServer: { text: "Changed on server", display: null, className: 'changedServer' },
+		changedLocally: { text: "Changed while unplugged", display: null, className: 'changedLocally' },
+		changedBoth: { text: "Changed while unplugged and on server", display: null, className: 'changedBoth' },
+		notFound: { text: "Not found on server", display: null, className: 'notFound' },
+		putToServer: { text: "Saved update on server", display: null, className: 'putToServer' },
+		gotFromServer: { text: "Retrieved update from server", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "ਬੰਦ",
-	tooltip: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਬੰਦ ਕਰੋ"});
+	tooltip: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਬੰਦ ਕਰੋ" });
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "ਬਾਕੀ ਬੰਦ",
-	tooltip: "ਬਾਕੀ ਟਿਡਲਰਾਂ ਨੂੰ ਬੰਦ ਕਰੋ"});
+	tooltip: "ਬਾਕੀ ਟਿਡਲਰਾਂ ਨੂੰ ਬੰਦ ਕਰੋ" });
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "ਸੰਪਾਦਨ",
 	tooltip: "ਇਸ ਟਿਡਲਰ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
 	readOnlyText: "ਦੇਖੋ",
-	readOnlyTooltip: "ਇਸ ਟਿਡਲਰ ਦੇ ਸੋਰਸ ਨੂੰ ਦੇਖੋ"});
+	readOnlyTooltip: "ਇਸ ਟਿਡਲਰ ਦੇ ਸੋਰਸ ਨੂੰ ਦੇਖੋ" });
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "ਮੁਕੰਮਲ",
-	tooltip: "ਇਸ ਟਿਡਲਰ ਦੇ ਬਦਲਾਓ ਸੇਵ ਕਰੋ"});
+	tooltip: "ਇਸ ਟਿਡਲਰ ਦੇ ਬਦਲਾਓ ਸੇਵ ਕਰੋ" });
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "ਕੈਂਸਲ",
 	tooltip: "ਇਸ ਟਿਡਲਰ ਦੇ ਬਦਲਾਓ ਰੱਦ ਕਰੋ",
 	warning: "ਕੀ ਤੁਸੀਂ ਨਿਸ਼ਚਿਤ ਹੀ ਇਸ ਟਿਡਲਰ ਦੇ ਬਦਲਾਵਾਂ ਨੂੰ ਰੱਦ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋਂ : '%0'?",
 	readOnlyText: "ਮੁਕੰਮਲ",
-	readOnlyTooltip: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਸਧਾਰਨ ਤੋਰ ਤੇ ਦੇਖੋ"});
+	readOnlyTooltip: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਸਧਾਰਨ ਤੋਰ ਤੇ ਦੇਖੋ" });
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "ਡਿਲੀਟ",
 	tooltip: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਮਿਟਾਓ",
-	warning: "ਕੀ ਤੁਸੀਂ ਨਿਸ਼ਚਿਤ ਹੀ ਇਸ ਟਿਡਲਰ ਨੂੰ ਡਿਲੀਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋਂ :'%0'?"});
+	warning: "ਕੀ ਤੁਸੀਂ ਨਿਸ਼ਚਿਤ ਹੀ ਇਸ ਟਿਡਲਰ ਨੂੰ ਡਿਲੀਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋਂ :'%0'?" });
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "ਸਥਾਈ-ਲਿੰਕ",
-	tooltip: "ਇਸ ਟਿਡਲਰ ਦਾ ਸਥਾਈ ਲਿੰਕ"});
+	tooltip: "ਇਸ ਟਿਡਲਰ ਦਾ ਸਥਾਈ ਲਿੰਕ" });
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "ਹਵਾਲੇ",
 	tooltip: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਲਿੰਕ ਹੁੰਦੇ ਟਿਡਲਰ ਦਿਖਾਓ",
-	popupNone: "ਕੋਈ ਹਵਾਲੇ ਨਹੀਂ"});
+	popupNone: "ਕੋਈ ਹਵਾਲੇ ਨਹੀਂ" });
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "ਛਾਲ ਮਾਰੋ",
-	tooltip: "ਹੋਰ ਖੁੱਲੇ ਹੋਏ ਟਿਡਲਰ ਵੱਲ ਛਾਲ ਮਾਰੋ"});
+	tooltip: "ਹੋਰ ਖੁੱਲੇ ਹੋਏ ਟਿਡਲਰ ਵੱਲ ਛਾਲ ਮਾਰੋ" });
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "ਸੁਮੇਲ",
 	tooltip: "ਇਸ ਟਿਡਲਰ ਦੀ ਕਿਸੇ ਸਰਵਰ ਜਾਂ ਬਾਹਰਲੀ ਫਾਈਲ ਨਾਲ ਸੁਮੇਲ ਕੰਟ੍ਰੋਲ ਕਰੋ",
-	currentlySyncing: "<div>ਇਸ ਵਕਤ ਇਸ ਰਾਹੀ ਸੁਮੇਲ ਹੋ ਰਿਹਾ ਹੈ: <span class='popupHighlight'>'%0'</span> to:</"+"div><div>host: <span class='popupHighlight'>%1</span></"+"div><div>workspace: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>ਇਸ ਵਕਤ ਇਸ ਰਾਹੀ ਸੁਮੇਲ ਹੋ ਰਿਹਾ ਹੈ: <span class='popupHighlight'>'%0'</span> to:</" + "div><div>host: <span class='popupHighlight'>%1</span></" + "div><div>workspace: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "ਇਸ ਵਕਤ ਸੁਮੇਲ ਨਹੀਂ ਹੋ ਰਿਹਾ",
 	captionUnSync: "ਇਸ ਟਿਡਲਰ ਦੇ ਸੁਮੇਲ ਨੂੰ ਰੋਕੋ",
 	chooseServer: "ਇਸ ਟਿਡਲਰ ਨੂੰ ਕਿਸੇ ਹੋਰ ਸਰਵਰ ਨਾਲ ਸੁਮੇਲੋ:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  " });
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "ਫੀਲਡ",
 	tooltip: "ਇਸ ਟਿਡਲਰ ਦੇ ਵਿਸਤਾਰਿਤ ਫੀਲਡ ਦਿਖਾਓ",
 	emptyText: "ਇਸ ਟਿਡਲਰ ਦੇ ਕੋਈ ਵਿਸਤਾਰਿਤ ਫੀਲਡ ਨਹੀਂ ਹਨ",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Field", type: 'String'},
-			{name: 'Value', field: 'value', title: "Value", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "Field", type: 'String' },
+			{ name: 'Value', field: 'value', title: "Value", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	} });
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[TranslatedGettingStarted]]",
 	MainMenu: "[[TranslatedGettingStarted]]\n\n\n^^~ਟਿਡਲੀਵਿਕੀ ਪ੍ਰਕਾਸ਼ਨ ਨੰ: <<version>>\n© 2010 [[UnaMesa|http://www.unamesa.org/]]^^",
 	TranslatedGettingStarted: "ਇਸ ਟਿਡਲੀਵਿਕੀ ਤੇ ਕੰਮ ਸ਼ੁਰੂ ਕਰਣ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ ਇਹਨਾਂ ਟਿਡਲਰਾਂ ਨੂੰ ਬਦਲਣ ਦੀ ਲੋੜ ਪਵੇਗੀ:\n* SiteTitle & SiteSubtitle: ਇਸ ਸਾਈਟ ਦਾ ਸਿਰਨਾਵਾਂ ਤੇ ਉਪ-ਸਿਰਨਾਵਾਂ, ਜਿਵੇਂ ਉੱਪਰ ਨਜ਼ਰ ਆ ਰਿਹਾ ਹੈ ( ਸੇਵ ਕਰਣ ਪਿੱਛੋਂ, ਇਹ ਬ੍ਰਾਉਜ਼ਰ ਦੇ ਟਾਈਟਲ ਬਾਰ ਵਿਚ ਵੀ ਨਜ਼ਰ ਆਉਣਗੇ )\n* MainMenu: ਮੈਨ੍ਯੂ (ਆਮ ਤੌਰ ਤੇ ਖੱਬੇ ਪਾਸੇ )\n* DefaultTiddlers: ਇਸ ਵਿਚ ਉਹਨਾਂ ਟਿਡਲਰਾਂ ਦੇ ਨਾਮ ਦਰਜ ਹਨ ਜੋ ਤੁਸੀਂ ਟਿਡਲੀਵਿਕੀ ਖੁਲਣ ਤੇ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਣਾ ਚਾਹੁੰਦੇ ਹੋਂ \nਤੁਹਾਨੂੰ ਆਪਣੇ ਸੰਪਾਦਨਾਂ ਤੇ ਹਸਤਾਖਰ ਕਰਣ ਲਈ ਆਪਣਾ ਯੂਜ਼ਰ-ਨੇਮ ਵੀ ਪਾਉਣਾ ਪਵੇਗਾ: <<option txtUserName>>",
@@ -452,9 +460,9 @@ merge(config.shadowTiddlers,{
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY" "journal">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "ਵਿਕਲਪ \u00bb" "ਟਿਡਲੀਵਿਕੀ ਦੇ ਅਗਲੇਰੇ ਵਿਕਲਪ ਬਦਲੋ">>',
 	SideBarTabs: '<<tabs txtMainTab "ਸਮੇ ਰੇਖਾ" "ਸਮੇ ਰੇਖਾ" TabTimeline "ਸਭ" "ਸਾਰੇ ਟਿਡਲਰ" TabAll "ਟੈਗ" "ਸਾਰੇ ਟੈਗ" TabTags "ਹੋਰ" "ਹੋਰ ਸੂਚੀਆਂ" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "ਲਾਪਤਾ" "ਲਾਪਤਾ ਟਿਡਲਰ" TabMoreMissing "ਅਨਾਥ" "ਅਨਾਥ ਟਿਡਲਰ" TabMoreOrphans "ਪਰਛਾਵੇਂ" "ਪਰਛਾਵੇਂ ਟਿਡਲਰ" TabMoreShadowed>>'
-	});
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "ਇਹ ਪਰਛਾਵਾਂ ਟਿਡਲਰ ਕਈ ਸਾਰੇ ਅਗਲੇਰੇ ਵਿਕਲਪਾਂ ਲਈ ਪ੍ਰਵੇਸ਼ ਦਿੰਦਾ ਹੈ",
 	ColorPalette: "ਇਸ ਟਿਡਲਰ ਵਿਚਲੀਆਂ ਕੀਮਤਾਂ ਟਿਡਲੀਵਿਕੀ ਯੂਜ਼ਰ-ਇੰਟਰਫੇਸ ਦੀ ਰੰਗ ਯੋਜਨਾ ਨਿਸ਼ਚਿਤ ਕਰਦੀਆਂ ਹਨ ",
 	DefaultTiddlers: "ਇਸ ਪਰਛਾਵੇਂ ਟਿਡਲਰ ਵਿਚ ਸੂਚਿਤ ਟਿਡਲਰ ਟਿਡਲੀਵਿਕੀ ਸ਼ੁਰੂ ਹੋਣ ਤੇ ਆਪੇ ਹੀ ਪ੍ਰਦਰਸ਼ਿਤ ਹੋ ਜਾਣਗੇ",
@@ -488,5 +496,5 @@ merge(config.annotations,{
 	TabTimeline: "ਇਸ ਪਰਛਾਵੇਂ ਟਿਡਲਰ ਵਿਚ ਸੱਜੇ ਹਥ ਦੇ ਸਾਇਡਬਾਰ ਵਿਚਲੇ 'ਸਮੇ ਰੇਖਾ' ਟੈਬ ਦੀ ਸਮੱਗਰੀ ਸੰਮਿਲਿਤ ਹੈ",
 	ToolbarCommands: "ਇਹ ਪਰਛਾਵਾਂ ਟਿਡਲਰ ਇਹ ਨਿਸ਼ਚਿਤ ਕਰਦਾ ਹੈ ਕਿ ਟਿਡਲਰ ਟੂਲਬਾਰ ਵਿਚ ਕਿਹੜੀਆਂ ਕਮਾਂਡਾਂ ਪ੍ਰਦਰਸ਼ਿਤ ਹੁੰਦੀਆਂ ਹਨ",
 	ViewTemplate: "ਇਸ ਪਰਛਾਵੇਂ ਟਿਡਲਰ ਵਿਚਲਾ HTML ਖਾਕਾ ਟਿਡਲਰਾਂ ਦੀ ਦਿੱਖ ਨਿਸ਼ਚਿਤ ਕਰਦਾ ਹੈ"
-	});
+});
 //}}}
