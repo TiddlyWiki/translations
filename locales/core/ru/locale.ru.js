@@ -15,16 +15,17 @@
 //-- Строки для перевода
 // Строки в "двойных кавычках" должны быть переведены; строки в 'одиночных кавычках' должны быть оставлены как есть
 
-merge(config.tasks,{
-	save: {text: "сохранить", tooltip: "Сохранить Ваши изменения в эту TiddlyWiki", action: saveChanges},
-	sync: {text: "синхронизация", tooltip: "Синхронизировать изменения с другим файлом или сервером TiddlyWiki", content: '<<sync>>'},
-	importTask: {text: "импорт", tooltip: "Импортировать заметки и модули из другого файла или сервера TiddlyWiki", content: '<<importTiddlers>>'},
-	tweak: {text: "настройка", tooltip: "Подстроить появление и поведение TiddlyWiki", content: '<<options>>'},
-	upgrade: {text: "обновление", tooltip: "Обновить код ядра TiddlyWiki", content: '<<upgrade>>'},
-	plugins: {text: "модули", tooltip: "Управление встроенными модулями", content: '<<plugins>>'} });
+merge(config.tasks, {
+	save: { text: "сохранить", tooltip: "Сохранить Ваши изменения в эту TiddlyWiki", action: saveChanges },
+	sync: { text: "синхронизация", tooltip: "Синхронизировать изменения с другим файлом или сервером TiddlyWiki", content: '<<sync>>' },
+	importTask: { text: "импорт", tooltip: "Импортировать заметки и модули из другого файла или сервера TiddlyWiki", content: '<<importTiddlers>>' },
+	tweak: { text: "настройка", tooltip: "Подстроить появление и поведение TiddlyWiki", content: '<<options>>' },
+	upgrade: { text: "обновление", tooltip: "Обновить код ядра TiddlyWiki", content: '<<upgrade>>' },
+	plugins: { text: "модули", tooltip: "Управление встроенными модулями", content: '<<plugins>>' }
+});
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "Имя пользователя для подписывания Ваших правок",
 	chkRegExpSearch: "Разрешить регулярные выражения при поиске",
 	chkCaseSensitiveSearch: "Регистро-зависимый поиск",
@@ -43,9 +44,10 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "Имя папки для резервных копий",
 	txtMaxEditRows: "Максимальное количество строк в окне редактирования",
 	txtTheme: "Имя темы для использования",
-	txtFileSystemCharSet: "Кодировка символов в файле TiddlyWiki для сохранения изменений (только для Firefox/Mozilla)" });
+	txtFileSystemCharSet: "Кодировка символов в файле TiddlyWiki для сохранения изменений (только для Firefox/Mozilla)"
+});
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "Не удалось загрузить модуль. Подробнее смотрите в PluginManager",
 	pluginError: "Ошибка: %0",
 	pluginDisabled: "Не выполнено в связи с запретом, установленным меткой 'systemConfigDisable'",
@@ -85,84 +87,101 @@ merge(config.messages,{
 	fieldCannotBeChanged: "Поле '%0' не может быть изменено",
 	loadingMissingTiddler: "Пытаюсь восстановить заметку '%0' с сервера '%1' по адресу:\n\n'%2' в 'рабочем пространстве' '%3'",
 	upgradeDone: "Обновление до версии %0 завершено\n\nНажмите 'OK' для перезагрузки новой обновлённой TiddlyWiki",
-	invalidCookie: "Испорченная cookie-переменная '%0'"}); // v.2.6.1
+	invalidCookie: "Испорченная cookie-переменная '%0'"
+});
 
-merge(config.messages.messageClose,{text: "[X]", tooltip: "закрыть эту область сообщения"});
+merge(config.messages.messageClose, { text: "[X]", tooltip: "закрыть эту область сообщения" });
 
 config.messages.backstage = {
-	open: {text: "обслуживание", tooltip: "Откройте меню обслуживания для проведения сервисных задач"},
-	close: {text: "закрыть", tooltip: "Закрытие меню обслуживания"},
+	open: { text: "обслуживание", tooltip: "Откройте меню обслуживания для проведения сервисных задач" },
+	close: { text: "закрыть", tooltip: "Закрытие меню обслуживания" },
 	prompt: "Ослуживание: ",
-	decal: {edit: {text: "правка", tooltip: "Правка заметки '%0'"}}};
+	decal: { edit: { text: "правка", tooltip: "Правка заметки '%0'" } }
+};
 
 config.messages.listView = {
 	tiddlerTooltip: "Щёлкните тут для просмотра полного текста этой заметки",
-	previewUnavailable: "(предварительный просмотр недоступен)"};
+	previewUnavailable: "(предварительный просмотр недоступен)"
+};
 
-config.messages.dates.months = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
-config.messages.dates.days = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
-config.messages.dates.shortMonths = ["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"];
-config.messages.dates.shortDays = ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"];
+config.messages.dates.months = [
+	"января", "февраля", "марта", "апреля", "мая", "июня",
+	"июля", "августа", "сентября", "октября", "ноября", "декабря"
+];
+config.messages.dates.days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+config.messages.dates.shortMonths = ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"];
+config.messages.dates.shortDays = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
 config.messages.dates.daySuffixes = [
-	"-е","-е","-е","-е","-е","-е","-е","-е","-е","-е",
-	"-е","-е","-е","-е","-е","-е","-е","-е","-е","-е",
-	"-е","-е","-е","-е","-е","-е","-е","-е","-е","-е",
-	"-е"];
+	"-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е",
+	"-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е",
+	"-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е", "-е",
+	"-е"
+];
 config.messages.dates.am = "утра";
 config.messages.dates.pm = "дня";
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "меток нет",
 	labelTags: "метки: ",
 	openTag: "Открыть метку '%0'",
 	tooltip: "Показать заметки, помеченные как '%0'",
 	openAllText: "Открыть всё",
 	openAllTooltip: "Открыть все эти заметки",
-	popupNone: "Нет других заметок, помеченных '%0'"});
+	popupNone: "Нет других заметок, помеченных '%0'"
+});
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "Заметка '%0' пока не создана. Создайте её двойным щелчком мышки",
 	defaultModifier: "(отсутствует)",
 	shadowModifier: "(встроенная служебная заметка)",
 	dateFormat: "DD.0MM.YYYY",
-	createdPrompt: "создана"});
+	createdPrompt: "создана"
+});
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "Введите метки, разделённые пробелами, в случае необходимости [[используйте двойные квадратные скобки|use double square brackets]], или добавьте существующие метки",
-	defaultText: "Введите текст для '%0'"});
+	defaultText: "Введите текст для '%0'"
+});
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "метки",
 	tooltip: "Выберите существующую метку для добавления к этой заметке",
 	popupNone: "Нет ни одной метки",
-	tagTooltip: "Добавьте метку для '%0'"});
+	tagTooltip: "Добавьте метку для '%0'"
+});
 
-merge(config.messages,{
+merge(config.messages, {
 	sizeTemplates: [
-		{unit: 1024*1024*1024, template: "%0\u00a0 Gb"},
-		{unit: 1024*1024, template: "%0\u00a0 Mb"},
-		{unit: 1024, template: "%0\u00a0 Kb"},
-		{unit: 1, template: "%0\u00a0 b"}]});
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0 Gb" },
+		{ unit: 1024 * 1024, template: "%0\u00a0 Mb" },
+		{ unit: 1024, template: "%0\u00a0 Kb" },
+		{ unit: 1, template: "%0\u00a0 b" }
+	]
+});
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "поиск",
 	prompt: "Поиск в этой TiddlyWiki",
 	accessKey: "F",
 	successMsg: "Найдено %0 заметок с текстом %1",
-	failureMsg: "Нет ни одной заметки с текстом %0"});
+	failureMsg: "Нет ни одной заметки с текстом %0"
+});
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "метки: ",
 	labelNotTag: "(нет меток)",
-	tooltip: "Список заметок, помеченных как '%0'"});
+	tooltip: "Список заметок, помеченных как '%0'"
+});
 
-merge(config.macros.timeline,{
-	dateFormat: "DD.0MM.YYYY"});
+merge(config.macros.timeline, {
+	dateFormat: "DD.0MM.YYYY"
+});
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "Показать заметки, помеченные как '%0'",
-	noTags: "Нет ни одной помеченной заметки"});
+	noTags: "Нет ни одной помеченной заметки"
+});
 
 config.macros.list.all.prompt = "Все заметки в алфавитном порядке";
 config.macros.list.missing.prompt = "Отсутствующие заметки, на которые при этом есть ссылки с других заметок";
@@ -170,44 +189,51 @@ config.macros.list.orphans.prompt = "Заметки, на которые нет 
 config.macros.list.shadowed.prompt = "Служебные заметки";
 config.macros.list.touched.prompt = "Заметки, которые были изменены";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "закрыть всё",
-	prompt: "Закрыть все отображённые заметки (за исключением заметок в состоянии правки)"});
+	prompt: "Закрыть все отображённые заметки (за исключением заметок в состоянии правки)"
+});
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "прямая ссылка",
-	prompt: "Создание адресной строки для открытия TiddlyWiki с текущими открытыми заметками"});
+	prompt: "Создание адресной строки для открытия TiddlyWiki с текущими открытыми заметками"
+});
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "сохранить",
 	prompt: "Сохранение TiddlyWiki со всеми заметками",
-	accessKey: "S"});
+	accessKey: "S"
+});
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "новая заметка",
 	prompt: "Создать новую заметку",
 	title: "Новая заметка",
-	accessKey: "N"});
+	accessKey: "N"
+});
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "новая запись",
 	prompt: "Создать новую заметку с текущей датой и временем",
-	accessKey: "J"});
+	accessKey: "J"
+});
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "Расширенные пункты настройки",
 	step1Title: "Эти настройки Ваша программа просмотра сохраняет с помощью cookies",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Показать настройки без описания</input>",
 	unknownDescription: "//(unknown)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "Возможности", type: 'String'},
-			{name: 'Description', field: 'description', title: "Описание", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "Имя", type: 'String'}],
-		rowClasses: [{className: 'lowlight', field: 'lowlight'} ]}
-	});
+			{ name: 'Option', field: 'option', title: "Возможности", type: 'String' },
+			{ name: 'Description', field: 'description', title: "Описание", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "Имя", type: 'String' }
+		],
+		rowClasses: [{ className: 'lowlight', field: 'lowlight' }]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "Управление модулями",
 	step1Title: "Подключенные модули",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -220,49 +246,55 @@ merge(config.macros.plugins,{
 	deletePrompt: "Удалить эту заметку навсегда",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Описание", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Версия", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "Forced", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "Запрещён", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "Загружен", type: 'Boolean', trueText: "Да", falseText: "Нет"},
-			{name: 'Startup Time', field: 'startupTime', title: "Стартовый", type: 'String'},
-			{name: 'Error', field: 'error', title: "Состояние", type: 'Boolean', trueText: "Ошибка", falseText: "Норма"},
-			{name: 'Log', field: 'log', title: "Протокол", type: 'StringList'} ],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "Описание", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "Версия", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "Forced", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "Запрещён", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "Загружен", type: 'Boolean', trueText: "Да", falseText: "Нет" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Стартовый", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Состояние", type: 'Boolean', trueText: "Ошибка", falseText: "Норма" },
+			{ name: 'Log', field: 'log', title: "Протокол", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'} ]},
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	},
 	listViewTemplateReadOnly: {
 		columns: [
-			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "Описание", type: 'String'},
-			{name: 'Version', field: 'Version', title: "Версия", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size'},
-			{name: 'Executed', field: 'executed', title: "Загружен", type: 'Boolean', trueText: "Да", falseText: "Нет"},
-			{name: 'Startup Time', field: 'startupTime', title: "Стартовый", type: 'String'},
-			{name: 'Error', field: 'error', title: "Состояние", type: 'Boolean', trueText: "Ошибка", falseText: "Норма"},
-			{name: 'Log', field: 'log', title: "Log", type: 'StringList'}
-			],
+			{ name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "Описание", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "Версия", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size' },
+			{ name: 'Executed', field: 'executed', title: "Загружен", type: 'Boolean', trueText: "Да", falseText: "Нет" },
+			{ name: 'Startup Time', field: 'startupTime', title: "Стартовый", type: 'String' },
+			{ name: 'Error', field: 'error', title: "Состояние", type: 'Boolean', trueText: "Ошибка", falseText: "Норма" },
+			{ name: 'Log', field: 'log', title: "Log", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "ещё",
 	morePrompt: "Показать дополнительные команды",
 	lessLabel: "кратко",
 	lessPrompt: "Скрыть дополнительные команды",
-	separator: "|" });
+	separator: "|"
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "обновить",
-	prompt: "Обновить отображение TiddlyWiki" });
+	prompt: "Обновить отображение TiddlyWiki"
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "Вы не можете добавлять что-либо в открытую только для чтения TiddlyWiki. Попробуйте открыть её как файл (через обращение file://)",
 	wizardTitle: "Импорт заметок из другого файла или сервера",
 	step1Title: "Шаг 1: Найдите сервер или файл TiddlyWiki",
@@ -297,14 +329,16 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "Метки", type: 'Tags'} ],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Размер", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "Метки", type: 'Tags' }
+		],
 		rowClasses: []
-	} });
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "Обновление кода ядра TiddlyWiki",
 	step1Title: "Обновление или восстановление этой TiddlyWiki до последней версии",
 	step1Html: "Вы готовы обновить код ядра TiddlyWiki до последней версии (с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). Информационное наполнение этого файла будет сохранено.<br><br>Заметьте, что обновление кода ядра может вызвать конфликт с уже подключенными старыми модулями. Если у Вас появились проблемы с обновлённым файлом, почитайте здесь: <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -330,20 +364,22 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "Отмена процесса обновления",
 	step3Title: "Процесс обновления прерван",
 	step3Html: "Вы отменили процесс обновления TiddlyWiki"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "Тип сервера", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "Хранилище сервера (host)", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "Рабочее пространство сервера", type: 'String'},
-			{name: 'Status', field: 'status', title: "Состояние синхронизации", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "Адресная строка", text: "View", type: 'Link'} ],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Заметка", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "Тип сервера", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "Хранилище сервера (host)", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "Рабочее пространство сервера", type: 'String' },
+			{ name: 'Status', field: 'status', title: "Состояние синхронизации", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "Адресная строка", text: "View", type: 'Link' }
+		],
 		rowClasses: [],
-		buttons: [{caption: "Синхронизировать эти заметки", name: 'sync'}] },
+		buttons: [{ caption: "Синхронизировать эти заметки", name: 'sync' }]
+	},
 	wizardTitle: "Синхронизировать с внешним сервером или файлом",
 	step1Title: "Выберите заметки, которые Вы хотите синхронизировать",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -352,81 +388,96 @@ merge(config.macros.sync,{
 	hasChanged: "Изменены с момента последней синхронизации",
 	hasNotChanged: "Нет изменений с момента последней синхронизации",
 	syncStatusList: {
-		none: {text: "...", display:'none', className:'notChanged'},
-		changedServer: {text: "Изменены на сервере", display:null, className:'changedServer'},
-		changedLocally: {text: "Изменены локально", display:null, className:'changedLocally'},
-		changedBoth: {text: "Изменены в обоих местах сразу", display:null, className:'changedBoth'},
-		notFound: {text: "Отсутствует на сервере", display:null, className:'notFound'},
-		putToServer: {text: "Обновление сохранено на сервер", display:null, className:'putToServer'},
-		gotFromServer: {text: "Обновления получены с сервера", display:null, className:'gotFromServer'} } });
+		none: { text: "...", display: 'none', className: 'notChanged' },
+		changedServer: { text: "Изменены на сервере", display: null, className: 'changedServer' },
+		changedLocally: { text: "Изменены локально", display: null, className: 'changedLocally' },
+		changedBoth: { text: "Изменены в обоих местах сразу", display: null, className: 'changedBoth' },
+		notFound: { text: "Отсутствует на сервере", display: null, className: 'notFound' },
+		putToServer: { text: "Обновление сохранено на сервер", display: null, className: 'putToServer' },
+		gotFromServer: { text: "Обновления получены с сервера", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.macros.annotations,{});
+merge(config.macros.annotations, {});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "закрыть",
-	tooltip: "Закрыть эту заметку"});
+	tooltip: "Закрыть эту заметку"
+});
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "закрыть другие",
-	tooltip: "Закрыть все другие заметки"});
+	tooltip: "Закрыть все другие заметки"
+});
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "правка",
 	tooltip: "Исправить эту заметку",
 	readOnlyText: "просмотр",
-	readOnlyTooltip: "Просмотр исходного текста этой заметки"});
+	readOnlyTooltip: "Просмотр исходного текста этой заметки"
+});
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "сохранить",
-	tooltip: "Сохранить изменения этой заметки"});
+	tooltip: "Сохранить изменения этой заметки"
+});
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "отмена",
 	tooltip: "Отменить изменение этой заметки",
 	warning: "Вы действительно уверены, что Вы хотите потерять все Ваши изменения заметки '%0'?",
 	readOnlyText: "возврат",
-	readOnlyTooltip: "Просмотр этой заметки в нормальном режиме"});
+	readOnlyTooltip: "Просмотр этой заметки в нормальном режиме"
+});
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "удалить",
 	tooltip: "Удалить эту заметку",
-	warning: "Вы уверены, что хотите удалить '%0'?"});
+	warning: "Вы уверены, что хотите удалить '%0'?"
+});
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "прямая ссылка",
-	tooltip: "Адресная строка для этой заметки"});
+	tooltip: "Адресная строка для этой заметки"
+});
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "ссылки",
 	tooltip: "Показать все заметки, которые ссылаются на эту заметку",
-	popupNone: "Нет ссылок"});
+	popupNone: "Нет ссылок"
+});
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "переход",
-	tooltip: "Переход на другую открытую заметку"});
+	tooltip: "Переход на другую открытую заметку"
+});
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "синхронизация",
 	tooltip: "Управление синхронизацией этой заметки с сервером или внешним файлом",
-	currentlySyncing: "<div>Синхронизирую с помощью <span class='popupHighlight'>'%0'</span> с:</"+"div><div>хранилищем: <span class='popupHighlight'>%1</span></"+"div><div>рабочее пространство: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Синхронизирую с помощью <span class='popupHighlight'>'%0'</span> с:</" + "div><div>хранилищем: <span class='popupHighlight'>%1</span></" + "div><div>рабочее пространство: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "Пока не синхронизировано",
 	captionUnSync: "Остановить синхронизацию этой заметки",
 	chooseServer: "Привести в соответствие эту заметку с другим сервером:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  "
+});
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "поля",
 	tooltip: "Отображение расширенных параметров этой заметки",
 	emptyText: "У этой заметки нет расширенных параметров",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "Поле", type: 'String'},
-			{name: 'Value', field: 'value', title: "Значение", type: 'String'} ],
+			{ name: 'Field', field: 'field', title: "Поле", type: 'String' },
+			{ name: 'Value', field: 'value', title: "Значение", type: 'String' }
+		],
 		rowClasses: [],
-		buttons: [] } });
+		buttons: []
+	}
+});
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[GettingStarted]]",
 	MainMenu: "[[GettingStarted]]",
 	SiteTitle: "Моя TiddlyWiki",
@@ -434,9 +485,10 @@ merge(config.shadowTiddlers,{
 	SiteUrl: "",
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD.0MM.YYYY" "journal">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "настройки \u00bb" "Изменение настроек TiddlyWiki">>',
 	SideBarTabs: '<<tabs txtMainTab "история" "История" TabTimeline "все" "Все заметки" TabAll "метки" "Все метки" TabTags "ещё" "Другие списки" TabMore>>',
-	TabMore: '<<tabs txtMoreTab "нет" "Отсутствующие заметки" TabMoreMissing "одиночки" "Потерянные заметки" TabMoreOrphans "служебные" "Служебные заметки" TabMoreShadowed>>' });
+	TabMore: '<<tabs txtMoreTab "нет" "Отсутствующие заметки" TabMoreMissing "одиночки" "Потерянные заметки" TabMoreOrphans "служебные" "Служебные заметки" TabMoreShadowed>>'
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "Эта служебная заметка обеспечивает доступ к некоторым дополнительным настройкам",
 	ColorPalette: "Значения из этой служебной заметки определяют цветовую схему пользовательского интерфейса TiddlyWiki",
 	DefaultTiddlers: "Заметки, перечисленные в этой служебной заметке, будут автоматически открываться при каждом запуске TiddlyWiki",
@@ -471,6 +523,7 @@ merge(config.annotations,{
 	TabTimeline: "Эта служебная заметка содержит начинку закладки 'История' на боковой панели",
 	ToolbarCommands: "Эта служебная заметка определяет, какие команды будут показываться в меню заметки",
 	ViewTemplate: "HTML-шаблон в этой сервисной заметке определяет, как будет выглядеть заметка",
-	WindowTitle: "Эта служебная заметка содержит полный вид заголовка страницы" });
+	WindowTitle: "Эта служебная заметка содержит полный вид заголовка страницы"
+});
 
 //}}}
