@@ -1,6 +1,6 @@
 /***
 |''Name:''|TiddlyWiki:rus|
-|''Version:''|0.9.7|
+|''Version:''|0.9.8|
 |''Description:''|TiddlyWiki russian interface plugin. Supports core up to 2.6.2|
 |''Описание:''|Русификация TiddlyWiki. Поддерживает ядро до 2.6.2 включительно|
 |''CoreVersion:''|2.6.x|
@@ -14,6 +14,8 @@
 //{{{
 //-- Строки для перевода
 // Строки в "двойных кавычках" должны быть переведены; строки в 'одиночных кавычках' должны быть оставлены как есть
+
+config.locale = "ru";
 
 merge(config.tasks, {
 	save: { text: "сохранить", tooltip: "Сохранить Ваши изменения в эту TiddlyWiki", action: saveChanges },
