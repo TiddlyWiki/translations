@@ -1,13 +1,13 @@
 /***
-|''Name:''|Tradução do TiddliWiki pt-BR|
-|''Description:''|Translation of TiddlyWiki 2.6.0 in Brazilian Portuguese|
-|''Author:''|Frederico José Andries Lopes (frelopes (at) gmail (dot) com)|
-|''CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/pt-BR/locale.pt-BR.js |
-|''Version:''|0.4.3|
-|''Date:''|Jan 13, 2012|
-|''Comments:''|Based on version 2.6 pt-PT by Paulo Soares|
-|''Licença:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''~CoreVersion:''|2.6.0|
+|Name          |Tradução do TiddliWiki pt-BR|
+|Description   |Translation of TiddlyWiki 2.6.0 in Brazilian Portuguese|
+|Author        |Frederico José Andries Lopes (frelopes (at) gmail (dot) com)|
+|CodeRepository|http://svn.tiddlywiki.org/Trunk/association/locales/core/pt-BR/locale.pt-BR.js |
+|Version       |0.4.3|
+|Date          |Jan 13, 2012|
+|Comments      |Based on version 2.6 pt-PT by Paulo Soares|
+|Licença       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|~CoreVersion  |2.6.0|
 ***/
 
 //{{{

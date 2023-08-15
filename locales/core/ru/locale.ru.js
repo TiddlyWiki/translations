@@ -1,15 +1,15 @@
 /***
-|''Name:''|TiddlyWiki:rus|
-|''Version:''|0.9.8|
-|''Description:''|TiddlyWiki russian interface plugin. Supports core up to 2.6.2|
-|''Описание:''|Русификация TiddlyWiki. Поддерживает ядро до 2.6.2 включительно|
-|''CoreVersion:''|2.6.x|
-|''Version comment:''|Tested on v.2.6.0 and 2.6.1|
-|''Date:''|2010|
-|''Author:''|vmunt|
-|''Source:''|http://vmunt.dyndns.org|
-|''License:''|BSD open source license|
-|''Idea:''|Глеб Тржемецкий (Gleb Trzhemetski), http://www.glebsite.ru|
+|Name           |TiddlyWiki:rus|
+|Version        |0.9.8|
+|Description    |TiddlyWiki russian interface plugin. Supports core up to 2.6.2|
+|Описание       |Русификация TiddlyWiki. Поддерживает ядро до 2.6.2 включительно|
+|CoreVersion    |2.6.x|
+|Version comment|Tested on v.2.6.0 and 2.6.1|
+|Date           |2010|
+|Author         |vmunt|
+|Source         |http://vmunt.dyndns.org|
+|License        |BSD open source license|
+|Idea           |Глеб Тржемецкий (Gleb Trzhemetski), http://www.glebsite.ru|
 ***/
 //{{{
 //-- Строки для перевода

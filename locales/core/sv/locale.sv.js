@@ -1,14 +1,14 @@
 /***
-|''Name:''|SwedishTranslationPlugin|
-|''Description:''|Translation of TiddlyWiki into Swedish|
-|''Author:''|SebastianRasmussen (sebras (at) hotmail (dot) com)|
-|''Source:''|www.example.com |
-|''CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/sv/locale.sv.js |
-|''Version:''|0.3.7|
-|''Date:''|Sep 14, 2008|
-|''Comments:''|Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
-|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''~CoreVersion:''|2.4|
+|Name          |SwedishTranslationPlugin|
+|Description   |Translation of TiddlyWiki into Swedish|
+|Author        |SebastianRasmussen (sebras (at) hotmail (dot) com)|
+|Source        |www.example.com |
+|CodeRepository|http://svn.tiddlywiki.org/Trunk/association/locales/core/sv/locale.sv.js |
+|Version       |0.3.7|
+|Date          |Sep 14, 2008|
+|Comments      |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
+|License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|~CoreVersion  |2.4|
 ***/
 
 //{{{
