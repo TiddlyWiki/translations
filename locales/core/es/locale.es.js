@@ -4,7 +4,8 @@
 |Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com)|
 |Correcciónes  |Dave Gifford y Ton van Rooijen (giff (at) giffmex (dot) org / tonsweb (at) xs4all (dot) nl)|
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
-|Código        |http://svn.tiddlywiki.org/Trunk/association/locales/core/en/locale.en.js |
+|Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
+|Código        |~|
 |Versión       |0.4.2|
 |Fecha         |October 2, 2010|
 |Comentarios   |Por favor deje sus comentarios en http://groups.google.co.uk/group/TiddlyWikiDev |

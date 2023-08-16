@@ -2,7 +2,7 @@
 |Name          |GermanTranslationPlugin|
 |Description   |German Translation for TiddlyWiki|
 |Author        |BesimKaradeniz (besim (at) karadeniz (dot) de)|
-|CodeRepository|http://svn.tiddlywiki.org/Trunk/association/locales/core/de/locale.de.js |
+|Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/de/locale.de.js|
 |Version       |2.6.2|
 |Date          |Feb 14, 2011|
 |Comments      |Visit the home of this translation on [[TiddlyWikiDeutsch|http://www.karadeniz.de/tiddlywiki/]] |

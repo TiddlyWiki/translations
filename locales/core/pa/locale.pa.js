@@ -2,7 +2,7 @@
 |Name          |PunjabiTranslationPlugin|
 |Description   |Translation of TiddlyWiki into Punjabi|
 |Author        |Shavinder Singh (shavinderpalsingh (at) gmail (dot) com)|
-|CodeRepository|http://punjabi.tiddlyspot.com/#PunjabiTranslationPlugin|
+|Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/pa/locale.pa.js|
 |Version       |0.0.1|
 |Date          |Feb 5, 2012|
 |Comments      |Please make comments at http://groups.google.com/group/tiddlywiki|

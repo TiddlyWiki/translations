@@ -1,13 +1,13 @@
 /***
-|Name          |ItalianTranslationPlugin|
-|Description   |Translation of TiddlyWiki into Italian Language|
-|Authors       |Pollio Maurizio (pollio.maurizio (at) gmail (dot) com)|
-|Source        |http://pollio.maurizio.googlepages.com/MiniGuidaTiddlyWiki.html|
-|CodeRepository|http://pollio.maurizio.googlepages.com/it_2_6.js|
-|Version       |2.6|
-|Date          |Dec 15, 2011|
-|License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/deed.it]] |
-|~CoreVersion  |2.6|
+|Name           |ItalianTranslationPlugin|
+|Description    |Translation of TiddlyWiki into Italian Language|
+|Authors        |Pollio Maurizio (pollio.maurizio (at) gmail (dot) com)|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/it/locale.it.js|
+|Original Source|http://pollio.maurizio.googlepages.com/MiniGuidaTiddlyWiki.html, http://pollio.maurizio.googlepages.com/it_2_6.js|
+|Version        |2.6|
+|Date           |Dec 15, 2011|
+|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/deed.it]] |
+|~CoreVersion   |2.6|
 ***/
 
 //{{{

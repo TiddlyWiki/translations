@@ -2,7 +2,7 @@
 |''Name:''|DutchTranslationPlugin|
 |''Description:''|Translation of TiddlyWiki translateable strings into Dutch|
 |''Author:''|Ton van Rooijen (tonsweb (at) xs4all (dot) nl)|
-|''~CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/nl/locale.nl.js|
+|''~CodeRepository:''|https://github.com/TiddlyWiki/translations/blob/master/locales/core/nl/locale.nl.js|
 |''Version:''|0.4.1|
 |''Date:''|April 13, 2010|
 |''Version history:''|This version is applicable to all ~TiddlyWikis as of version 2.4.0 until further notice.|

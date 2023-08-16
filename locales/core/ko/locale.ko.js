@@ -1,10 +1,9 @@
 /***
-|Name          |KoreanTranslationPlugin|
-|Description   |Translation of TiddlyWiki into Korean|
-|Author        |Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
-|Source        |http://snooey.net/tiddlywiki/locale.ko.js |
-|              |http://snooey.net/tiddlywiki/#KoreanTranslationPlugin |
-|CodeRepository|http://svn.tiddlywiki.org/Trunk/association/locales/core/ko/locale.ko.js |
+|Name           |KoreanTranslationPlugin|
+|Description    |Translation of TiddlyWiki into Korean|
+|Author         |Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ko/locale.ko.js|
+|Original Source|http://snooey.net/tiddlywiki/locale.ko.js, http://snooey.net/tiddlywiki/#KoreanTranslationPlugin|
 |Version       |0.6.0|
 |Date          |Sep 13, 2010|
 |Comments      |If you have suggestion about this translation, please make comments at http://blog.snooey.net/guestbook/ or mail to me |
@@ -15,9 +14,8 @@
 |이름      |KoreanTranslationPlugin|
 |설명      |TiddlyWiki를 한국어로 번역|
 |제작자    |Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
-|소스      |http://snooey.net/tiddlywiki/locale.ko.js |
-|          |http://snooey.net/tiddlywiki/#KoreanTranslationPlugin |
-|코드 저장소|http://svn.tiddlywiki.org/Trunk/association/locales/core/ko/locale.ko.js |
+|코드 저장소|https://github.com/TiddlyWiki/translations/blob/master/locales/core/ko/locale.ko.js|
+|소스      |http://snooey.net/tiddlywiki/locale.ko.js, http://snooey.net/tiddlywiki/#KoreanTranslationPlugin|
 |버전      |0.6.0|
 |날짜      |2010년 9월 13일|
 |덧글      |이 번역에 대한 제안이 있으신 경우, http://blog.snooey.net/guestbook/ 또는 제게 메일을 보내주십시요. |

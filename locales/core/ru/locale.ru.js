@@ -7,7 +7,8 @@
 |Version comment|Tested on v.2.6.0 and 2.6.1|
 |Date           |2010|
 |Author         |vmunt|
-|Source         |http://vmunt.dyndns.org|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
+|Original Source|http://vmunt.dyndns.org|
 |License        |BSD open source license|
 |Idea           |Глеб Тржемецкий (Gleb Trzhemetski), http://www.glebsite.ru|
 ***/
