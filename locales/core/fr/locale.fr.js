@@ -1,16 +1,16 @@
 /***
-|''Name:''|locale.fr|
-|''Description:''|Translation of TiddlyWiki into French|
-|''Version:''|0.0.7|
-|''Date:''|Jun 20, 2007|
-|''Source:''|http://???/#locale.fr (temporairement http://TiddlyWikiFR.bidix.info/)|
-|''CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/fr/locale.fr.js |
-|''Fichier de base "empty.html":''|http://???/empty.fr.html (temporairement http://TiddlyWikiFR.bidix.info/empty.fr-FR.html)|
-|''Author:''|BidiX (BidiX (at) bidix (dot) info)|
-|''Credits:''|Jacques Turbé : http://avm.free.fr//TiddlyWiki-fr.html - Traduction de la version 2.1|
-|''Comments:''|Merci de faire vos commentaires à http://groups.google.fr/group/TiddlyWikiFR |
-|''License:''|[[BSD open source license|http://tiddlywiki.bidix.info/#%5B%5BBSD%20open%20source%20license%5D%5D ]]|
-|''~CoreVersion:''|2.2.0|
+|Name                        |locale.fr|
+|Description                 |Translation of TiddlyWiki into French|
+|Version                     |0.0.7|
+|Date                        |Jun 20, 2007|
+|Source                      |http://???/#locale.fr (temporairement http://TiddlyWikiFR.bidix.info/)|
+|CodeRepository              |http://svn.tiddlywiki.org/Trunk/association/locales/core/fr/locale.fr.js |
+|Fichier de base "empty.html"|http://???/empty.fr.html (temporairement http://TiddlyWikiFR.bidix.info/empty.fr-FR.html)|
+|Author                      |BidiX (BidiX (at) bidix (dot) info)|
+|Credits                     |Jacques Turbé : http://avm.free.fr//TiddlyWiki-fr.html - Traduction de la version 2.1|
+|Comments                    |Merci de faire vos commentaires à http://groups.google.fr/group/TiddlyWikiFR |
+|License                     |[[BSD open source license|http://tiddlywiki.bidix.info/#%5B%5BBSD%20open%20source%20license%5D%5D ]]|
+|~CoreVersion                |2.2.0|
 ***/
 /***
 Je suis reparti du fichier officiel locale.en.js en intégrant la traduction de Jacques Turbé http://avm.free.fr//TiddlyWiki-fr.html et en reprenant les mêmes choix de traduction.

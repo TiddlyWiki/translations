@@ -1,13 +1,13 @@
 /***
-|''Name:''|PunjabiTranslationPlugin|
-|''Description:''|Translation of TiddlyWiki into Punjabi|
-|''Author:''|Shavinder Singh (shavinderpalsingh (at) gmail (dot) com)|
-|''CodeRepository:''|http://punjabi.tiddlyspot.com/#PunjabiTranslationPlugin|
-|''Version:''|0.0.1|
-|''Date:''|Feb 5, 2012|
-|''Comments:''|Please make comments at http://groups.google.com/group/tiddlywiki|
-|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''~CoreVersion:''|2.6.1|
+|Name          |PunjabiTranslationPlugin|
+|Description   |Translation of TiddlyWiki into Punjabi|
+|Author        |Shavinder Singh (shavinderpalsingh (at) gmail (dot) com)|
+|CodeRepository|http://punjabi.tiddlyspot.com/#PunjabiTranslationPlugin|
+|Version       |0.0.1|
+|Date          |Feb 5, 2012|
+|Comments      |Please make comments at http://groups.google.com/group/tiddlywiki|
+|License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|~CoreVersion  |2.6.1|
 ***/
 
 //{{{

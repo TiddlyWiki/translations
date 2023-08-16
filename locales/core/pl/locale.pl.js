@@ -1,13 +1,13 @@
 /***
-|''Name:''|PolishTranslationPlugin|
-|''Description:''|Translation of TiddlyWiki into Polish|
-|''Author:''|Ryszard Niewisiewicz (*ziemiowid* *at* *gmail* *dot* *com*)|
-|''CodeRepository:''|https://github.com/ziemiowid/translations/blob/master/locales/core/pl/locale.pl.js |
-|''Version:''|0.9.0|
-|''Date:''|Jan 08, 2012|
-|''Comments:''|Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev|
-|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''~CoreVersion:''|2.6.0|
+|Name          |PolishTranslationPlugin|
+|Description   |Translation of TiddlyWiki into Polish|
+|Author        |Ryszard Niewisiewicz (*ziemiowid* *at* *gmail* *dot* *com*)|
+|CodeRepository|https://github.com/ziemiowid/translations/blob/master/locales/core/pl/locale.pl.js |
+|Version       |0.9.0|
+|Date          |Jan 08, 2012|
+|Comments      |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev|
+|License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|~CoreVersion  |2.6.0|
 
 // Based on english translation by MartinBudden (mjbudden (at) gmail (dot) com)
 // https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js (commit 966556b66a)

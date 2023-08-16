@@ -1,14 +1,13 @@
 /***
-|''Name:''|GreekTranslationPlugin|
-|''Description:''|Μετάφραση του TiddlyWiki στα Ελληνικά (Translation of TiddlyWiki into Greek) |
-|''Author:''|Spyros Kroustalakis (spyros.kroustalakis (at) gmail (dot) com)|
-|''Empty greek tiddlywiki:''|http://spyros.kroustalakis.googlepages.com/empty_gr.html |
-|''CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/el/locale.el.js |
-|''Version:''|1.0.0|
-|''Date:''|May 6, 2007|
-|''Comments:''|Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
-|''~CoreVersion:''|2.2|
-
+|Name                  |GreekTranslationPlugin|
+|Description           |Μετάφραση του TiddlyWiki στα Ελληνικά (Translation of TiddlyWiki into Greek) |
+|Author                |Spyros Kroustalakis (spyros.kroustalakis (at) gmail (dot) com)|
+|Empty greek tiddlywiki|http://spyros.kroustalakis.googlepages.com/empty_gr.html |
+|CodeRepository        |http://svn.tiddlywiki.org/Trunk/association/locales/core/el/locale.el.js |
+|Version               |1.0.0|
+|Date                  |May 6, 2007|
+|Comments              |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
+|~CoreVersion          |2.2|
 ***/
 
 //{{{
