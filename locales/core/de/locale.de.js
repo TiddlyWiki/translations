@@ -9,7 +9,6 @@
 |License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |~CoreVersion  |2.6.2|
 ***/
-
 //{{{
 //-- TiddlyWiki German Translation - r12569
 //-- Maintainer: Besim Karadeniz <besim(-at-)karadeniz(-dot-)de>
@@ -50,7 +49,8 @@ merge(config.optionsDesc, {
 	txtBackupFolder: "Verzeichnisname für Backup Dateien:",
 	txtMaxEditRows: "Maximale Zahl von Zeilen in einer Textbox eines Tiddlers:",
 	txtTheme: "Name des zu verwendenden Themes",
-	txtFileSystemCharSet: "Standard-Zeichensatz beim Speichern von Änderungen (nur Firefox/Mozilla)" });
+	txtFileSystemCharSet: "Standard-Zeichensatz beim Speichern von Änderungen (nur Firefox/Mozilla)"
+});
 
 merge(config.messages, {
 	customConfigError: "Beim Laden von Plugins sind Fehler aufgetreten. Siehe PluginManager für Details",
@@ -92,11 +92,13 @@ merge(config.messages, {
 	fieldCannotBeChanged: "Feld '%0' kann nicht geändert werden",
 	loadingMissingTiddler: "Es wird versucht, den Tiddler '%0' vom Server '%1' bei\n\n'%2' im Workspace '%3' abzurufen",
 	upgradeDone: "Das Upgrade auf Version %0 ist komplett\n\nKlicken Sie auf 'OK' zum Neuladen des aktualisierten TiddlyWiki",
-	invalidCookie: "Ungültiger Cookie '%0'" });
+	invalidCookie: "Ungültiger Cookie '%0'"
+});
 
 merge(config.messages.messageClose, {
 	text: "schließen",
-	tooltip: "diesen Textbereich schließen" });
+	tooltip: "diesen Textbereich schließen"
+});
 
 config.messages.backstage = {
 	open: { text: "Backstage", tooltip: "Öffnen Sie den Backstage-Bereich für Arbeiten an Entwicklungs- und Bearbeitungsaufgaben" },
@@ -112,7 +114,10 @@ config.messages.listView = {
 	previewUnavailable: "(Vorschau nicht vorhanden)"
 };
 
-config.messages.dates.months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+config.messages.dates.months = [
+	"Januar", "Februar", "März", "April", "Mai", "Juni",
+	"Juli", "August", "September", "Oktober", "November", "Dezember"
+];
 config.messages.dates.days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 config.messages.dates.shortMonths = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
 config.messages.dates.shortDays = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
@@ -136,24 +141,28 @@ merge(config.views.wikified.tag, {
 	tooltip: "Zeige Tiddlers mit Tags '%0'",
 	openAllText: "Öffne alle",
 	openAllTooltip: "Alle diese Tiddler öffnen",
-	popupNone: "Keine anderen Tiddler mit '%0' getaggt" });
+	popupNone: "Keine anderen Tiddler mit '%0' getaggt"
+});
 
 merge(config.views.wikified, {
 	defaultText: "Der Tiddler '%0' existiert noch nicht. Doppelklicken zum Erstellen",
 	defaultModifier: "(fehlt)",
 	shadowModifier: "(vordefinierter Schatten-Tiddler)",
 	dateFormat: "DD. MMM YYYY",
-	createdPrompt: "erstellt" });
+	createdPrompt: "erstellt"
+});
 
 merge(config.views.editor, {
 	tagPrompt: "Geben Sie die Tags durch Leerstellen getrennt ein, [[benutzen Sie doppelte eckige Klammern]] falls nötig, oder wählen Sie vorhandene",
-	defaultText: "Geben Sie den Text für '%0' ein" });
+	defaultText: "Geben Sie den Text für '%0' ein"
+});
 
 merge(config.views.editor.tagChooser, {
 	text: "Tags",
 	tooltip: "Wählen Sie vorhandene Tags zum Hinzufügen zu diesem Tiddler aus",
 	popupNone: "Es sind keine Tags definiert",
-	tagTooltip: "Tag '%0' hinzufügen" });
+	tagTooltip: "Tag '%0' hinzufügen"
+});
 
 merge(config.messages, {
 	sizeTemplates: [
@@ -161,26 +170,31 @@ merge(config.messages, {
 		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
 		{ unit: 1024, template: "%0\u00a0KB" },
 		{ unit: 1, template: "%0\u00a0B" }
-	] });
+	]
+});
 
 merge(config.macros.search, {
 	label: "suchen",
 	prompt: "Dieses TiddlyWiki durchsuchen",
 	accessKey: "F",
 	successMsg: "%0 Tiddler gefunden, die %1 enthalten",
-	failureMsg: "Keine Tiddler gefunden, die %0 enthalten" });
+	failureMsg: "Keine Tiddler gefunden, die %0 enthalten"
+});
 
 merge(config.macros.tagging, {
 	label: "Tagging: ",
 	labelNotTag: "kein Tagging",
-	tooltip: "Liste der Tiddler, die mit '%0' getaggt sind" });
+	tooltip: "Liste der Tiddler, die mit '%0' getaggt sind"
+});
 
 merge(config.macros.timeline, {
-	dateFormat: "DD. MMM YYYY" });
+	dateFormat: "DD. MMM YYYY"
+});
 
 merge(config.macros.allTags, {
 	tooltip: "Tiddler, die mit '%0' getagged sind, anzeigen",
-	noTags: "Keine getaggten Tiddler vorhanden" });
+	noTags: "Keine getaggten Tiddler vorhanden"
+});
 
 config.macros.list.all.prompt = "Alle Tiddler in alphabetischer Reihenfolge";
 config.macros.list.missing.prompt = "Tiddler, auf die verwiesen wird, die aber nicht existieren";
@@ -190,27 +204,32 @@ config.macros.list.touched.prompt = "Tiddlers, die lokal verändert wurden";
 
 merge(config.macros.closeAll, {
 	label: "alle schließen",
-	prompt: "Alle angezeigten Tiddler schließen (außer denen, die gerade bearbeitet werden)" });
+	prompt: "Alle angezeigten Tiddler schließen (außer denen, die gerade bearbeitet werden)"
+});
 
 merge(config.macros.permaview, {
 	label: "Permaview",
-	prompt: "Erzeugt einen URL, mit dem auf alle gerade geöffneten Tiddler verwiesen werden kann" });
+	prompt: "Erzeugt einen URL, mit dem auf alle gerade geöffneten Tiddler verwiesen werden kann"
+});
 
 merge(config.macros.saveChanges, {
 	label: "Änderungen speichern",
 	prompt: "Alle Änderungen speichern",
-	accessKey: "S" });
+	accessKey: "S"
+});
 
 merge(config.macros.newTiddler, {
 	label: "Neuer Tiddler",
 	prompt: "Neuen Tiddler erstellen",
 	title: "Neuer Tiddler",
-	accessKey: "N" });
+	accessKey: "N"
+});
 
 merge(config.macros.newJournal, {
 	label: "Neues Journal",
 	prompt: "Neuen Tiddler mit aktuellem Datum und aktueller Zeit erstellen",
-	accessKey: "J" });
+	accessKey: "J"
+});
 
 merge(config.macros.options, {
 	wizardTitle: "Erweiterte Optionen verändern",
@@ -225,7 +244,8 @@ merge(config.macros.options, {
 		],
 		rowClasses: [
 			{ className: 'lowlight', field: 'lowlight' }
-		] }
+		]
+	}
 });
 
 merge(config.macros.plugins, {
@@ -256,7 +276,8 @@ merge(config.macros.plugins, {
 		rowClasses: [
 			{ className: 'error', field: 'error' },
 			{ className: 'warning', field: 'warning' }
-		] },
+		]
+	},
 	listViewTemplateReadOnly: {
 		columns: [
 			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
@@ -271,7 +292,8 @@ merge(config.macros.plugins, {
 		rowClasses: [
 			{ className: 'error', field: 'error' },
 			{ className: 'warning', field: 'warning' }
-		] }
+		]
+	}
 });
 
 merge(config.macros.toolbar, {
@@ -399,46 +421,55 @@ merge(config.macros.annotations, {
 
 merge(config.commands.closeTiddler, {
 	text: "schließen",
-	tooltip: "Diesen Tiddler schließen" });
+	tooltip: "Diesen Tiddler schließen"
+});
 
 merge(config.commands.closeOthers, {
 	text: "andere schließen",
-	tooltip: "Alle anderen Tiddler schließen" });
+	tooltip: "Alle anderen Tiddler schließen"
+});
 
 merge(config.commands.editTiddler, {
 	text: "bearbeiten",
 	tooltip: "Diesen Tiddler bearbeiten",
 	readOnlyText: "betrachten",
-	readOnlyTooltip: "Quellcode dieses Tiddlers betrachten" });
+	readOnlyTooltip: "Quellcode dieses Tiddlers betrachten"
+});
 
 merge(config.commands.saveTiddler, {
 	text: "fertig",
-	tooltip: "Änderungen an diesem Tiddler speichern" });
+	tooltip: "Änderungen an diesem Tiddler speichern"
+});
 
 merge(config.commands.cancelTiddler, {
 	text: "abbrechen",
 	tooltip: "Änderungen an diesem Tiddler verwerfen",
 	warning: "Wollen Sie wirklich Änderungen in '%0' verwerfen?",
 	readOnlyText: "fertig",
-	readOnlyTooltip: "Diesen Tiddler normal anzeigen" });
+	readOnlyTooltip: "Diesen Tiddler normal anzeigen"
+});
 
 merge(config.commands.deleteTiddler, {
 	text: "löschen",
 	tooltip: "Diesen Tiddler löschen",
-	warning: "Wollen Sie '%0' wirklich löschen?" });
+	warning: "Wollen Sie '%0' wirklich löschen?"
+});
 
 merge(config.commands.permalink, {
 	text: "Permalink",
-	tooltip: "Permalink für diesen Tiddler" });
+	tooltip: "Permalink für diesen Tiddler"
+});
 
 merge(config.commands.references, {
 	text: "Referenzen",
 	tooltip: "Alle Tiddler zeigen, die auf diesen verweisen",
-	popupNone: "Keine Referenzen" });
+	popupNone: "Keine Referenzen"
+});
 
 merge(config.commands.jump, {
 	text: "springen",
-	tooltip: "Zu anderem, geöffneten Tiddler springen" });
+	tooltip: "Zu anderem, geöffneten Tiddler springen"
+});
 
 merge(config.commands.syncing, {
 	text: "Synchronisierung läuft",
@@ -448,7 +479,8 @@ merge(config.commands.syncing, {
 	captionUnSync: "Synchronisierung dieses Tiddlers stoppen",
 	chooseServer: "Diesen Tiddler mit anderem Server synchronisieren:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  " });
+	notCurrServerMarker: "  "
+});
 
 merge(config.commands.fields, {
 	text: "Felder",
@@ -462,7 +494,9 @@ merge(config.commands.fields, {
 		rowClasses: [
 		],
 		buttons: [
-		] } });
+		]
+	}
+});
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[GettingStarted]]",
@@ -529,5 +563,6 @@ merge(config.shadowTiddlers, {
 	SaveEmptyTemplate: "Diese Funktion erwirkt, dass beim Abspeichern von Änderungen eine leere Vorlage von TiddlyWiki erzeugt wird. Dies ist als Hilfe gedacht für Entwickler, die Adaptionen von TiddlyWiki bereitstellen. Die Funktion ist nicht erforderlich, wenn Sie ein normaler Benutzer sind.",
 	HideEditingFeatures: "Ist diese Funktion aktiviert, werden die Bearbeitungsfunktionen ausgeblendet, wenn das TiddlyWiki über HTTP aufgerufen wird. Der Benutzer hat dann die Möglichkeit, den Tiddler zwar betrachten zu können, aber nicht zu bearbeiten.",
 	MinorChanged: "Manchmal ist es sinnvoll, dass bei kleinen Änderungen der Tiddler in der Zeitachse nicht automatisch an den Anfang gesetzt wird. Mit Aktivierung dieser Funktion werden alle Bearbeitungen von Tiddlern als kleine Änderungen betrachtet und das Änderungsdatum nicht geändert.",
-	ConfirmBeforeDeleting: "Bei Aktivierung dieser Funktion fordert TiddlyWiki eine Bestätigung des Benutzers an, wenn ein Tiddler gelöscht werden soll." });
+	ConfirmBeforeDeleting: "Bei Aktivierung dieser Funktion fordert TiddlyWiki eine Bestätigung des Benutzers an, wenn ein Tiddler gelöscht werden soll."
+});
 //}}}
