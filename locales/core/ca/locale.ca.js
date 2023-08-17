@@ -1,14 +1,14 @@
 /***
-|Name          |CatalanLingo|
-|Description   |Central Catalan translation for TiddlyWiki|
-|Author        |Paco Rivière (http://pacoriviere.cat)|
-|Source        |https://projectes.lafarga.cat/projects/tiddlywiki/downloads|
-|CodeRepository|http://svn.tiddlywiki.org/Trunk/association/locales/core/en/locale.en.js |
-|Version       |0.4.0|
-|Date          |Apr 11, 2010|
-|Comments      |Agrairem els vostres comentaris a https://projectes.lafarga.cat/forum/?group_id=38|
-|License       |[[BSD open source license]]|
-|~CoreVersion  |2.5.2|
+|Name           |CatalanLingo|
+|Description    |Central Catalan translation for TiddlyWiki|
+|Author         |Paco Rivière (http://pacoriviere.cat)|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ca/locale.ca.js|
+|Original Source|https://projectes.lafarga.cat/projects/tiddlywiki/downloads|
+|Version        |0.4.0|
+|Date           |Apr 11, 2010|
+|Comments       |Agrairem els vostres comentaris a https://projectes.lafarga.cat/forum/?group_id=38|
+|License        |[[BSD open source license]]|
+|~CoreVersion   |2.5.2|
 ***/
 
 //{{{

@@ -1,14 +1,14 @@
 /***
-|Name        |TurkishTranslationPlugin|
-|Description |Translation of TiddlyWiki into Turkish|
-|Author      |Kıvılcım Hindistan|
-|Source      |www.fazlamesai.net/sundance|
-|Subversion  |http://svn.tiddlywiki.org/Trunk/association/locales/core/tr/locale.tr.js|
-|Version     |0.1.1|
-|Date        |Jan 05, 2007|
-|Comments    |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev|
-|License     |[[Creative Commons Attribution-ShareAlike 2.5 License|http://creativecommons.org/licenses/by-sa/2.5/]]|
-|~CoreVersion|2.1.0|
+|Name           |TurkishTranslationPlugin|
+|Description    |Translation of TiddlyWiki into Turkish|
+|Author         |Kıvılcım Hindistan|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/tr/locale.tr.js|
+|Original Source|www.fazlamesai.net/sundance|
+|Version        |0.1.1|
+|Date           |Jan 05, 2007|
+|Comments       |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev|
+|License        |[[Creative Commons Attribution-ShareAlike 2.5 License|http://creativecommons.org/licenses/by-sa/2.5/]]|
+|~CoreVersion   |2.1.0|
 ***/
 
 /*{{{*/

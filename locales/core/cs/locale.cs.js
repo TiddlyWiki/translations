@@ -2,7 +2,7 @@
 |Name                 |CzechTranslationPlugin|
 |Description          |Czech Translation of TiddlyWiki|
 |Author of translation|PetrChlebek (pchlebek (at) gmail (dot) com)|
-|CodeRepository       |http://svn.tiddlywiki.org/Trunk/association/locales/core/cs/locale.cs.js |
+|Source               |https://github.com/TiddlyWiki/translations/blob/master/locales/core/cs/locale.cs.js|
 |Version              |0.3.7|
 |Date                 |Jul 6, 2007|
 |Comments             |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |

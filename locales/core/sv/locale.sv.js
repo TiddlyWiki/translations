@@ -2,8 +2,7 @@
 |Name          |SwedishTranslationPlugin|
 |Description   |Translation of TiddlyWiki into Swedish|
 |Author        |SebastianRasmussen (sebras (at) hotmail (dot) com)|
-|Source        |www.example.com |
-|CodeRepository|http://svn.tiddlywiki.org/Trunk/association/locales/core/sv/locale.sv.js |
+|Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/sv/locale.sv.js|
 |Version       |0.3.7|
 |Date          |Sep 14, 2008|
 |Comments      |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |

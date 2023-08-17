@@ -1,14 +1,14 @@
 /***
-|Name          |locale.lv|
-|Description   |TiddlyWiki tulkojums latviešu valodā|
-|Author        |Mārcis Š. (marcis (at) webdizains (dot) com)|
-|Source        |http://www.webdizains.com/tw/ |
-|CodeRepository|http://svn.tiddlywiki.org/Trunk/association/locales/core/lv/locale.lv.js |
-|Version       |0.3.6|
-|Date          |Jul 6, 2007|
-|Comments      |Lūdzu, komentējiet iekš http://groups.google.co.uk/group/TiddlyWikiDev |
-|License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|~CoreVersion  |2.2|
+|Name           |locale.lv|
+|Description    |TiddlyWiki tulkojums latviešu valodā|
+|Author         |Mārcis Š. (marcis (at) webdizains (dot) com)|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/lv/locale.lv.js|
+|Original Source|http://www.webdizains.com/tw/|
+|Version        |0.3.6|
+|Date           |Jul 6, 2007|
+|Comments       |Lūdzu, komentējiet iekš http://groups.google.co.uk/group/TiddlyWikiDev |
+|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|~CoreVersion   |2.2|
 ***/
 
 //{{{

@@ -1,14 +1,14 @@
 /***
-|Name        |zh-HantTranslationPlugin|
-|Description |Translation of TiddlyWiki into Traditional Chinese|
-|Source      |http://tiddlywiki-zh.googlecode.com/svn/trunk/|
-|Subversion  |http://svn.tiddlywiki.org/Trunk/association/locales/core/zh-Hant/locale.zh-Hant.js|
-|Author      |BramChen (bram.chen (at) gmail (dot) com)|
-|Version     |2.6|
-|Date        |Aug 06, 2010|
-|Comments    |Please make comments at http://groups.google.com/group/TiddlyWiki-zh/|
-|License     |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
-|~CoreVersion|2.4.1|
+|Name           |zh-HantTranslationPlugin|
+|Description    |Translation of TiddlyWiki into Traditional Chinese|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/zh-Hant/locale.zh-Hant.js|
+|Original Source|http://tiddlywiki-zh.googlecode.com/svn/trunk/|
+|Author         |BramChen (bram.chen (at) gmail (dot) com)|
+|Version        |2.6|
+|Date           |Aug 06, 2010|
+|Comments       |Please make comments at http://groups.google.com/group/TiddlyWiki-zh/|
+|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
+|~CoreVersion   |2.4.1|
 ***/
 
 //{{{
