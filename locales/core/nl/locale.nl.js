@@ -1,25 +1,25 @@
 /***
-|''Name:''|DutchTranslationPlugin|
-|''Description:''|Translation of TiddlyWiki translateable strings into Dutch|
-|''Author:''|Ton van Rooijen (tonsweb (at) xs4all (dot) nl)|
-|''~CodeRepository:''|https://github.com/TiddlyWiki/translations/blob/master/locales/core/nl/locale.nl.js|
-|''Version:''|0.4.1|
-|''Date:''|April 13, 2010|
+|''Name''            |DutchTranslationPlugin|
+|''Description''     |Translation of TiddlyWiki translateable strings into Dutch|
+|''Author''          |Ton van Rooijen (tonsweb (at) xs4all (dot) nl)|
+|''~CodeRepository'' |https://github.com/TiddlyWiki/translations/blob/master/locales/core/nl/locale.nl.js|
+|''Version''         |0.4.1|
+|''Date''            |April 13, 2010|
 |''Version history:''|This version is applicable to all ~TiddlyWikis as of version 2.4.0 until further notice.|
-| June 20, 2007 v0.2.0: |First draft translation in Dutch based on Core-version 2.2 of "locale.en.js" (v0.3.3/v0.3.5).|
-| June 24, 2007 v0.2.1: |Workaround implemented for the translation problem as described in Ticket #217. Translations for shadow-tiddlers "~GettingStarted" (~HierBeginnen)  and "~OptionsPanel" added for this translation.|
-| July 1, 2007 v0.2.2: |Translation of the year string YYYY in date-formats (in Dutch it should be JJJJ) doesn't work; so I had to undo that. Extra comments added with all date-strings. Several miscellaneous improvements and corrections applied.|
-| July 4, 2007 v0.2.3: |According to ISO 639-1 the language-identification code should be "nl" instead of "du". So I changed the config.locale and the filename of this file accordingly. TW version and Copyright in ~MainMenu. Misc. corrections.|
-| July 6, 2007 v0.2.4: |~CoreVersion was mistakenly documented as "2.1.3" and so it was assumed to be applicable as of TW 2.1.3. Testing proved otherwise: applicability is only for all 2.2-versions. Synced with new "locale.en.js" (v0.3.6)|
-| July 11, 2007 v0.2.5: |The original translation of "backstage" changed from "redactiescherm" to "managementmenu" which better covers the functionality.|
-| August 02, 2008 v0.2.6: |tweak->opties; tiddler opslaan->bewaar (opslaan is alleen de complete TW); onbedoelde ~WikiWords in dit documentatieblok ge"~"ed; all 2.4.0-changes (from "locale.en.js" v0.3.7).|
-| September 8, 2009 v0.3.0: |All 2.5.2-changes (from "locale.en.js" v0.4.0) for TW version 2.5.0 and up.|
-| April 13, 2010 v0.4.1: |TW 2.6.0-changes (from "locale.en.js" v0.4.1) for TW v2.6.0 and up. Version-no. synchronized|
-| October 2, 2010 v0.4.2: |TW 2.6.1-changes (from "locale.en.js" v0.4.2), backward compatible, so valid for TW v2.6.0 and up.|
-|''Comments:''|Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev, or directly to the author.|
-|''Acknowledgements:''|Special thanks to "Lourens van Quadsk8.nl" who created the very first Dutch translation, back in midst 2005 for versions 1.2 and up to 2.0, many parts of which were gratefully reused in here.|
-|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
-|''~CoreVersion:''|2.6.0|
+| June 20, 2007 v0.2.0     |First draft translation in Dutch based on Core-version 2.2 of "locale.en.js" (v0.3.3/v0.3.5).|
+| June 24, 2007 v0.2.1     |Workaround implemented for the translation problem as described in Ticket #217. Translations for shadow-tiddlers "~GettingStarted" (~HierBeginnen)  and "~OptionsPanel" added for this translation.|
+| July 1, 2007 v0.2.2      |Translation of the year string YYYY in date-formats (in Dutch it should be JJJJ) doesn't work; so I had to undo that. Extra comments added with all date-strings. Several miscellaneous improvements and corrections applied.|
+| July 4, 2007 v0.2.3      |According to ISO 639-1 the language-identification code should be "nl" instead of "du". So I changed the config.locale and the filename of this file accordingly. TW version and Copyright in ~MainMenu. Misc. corrections.|
+| July 6, 2007 v0.2.4      |~CoreVersion was mistakenly documented as "2.1.3" and so it was assumed to be applicable as of TW 2.1.3. Testing proved otherwise: applicability is only for all 2.2-versions. Synced with new "locale.en.js" (v0.3.6)|
+| July 11, 2007 v0.2.5     |The original translation of "backstage" changed from "redactiescherm" to "managementmenu" which better covers the functionality.|
+| August 02, 2008 v0.2.6   |tweak->opties; tiddler opslaan->bewaar (opslaan is alleen de complete TW); onbedoelde ~WikiWords in dit documentatieblok ge"~"ed; all 2.4.0-changes (from "locale.en.js" v0.3.7).|
+| September 8, 2009 v0.3.0 |All 2.5.2-changes (from "locale.en.js" v0.4.0) for TW version 2.5.0 and up.|
+| April 13, 2010 v0.4.1    |TW 2.6.0-changes (from "locale.en.js" v0.4.1) for TW v2.6.0 and up. Version-no. synchronized|
+| October 2, 2010 v0.4.2   |TW 2.6.1-changes (from "locale.en.js" v0.4.2), backward compatible, so valid for TW v2.6.0 and up.|
+|''Comments''        |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev, or directly to the author.|
+|''Acknowledgements''|Special thanks to "Lourens van Quadsk8.nl" who created the very first Dutch translation, back in midst 2005 for versions 1.2 and up to 2.0, many parts of which were gratefully reused in here.|
+|''License''         |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
+|''~CoreVersion''    |2.6.0|
 ***/
 
 //{{{
