@@ -9,7 +9,7 @@ If you have any questions you would like addressed, please please ask at https:/
 How to create or update a translation of TiddlyWiki
 ---------------------------------------------------
 
-1. First, check below to see if the translation you need already exists.
+1. First, check [here](https://github.com/TiddlyWiki/translations/tree/master/locales/core) if the translation you need already exists.
 2. Download a fresh copy of TiddlyWiki from  http://www.tiddlywiki.com/
 3. In another window, visit  https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js and copy all the text to the clipboard
 4. Go back to the TiddlyWiki file and create a tiddler named after the language you are translating
