@@ -3,7 +3,7 @@
 |Description    |Central Catalan translation for TiddlyWiki|
 |Author         |Paco Rivière (http://pacoriviere.cat)|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ca/locale.ca.js|
-|Original Source|https://projectes.lafarga.cat/projects/tiddlywiki/downloads|
+|Original Source|projectes.lafarga.cat/projects/tiddlywiki/downloads ([[archived|http://web.archive.org/web/20110907055534/https://projectes.lafarga.cat/projects/tiddlywiki/downloads]])|
 |Version        |0.4.0|
 |Date           |Apr 11, 2010|
 |Comments       |Agrairem els vostres comentaris a https://projectes.lafarga.cat/forum/?group_id=38|

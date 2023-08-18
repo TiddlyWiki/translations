@@ -5,7 +5,7 @@
 |Date                        |Jun 20, 2007|
 |Source                      |https://github.com/TiddlyWiki/translations/blob/master/locales/core/fr/locale.fr.js|
 |Original Source             |TiddlyWikiFR.bidix.info ([[archived|https://web.archive.org/web/20080209235731/http://tiddlywikifr.bidix.info/]])|
-|Fichier de base "empty.html"|?? (c'était http://TiddlyWikiFR.bidix.info/empty.fr-FR.html|
+|Fichier de base "empty.html"|?? (c'était http://TiddlyWikiFR.bidix.info/empty.fr-FR.html)|
 |Author                      |BidiX (BidiX (at) bidix (dot) info)|
 |Credits                     |Jacques Turbé : http://avm.free.fr//TiddlyWiki-fr.html - Traduction de la version 2.1|
 |Comments                    |Merci de faire vos commentaires à http://groups.google.fr/group/TiddlyWikiFR |
