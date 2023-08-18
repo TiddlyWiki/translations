@@ -4,12 +4,12 @@
 |Author         |Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ko/locale.ko.js|
 |Original Source|http://snooey.net/tiddlywiki/locale.ko.js, http://snooey.net/tiddlywiki/#KoreanTranslationPlugin|
-|Version       |0.6.0|
-|Date          |Sep 13, 2010|
-|Comments      |If you have suggestion about this translation, please make comments at http://blog.snooey.net/guestbook/ or mail to me |
-|              |another suggestion, please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
-|License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|~CoreVersion  |2.6.1|
+|Version        |0.6.0|
+|Date           |Sep 13, 2010|
+|Comments       |If you have suggestion about this translation, please make comments at http://blog.snooey.net/guestbook/ or mail to me |
+|               |another suggestion, please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
+|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|~CoreVersion   |2.6.1|
 
 |이름      |KoreanTranslationPlugin|
 |설명      |TiddlyWiki를 한국어로 번역|
@@ -23,7 +23,6 @@
 |라이센스  |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |코어 버전 |2.6.1|
 ***/
-
 //{{{
 //--
 //-- 번역 가능한 문장
@@ -65,7 +64,8 @@ merge(config.optionsDesc, {
 	txtBackupFolder: "백업 파일을 저장할 때 쓸 폴더의 이름을 입력하세요.",
 	txtMaxEditRows: "편집 상자의 최대 줄 수를 입력하세요.",
 	txtFileSystemCharSet: "변경 사항 저장할 때 기본으로 사용할 문자셋(인코딩)을 입력하세요. (Firefox/Mozilla 전용)",
-	txtTheme: "사용할 테마의 이릉을 입력하세요." });
+	txtTheme: "사용할 테마의 이릉을 입력하세요."
+});
 
 merge(config.messages, {
 	customConfigError: "플러그인을 읽어들이는 데에 문제가 발생하였습니다. PluginManager에서 자세한 사항을 확인하십시요.",
@@ -106,11 +106,13 @@ merge(config.messages, {
 	invalidFieldName: "%0은(는) 잘못된 입력 항목 이름입니다.",
 	fieldCannotBeChanged: "'%0' 입력 항목이 변경되지 않았습니다.",
 	loadingMissingTiddler: "'%0' 티들러를 '%1' 서버에서 가져오려 하고 있습니다.\n\n위치: 서버 '%2'의 작업공간 '%3'",
-	upgradeDone: "%0 버전으로 업그레이드를 완료하였습니다.\n\n새 TiddlyWiki를 불러오려면 '확인' 을 누르십시요." });
+	upgradeDone: "%0 버전으로 업그레이드를 완료하였습니다.\n\n새 TiddlyWiki를 불러오려면 '확인' 을 누르십시요."
+});
 
 merge(config.messages.messageClose, {
 	text: "닫기",
-	tooltip: "메세지 창을 닫습니다." });
+	tooltip: "메세지 창을 닫습니다."
+});
 
 config.messages.backstage = {
 	open: { text: "고급도구", tooltip: "작업을 만들거나 수행, 조정할 수 있는 고급도구 공간을 엽니다." },
@@ -135,7 +137,8 @@ config.messages.dates.daySuffixes = [
 	"일", "일", "일", "일", "일", "일", "일", "일", "일", "일",
 	"일", "일", "일", "일", "일", "일", "일", "일", "일", "일",
 	"일", "일", "일", "일", "일", "일", "일", "일", "일", "일",
-	"일"];
+	"일"
+];
 config.messages.dates.am = "오전";
 config.messages.dates.pm = "오후";
 
@@ -149,24 +152,28 @@ merge(config.views.wikified.tag, {
 	tooltip: "'%0' 태그가 달린 티들러 모두 열기",
 	openAllText: "모두 열기",
 	openAllTooltip: "이 티들러 모두 열기",
-	popupNone: "'%0' 태그가 달린 다른 티들러가 없습니다." });
+	popupNone: "'%0' 태그가 달린 다른 티들러가 없습니다."
+});
 
 merge(config.views.wikified, {
 	defaultText: "'%0' 티들러는 아직 없습니다. 만드려면 두번 클릭하세요.",
 	defaultModifier: "(빠짐)",
 	shadowModifier: "(내장 기능 숨김 티들러)",
 	dateFormat: "YYYY년 MM월 DD일", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "만든 날짜:" });
+	createdPrompt: "만든 날짜:"
+});
 
 merge(config.views.editor, {
 	tagPrompt: "태그는 공백으로 구분하여 입력하며, 필요한 경우 [[대괄호를 두 번 사용]]하거나, 이미 있는 태그를 추가하십시오.",
-	defaultText: "'%0'에 넣을 본문을 입력하십시오." });
+	defaultText: "'%0'에 넣을 본문을 입력하십시오."
+});
 
 merge(config.views.editor.tagChooser, {
 	text: "태그",
 	tooltip: "이 티들러에 이미 있는 태그를 추가할 수 있습니다.",
 	popupNone: "아무 태그도 정의되지 않았습니다.",
-	tagTooltip: "'%0' 태그를 추가합니다." });
+	tagTooltip: "'%0' 태그를 추가합니다."
+});
 
 merge(config.messages, {
 	sizeTemplates: [
@@ -175,26 +182,32 @@ merge(config.messages, {
 		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
 		{ unit: 1024, template: "%0\u00a0KB" },
 		{ unit: 1, template: "%0\u00a0바이트" }
-	] });
+	]
+});
 
 merge(config.macros.search, {
 	label: "찾기",
 	prompt: "이 TiddlyWiki에서 찾기",
 	accessKey: "F",
 	successMsg: "%1을(를) 포함한 티들러를 %0개 찾았습니다.",
-	failureMsg: "%0을(를) 포함한 티들러를 찾지 못하였습니다." });
+	failureMsg: "%0을(를) 포함한 티들러를 찾지 못하였습니다."
+});
 
 merge(config.macros.tagging, {
 	label: "'태그 달림: ",
 	labelNotTag: "태그가 달리지 않음",
-	tooltip: "'%0'태그가 달린 티들러의 목록" });
+	tooltip: "'%0'태그가 달린 티들러의 목록"
+});
 
 merge(config.macros.timeline, {
-	dateFormat: "YYYY년 MM월 DD일" });// 왼쪽에 나온 대로 날짜 형식을 수정하시면 됩니다. Y와 M, D는 수정하시면 안됩니다.
+	// 왼쪽에 나온 대로 날짜 형식을 수정하시면 됩니다. Y와 M, D는 수정하시면 안됩니다.
+	dateFormat: "YYYY년 MM월 DD일"
+});
 
 merge(config.macros.allTags, {
 	tooltip: "'%0' 태그가 달린 티들러를 보입니다.",
-	noTags: "태그가 달린 티들러가 없습니다." });
+	noTags: "태그가 달린 티들러가 없습니다."
+});
 
 config.macros.list.all.prompt = "모든 티들러를 알파벳순으로 정렬하여 보입니다.";
 config.macros.list.missing.prompt = "링크는 되어 있으나 정의되지 않은 티들러를 보입니다.";
@@ -204,27 +217,32 @@ config.macros.list.touched.prompt = "개별 수정한 티들러를 보입니다.
 
 merge(config.macros.closeAll, {
 	label: "모두 닫기",
-	prompt: "열린 모든 티들러를 닫습니다(편집중인 티들러는 제외합니다)." });
+	prompt: "열린 모든 티들러를 닫습니다(편집중인 티들러는 제외합니다)."
+});
 
 merge(config.macros.permaview, {
 	label: "절대주소",
-	prompt: "현재 열린 티들러를 모두 볼 수 있는 URL 링크로 이동합니다." });
+	prompt: "현재 열린 티들러를 모두 볼 수 있는 URL 링크로 이동합니다."
+});
 
 merge(config.macros.saveChanges, {
 	label: "바뀐점 저장",
 	prompt: "모든 티들러를 저장하여 새 TiddlyWiki를 만듭니다.",
-	accessKey: "S" });
+	accessKey: "S"
+});
 
 merge(config.macros.newTiddler, {
 	label: "새 티들러",
 	prompt: "새 티들러를 만듭니다.",
 	title: "새 티들러",
-	accessKey: "N" });
+	accessKey: "N"
+});
 
 merge(config.macros.newJournal, {
 	label: "새 일정",
 	prompt: "현재 날자와 시간으로 새 티들러를 만듭니다.",
-	accessKey: "J" });
+	accessKey: "J"
+});
 
 merge(config.macros.options, {
 	wizardTitle: "고급 옵션 조정",
@@ -397,46 +415,55 @@ merge(config.macros.sync, {
 
 merge(config.commands.closeTiddler, {
 	text: "닫기",
-	tooltip: "이 티들러를 닫습니다." });
+	tooltip: "이 티들러를 닫습니다."
+});
 
 merge(config.commands.closeOthers, {
 	text: "다른 티들러 닫기",
-	tooltip: "다른 티들러를 모두 닫습니다." });
+	tooltip: "다른 티들러를 모두 닫습니다."
+});
 
 merge(config.commands.editTiddler, {
 	text: "편집",
 	tooltip: "이 티들러들 편집합니다.",
 	readOnlyText: "보기",
-	readOnlyTooltip: "이 티들러의 원본을 봅니다." });
+	readOnlyTooltip: "이 티들러의 원본을 봅니다."
+});
 
 merge(config.commands.saveTiddler, {
 	text: "완료",
-	tooltip: "이 티들러의 바뀐점을 저장합니다." });
+	tooltip: "이 티들러의 바뀐점을 저장합니다."
+});
 
 merge(config.commands.cancelTiddler, {
 	text: "취소",
 	tooltip: "이 티들러의 바뀐점을 되돌립니다.",
 	warning: "'%0'의 바뀐점을 정말 버리시겠습니까?",
 	readOnlyText: "완료",
-	readOnlyTooltip: "이 티들러를 보통 모양로 봅니다." });
+	readOnlyTooltip: "이 티들러를 보통 모양로 봅니다."
+});
 
 merge(config.commands.deleteTiddler, {
 	text: "삭제",
 	tooltip: "이 티들러를 삭제합니다.",
-	warning: "'%0'을(를) 정말 삭제하시겠습니까?" });
+	warning: "'%0'을(를) 정말 삭제하시겠습니까?"
+});
 
 merge(config.commands.permalink, {
 	text: "절대주소",
-	tooltip: "이 티들러의 절대주소입니다." });
+	tooltip: "이 티들러의 절대주소입니다."
+});
 
 merge(config.commands.references, {
 	text: "연관글",
 	tooltip: "이 티들러를 링크한 티들러를 보여줍니다.",
-	popupNone: "연관글 없음" });
+	popupNone: "연관글 없음"
+});
 
 merge(config.commands.jump, {
 	text: "건너뛰기",
-	tooltip: "열려있는 다른 티들러로 건너뜁니다." });
+	tooltip: "열려있는 다른 티들러로 건너뜁니다."
+});
 
 merge(config.commands.syncing, {
 	text: "동기화",
@@ -446,7 +473,8 @@ merge(config.commands.syncing, {
 	captionUnSync: "이 티들러의 동기화를 중단.",
 	chooseServer: "이 티들러를 다른 서버와 동기화",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  " });
+	notCurrServerMarker: "  "
+});
 
 merge(config.commands.fields, {
 	text: "입력 항목",
@@ -461,7 +489,8 @@ merge(config.commands.fields, {
 		],
 		buttons: [
 		]
-	} });
+	}
+});
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "GettingStarted",
@@ -511,5 +540,4 @@ merge(config.annotations, {
 	ToolbarCommands: "이 숨김 티들러는 티들러에 표시하는 오른쪽 상단 도구 모음에 보이는 명령의 배치를 결정합니다.",
 	ViewTemplate: "이 숨김 티들러의 HTML 템플릿은 티들러가 어떻게 보일 지를 결정합니다."
 });
-
 //}}}
