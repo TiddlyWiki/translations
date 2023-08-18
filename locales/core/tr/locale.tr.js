@@ -9,7 +9,6 @@
 |License      |[[Creative Commons Attribution-ShareAlike 2.5 License|http://creativecommons.org/licenses/by-sa/2.5/]]|
 |~CoreVersion |2.1.0|
 ***/
-
 /*{{{*/
 // Translateable strings
 // ---------------------
@@ -19,7 +18,8 @@
 config.locale = "tr"; // W3C language tag
 
 merge(config.options, {
-	txtUserName: "İsminiz" });
+	txtUserName: "İsminiz"
+});
 
 config.tasks = {
 	tidy: { text: "tidy up", tooltip: "Make bulk changes across groups of tiddlers", content: 'Coming soon...\n\nThis tab will allow bulk operations on tiddlers, and tags. It will be a generalised, extensible version of the plugins tab' },
@@ -67,13 +67,18 @@ merge(config.messages, {
 	wrongSaveFormat: "'%0' kayıt formatında kaydedilemedi. Kayıt için standart format kullanılıyor..",
 	invalidFieldName: "%0 geçersiz alan ismi",
 	fieldCannotBeChanged: "'%0' alanı değiştirilemez.",
-	backstagePrompt: "backstage: " });
+	backstagePrompt: "backstage: "
+});
 
 merge(config.messages.messageClose, {
 	text: "kapat",
-	tooltip: "bu mesaj alanını kapat" });
+	tooltip: "bu mesaj alanını kapat"
+});
 
-config.messages.dates.months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+config.messages.dates.months = [
+	"Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+	"Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+];
 config.messages.dates.days = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
 config.messages.dates.shortMonths = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"];
 config.messages.dates.shortDays = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
@@ -94,43 +99,51 @@ merge(config.views.wikified.tag, {
 	tooltip: "'%0' ile etiketlenmiş notcukları göster",
 	openAllText: "hepsini aç",
 	openAllTooltip: "Bu notcuklar için hepsini aç",
-	popupNone: "'%0' ile etiketlenmiş başka notcuk yok" });
+	popupNone: "'%0' ile etiketlenmiş başka notcuk yok"
+});
 
 merge(config.views.wikified, {
 	defaultText: "'%0' notu halihazırda mevcut değil. Oluşturmak için çift klikleyin",
 	defaultModifier: "(eksik)",
 	shadowModifier: "(dahili gölge notcuk)",
 	dateFormat: "DD MMM YYYY",
-	createdPrompt: "Oluşturulduğu tarih" });
+	createdPrompt: "Oluşturulduğu tarih"
+});
 
 merge(config.views.editor, {
 	tagPrompt: "Etiketleri boşluklarla ayırarak yazınız. Eğer gerekirse  [[çift köşeli parantez]] kullanın, yad da mevcut etiketlerden seçtiklerinizi ekleyin",
-	defaultText: "'%0' için olan metni girin" });
+	defaultText: "'%0' için olan metni girin"
+});
 
 merge(config.views.editor.tagChooser, {
 	text: "tags",
 	tooltip: "Bu nota uygun etiketleri seçiniz",
 	popupNone: "Tanımlanmış bir etiket bulunmamaktadır",
-	tagTooltip: "'%0' isimli notu ekle" });
+	tagTooltip: "'%0' isimli notu ekle"
+});
 
 merge(config.macros.search, {
 	label: "arama",
 	prompt: "Bu TiddlyWiki'de ara",
 	accessKey: "F",
 	successMsg: "%1'e uyan %0 notcuk bulundu",
-	failureMsg: "%0'e uygun notcuk bulunamadı" });
+	failureMsg: "%0'e uygun notcuk bulunamadı"
+});
 
 merge(config.macros.tagging, {
 	label: "etiketliyor: ",
 	labelNotTag: "etiketlenmiyor",
-	tooltip: "'%0' ile etiketlenmiş notcuklar" });
+	tooltip: "'%0' ile etiketlenmiş notcuklar"
+});
 
 merge(config.macros.timeline, {
-	dateFormat: "DD MMM YYYY" });
+	dateFormat: "DD MMM YYYY"
+});
 
 merge(config.macros.allTags, {
 	tooltip: "'%0' ile etiketlenmiş notcukları göster",
-	noTags: "Etiketlenmiş notcuk bulunmamakta" });
+	noTags: "Etiketlenmiş notcuk bulunmamakta"
+});
 
 config.macros.list.all.prompt = "Bütün notcuklar alfabetik sırada";
 config.macros.list.missing.prompt = "Kendilerine bağ bulunan fakat tanımlanmamış notcuklar";
@@ -139,27 +152,32 @@ config.macros.list.shadowed.prompt = "Öntanımlı içerikle doldurulmuş notcuk
 
 merge(config.macros.closeAll, {
 	label: "hepsini kapat",
-	prompt: "Bütün görüntülenen notcukları kapat.(düzenlenenler dışında)" });
+	prompt: "Bütün görüntülenen notcukları kapat.(düzenlenenler dışında)"
+});
 
 merge(config.macros.permaview, {
 	label: "kalıcı görüntü",
-	prompt: "Görüntülenmekte olan mevcut bütün notlara işaret eden bir bağ" });
+	prompt: "Görüntülenmekte olan mevcut bütün notlara işaret eden bir bağ"
+});
 
 merge(config.macros.saveChanges, {
 	label: "değişiklikleri kaydet",
 	prompt: "Yeni bir TiddlyWiki oluşturmak için bütün notcukları kaydet",
-	accessKey: "S" });
+	accessKey: "S"
+});
 
 merge(config.macros.newTiddler, {
 	label: "yeni notcuk",
 	prompt: "yeni bir notcuk oluştur",
 	title: "Yeni Notcuk ",
-	accessKey: "N" });
+	accessKey: "N"
+});
 
 merge(config.macros.newJournal, {
 	label: "yeni jurnal",
 	prompt: "Mevcut tarih ve saatten yeni bir notcuk oluştur",
-	accessKey: "J" });
+	accessKey: "J"
+});
 
 merge(config.macros.plugins, {
 	wizardTitle: "Pluginler",
@@ -251,46 +269,55 @@ merge(config.macros.sync, {
 
 merge(config.commands.closeTiddler, {
 	text: "kapat",
-	tooltip: " Bu notu kapat" });
+	tooltip: " Bu notu kapat"
+});
 
 merge(config.commands.closeOthers, {
 	text: "diğerlerini kapat",
-	tooltip: "Bütün diğer notcukları kapat" });
+	tooltip: "Bütün diğer notcukları kapat"
+});
 
 merge(config.commands.editTiddler, {
 	text: "düzenle",
 	tooltip: "Bu notu düzenle",
 	readOnlyText: "göster",
-	readOnlyTooltip: "Bu notun kaynak kodunu göster" });
+	readOnlyTooltip: "Bu notun kaynak kodunu göster"
+});
 
 merge(config.commands.saveTiddler, {
 	text: "bitti",
-	tooltip: "Bu nottaki değişiklikleri kaydet" });
+	tooltip: "Bu nottaki değişiklikleri kaydet"
+});
 
 merge(config.commands.cancelTiddler, {
 	text: "iptal et",
 	tooltip: "Bu nottaki değişiklikleri iptal et",
 	warning: "'%0' notundaki değişikliklerinizi iptal etmek istiyor musunuz?",
 	readOnlyText: "bitti",
-	readOnlyTooltip: "B notu normal haliyle göster" });
+	readOnlyTooltip: "B notu normal haliyle göster"
+});
 
 merge(config.commands.deleteTiddler, {
 	text: "sil",
 	tooltip: "Bu notu sil",
-	warning: "'%0' notunu silmek istiyor musunuz?" });
+	warning: "'%0' notunu silmek istiyor musunuz?"
+});
 
 merge(config.commands.permalink, {
 	text: "kalıcı bağ",
-	tooltip: "Bu notcuk için kalıcı bağ" });
+	tooltip: "Bu notcuk için kalıcı bağ"
+});
 
 merge(config.commands.references, {
 	text: "referanslar",
 	tooltip: "Bu nota olan referansları göster",
-	popupNone: "Hiç referans yok" });
+	popupNone: "Hiç referans yok"
+});
 
 merge(config.commands.jump, {
 	text: "atla",
-	tooltip: "Açık olan bir başka nota geçmek" });
+	tooltip: "Açık olan bir başka nota geçmek"
+});
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[Başlamak]]",
@@ -308,6 +335,6 @@ merge(config.shadowTiddlers, {
 	TabMoreOrphans: '<<list orphans>>',
 	TabMoreShadowed: '<<list shadowed>>',
 	PluginManager: '<<plugins>>',
-	ImportTiddlers: '<<importTiddlers>>' });
-
+	ImportTiddlers: '<<importTiddlers>>'
+});
 /*}}}*/
