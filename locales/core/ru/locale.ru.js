@@ -9,6 +9,7 @@
 |Author          |vmunt|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
+|Feedback        |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License         |BSD open source license|
 |Acknowledgements|Idea by Глеб Тржемецкий (Gleb Trzhemetski), https://glebsite.net|
 ***/

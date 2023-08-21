@@ -6,7 +6,7 @@
 |Original Source|https://github.com/ziemiowid/translations/blob/master/locales/core/pl/locale.pl.js|
 |Version        |0.9.0|
 |Date           |Jan 08, 2012|
-|Comments       |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev|
+|Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |~CoreVersion   |2.6.0|
 
@@ -23,7 +23,6 @@ Kilka decyzji tłumacza:
 * core code      - kod podstawowy
 * backstage     - zaplecze
 ***/
-
 //{{{
 //--
 //-- Translateable strings

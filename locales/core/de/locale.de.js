@@ -7,7 +7,7 @@
 |Version        |2.6.2|
 |~CoreVersion   |2.6.2|
 |Date           |Feb 14, 2011|
-|Comments       |Visit the home of this translation on [[TiddlyWikiDeutsch|http://www.karadeniz.de/tiddlywiki/]] |
+|Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
 //{{{
