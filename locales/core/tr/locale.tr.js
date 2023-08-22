@@ -4,10 +4,10 @@
 |Author       |Kıvılcım Hindistan (www.fazlamesai.net/sundance, [[archived|https://web.archive.org/web/20120806052752/http://www.fazlamesai.net:80/sundance/]])|
 |Source       |https://github.com/TiddlyWiki/translations/blob/master/locales/core/tr/locale.tr.js|
 |Version      |0.1.1|
-|Date         |Jan 05, 2007|
-|Comments     |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev|
-|License      |[[Creative Commons Attribution-ShareAlike 2.5 License|http://creativecommons.org/licenses/by-sa/2.5/]]|
 |~CoreVersion |2.1.0|
+|Date         |Jan 05, 2007|
+|Feedback     |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
+|License      |[[Creative Commons Attribution-ShareAlike 2.5 License|http://creativecommons.org/licenses/by-sa/2.5/]]|
 ***/
 /*{{{*/
 // Translateable strings

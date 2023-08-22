@@ -1,15 +1,14 @@
 /***
-|Name                 |CzechTranslationPlugin|
-|Description          |Czech Translation of TiddlyWiki|
-|Author of translation|PetrChlebek (pchlebek (at) gmail (dot) com)|
-|Source               |https://github.com/TiddlyWiki/translations/blob/master/locales/core/cs/locale.cs.js|
-|Version              |0.3.7|
-|Date                 |Jul 6, 2007|
-|Comments             |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
-|License              |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|~CoreVersion         |2.4.0|
+|Name         |CzechTranslationPlugin|
+|Description  |Czech Translation of TiddlyWiki|
+|Author       |PetrChlebek (pchlebek (at) gmail (dot) com)|
+|Source       |https://github.com/TiddlyWiki/translations/blob/master/locales/core/cs/locale.cs.js|
+|Version      |0.3.7|
+|~CoreVersion |2.4.0|
+|Date         |Jul 6, 2007|
+|Feedback     |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
+|License      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
-
 //{{{
 //--
 //-- Translateable strings

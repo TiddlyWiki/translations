@@ -4,12 +4,12 @@
 |Author        |Frederico José Andries Lopes (frelopes (at) gmail (dot) com)|
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/pt-BR/locale.pt-BR.js|
 |Version       |0.4.3|
-|Date          |Jan 13, 2012|
-|Comments      |Based on version 2.6 pt-PT by Paulo Soares|
-|Licença       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |~CoreVersion  |2.6.0|
+|Date          |Jan 13, 2012|
+|Feedback      |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
+|Credits       |Based on version 2.6 pt-PT by Paulo Soares|
+|License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
 ***/
-
 //{{{
 //--
 //-- Translateable strings

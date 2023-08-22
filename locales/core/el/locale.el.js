@@ -5,11 +5,10 @@
 |Source                |https://github.com/TiddlyWiki/translations/blob/master/locales/core/el/locale.el.js|
 |Empty greek tiddlywiki|http://spyros.kroustalakis.googlepages.com/empty_gr.html |
 |Version               |1.0.0|
-|Date                  |May 6, 2007|
-|Comments              |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
 |~CoreVersion          |2.2|
+|Date                  |May 6, 2007|
+|Feedback              |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 ***/
-
 //{{{
 //--
 //-- Translateable strings

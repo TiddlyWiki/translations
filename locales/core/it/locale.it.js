@@ -4,12 +4,12 @@
 |Authors        |Pollio Maurizio (pollio.maurizio (at) gmail (dot) com)|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/it/locale.it.js|
 |Original Source|pollio.maurizio.googlepages.com/MiniGuidaTiddlyWiki.html ([[archived|https://web.archive.org/web/20080919031946/http://pollio.maurizio.googlepages.com/MiniGuidaTiddlyWiki.html]])|
+|Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |Version        |2.6|
+|~CoreVersion   |2.6|
 |Date           |Dec 15, 2011|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/deed.it]] |
-|~CoreVersion   |2.6|
 ***/
-
 //{{{
 // --
 // -- Translateable strings
