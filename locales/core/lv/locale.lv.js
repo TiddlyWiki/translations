@@ -5,12 +5,11 @@
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/lv/locale.lv.js|
 |Original Source|http://www.webdizains.com/tw/|
 |Version        |0.3.6|
-|Date           |Jul 6, 2007|
-|Comments       |Lūdzu, komentējiet iekš http://groups.google.co.uk/group/TiddlyWikiDev |
-|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |~CoreVersion   |2.2|
+|Date           |Jul 6, 2007|
+|Feedback       |Lūdzu, komentējiet iekš https://github.com/TiddlyWiki/translations/issues vai https://groups.google.com/g/tiddlywikiclassic|
+|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
-
 //{{{
 //--
 //-- Translateable strings

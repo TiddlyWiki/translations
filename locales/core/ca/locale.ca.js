@@ -5,12 +5,11 @@
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ca/locale.ca.js|
 |Original Source|projectes.lafarga.cat/projects/tiddlywiki/downloads ([[archived|http://web.archive.org/web/20110907055534/https://projectes.lafarga.cat/projects/tiddlywiki/downloads]])|
 |Version        |0.4.0|
-|Date           |Apr 11, 2010|
-|Comments       |Agrairem els vostres comentaris a https://projectes.lafarga.cat/forum/?group_id=38|
-|License        |[[BSD open source license]]|
 |~CoreVersion   |2.5.2|
+|Date           |Apr 11, 2010|
+|Feedback       |Agrairem els vostres comentaris a https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
+|License        |[[BSD open source license]]|
 ***/
-
 //{{{
 //--
 //-- Translateable strings

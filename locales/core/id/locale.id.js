@@ -5,12 +5,11 @@
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/id/locale.id.js|
 |Original Source|http://id-tiddlywiki.tiddlyspot.com|
 |Version        |0.3.6|
-|Date           |Mar 8, 2008|
-|Comments       |Silahkan mengirimkan komentar Anda ke http://groups.google.co.uk/group/TiddlyWikiDev |
-|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |~CoreVersion   |2.3.0|
+|Date           |Mar 8, 2008|
+|Feedback       |Silahkan mengirimkan komentar Anda ke https://github.com/TiddlyWiki/translations/issues atau https://groups.google.com/g/tiddlywikiclassic|
+|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
-
 //{{{
 //--
 //-- Translateable strings

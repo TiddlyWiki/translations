@@ -7,12 +7,11 @@
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
 |Versión       |0.4.2|
-|Fecha         |October 2, 2010|
-|Comentarios   |Por favor deje sus comentarios en http://groups.google.co.uk/group/TiddlyWikiDev |
-|Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |~VersiónNúcleo|2.6.0|
+|Fecha         |October 2, 2010|
+|Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
+|Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
-
 //{{{
 //--
 //-- Translateable strings
