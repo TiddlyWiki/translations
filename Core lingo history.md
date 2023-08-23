@@ -24,22 +24,22 @@ v2.9.1
 v2.8.1-2.9.0
 * no changes
 
-v2.7.2
+v2.8.0
 * [8bf8ca0](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8bf8ca0) download saving: improve messaging/interaction
 
-v2.6.6-2.7.1
+v2.7.0-2.7.2
 * no changes
 
-v2.6.5
+v2.6.6
 * [e901015](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/e901015) Removal of sync from core, in preparation for making it plugin
 
-v2.6.4
+v2.6.5
 * [6e74ae4](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/6e74ae4) add error messages for importing
 
-v2.6.3
+v2.6.4
 * no changes
 
-v2.6.2
+v2.6.3
 * [9a3bf25](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/9a3bf25) Removed unnecessary escape character in Lingo.js.
 * [8790249](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8790249) Move config.tasks code into backstage
 * [11aab93](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/11aab93) Ticket #1274 search macro should support placeholder
