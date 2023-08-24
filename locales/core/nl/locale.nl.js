@@ -4,6 +4,7 @@
 |''Author''          |Ton van Rooijen (tonsweb (at) xs4all (dot) nl)|
 |''Source''          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/nl/locale.nl.js|
 |''Version''         |0.4.1|
+|''~CoreVersion''    |2.6.0|
 |''Date''            |April 13, 2010|
 |''Version history:''|This version is applicable to all ~TiddlyWikis as of version 2.4.0 until further notice.|
 | June 20, 2007 v0.2.0     |First draft translation in Dutch based on Core-version 2.2 of "locale.en.js" (v0.3.3/v0.3.5).|
@@ -16,12 +17,10 @@
 | September 8, 2009 v0.3.0 |All 2.5.2-changes (from "locale.en.js" v0.4.0) for TW version 2.5.0 and up.|
 | April 13, 2010 v0.4.1    |TW 2.6.0-changes (from "locale.en.js" v0.4.1) for TW v2.6.0 and up. Version-no. synchronized|
 | October 2, 2010 v0.4.2   |TW 2.6.1-changes (from "locale.en.js" v0.4.2), backward compatible, so valid for TW v2.6.0 and up.|
-|''Comments''        |Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev, or directly to the author.|
+|''Feedback''        |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues, or directly to the author (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention).|
 |''Acknowledgements''|Special thanks to "Lourens van Quadsk8.nl" who created the very first Dutch translation, back in midst 2005 for versions 1.2 and up to 2.0, many parts of which were gratefully reused in here.|
 |''License''         |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
-|''~CoreVersion''    |2.6.0|
 ***/
-
 //{{{
 //--
 //-- Translateable strings
