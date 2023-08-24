@@ -1,33 +1,28 @@
-﻿/***
-|''Name:''|KoreanTranslationPlugin|
-|''Description:''|Translation of TiddlyWiki into Korean|
-|''Author:''|Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
-|''Source:''|http://snooey.net/tiddlywiki/locale.ko.js |
-|'' ''|http://snooey.net/tiddlywiki/#KoreanTranslationPlugin |
-|''CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/ko/locale.ko.js |
-|''Version:''|0.6.0|
-|''Date:''|Sep 13, 2010|
-|''Comments:''|If you have suggestion about this translation, please make comments at http://blog.snooey.net/guestbook/ or mail to me |
-|'' ''|another suggestion, please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
-|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''~CoreVersion:''|2.6.1|
-***/
-
 /***
-|''이름:''|KoreanTranslationPlugin|
-|''설명:''|TiddlyWiki를 한국어로 번역|
-|''제작자:''|Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
-|''소스:''|http://snooey.net/tiddlywiki/locale.ko.js |
-|'' ''|http://snooey.net/tiddlywiki/#KoreanTranslationPlugin |
-|''코드 저장소:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/ko/locale.ko.js |
-|''버전:''|0.6.0|
-|''날짜:''|2010년 9월 13일|
-|''덧글:''|이 번역에 대한 제안이 있으신 경우, http://blog.snooey.net/guestbook/ 또는 제게 메일을 보내주십시요. |
-|'' ''|다른 제안은 http://groups.google.co.uk/group/TiddlyWikiDev으로 보내주십시요. |
-|''라이센스:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''코어 버전:''|2.6.1|
-***/
+|Name           |KoreanTranslationPlugin|
+|Description    |Translation of TiddlyWiki into Korean|
+|Author         |Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ko/locale.ko.js|
+|Original Source|http://snooey.net/tiddlywiki/locale.ko.js, http://snooey.net/tiddlywiki/#KoreanTranslationPlugin|
+|Version        |0.6.0|
+|Date           |Sep 13, 2010|
+|Comments       |If you have suggestion about this translation, please make comments at http://blog.snooey.net/guestbook/ or mail to me |
+|               |another suggestion, please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
+|License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|~CoreVersion   |2.6.1|
 
+|이름      |KoreanTranslationPlugin|
+|설명      |TiddlyWiki를 한국어로 번역|
+|제작자    |Snooey(Seongsu Yoon) (tiddlywiki (at) snooey (dot) net)|
+|코드 저장소|https://github.com/TiddlyWiki/translations/blob/master/locales/core/ko/locale.ko.js|
+|소스      |http://snooey.net/tiddlywiki/locale.ko.js, http://snooey.net/tiddlywiki/#KoreanTranslationPlugin|
+|버전      |0.6.0|
+|날짜      |2010년 9월 13일|
+|덧글      |이 번역에 대한 제안이 있으신 경우, http://blog.snooey.net/guestbook/ 또는 제게 메일을 보내주십시요. |
+|          |다른 제안은 http://groups.google.co.uk/group/TiddlyWikiDev으로 보내주십시요. |
+|라이센스  |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
+|코어 버전 |2.6.1|
+***/
 //{{{
 //--
 //-- 번역 가능한 문장
@@ -38,19 +33,19 @@
 config.locale = "ko"; // W3C 언어 태그
 
 if (config.options.txtUserName == 'YourName') // 이 줄은 번역하지 마시고, 다음 줄부터 번역하십시요.
-	merge(config.options,{txtUserName: "익명"});
+	merge(config.options, { txtUserName: "익명" });
 
-merge(config.tasks,{
-	save: {text: "저장", tooltip: "이 TiddlyWiki에 바뀐점을 저장합니다", action: saveChanges},
-	sync: {text: "동기화", tooltip: "로컬 또는 서버에 있는 다른 TiddlyWiki 파일과의 차이점을 동기화합니다", content: '<<sync>>'},
-	importTask: {text: "가져오기", tooltip: "로컬 또는 서버에 있는 다른 TiddlyWiki 파일에서 티들러와 플러그인을 가져옵니다", content: '<<importTiddlers>>'},
-	tweak: {text: "모양 조정", tooltip: "TiddlyWiki의 모양과 형식을 조정합니다", content: '<<options>>'},
-	upgrade: {text: "업그레이드", tooltip: "TiddlyWiki의 코어 코드를 업그레이드합니다", content: '<<upgrade>>'},
-	plugins: {text: "플러그인", tooltip: "설치된 플러그인을 관리합니다", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "저장", tooltip: "이 TiddlyWiki에 바뀐점을 저장합니다", action: saveChanges },
+	sync: { text: "동기화", tooltip: "로컬 또는 서버에 있는 다른 TiddlyWiki 파일과의 차이점을 동기화합니다", content: '<<sync>>' },
+	importTask: { text: "가져오기", tooltip: "로컬 또는 서버에 있는 다른 TiddlyWiki 파일에서 티들러와 플러그인을 가져옵니다", content: '<<importTiddlers>>' },
+	tweak: { text: "모양 조정", tooltip: "TiddlyWiki의 모양과 형식을 조정합니다", content: '<<options>>' },
+	upgrade: { text: "업그레이드", tooltip: "TiddlyWiki의 코어 코드를 업그레이드합니다", content: '<<upgrade>>' },
+	plugins: { text: "플러그인", tooltip: "설치된 플러그인을 관리합니다", content: '<<plugins>>' }
 });
 
 // Options은 옵션 패널과 쿠키에 설정될 수 있습니다.
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "편집한 티들러에 서명할 이름을 입력하세요.",
 	chkRegExpSearch: "찾을 때 정규식을 사용할 수 있게 합니다.",
 	chkCaseSensitiveSearch: "알파벳의 대소문자를 구분하여 찾습니다.",
@@ -69,9 +64,10 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "백업 파일을 저장할 때 쓸 폴더의 이름을 입력하세요.",
 	txtMaxEditRows: "편집 상자의 최대 줄 수를 입력하세요.",
 	txtFileSystemCharSet: "변경 사항 저장할 때 기본으로 사용할 문자셋(인코딩)을 입력하세요. (Firefox/Mozilla 전용)",
-	txtTheme: "사용할 테마의 이릉을 입력하세요."});
+	txtTheme: "사용할 테마의 이릉을 입력하세요."
+});
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "플러그인을 읽어들이는 데에 문제가 발생하였습니다. PluginManager에서 자세한 사항을 확인하십시요.",
 	pluginError: "오류: %0",
 	pluginDisabled: "이 플러그인은 'systemConfigDisable' 태그가 있어 실행하지 않았습니다.",
@@ -110,18 +106,20 @@ merge(config.messages,{
 	invalidFieldName: "%0은(는) 잘못된 입력 항목 이름입니다.",
 	fieldCannotBeChanged: "'%0' 입력 항목이 변경되지 않았습니다.",
 	loadingMissingTiddler: "'%0' 티들러를 '%1' 서버에서 가져오려 하고 있습니다.\n\n위치: 서버 '%2'의 작업공간 '%3'",
-	upgradeDone: "%0 버전으로 업그레이드를 완료하였습니다.\n\n새 TiddlyWiki를 불러오려면 '확인' 을 누르십시요."});
+	upgradeDone: "%0 버전으로 업그레이드를 완료하였습니다.\n\n새 TiddlyWiki를 불러오려면 '확인' 을 누르십시요."
+});
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "닫기",
-	tooltip: "메세지 창을 닫습니다."});
+	tooltip: "메세지 창을 닫습니다."
+});
 
 config.messages.backstage = {
-	open: {text: "고급도구", tooltip: "작업을 만들거나 수행, 조정할 수 있는 고급도구 공간을 엽니다."},
-	close: {text: "닫기", tooltip: "고급도구 공간을 닫습니다."},
+	open: { text: "고급도구", tooltip: "작업을 만들거나 수행, 조정할 수 있는 고급도구 공간을 엽니다." },
+	close: { text: "닫기", tooltip: "고급도구 공간을 닫습니다." },
 	prompt: "고급도구: ",
 	decal: {
-		edit: {text: "편집", tooltip: "'%0' 티들러를 편집합니다."}
+		edit: { text: "편집", tooltip: "'%0' 티들러를 편집합니다." }
 	}
 };
 
@@ -130,75 +128,86 @@ config.messages.listView = {
 	previewUnavailable: "(미리 보기가 없습니다.)"
 };
 
-config.messages.dates.months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월","12월"];
+config.messages.dates.months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
 config.messages.dates.days = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
-config.messages.dates.shortMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11","12"];
+config.messages.dates.shortMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
 config.messages.dates.shortDays = ["일", "월", "화", "수", "목", "금", "토"];
 //날짜 형식 설정입니다. 한국어에는 무의미하지요.
-config.messages.dates.daySuffixes = ["일","일","일","일","일","일","일","일","일","일",
-		"일","일","일","일","일","일","일","일","일","일",
-		"일","일","일","일","일","일","일","일","일","일",
-		"일"];
+config.messages.dates.daySuffixes = [
+	"일", "일", "일", "일", "일", "일", "일", "일", "일", "일",
+	"일", "일", "일", "일", "일", "일", "일", "일", "일", "일",
+	"일", "일", "일", "일", "일", "일", "일", "일", "일", "일",
+	"일"
+];
 config.messages.dates.am = "오전";
 config.messages.dates.pm = "오후";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "태그 없음",
 	labelTags: "달린 태그: ",
 	openTag: "'%0' 태그 열기",
 	tooltip: "'%0' 태그가 달린 티들러 모두 열기",
 	openAllText: "모두 열기",
 	openAllTooltip: "이 티들러 모두 열기",
-	popupNone: "'%0' 태그가 달린 다른 티들러가 없습니다."});
+	popupNone: "'%0' 태그가 달린 다른 티들러가 없습니다."
+});
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "'%0' 티들러는 아직 없습니다. 만드려면 두번 클릭하세요.",
 	defaultModifier: "(빠짐)",
 	shadowModifier: "(내장 기능 숨김 티들러)",
 	dateFormat: "YYYY년 MM월 DD일", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "만든 날짜:"});
+	createdPrompt: "만든 날짜:"
+});
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "태그는 공백으로 구분하여 입력하며, 필요한 경우 [[대괄호를 두 번 사용]]하거나, 이미 있는 태그를 추가하십시오.",
-	defaultText: "'%0'에 넣을 본문을 입력하십시오."});
+	defaultText: "'%0'에 넣을 본문을 입력하십시오."
+});
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "태그",
 	tooltip: "이 티들러에 이미 있는 태그를 추가할 수 있습니다.",
 	popupNone: "아무 태그도 정의되지 않았습니다.",
-	tagTooltip: "'%0' 태그를 추가합니다."});
+	tagTooltip: "'%0' 태그를 추가합니다."
+});
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024*1024, template: "%0\u00a0TB"},
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0바이트"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024 * 1024, template: "%0\u00a0TB" },
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0바이트" }
+	]
+});
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "찾기",
 	prompt: "이 TiddlyWiki에서 찾기",
 	accessKey: "F",
 	successMsg: "%1을(를) 포함한 티들러를 %0개 찾았습니다.",
-	failureMsg: "%0을(를) 포함한 티들러를 찾지 못하였습니다."});
+	failureMsg: "%0을(를) 포함한 티들러를 찾지 못하였습니다."
+});
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "'태그 달림: ",
 	labelNotTag: "태그가 달리지 않음",
-	tooltip: "'%0'태그가 달린 티들러의 목록"});
+	tooltip: "'%0'태그가 달린 티들러의 목록"
+});
 
-merge(config.macros.timeline,{
-	dateFormat: "YYYY년 MM월 DD일"});// 왼쪽에 나온 대로 날짜 형식을 수정하시면 됩니다. Y와 M, D는 수정하시면 안됩니다.
+merge(config.macros.timeline, {
+	// 왼쪽에 나온 대로 날짜 형식을 수정하시면 됩니다. Y와 M, D는 수정하시면 안됩니다.
+	dateFormat: "YYYY년 MM월 DD일"
+});
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "'%0' 태그가 달린 티들러를 보입니다.",
-	noTags: "태그가 달린 티들러가 없습니다."});
+	noTags: "태그가 달린 티들러가 없습니다."
+});
 
 config.macros.list.all.prompt = "모든 티들러를 알파벳순으로 정렬하여 보입니다.";
 config.macros.list.missing.prompt = "링크는 되어 있으나 정의되지 않은 티들러를 보입니다.";
@@ -206,47 +215,53 @@ config.macros.list.orphans.prompt = "다른 티들러에 링크되지 않은 티
 config.macros.list.shadowed.prompt = "기본값 본문을 가진 숨김 티들러를 보입니다.";
 config.macros.list.touched.prompt = "개별 수정한 티들러를 보입니다.";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "모두 닫기",
-	prompt: "열린 모든 티들러를 닫습니다(편집중인 티들러는 제외합니다)."});
+	prompt: "열린 모든 티들러를 닫습니다(편집중인 티들러는 제외합니다)."
+});
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "절대주소",
-	prompt: "현재 열린 티들러를 모두 볼 수 있는 URL 링크로 이동합니다."});
+	prompt: "현재 열린 티들러를 모두 볼 수 있는 URL 링크로 이동합니다."
+});
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "바뀐점 저장",
 	prompt: "모든 티들러를 저장하여 새 TiddlyWiki를 만듭니다.",
-	accessKey: "S"});
+	accessKey: "S"
+});
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "새 티들러",
 	prompt: "새 티들러를 만듭니다.",
 	title: "새 티들러",
-	accessKey: "N"});
+	accessKey: "N"
+});
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "새 일정",
 	prompt: "현재 날자와 시간으로 새 티들러를 만듭니다.",
-	accessKey: "J"});
+	accessKey: "J"
+});
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "고급 옵션 조정",
 	step1Title: "이 옵션은 사용중인 브라우저의 쿠키로 저장됩니다.",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>알림 없는 보이기</input>",
 	unknownDescription: "//(알림 없음)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "옵션", type: 'String'},
-			{name: 'Description', field: 'description', title: "설명", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "기능이름", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "옵션", type: 'String' },
+			{ name: 'Description', field: 'description', title: "설명", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "기능이름", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "플러그인 관리",
 	step1Title: "현재 읽은 플러그인",
 	step1Html: "<input type='hidden' name='markList'></input>", // 번역 금지
@@ -259,37 +274,38 @@ merge(config.macros.plugins,{
 	deletePrompt: "이 티들러를 완전히 삭제합니다.",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Description', field: 'desc', title: "설명", type: 'String'},
-			{name: 'Tiddler', field: 'tiddler', title: "티들러", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "크기", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "강제 실행", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "비활성화", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "읽음", type: 'Boolean', trueText: "Yes", falseText: "No"},
-			{name: 'Startup Time', field: 'startupTime', title: "구동 소요시간", type: 'String'},
-			{name: 'Error', field: 'error', title: "상태", type: 'Boolean', trueText: "오류", falseText: "정상"},
-			{name: 'Log', field: 'log', title: "기록", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Description', field: 'desc', title: "설명", type: 'String' },
+			{ name: 'Tiddler', field: 'tiddler', title: "티들러", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "크기", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "강제 실행", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "비활성화", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "읽음", type: 'Boolean', trueText: "Yes", falseText: "No" },
+			{ name: 'Startup Time', field: 'startupTime', title: "구동 소요시간", type: 'String' },
+			{ name: 'Error', field: 'error', title: "상태", type: 'Boolean', trueText: "오류", falseText: "정상" },
+			{ name: 'Log', field: 'log', title: "기록", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "더 보기",
 	morePrompt: "추가 명령을 보입니다.",
 	lessLabel: "가리기",
 	lessPrompt: "추가 명령을 숨깁니다.",
 	separator: "|"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "새로 고침",
 	prompt: "이 TiddlyWiki의 전체 화면을 새로 그립니다."
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "읽기 전용 TiddlyWiki 파일에서 가져올 수 없습니다. file:// URL을 사용해서 열어보십시오.",
 	wizardTitle: "다른 파일이나 서버에서 티들러 가져오기",
 	step1Title: "1단계: TiddlyWiki 파일이 있는 위치를 지정합니다.",
@@ -324,16 +340,17 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(시스템)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "티들러", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "크기", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "태그", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "티들러", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "크기", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "태그", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "TiddlyWiki 코어 코드 업그레이드",
 	step1Title: "이 TiddlyWiki를 새 버전으로 업데이트하거나 고칩니다.",
 	step1Html: "이 Tiddlywiki의 코어 코드를 새 버전으로 업그레이드하려고 합니다. (위치: <a href='%0' class='externalLink' target='_blank'>%1</a>). 업그레이드 중에 내용을 보존합니다.<br><br>코어를 업그레이드하면 기존 플러그인과 충돌을 일으킬 수 있습니다. 만약 업그레이드한 파일을 실행하는 데에 문제가 발생한다면, <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>를 참조해 주십시오.",
@@ -359,24 +376,25 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "업그레이드 과정을 취소합니다.",
 	step3Title: "업그레이드가 취소되었습니다.",
 	step3Html: "업그레이드 과정을 취소하였습니다."
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "티들러", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "서버 종류", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "서버 호스트", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "서버 작업공간", type: 'String'},
-			{name: 'Status', field: 'status', title: "동기화 상태", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "서버 URL", text: "View", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "티들러", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "서버 종류", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "서버 호스트", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "서버 작업공간", type: 'String' },
+			{ name: 'Status', field: 'status', title: "동기화 상태", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "서버 URL", text: "View", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "이 티들러 동기화", name: 'sync'}
-			]},
+			{ caption: "이 티들러 동기화", name: 'sync' }
+		]
+	},
 	wizardTitle: "외부 서버 또는 파일과 동기화",
 	step1Title: "동기화하려는 티들러를 선택하여 주십시요.",
 	step1Html: "<input type='hidden' name='markList'></input>", // 번역 금지
@@ -385,84 +403,96 @@ merge(config.macros.sync,{
 	hasChanged: "바뀐 점이 있음",
 	hasNotChanged: "바뀌지 않음",
 	syncStatusList: {
-		none: {text: "...", display:null, className:'notChanged'},
-		changedServer: {text: "서버에서 바뀜", display:null, className:'changedServer'},
-		changedLocally: {text: "로컬에서 바뀜", display:null, className:'changedLocally'},
-		changedBoth: {text: "서버와 로컬에서 바뀜", display:null, className:'changedBoth'},
-		notFound: {text: "서버에서 찾을 수 없음", display:null, className:'notFound'},
-		putToServer: {text: "서버에 업데이트를 저장함", display:null, className:'putToServer'},
-		gotFromServer: {text: "서버에서 업데이트를 가져옴", display:null, className:'gotFromServer'}
-		}
-	});
+		none: { text: "...", display: null, className: 'notChanged' },
+		changedServer: { text: "서버에서 바뀜", display: null, className: 'changedServer' },
+		changedLocally: { text: "로컬에서 바뀜", display: null, className: 'changedLocally' },
+		changedBoth: { text: "서버와 로컬에서 바뀜", display: null, className: 'changedBoth' },
+		notFound: { text: "서버에서 찾을 수 없음", display: null, className: 'notFound' },
+		putToServer: { text: "서버에 업데이트를 저장함", display: null, className: 'putToServer' },
+		gotFromServer: { text: "서버에서 업데이트를 가져옴", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "닫기",
-	tooltip: "이 티들러를 닫습니다."});
+	tooltip: "이 티들러를 닫습니다."
+});
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "다른 티들러 닫기",
-	tooltip: "다른 티들러를 모두 닫습니다."});
+	tooltip: "다른 티들러를 모두 닫습니다."
+});
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "편집",
 	tooltip: "이 티들러들 편집합니다.",
 	readOnlyText: "보기",
-	readOnlyTooltip: "이 티들러의 원본을 봅니다."});
+	readOnlyTooltip: "이 티들러의 원본을 봅니다."
+});
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "완료",
-	tooltip: "이 티들러의 바뀐점을 저장합니다."});
+	tooltip: "이 티들러의 바뀐점을 저장합니다."
+});
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "취소",
 	tooltip: "이 티들러의 바뀐점을 되돌립니다.",
 	warning: "'%0'의 바뀐점을 정말 버리시겠습니까?",
 	readOnlyText: "완료",
-	readOnlyTooltip: "이 티들러를 보통 모양로 봅니다."});
+	readOnlyTooltip: "이 티들러를 보통 모양로 봅니다."
+});
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "삭제",
 	tooltip: "이 티들러를 삭제합니다.",
-	warning: "'%0'을(를) 정말 삭제하시겠습니까?"});
+	warning: "'%0'을(를) 정말 삭제하시겠습니까?"
+});
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "절대주소",
-	tooltip: "이 티들러의 절대주소입니다."});
+	tooltip: "이 티들러의 절대주소입니다."
+});
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "연관글",
 	tooltip: "이 티들러를 링크한 티들러를 보여줍니다.",
-	popupNone: "연관글 없음"});
+	popupNone: "연관글 없음"
+});
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "건너뛰기",
-	tooltip: "열려있는 다른 티들러로 건너뜁니다."});
+	tooltip: "열려있는 다른 티들러로 건너뜁니다."
+});
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "동기화",
 	tooltip: "이 티들러를 서버 또는 외부 파일과 동기화합니다.",
-	currentlySyncing: "<div>현재 <span class='popupHighlight'>'%0'</span>을 통해 다음과 동기화하고 있습니다.</"+"div><div>호스트: <span class='popupHighlight'>%1</span></"+"div><div>작업공간: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>현재 <span class='popupHighlight'>'%0'</span>을 통해 다음과 동기화하고 있습니다.</" + "div><div>호스트: <span class='popupHighlight'>%1</span></" + "div><div>작업공간: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "현재 동기화하고 있지 않습니다.",
 	captionUnSync: "이 티들러의 동기화를 중단.",
 	chooseServer: "이 티들러를 다른 서버와 동기화",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  "
+});
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "입력 항목",
 	tooltip: "이 티들러의 확장된 입력 항목을 보여줍니다.",
 	emptyText: "이 티들러에 확장된 입력 항목이 없습니다.",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "필드", type: 'String'},
-			{name: 'Value', field: 'value', title: "값", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "필드", type: 'String' },
+			{ name: 'Value', field: 'value', title: "값", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	}
+});
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "GettingStarted",
 	MainMenu: "[[처음 사용자용 문서|GettingStarted]]\n\n\n^^~TiddlyWiki 버전 <<version>>\nⓒ 2009 [[UnaMesa|http://www.unamesa.org/]]^^",
 	GettingStarted: "비어있는 이 TiddlyWiki를 사용하기 전에 아래 티들러를 수정해야 합니다.\n* SiteTitle 및 SiteSubtitle: 페이지 상단에 보이는 이 사이트의 제목과 부제목입니다. (저장 후에는 이 파일을 연 브라우저의 제목 표시줄에도 보입니다.)\n* MainMenu: 메인 메뉴입니다. 대부분 왼쪽에 있습니다.\n* DefaultTiddlers: TiddlyWiki를 열 때 띄울 티들러의 이름을 포함하고 있습니다.\n그리고, 편집한 티들러에 서명할 이름을 입력해 주십시오. <<option txtUserName>>",
@@ -473,9 +503,9 @@ merge(config.shadowTiddlers,{
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "YYYY년 MM월 DD일" "일정">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "옵션 \u00bb" "TiddlyWiki의 고급 옵션을 바꿉니다.">>',
 	SideBarTabs: '<<tabs txtMainTab "시간순" "티들러를 시간순으로 나열합니다." TabTimeline "모두봄" "모든 티들러를 보입니다." TabAll "태그" "모든 태그를 보입니다." TabTags "기타" "목록을 다른 모양으로 보입니다." TabMore>>',
 	TabMore: '<<tabs txtMoreTab "빠짐" "빠진 티들러를 보입니다." TabMoreMissing "외톨이" "외톨이 티들러를 보입니다." TabMoreOrphans "숨김" "숨김 티들러를 보입니다." TabMoreShadowed>>'
-	});
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "이 숨김 티들러는 몇 가지 고급 옵션에 접근할 수 있도록 합니다.",
 	ColorPalette: "이 숨김 티들러의 값들은 이 TiddlyWiki의 사용자 인터페이스에 쓸 색 배합을 결정합니다.",
 	DefaultTiddlers: "이 숨김 티들러는 이 TiddlyWiki가 시작했을 때 자동으로 보여지는 티들러를 나열합니다.",
@@ -509,6 +539,5 @@ merge(config.annotations,{
 	TabTimeline: "이 숨김 티들러는 오른쪽 열에 있는 사이드바의 '시간순' 탭의 내용입니다.",
 	ToolbarCommands: "이 숨김 티들러는 티들러에 표시하는 오른쪽 상단 도구 모음에 보이는 명령의 배치를 결정합니다.",
 	ViewTemplate: "이 숨김 티들러의 HTML 템플릿은 티들러가 어떻게 보일 지를 결정합니다."
-	});
-
+});
 //}}}
