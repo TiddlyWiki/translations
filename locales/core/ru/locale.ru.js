@@ -14,7 +14,6 @@
 |Credits         |Idea by Глеб Тржемецкий (Gleb Trzhemetski), https://glebsite.net; fixes by Karel Winterksy|
 ***/
 //{{{
-//-- Строки для перевода
 // Строки в "двойных кавычках" предназначены для перевода; строки в 'одиночных кавычках' переводить нужно оставить как есть
 
 config.locale = "ru";
