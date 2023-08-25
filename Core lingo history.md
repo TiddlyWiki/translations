@@ -44,19 +44,22 @@ v2.6.3
 * [8790249](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8790249) Move config.tasks code into backstage
 * [11aab93](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/11aab93) Ticket #1274 search macro should support placeholder
 
+v2.6.2
+* [5db9295](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/5db9295) Add annotation for SystemSettings
+* [702620b](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/702620b) Add listViewTemplateReadOnly for the plugins macro
+
+v2.6.1
+* [0fb03b7](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/0fb03b7) Add invalidCookie message
+* [eefa58d](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/eefa58d) Remove unused openError in config.macros.importTiddlers
+
 previous changes (source: `git log --oneline -- .\js\Lingo.js`; TODO: ideally, add tags between those, down to 2.2)
-* 13f1040 TiddlyWiki - changed default for sync list default: tiddlers that have not been changed locally or on the server are not displayed.
-* 5db9295 Ticket #756 persistent options (without cookies)
-* 702620b Ticket #1249
-* 0fb03b7 Ticket #1143
-* eefa58d removed unused lingo string, efficiency enhancements in ImportTiddlers
 * 4c9f678 Ticket #658 SiteUrl as current document location
 * d25e8e8 Ticket #608 toolbar ">" should toggle between "more/less" and display extra commands on separate line
 * 528844c Ticket #952 Give 'txtTheme' option a description so it's easier to find/understand/use
 * 081935a minor documentation addition, whitespace corrections
 * 7b45e3a Ticket #871 Extend the list of plugins by a version column
 * 97a95ed Core - reverting error in core checked in by idiot - me.  Less/more behavior on tiddlers reinstated.
-* 40124f8 Core jQuery refactoring. Deprecating hasClass and removeClass from the core.  All internall calls to thos funcitons now use jQuery directly.      
+* 40124f8 Core jQuery refactoring. Deprecating hasClass and removeClass from the core.  All internall calls to thos funcitons now use jQuery directly.
 * c899b81 increased core version, URL correction
 * c8f8602 Ticket #739
 * 2eadae7 reverting accidental commits
@@ -67,14 +70,14 @@ previous changes (source: `git log --oneline -- .\js\Lingo.js`; TODO: ideally, a
 * 5fecd00 Moved ToolbarCommands shadow tiddler from Lingo.js to Config.js, since it contains no localizable text
 * 4124d18 Added ability to be more selective about which tiddlers are displayed in the synchronization wizard
 * 4d4f35c ImportTiddlers wizard: error when specyfing non-TiddlyWiki source (ticket #620)
-* ec727e9 Added option to enable/disable incremental searching (ticket #467)   
+* ec727e9 Added option to enable/disable incremental searching (ticket #467)
 * 9256e64 Fixed problem with upgrade attempts over http (ticket #584)
-* 12e0d1a Added unsaved changes warning before performing upgrade (ticket #600)498bb75 Improved upgrade process to include a version check and confirmation 
+* 12e0d1a Added unsaved changes warning before performing upgrade (ticket #600)498bb75 Improved upgrade process to include a version check and confirmation
 * message (ticket #585)
 * 6b86e37 Second part of patch to support automatic core upgrades (ticket #554)44b0fd0 Removed non-ASCII characters from Lingo.js so that it can be used via a <script> tag (ticket #572)
 * 2c24aa4 First part of new core upgrade mechanism (ticket #554)
 * b6cb0b9 Friendlier toolbar customisation (ticket #488)
-* 887f04e Corrected annotation for MarkupPostBody tiddler (ticket #499)        
+* 887f04e Corrected annotation for MarkupPostBody tiddler (ticket #499)
 * 48b364b Made the warning against modifying StyleSheetLayout and StyleSheetColors be stronger (ticket #404)
 * 25f3f5c Fixed problem with sync error in Internet Explorer (ticket #421)
 * ...
