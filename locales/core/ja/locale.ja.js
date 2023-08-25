@@ -1,28 +1,15 @@
 /***
-|''Name:''|JapaneseTranslationPlugin |
-|''Description:''|Translation of TiddlyWiki into Japanese |
-|''Author:''|OGOSHI Masayuki &lt;ogoshima@gmail.com&gt; |
-|''Source:''|http://ogoshi.tiddlyspot.com/#JapaneseTranslationPlugin |
-|''Version:''|0.4.1-ja|
-|''Date:''|Apr 29, 2010|
-|''License:''|[[Creative Commons Attribution-ShareAlike 2.1 Japan |http://creativecommons.org/licenses/by-sa/2.1/jp/]] |
-|''~CoreVersion:''|2.6.0|
-
+|Name        |JapaneseTranslationPlugin|
+|Description |Translation of TiddlyWiki into Japanese|
+|Author      |OGOSHI Masayuki &lt;ogoshima@gmail.com&gt;|
+|Source      |http://ogoshi.tiddlyspot.com/#JapaneseTranslationPlugin|
+|Version     |0.4.2|
+|~CoreVersion|2.6.0|
+|Date        |Apr 29, 2010|
+|License     |[[Creative Commons Attribution-ShareAlike 2.1 Japan |http://creativecommons.org/licenses/by-sa/2.1/jp/]]|
+|            |ライセンスは英語版のCCライセンスに準じる日本語版の CC-by-SA 2.1 ライセンスとします。|
 TiddlyWiki を日本語化するプラグイン。TiddlyWiki Version 2.6 上で動作を確認しました。
-ライセンスは英語版のCCライセンスに準じる日本語版の CC-by-SA 2.1 ライセンスとします。
-
-オリジナルとなる英語版のクレジットは以下のとおり。
-|''Name:''|EnglishTranslationPlugin|
-|''Description:''|Translation of TiddlyWiki into English|
-|''Author:''|MartinBudden (mjbudden (at) gmail (dot) com)|
-|''CodeRepository:''|http://svn.tiddlywiki.org/Trunk/association/locales/core/en/locale.en.js |
-|''Version:''|0.4.1|
-|''Date:''|Mar 10, 2010|
-|''Comments:''|Please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
-|''License:''|[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
-|''~CoreVersion:''|2.6.0|
 ***/
-
 //{{{
 //--
 //-- Translateable strings
@@ -33,19 +20,19 @@ TiddlyWiki を日本語化するプラグイン。TiddlyWiki Version 2.6 上で�
 config.locale = "ja"; // W3C language tag
 
 if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
-	merge(config.options,{txtUserName: "氏名"});
+	merge(config.options, { txtUserName: "氏名" });
 
-merge(config.tasks,{
-	save: {text: "保存", tooltip: "このTiddlyWikiを保存します", action: saveChanges},
-	sync: {text: "同期", tooltip: "他のTiddlyWikiファイルやサーバと同期をとります", content: '<<sync>>'},
-	importTask: {text: "取り込み", tooltip: "他のTiddlyWikiファイルやサーバからtiddlerやプラグインを取り込みます", content: '<<importTiddlers>>'},
-	tweak: {text: "詳細設定", tooltip: "TiddlyWikiの細かな振る舞いを設定します", content: '<<options>>'},
-	upgrade: {text: "アップグレード", tooltip: "TiddlyWiki本体をバージョンアップします", content: '<<upgrade>>'},
-	plugins: {text: "プラグイン", tooltip: "インストール済みのプラグインを管理します", content: '<<plugins>>'}
+merge(config.tasks, {
+	save: { text: "保存", tooltip: "このTiddlyWikiを保存します", action: saveChanges },
+	sync: { text: "同期", tooltip: "他のTiddlyWikiファイルやサーバと同期をとります", content: '<<sync>>' },
+	importTask: { text: "取り込み", tooltip: "他のTiddlyWikiファイルやサーバからtiddlerやプラグインを取り込みます", content: '<<importTiddlers>>' },
+	tweak: { text: "詳細設定", tooltip: "TiddlyWikiの細かな振る舞いを設定します", content: '<<options>>' },
+	upgrade: { text: "アップグレード", tooltip: "TiddlyWiki本体をバージョンアップします", content: '<<upgrade>>' },
+	plugins: { text: "プラグイン", tooltip: "インストール済みのプラグインを管理します", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
-merge(config.optionsDesc,{
+merge(config.optionsDesc, {
 	txtUserName: "編集したtiddlerに記録されるユーザ名",
 	chkRegExpSearch: "検索に正規表現を使います",
 	chkCaseSensitiveSearch: "検索で大文字小文字を区別します",
@@ -64,9 +51,10 @@ merge(config.optionsDesc,{
 	txtBackupFolder: "バックアップ用フォルダの名前",
 	txtMaxEditRows: "編集領域の最大行数",
 	txtTheme: "使用するテーマ名",
-	txtFileSystemCharSet: "保存時のデフォルト文字コード(Firefox/Mozillaのみ)"});
+	txtFileSystemCharSet: "保存時のデフォルト文字コード(Firefox/Mozillaのみ)"
+});
 
-merge(config.messages,{
+merge(config.messages, {
 	customConfigError: "プラグインの読み込み時に問題が発生しました。詳細は PluginManager をご覧ください",
 	pluginError: "エラー: %0",
 	pluginDisabled: "'systemConfigDisable'タグによって実行が禁止されています",
@@ -105,18 +93,20 @@ merge(config.messages,{
 	invalidFieldName: "%0 は不正なファイル名です",
 	fieldCannotBeChanged: "領域 '%0' は変更できません",
 	loadingMissingTiddler: "tiddler '%0' の '%1' サーバーからの回復を試しています:\n\nワークスペース '%3' の中の '%2'",
-	upgradeDone: "バージョン %0 へのアップグレードが完了しました。\n'OK' をクリックすると新しくなったTiddlyWikiをリロードします。"});
+	upgradeDone: "バージョン %0 へのアップグレードが完了しました。\n'OK' をクリックすると新しくなったTiddlyWikiをリロードします。"
+});
 
-merge(config.messages.messageClose,{
+merge(config.messages.messageClose, {
 	text: "閉じる",
-	tooltip: "このメッセージを閉じます"});
+	tooltip: "このメッセージを閉じます"
+});
 
 config.messages.backstage = {
-	open: {text: "クイックメニュー", tooltip: "クイックメニューを開きます"},
-	close: {text: "閉じる", tooltip: "クイックメニューを閉じます"},
+	open: { text: "クイックメニュー", tooltip: "クイックメニューを開きます" },
+	close: { text: "閉じる", tooltip: "クイックメニューを閉じます" },
 	prompt: "クイックメニュー: ",
 	decal: {
-		edit: {text: "編集", tooltip: "tiddler '%0' を編集します"}
+		edit: { text: "編集", tooltip: "tiddler '%0' を編集します" }
 	}
 };
 
@@ -125,74 +115,85 @@ config.messages.listView = {
 	previewUnavailable: "(プレビューがありません)"
 };
 
-config.messages.dates.months = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月","12月"];
+config.messages.dates.months = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"];
 config.messages.dates.days = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
 config.messages.dates.shortMonths = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 config.messages.dates.shortDays = ["日", "月", "火", "水", "木", "金", "土"];
 // suffixes for dates, eg "1st","2nd","3rd"..."30th","31st"
-config.messages.dates.daySuffixes = ["日","日","日","日","日","日","日","日","日","日",
-		"日","日","日","日","日","日","日","日","日","日",
-		"日","日","日","日","日","日","日","日","日","日",
-		"日"];
+config.messages.dates.daySuffixes = [
+	"日", "日", "日", "日", "日", "日", "日", "日", "日", "日",
+	"日", "日", "日", "日", "日", "日", "日", "日", "日", "日",
+	"日", "日", "日", "日", "日", "日", "日", "日", "日", "日",
+	"日"
+];
 config.messages.dates.am = "am";
 config.messages.dates.pm = "pm";
 
-merge(config.messages.tiddlerPopup,{
-	});
+merge(config.messages.tiddlerPopup, {
+});
 
-merge(config.views.wikified.tag,{
+merge(config.views.wikified.tag, {
 	labelNoTags: "タグ無し",
 	labelTags: "タグ: ",
 	openTag: "'%0' タグを開く",
 	tooltip: "'%0' タグの付いたtiddlerを表示",
 	openAllText: "全て開く",
 	openAllTooltip: "以下のtiddlerを全て開く",
-	popupNone: "'%0' タグの付いたtiddlerは他にありません"});
+	popupNone: "'%0' タグの付いたtiddlerは他にありません"
+});
 
-merge(config.views.wikified,{
+merge(config.views.wikified, {
 	defaultText: "tiddler '%0' はまだ作成されていません。ダブルクリックで作成できます",
 	defaultModifier: "(missing)",
 	shadowModifier: "(built-in shadow tiddler)",
 	dateFormat: "YYYY.MM.DD", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "作成"});
+	createdPrompt: "作成"
+});
 
-merge(config.views.editor,{
+merge(config.views.editor, {
 	tagPrompt: "スペース区切りでタグを入力。スペースを含める場合は[[二重の角括弧]]で囲みます。既存のタグを選択≫",
-	defaultText: "'%0' の内容を入力してください"});
+	defaultText: "'%0' の内容を入力してください"
+});
 
-merge(config.views.editor.tagChooser,{
+merge(config.views.editor.tagChooser, {
 	text: "タグ",
 	tooltip: "既存のタグを選択して追加します",
 	popupNone: "タグが定義されていません",
-	tagTooltip: "'%0' タグを追加します"});
+	tagTooltip: "'%0' タグを追加します"
+});
 
-merge(config.messages,{
-	sizeTemplates:
-		[
-		{unit: 1024*1024*1024, template: "%0\u00a0GB"},
-		{unit: 1024*1024, template: "%0\u00a0MB"},
-		{unit: 1024, template: "%0\u00a0KB"},
-		{unit: 1, template: "%0\u00a0B"}
-		]});
+merge(config.messages, {
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	]
+});
 
-merge(config.macros.search,{
+merge(config.macros.search, {
 	label: "検索",
 	prompt: "この TiddlyWiki 内を検索します",
 	accessKey: "F",
 	successMsg: "%0 件のtiddlerで %1 が見つかりました",
-	failureMsg: "%0 は見つかりませんでした"});
+	failureMsg: "%0 は見つかりませんでした"
+});
 
-merge(config.macros.tagging,{
+merge(config.macros.tagging, {
 	label: "タグあり: ",
 	labelNotTag: "タグなし",
-	tooltip: "'%0' タグを付けたtiddlerリスト"});
+	tooltip: "'%0' タグを付けたtiddlerリスト"
+});
 
-merge(config.macros.timeline,{
-	dateFormat: "YYYY年MM月DD日"});// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+merge(config.macros.timeline, {
+	// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
+	dateFormat: "YYYY年MM月DD日"
+});
 
-merge(config.macros.allTags,{
+merge(config.macros.allTags, {
 	tooltip: "'%0' タグの付いたtiddlerを表示",
-	noTags: "タグの付いたtiddlerがありません"});
+	noTags: "タグの付いたtiddlerがありません"
+});
 
 config.macros.list.all.prompt = "アルファベット順 全tiddler";
 config.macros.list.missing.prompt = "リンクがあるのに存在しないtiddler";
@@ -200,47 +201,53 @@ config.macros.list.orphans.prompt = "どこからもリンクされていないt
 config.macros.list.shadowed.prompt = "規定で隠されているtiddler";
 config.macros.list.touched.prompt = "ローカルに変更されているtiddler";
 
-merge(config.macros.closeAll,{
+merge(config.macros.closeAll, {
 	label: "全て閉じる",
-	prompt: "表示されている全てのtiddlerを閉じます (編集中を除く)"});
+	prompt: "表示されている全てのtiddlerを閉じます (編集中を除く)"
+});
 
-merge(config.macros.permaview,{
+merge(config.macros.permaview, {
 	label: "現況リンク",
-	prompt: "現在のtiddler表示状態を再現するURLをアドレス欄に生成します"});
+	prompt: "現在のtiddler表示状態を再現するURLをアドレス欄に生成します"
+});
 
-merge(config.macros.saveChanges,{
+merge(config.macros.saveChanges, {
 	label: "保存",
 	prompt: "全てのtiddlerを保存します",
-	accessKey: "S"});
+	accessKey: "S"
+});
 
-merge(config.macros.newTiddler,{
+merge(config.macros.newTiddler, {
 	label: "新規作成",
 	prompt: "新しいtiddlerを作成します",
 	title: "新規作成",
-	accessKey: "N"});
+	accessKey: "N"
+});
 
-merge(config.macros.newJournal,{
+merge(config.macros.newJournal, {
 	label: "新規ジャーナル",
 	prompt: "現在日時がタイトルの新しいtiddlerを作成します",
-	accessKey: "J"});
+	accessKey: "J"
+});
 
-merge(config.macros.options,{
+merge(config.macros.options, {
 	wizardTitle: "詳細設定",
 	step1Title: "これらのオプション設定はブラウザのcookieに保存されます",
 	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>未知のオプションを表示</input>",
 	unknownDescription: "//(未知)//",
 	listViewTemplate: {
 		columns: [
-			{name: 'Option', field: 'option', title: "オプション設定", type: 'String'},
-			{name: 'Description', field: 'description', title: "説明", type: 'WikiText'},
-			{name: 'Name', field: 'name', title: "オプション名", type: 'String'}
-			],
+			{ name: 'Option', field: 'option', title: "オプション設定", type: 'String' },
+			{ name: 'Description', field: 'description', title: "説明", type: 'WikiText' },
+			{ name: 'Name', field: 'name', title: "オプション名", type: 'String' }
+		],
 		rowClasses: [
-			{className: 'lowlight', field: 'lowlight'}
-			]}
-	});
+			{ className: 'lowlight', field: 'lowlight' }
+		]
+	}
+});
 
-merge(config.macros.plugins,{
+merge(config.macros.plugins, {
 	wizardTitle: "プラグイン管理",
 	step1Title: "ロードされているプラグイン",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -253,38 +260,39 @@ merge(config.macros.plugins,{
 	deletePrompt: "これらのtiddlerを削除します",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Description', field: 'Description', title: "説明", type: 'String'},
-			{name: 'Version', field: 'Version', title: "バージョン", type: 'String'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "サイズ", type: 'Size'},
-			{name: 'Forced', field: 'forced', title: "強制実行", tag: 'systemConfigForce', type: 'TagCheckbox'},
-			{name: 'Disabled', field: 'disabled', title: "無効化", tag: 'systemConfigDisable', type: 'TagCheckbox'},
-			{name: 'Executed', field: 'executed', title: "ロード済み", type: 'Boolean', trueText: "Yes", falseText: "No"},
-			{name: 'Startup Time', field: 'startupTime', title: "起動時実行", type: 'String'},
-			{name: 'Error', field: 'error', title: "ステータス", type: 'Boolean', trueText: "Error", falseText: "OK"},
-			{name: 'Log', field: 'log', title: "ログ", type: 'StringList'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Description', field: 'Description', title: "説明", type: 'String' },
+			{ name: 'Version', field: 'Version', title: "バージョン", type: 'String' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "サイズ", type: 'Size' },
+			{ name: 'Forced', field: 'forced', title: "強制実行", tag: 'systemConfigForce', type: 'TagCheckbox' },
+			{ name: 'Disabled', field: 'disabled', title: "無効化", tag: 'systemConfigDisable', type: 'TagCheckbox' },
+			{ name: 'Executed', field: 'executed', title: "ロード済み", type: 'Boolean', trueText: "Yes", falseText: "No" },
+			{ name: 'Startup Time', field: 'startupTime', title: "起動時実行", type: 'String' },
+			{ name: 'Error', field: 'error', title: "ステータス", type: 'Boolean', trueText: "Error", falseText: "OK" },
+			{ name: 'Log', field: 'log', title: "ログ", type: 'StringList' }
+		],
 		rowClasses: [
-			{className: 'error', field: 'error'},
-			{className: 'warning', field: 'warning'}
-			]}
-	});
+			{ className: 'error', field: 'error' },
+			{ className: 'warning', field: 'warning' }
+		]
+	}
+});
 
-merge(config.macros.toolbar,{
+merge(config.macros.toolbar, {
 	moreLabel: "その他",
 	morePrompt: "その他のコマンドも表示します",
 	lessLabel: "隠す",
 	lessPrompt: "その他のコマンドを隠します",
 	separator: "|"
-	});
+});
 
-merge(config.macros.refreshDisplay,{
+merge(config.macros.refreshDisplay, {
 	label: "再表示",
 	prompt: "TiddlyWiki全体を再描画します"
-	});
+});
 
-merge(config.macros.importTiddlers,{
+merge(config.macros.importTiddlers, {
 	readOnlyWarning: "読込専用のTiddlyWikiには取り込めません。TiddlyWikiファイルを file:// 形式のURLで開いてみてください",
 	wizardTitle: "他のファイルあるいはサーバーからtiddlerを取り込む",
 	step1Title: "手順 1: TiddlyWikiファイルあるいはサーバーの位置を指定します",
@@ -319,16 +327,17 @@ merge(config.macros.importTiddlers,{
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Size', field: 'size', tiddlerLink: 'size', title: "サイズ", type: 'Size'},
-			{name: 'Tags', field: 'tags', title: "タグ", type: 'Tags'}
-			],
+			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "サイズ", type: 'Size' },
+			{ name: 'Tags', field: 'tags', title: "タグ", type: 'Tags' }
+		],
 		rowClasses: [
-			]}
-	});
+		]
+	}
+});
 
-merge(config.macros.upgrade,{
+merge(config.macros.upgrade, {
 	wizardTitle: "TiddlyWiki本体のアップグレード",
 	step1Title: "このTiddlyWikiを最新版へ更新（あるいは修復）",
 	step1Html: "TiddlyWiki本体のバージョンを <a href='%0' class='externalLink' target='_blank'>%1</a> から最新版に更新しようとしています。この更新をしてもあなたの作成したデータが削除されることはありません。<br><br>なお、本体をアップデートすることで旧プラグインの動作に支障が出る可能性があります。もし更新後の動作に問題が生じたときは、次のサイトを参照してください。<a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
@@ -354,24 +363,25 @@ merge(config.macros.upgrade,{
 	cancelPrompt: "更新処理を中断する",
 	step3Title: "更新処理を中断",
 	step3Html: "更新処理を中断しました"
-	});
+});
 
-merge(config.macros.sync,{
+merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
-			{name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector'},
-			{name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler'},
-			{name: 'Server Type', field: 'serverType', title: "種別", type: 'String'},
-			{name: 'Server Host', field: 'serverHost', title: "サーバーホスト", type: 'String'},
-			{name: 'Server Workspace', field: 'serverWorkspace', title: "ワークスペース", type: 'String'},
-			{name: 'Status', field: 'status', title: "同期ステータス", type: 'String'},
-			{name: 'Server URL', field: 'serverUrl', title: "サーバーURL", text: "開く", type: 'Link'}
-			],
+			{ name: 'Selected', field: 'selected', rowName: 'title', type: 'Selector' },
+			{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+			{ name: 'Server Type', field: 'serverType', title: "種別", type: 'String' },
+			{ name: 'Server Host', field: 'serverHost', title: "サーバーホスト", type: 'String' },
+			{ name: 'Server Workspace', field: 'serverWorkspace', title: "ワークスペース", type: 'String' },
+			{ name: 'Status', field: 'status', title: "同期ステータス", type: 'String' },
+			{ name: 'Server URL', field: 'serverUrl', title: "サーバーURL", text: "開く", type: 'Link' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			{caption: "これらのtiddlerを同期", name: 'sync'}
-			]},
+			{ caption: "これらのtiddlerを同期", name: 'sync' }
+		]
+	},
 	wizardTitle: "外部サーバーやファイルとの同期",
 	step1Title: "同期したいtiddlerを選択してください",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -380,84 +390,96 @@ merge(config.macros.sync,{
 	hasChanged: "ローカル側変更あり",
 	hasNotChanged: "ローカル側変更なし",
 	syncStatusList: {
-		none: {text: "...", display:null, className:'notChanged'},
-		changedServer: {text: "サーバー側で変更あり", display:null, className:'changedServer'},
-		changedLocally: {text: "ローカル側で変更あり", display:null, className:'changedLocally'},
-		changedBoth: {text: "双方で変更あり", display:null, className:'changedBoth'},
-		notFound: {text: "サーバーに見つかりません", display:null, className:'notFound'},
-		putToServer: {text: "更新をサーバーに保存しました", display:null, className:'putToServer'},
-		gotFromServer: {text: "サーバーから更新を取得しました", display:null, className:'gotFromServer'}
-		}
-	});
+		none: { text: "...", display: null, className: 'notChanged' },
+		changedServer: { text: "サーバー側で変更あり", display: null, className: 'changedServer' },
+		changedLocally: { text: "ローカル側で変更あり", display: null, className: 'changedLocally' },
+		changedBoth: { text: "双方で変更あり", display: null, className: 'changedBoth' },
+		notFound: { text: "サーバーに見つかりません", display: null, className: 'notFound' },
+		putToServer: { text: "更新をサーバーに保存しました", display: null, className: 'putToServer' },
+		gotFromServer: { text: "サーバーから更新を取得しました", display: null, className: 'gotFromServer' }
+	}
+});
 
-merge(config.commands.closeTiddler,{
+merge(config.commands.closeTiddler, {
 	text: "閉じる",
-	tooltip: "このtiddlerを閉じます"});
+	tooltip: "このtiddlerを閉じます"
+});
 
-merge(config.commands.closeOthers,{
+merge(config.commands.closeOthers, {
 	text: "他を閉じる",
-	tooltip: "他の全てのtiddlerを閉じます"});
+	tooltip: "他の全てのtiddlerを閉じます"
+});
 
-merge(config.commands.editTiddler,{
+merge(config.commands.editTiddler, {
 	text: "編集",
 	tooltip: "このtiddlerを編集します",
 	readOnlyText: "閲覧",
-	readOnlyTooltip: "このtiddlerのソースを表示します"});
+	readOnlyTooltip: "このtiddlerのソースを表示します"
+});
 
-merge(config.commands.saveTiddler,{
+merge(config.commands.saveTiddler, {
 	text: "確定",
-	tooltip: "このtiddlerへの変更を保存します"});
+	tooltip: "このtiddlerへの変更を保存します"
+});
 
-merge(config.commands.cancelTiddler,{
+merge(config.commands.cancelTiddler, {
 	text: "キャンセル",
 	tooltip: "このtiddlerへの変更を破棄します",
 	warning: "本当に '%0' の変更を破棄して良いですか?",
 	readOnlyText: "終了",
-	readOnlyTooltip: "このtiddlerを通常表示にします"});
+	readOnlyTooltip: "このtiddlerを通常表示にします"
+});
 
-merge(config.commands.deleteTiddler,{
+merge(config.commands.deleteTiddler, {
 	text: "削除",
 	tooltip: "このtiddlerを削除します",
-	warning: "本当に '%0' を削除して良いですか?"});
+	warning: "本当に '%0' を削除して良いですか?"
+});
 
-merge(config.commands.permalink,{
+merge(config.commands.permalink, {
 	text: "リンクURL",
-	tooltip: "このtiddlerへのURLをアドレス欄に生成します"});
+	tooltip: "このtiddlerへのURLをアドレス欄に生成します"
+});
 
-merge(config.commands.references,{
+merge(config.commands.references, {
 	text: "参照一覧",
 	tooltip: "このtiddlerへの参照を一覧表示します",
-	popupNone: "参照がありません"});
+	popupNone: "参照がありません"
+});
 
-merge(config.commands.jump,{
+merge(config.commands.jump, {
 	text: "ジャンプ",
-	tooltip: "他に開いているtiddlerへジャンプ"});
+	tooltip: "他に開いているtiddlerへジャンプ"
+});
 
-merge(config.commands.syncing,{
+merge(config.commands.syncing, {
 	text: "同期",
 	tooltip: "このtiddlerと外部のサーバー(ファイル)との同期を制御します",
-	currentlySyncing: "<div>現在の同期状態<br>種別: <span class='popupHighlight'>'%0'</span><br></"+"div><div>ホスト: <span class='popupHighlight'>%1</span></"+"div><br><div>ワークスペース: <span class='popupHighlight'>%2</span></"+"div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>現在の同期状態<br>種別: <span class='popupHighlight'>'%0'</span><br></" + "div><div>ホスト: <span class='popupHighlight'>%1</span></" + "div><br><div>ワークスペース: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
 	notCurrentlySyncing: "同期されていません",
 	captionUnSync: "このtiddlerの同期を停止",
 	chooseServer: "このtiddlerを次のサーバーと同期する:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  "});
+	notCurrServerMarker: "  "
+});
 
-merge(config.commands.fields,{
+merge(config.commands.fields, {
 	text: "拡張情報",
 	tooltip: "このtiddlerの拡張情報を表示します",
 	emptyText: "このtiddlerには拡張情報がありません",
 	listViewTemplate: {
 		columns: [
-			{name: 'Field', field: 'field', title: "項目", type: 'String'},
-			{name: 'Value', field: 'value', title: "値", type: 'String'}
-			],
+			{ name: 'Field', field: 'field', title: "項目", type: 'String' },
+			{ name: 'Value', field: 'value', title: "値", type: 'String' }
+		],
 		rowClasses: [
-			],
+		],
 		buttons: [
-			]}});
+		]
+	}
+});
 
-merge(config.shadowTiddlers,{
+merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[TranslatedGettingStarted]]",
 	MainMenu: "[[TranslatedGettingStarted]]\n\n\n^^~TiddlyWiki version <<version>>\n(c) 2010 [[UnaMesa|http://www.unamesa.org/]]^^",
 	TranslatedGettingStarted: "この空の~TiddlyWikiを使い始めるにあたって、まずは以下のtiddlerを編集してください。:\n;SiteTitle & SiteSubtitle: \n:このサイトのタイトルおよびサブタイトル。この上に表示されています。<br>保存後はブラウザのタイトルバーにも表示されます。\n;MainMenu: \n:メニュー。たいていは左側に表示されています。\n;DefaultTiddlers: \n:ここにtiddlerの名前が書かれていると、この TiddlyWiki を開いたときに、<br>そのtiddlerが初期表示されます。\nあなたの名前(編集したtiddlerに表示されます): <<option txtUserName>>",
@@ -467,9 +489,10 @@ merge(config.shadowTiddlers,{
 	OptionsPanel: "これらの~TiddlyWikiを制御する各オプションの設定は、使用中のブラウザに保存されます。\n\n署名として使用するあなたの名前を~WikiWord形式(例 JoeBloggs)で入力してください。\n<<option txtUserName>>\n\n<<option chkSaveBackups>> バックアップを保存\n<<option chkAutoSave>> 自動保存\n<<option chkRegExpSearch>> 正規表現で検索\n<<option chkCaseSensitiveSearch>> 検索で大文字小文字を区別\n<<option chkAnimate>> アニメーション\n\n----\n詳細設定 [[TranslatedAdvancedOptions|AdvancedOptions]]",
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "YYYY年MM月DD日" "ジャーナル">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "オプション \u00bb" "TiddlyWiki の詳細設定">>',
 	SideBarTabs: '<<tabs txtMainTab "時系列" "更新時刻の降順" TabTimeline "全て" "全てのtiddler" TabAll "タグ別" "全てのタグ" TabTags "その他" "その他の一覧" TabMore>>',
-	TabMore: '<<tabs txtMoreTab "未作成" "リンクがあるのに存在しないtiddler" TabMoreMissing "孤立" "どこからもリンクされていないtiddler" TabMoreOrphans "隠し" "隠されているtiddler" TabMoreShadowed>>'});
+	TabMore: '<<tabs txtMoreTab "未作成" "リンクがあるのに存在しないtiddler" TabMoreMissing "孤立" "どこからもリンクされていないtiddler" TabMoreOrphans "隠し" "隠されているtiddler" TabMoreShadowed>>'
+});
 
-merge(config.annotations,{
+merge(config.annotations, {
 	AdvancedOptions: "このtiddlerでは詳細オプションを設定できます",
 	ColorPalette: "この隠しtiddlerで設定された各値によって、この~TiddlyWikiでの色の枠組みが規定されます。",
 	DefaultTiddlers: "この隠しtiddlerに列挙された各tiddlerは、この~TiddlyWIkiを開くと同時に自動的に表示されます。",
@@ -503,5 +526,5 @@ merge(config.annotations,{
 	TabTimeline: "この隠しtiddlerの内容は右手のサイドバー内「時系列」タブに表示されます。",
 	ToolbarCommands: "この隠しtiddlerはtiddlerツールバーにどのようなコマンドを表示するかを決定します。",
 	ViewTemplate: "この隠しtiddlerにあるHTMLテンプレートは、各tiddlerの表示方法を決定します。"
-	});
+});
 //}}}
