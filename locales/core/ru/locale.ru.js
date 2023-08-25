@@ -216,7 +216,7 @@ merge(config.macros.newTiddler, {
 });
 
 merge(config.macros.newJournal, {
-	label: "новая запись",
+	label: "новая журнальная запись",
 	prompt: "Создать новую заметку с текущей датой и временем",
 	accessKey: "J"
 });
