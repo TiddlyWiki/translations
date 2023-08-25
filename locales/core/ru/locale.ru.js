@@ -2,7 +2,7 @@
 |Name            |TiddlyWiki:rus|
 |Description     |TiddlyWiki russian interface plugin. Supports core up to 2.6.2|
 |Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.6.2 включительно|
-|Version         |0.9.8|
+|Version         |0.9.9|
 |CoreVersion     |2.6.x|
 |Version comment |Tested on v.2.6.0 and 2.6.1|
 |Date            |2010|
@@ -21,10 +21,10 @@ config.locale = "ru";
 merge(config.tasks, {
 	save: { text: "сохранить", tooltip: "Сохранить изменения в эту TiddlyWiki", action: saveChanges },
 	sync: { text: "синхронизация", tooltip: "Синхронизировать изменения с другим файлом или сервером TiddlyWiki", content: '<<sync>>' },
-	importTask: { text: "импорт", tooltip: "Импортировать заметки и модули из другого файла или с сервера TiddlyWiki", content: '<<importTiddlers>>' },
+	importTask: { text: "импорт", tooltip: "Импортировать заметки и плагины из другого файла или с сервера TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "настройка", tooltip: "Настроить TiddlyWiki", content: '<<options>>' },
 	upgrade: { text: "обновление", tooltip: "Обновить код ядра TiddlyWiki", content: '<<upgrade>>' },
-	plugins: { text: "модули", tooltip: "Управление встроенными модулями", content: '<<plugins>>' }
+	plugins: { text: "плагины", tooltip: "Управление плагинами", content: '<<plugins>>' }
 });
 
 // Options that can be set in the options panel and/or cookies
@@ -51,11 +51,11 @@ merge(config.optionsDesc, {
 });
 
 merge(config.messages, {
-	customConfigError: "Не удалось загрузить модуль. Подробнее смотрите в PluginManager",
+	customConfigError: "Не удалось загрузить плагин. Подробности смотрите в PluginManager",
 	pluginError: "Ошибка: %0",
 	pluginDisabled: "Не выполнено в связи с запретом, установленным меткой 'systemConfigDisable'",
 	pluginForced: "Действие выполнено принудительно согласно установленной метке 'systemConfigForce'",
-	pluginVersionError: "Модуль не запущен, так как сделан для более новой версии TiddlyWiki",
+	pluginVersionError: "Плагин не запущен, так как разработан для более новой версии TiddlyWiki",
 	nothingSelected: "Ничего не выбрано. Сначала вы должны выбрать один или несколько элементов",
 	savedSnapshotError: "Похоже, что эта TiddlyWiki была сохранена с ошибкой. Обратитесь к http://www.tiddlywiki.com/#Download за более детальной информацией",
 	subtitleUnknown: "(неизвестно)",
@@ -237,12 +237,12 @@ merge(config.macros.options, {
 });
 
 merge(config.macros.plugins, {
-	wizardTitle: "Управление модулями",
-	step1Title: "Подключенные модули",
+	wizardTitle: "Управление плагинами",
+	step1Title: "Подключенные плагины",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
-	skippedText: "(Этот модуль не выполняется, так как после его добавления ещё не было перезапуска TiddlyWiki)",
-	noPluginText: "Нет установленных модулей",
-	confirmDeleteText: "Вы уверены, что хотите удалить эти модули:\n\n%0",
+	skippedText: "(Этот плагин не запущен, так как после его добавления ещё не было перезапуска TiddlyWiki)",
+	noPluginText: "Нет установленных плагинов",
+	confirmDeleteText: "Вы уверены, что хотите удалить эти плагины:\n\n%0",
 	removeLabel: "удалить метку systemConfig",
 	removePrompt: "Удалить метку systemConfig",
 	deleteLabel: "удалить",
@@ -344,7 +344,7 @@ merge(config.macros.importTiddlers, {
 merge(config.macros.upgrade, {
 	wizardTitle: "Обновление кода ядра TiddlyWiki",
 	step1Title: "Обновление или восстановление этой TiddlyWiki до последней версии",
-	step1Html: "Вы готовы обновить код ядра TiddlyWiki до последней версии (с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). Информационное наполнение этого файла будет сохранено.<br><br>Заметьте, что обновление кода ядра может вызвать конфликт с уже подключенными старыми модулями. Если у Вас появились проблемы с обновлённым файлом, почитайте здесь: <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+	step1Html: "Вы готовы обновить код ядра TiddlyWiki до последней версии (с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). Информационное наполнение этого файла будет сохранено.<br><br>Заметьте, что обновление кода ядра может вызвать конфликт с уже подключенными старыми плагинами. Если у Вас появились проблемы с обновлённым файлом, почитайте здесь: <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
 	errorCantUpgrade: "Не могу обновить эту TiddlyWiki. Вы можете производить обновление TiddlyWiki-файлов, сохранённых только локально",
 	errorNotSaved: "Вы должны сохранить изменения, прежде чем производить обновление",
 	step2Title: "Подтвердите параметры обновления",
@@ -505,7 +505,7 @@ merge(config.annotations, {
 	MarkupPostBody: "Эта заметка вставляется в конец раздела <body> этого HTML-файла с TiddlyWiki сразу же после блока кода",
 	OptionsPanel: "Эта служебная заметка используется для хранения скрываемой панели Настроек, расположенной на боковой панели",
 	PageTemplate: "HTML-шаблон в этой служебной заметке определяет общий вид TiddlyWiki",
-	PluginManager: "Эта служебная заметка обеспечивает доступ к управлению модулями",
+	PluginManager: "Эта служебная заметка обеспечивает доступ к управлению плагинами",
 	SideBarOptions: "Эта служебная заметка используется для хранения панели поиска и настроек на боковой панели",
 	SideBarTabs: "Эта служебная заметка содержит начинку панели со списком служебных заметок на боковой панели",
 	SiteSubtitle: "Эта служебная заметка содержит вторую часть заголовка страницы",
