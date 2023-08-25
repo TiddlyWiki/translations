@@ -30,7 +30,7 @@ merge(config.tasks, {
 // Options that can be set in the options panel and/or cookies
 merge(config.optionsDesc, {
 	txtUserName: "Имя пользователя для подписывания ваших правок",
-	chkRegExpSearch: "Разрешить регулярные выражения при поиске",
+	chkRegExpSearch: "Включить поиск с помощью регулярных выражений",
 	chkCaseSensitiveSearch: "Регистрозависимый поиск",
 	chkIncrementalSearch: "Последовательный поиск (слово-за-словом)",
 	chkAnimate: "Разрешить анимацию",
@@ -43,7 +43,7 @@ merge(config.optionsDesc, {
 	chkHttpReadOnly: "Скрывать возможности редактирования при обращении через протокол HTTP",
 	chkForceMinorUpdate: "Не обновлять автора изменений и дату редактирования заметок",
 	chkConfirmDelete: "Спрашивать подтверждение при удалении заметок",
-	chkInsertTabs: "Использовать клавишу табуляции для вставления символа табуляции вместо перехода по полям",
+	chkInsertTabs: "При нажатии табуляции вставлять символ табуляции вместо перехода между полями ввода",
 	txtBackupFolder: "Имя папки для резервных копий",
 	txtMaxEditRows: "Максимальное количество строк в окне редактирования",
 	txtTheme: "Имя темы для использования",
