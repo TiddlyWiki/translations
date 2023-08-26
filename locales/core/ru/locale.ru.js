@@ -1,7 +1,7 @@
 /***
 |Name            |TiddlyWiki:rus|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.0 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.0 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.1 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.1 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
 |Version         |0.10.0|
 |Date            |26.08.2023|
 |Author          |vmunt|
@@ -44,6 +44,7 @@ merge(config.optionsDesc, {
 	chkForceMinorUpdate: "Не обновлять автора изменений и дату редактирования заметок",
 	chkConfirmDelete: "Спрашивать подтверждение при удалении заметок",
 	chkInsertTabs: "При нажатии табуляции вставлять символ табуляции вместо перехода между полями ввода",
+	chkRemoveExtraMarkers: "Скрыть неиспользованные маркеры вставки ($1, $2 и т.д. – при использовании макроса tiddler)",
 	txtBackupFolder: "Имя папки для резервных копий",
 	txtMaxEditRows: "Максимальное количество строк в окне редактирования",
 	txtTheme: "Имя темы для использования",
