@@ -1,7 +1,7 @@
 /***
 |Name            |TiddlyWiki:rus|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.7.2 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.7.2 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.0 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.0 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
 |Version         |0.10.0|
 |Date            |26.08.2023|
 |Author          |vmunt|
@@ -74,6 +74,8 @@ merge(config.messages, {
 	emptySaved: "Пустой шаблон сохранён",
 	emptyFailed: "Не удалось сохранить файл с пустым шаблоном",
 	mainSaved: "Главный файл TiddlyWiki сохранён",
+	mainDownload: "Сохранение TiddlyWiki через скачивание...",
+	mainDownloadManual: "КЛИКНИТЕ правой кнопкой здесь, чтобы скачать (сохранить) изменённую TiddlyWiki",
 	mainFailed: "Не удалось сохранить главный файл TiddlyWiki. Ваши изменения не сохранены",
 	macroError: "Ошибка в макросе <<%0>>",
 	macroErrorDetails: "Ошибка при выполнении макроса <<%0>>:\n%1",
