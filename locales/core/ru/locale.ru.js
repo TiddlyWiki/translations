@@ -1,7 +1,7 @@
 /***
 |Name            |TiddlyWiki:rus|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.6.4 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.6.4 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.6.5 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.6.5 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
 |Version         |0.9.10|
 |Date            |26.08.2023|
 |Author          |vmunt|
@@ -314,6 +314,12 @@ merge(config.macros.importTiddlers, {
 	statusOpenWorkspace: "Открытие рабочего пространства",
 	statusGetTiddlerList: "Получение списка разрешённых заметок",
 	errorGettingTiddlerList: "Ошибка при получении списка заметок, нажмите Отмену и попробуйте снова",
+	errorGettingTiddlerListHttp404: "Не удалось получить заметки по выбранному url-адресу. " +
+		"Пожалуйста, проверьте, что адрес указан верно. Нажмите Отмена, чтобы попробовать снова.",
+	errorGettingTiddlerListHttp: "Не удалось получить заметки по выбранному url-адресу. " +
+		"Пожалуйста, проверьте, что контент по этому адресу существует, и поддерживает <a href='http://enable-cors.org/'>CORS</a>",
+	errorGettingTiddlerListFile: "Не удалось получить заметки из выбранного файла. " +
+		"Пожалуйста, проверьте, что файл существует и находится в той же папке, что ваша TiddlyWiki. Нажмите Отмена, чтобы попробовать снова.",
 	step3Title: "Шаг 3: Выберите импортируемые заметки",
 	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Оставить эти заметки связанными с этим сервером для облегчения последующих синхронизаций</input><br><input type='checkbox' name='chkSave'>Сохранить параметры этого сервера в заметке с названием 'systemServer':</input> <input type='text' size=25 name='txtSaveTiddler'>",
 	importLabel: "импорт",
