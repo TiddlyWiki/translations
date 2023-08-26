@@ -1,11 +1,9 @@
 /***
 |Name            |TiddlyWiki:rus|
-|Description     |TiddlyWiki russian interface plugin. Supports core up to 2.6.2|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.6.2 включительно|
-|Version         |0.9.9|
-|CoreVersion     |2.6.x|
-|Version comment |Tested on v.2.6.0 and 2.6.1|
-|Date            |2010|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.6.4 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.6.4 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Version         |0.9.10|
+|Date            |26.08.2023|
 |Author          |vmunt|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
@@ -19,6 +17,7 @@
 config.locale = "ru";
 
 merge(config.tasks, {
+	// Since 2.6.3, action is not used (see 8790249); left here for backwards compatibility
 	save: { text: "сохранить", tooltip: "Сохранить изменения в эту TiddlyWiki", action: saveChanges },
 	sync: { text: "синхронизация", tooltip: "Синхронизировать изменения с другим файлом или сервером TiddlyWiki", content: '<<sync>>' },
 	importTask: { text: "импорт", tooltip: "Импортировать заметки и плагины из другого файла или с сервера TiddlyWiki", content: '<<importTiddlers>>' },
@@ -75,8 +74,8 @@ merge(config.messages, {
 	emptyFailed: "Не удалось сохранить файл с пустым шаблоном",
 	mainSaved: "Главный файл TiddlyWiki сохранён",
 	mainFailed: "Не удалось сохранить главный файл TiddlyWiki. Ваши изменения не сохранены",
-	macroError: "Ошибка в макросе <<\%0>>",
-	macroErrorDetails: "Ошибка при выполнении макроса <<\%0>>:\n%1",
+	macroError: "Ошибка в макросе <<%0>>",
+	macroErrorDetails: "Ошибка при выполнении макроса <<%0>>:\n%1",
 	missingMacro: "Нет такого макроса",
 	overwriteWarning: "Заметка с именем '%0' уже существует. Нажмите OK для перезаписи её содержимого",
 	unsavedChangesWarning: "ВНИМАНИЕ! В TiddlyWiki есть несохранённые изменения\n\nНажмите OK для сохранения\nНажмите CANCEL, если изменения не нужны",
@@ -166,6 +165,7 @@ merge(config.messages, {
 merge(config.macros.search, {
 	label: "поиск",
 	prompt: "Поиск в этой TiddlyWiki",
+	placeholder: "",
 	accessKey: "F",
 	successMsg: "Найдено %0 заметок с текстом %1",
 	failureMsg: "Нет ни одной заметки с текстом %0"
