@@ -25,7 +25,7 @@ v2.8.1-2.9.0
 * no changes
 
 v2.8.0
-* [8bf8ca0](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8bf8ca0) download saving: improve messaging/interaction
+* [8bf8ca0](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8bf8ca0) download saving: add mainDownload, mainDownloadManual to config.messages
 
 v2.7.0-2.7.2
 * no changes
