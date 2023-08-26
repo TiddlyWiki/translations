@@ -1,8 +1,8 @@
 /***
 |Name            |TiddlyWiki:rus|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.6.5 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.6.5 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
-|Version         |0.9.10|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.7.2 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.7.2 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Version         |0.10.0|
 |Date            |26.08.2023|
 |Author          |vmunt|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
@@ -19,6 +19,7 @@ config.locale = "ru";
 merge(config.tasks, {
 	// Since 2.6.3, action is not used (see 8790249); left here for backwards compatibility
 	save: { text: "сохранить", tooltip: "Сохранить изменения в эту TiddlyWiki", action: saveChanges },
+	// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 	sync: { text: "синхронизация", tooltip: "Синхронизировать изменения с другим файлом или сервером TiddlyWiki", content: '<<sync>>' },
 	importTask: { text: "импорт", tooltip: "Импортировать заметки и плагины из другого файла или с сервера TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "настройка", tooltip: "Настроить TiddlyWiki", content: '<<options>>' },
@@ -375,6 +376,7 @@ merge(config.macros.upgrade, {
 	step3Html: "Вы отменили процесс обновления TiddlyWiki"
 });
 
+// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
@@ -461,6 +463,7 @@ merge(config.commands.jump, {
 	tooltip: "Переход на другую открытую заметку"
 });
 
+// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 merge(config.commands.syncing, {
 	text: "синхронизация",
 	tooltip: "Управление синхронизацией этой заметки с сервером или внешним файлом",
