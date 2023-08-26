@@ -3,13 +3,12 @@
 |Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.1 (for later versions, some bits may be missing or inaccurate)|
 |Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.1 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
 |Version         |0.10.0|
-|Date            |26.08.2023|
 |Author          |vmunt|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
 |Feedback        |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License         |BSD open source license|
-|Credits         |Idea by Глеб Тржемецкий (Gleb Trzhemetski), https://glebsite.net; fixes by Karel Winterksy|
+|Credits         |Idea by Глеб Тржемецкий (Gleb Trzhemetski), https://glebsite.net; fixes by Karel Winterksy; updates by Yakov Litvin|
 ***/
 //{{{
 // Строки в "двойных кавычках" предназначены для перевода; строки в 'одиночных кавычках' переводить нужно оставить как есть
