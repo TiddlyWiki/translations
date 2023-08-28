@@ -1,5 +1,5 @@
 /***
-|Name            |TiddlyWiki:rus|
+|Name            |RussianTranslationPlugin|
 |Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.1 (for later versions, some bits may be missing or inaccurate)|
 |Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.1 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
 |Version         |0.10.0|
