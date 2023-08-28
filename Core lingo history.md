@@ -52,8 +52,10 @@ v2.6.1
 * [0fb03b7](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/0fb03b7) Add invalidCookie message
 * [eefa58d](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/eefa58d) Remove unused openError in config.macros.importTiddlers
 
+v2.6.0
+* [4c9f678](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/4c9f678) Empty SiteUrl
+
 previous changes (source: `git log --oneline -- .\js\Lingo.js`; TODO: ideally, add tags between those, down to 2.2)
-* 4c9f678 Ticket #658 SiteUrl as current document location
 * d25e8e8 Ticket #608 toolbar ">" should toggle between "more/less" and display extra commands on separate line
 * 528844c Ticket #952 Give 'txtTheme' option a description so it's easier to find/understand/use
 * 081935a minor documentation addition, whitespace corrections
