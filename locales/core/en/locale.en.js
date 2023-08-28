@@ -1,6 +1,6 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.6.2 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.6.4 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
@@ -23,6 +23,7 @@ if (config.options.txtUserName == 'YourName') // do not translate this line, but
 	merge(config.options, { txtUserName: "YourName" });
 
 merge(config.tasks, {
+	// Since 2.6.3, action is not used (see 8790249); left here for backwards compatibility
 	save: { text: "save", tooltip: "Save your changes to this TiddlyWiki", action: saveChanges },
 	sync: { text: "sync", tooltip: "Synchronise changes with other TiddlyWiki files and servers", content: '<<sync>>' },
 	importTask: { text: "import", tooltip: "Import tiddlers and plugins from other TiddlyWiki files and servers", content: '<<importTiddlers>>' },
@@ -79,8 +80,8 @@ merge(config.messages, {
 	emptyFailed: "Failed to save empty template file",
 	mainSaved: "Main TiddlyWiki file saved",
 	mainFailed: "Failed to save main TiddlyWiki file. Your changes have not been saved",
-	macroError: "Error in macro <<\%0>>",
-	macroErrorDetails: "Error while executing macro <<\%0>>:\n%1",
+	macroError: "Error in macro <<%0>>",
+	macroErrorDetails: "Error while executing macro <<%0>>:\n%1",
 	missingMacro: "No such macro",
 	overwriteWarning: "A tiddler named '%0' already exists. Choose OK to overwrite it",
 	unsavedChangesWarning: "WARNING! There are unsaved changes in TiddlyWiki\n\nChoose OK to save\nChoose CANCEL to discard",
@@ -178,6 +179,7 @@ merge(config.messages, {
 merge(config.macros.search, {
 	label: "search",
 	prompt: "Search this TiddlyWiki",
+	placeholder: "",
 	accessKey: "F",
 	successMsg: "%0 tiddlers found matching %1",
 	failureMsg: "No tiddlers found matching %0"
