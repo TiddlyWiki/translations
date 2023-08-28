@@ -1,6 +1,6 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.7.2 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.0 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
@@ -80,6 +80,8 @@ merge(config.messages, {
 	emptySaved: "Empty template saved",
 	emptyFailed: "Failed to save empty template file",
 	mainSaved: "Main TiddlyWiki file saved",
+	mainDownload: "Downloading/saving main TiddlyWiki file",
+	mainDownloadManual: "RIGHT CLICK HERE to download/save main TiddlyWiki file",
 	mainFailed: "Failed to save main TiddlyWiki file. Your changes have not been saved",
 	macroError: "Error in macro <<%0>>",
 	macroErrorDetails: "Error while executing macro <<%0>>:\n%1",
