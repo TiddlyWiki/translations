@@ -5,15 +5,13 @@
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/pl/locale.pl.js|
 |Original Source|https://github.com/ziemiowid/translations/blob/master/locales/core/pl/locale.pl.js|
 |Version        |0.9.0|
-|Date           |Jan 08, 2012|
 |Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |~CoreVersion   |2.6.0|
 
-// Based on english translation by MartinBudden (mjbudden (at) gmail (dot) com)
-// https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js (commit 966556b66a)
-// using previous polish translation by Marcin Gedlek (psorek23 (at) gmail (dot) com)
-// https://github.com/TiddlyWiki/translations/blob/master/locales/core/pl/locale.pl.js (commit 966556b66a)
+Based on english translation template by MartinBudden (mjbudden (at) gmail (dot) com)
+and previous polish translation by Marcin Gedlek (psorek23 (at) gmail (dot) com)
+https://github.com/TiddlyWiki/translations/blob/master/locales/core/pl/locale.pl.js (commit 966556b66a)
 
 Kilka decyzji tłumacza:
 * tiddler        - notatka
@@ -21,18 +19,14 @@ Kilka decyzji tłumacza:
 * plugin         - wtyczka
 * tag            - tag
 * core code      - kod podstawowy
-* backstage     - zaplecze
+* backstage      - zaplecze
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "pl"; // W3C language tag
 
-if (config.options.txtUserName == 'YourName') // do not translate this line, but do translate the next line
+if (config.options.txtUserName == 'YourName')
 	merge(config.options, { txtUserName: "TwojeImię" });
 
 merge(config.tasks, {
@@ -64,7 +58,8 @@ merge(config.optionsDesc, {
 	txtBackupFolder: "Nazwa katalogu kopii zapasowych",
 	txtMaxEditRows: "Maksymalna ilość wierszy w okienku edycji",
 	txtTheme: "Nazwa tematu",
-	txtFileSystemCharSet: "Domyślne kodowanie użyte do zapisania zmian (tylko Firefox/Mozilla)" });
+	txtFileSystemCharSet: "Domyślne kodowanie użyte do zapisania zmian (tylko Firefox/Mozilla)"
+});
 
 merge(config.messages, {
 	customConfigError: "Wystąpiły problemy podczas wczytywania wtyczek. Zobacz więcej szczegółów w PluginManager",
@@ -106,11 +101,13 @@ merge(config.messages, {
 	fieldCannotBeChanged: "Pole '%0' nie może zostać zmienione",
 	loadingMissingTiddler: "Próba pobrania notatki '%0' z serwera '%1' o adresie:\n\n'%2' w przestrzeni roboczej '%3'",
 	upgradeDone: "Aktualizacja do wersji %0 została zakończona\n\nKliknij 'OK' by wczytać aktualizowaną TiddlyWiki",
-	invalidCookie: "Nieprawidłowe cookie '%0'" });
+	invalidCookie: "Nieprawidłowe cookie '%0'"
+});
 
 merge(config.messages.messageClose, {
 	text: "Zamknij",
-	tooltip: "zamknij ten komunikat" });
+	tooltip: "zamknij ten komunikat"
+});
 
 config.messages.backstage = {
 	open: { text: "Zaplecze", tooltip: "Otwórz obszar konfiguracyjny by wykonać zadania edycyjne" },
@@ -148,24 +145,28 @@ merge(config.views.wikified.tag, {
 	tooltip: "Pokaż notatki z tagiem '%0'",
 	openAllText: "Otwórz wszystkie",
 	openAllTooltip: "Otwórz wszystkie z tych notatek",
-	popupNone: "Żadna inna notatka nie ma tagu '%0'" });
+	popupNone: "Żadna inna notatka nie ma tagu '%0'"
+});
 
 merge(config.views.wikified, {
 	defaultText: "Notatka '%0' nie istnieje. Kliknij dwukrotnie aby ją utworzyć",
 	defaultModifier: "(brakujący)",
 	shadowModifier: "(wbudowana notatka podmienna)",
 	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "utworzono" });
+	createdPrompt: "utworzono"
+});
 
 merge(config.views.editor, {
 	tagPrompt: "Wprowadź tagi oddzielone spacjami, w razie potrzeby [[używając podwójnych nawiasów]], lub dodaj istniejące tagi",
-	defaultText: "Wprowadź tekst dla '%0'" });
+	defaultText: "Wprowadź tekst dla '%0'"
+});
 
 merge(config.views.editor.tagChooser, {
 	text: "tagi",
 	tooltip: "Wybierz istniejący tag aby go dodać do notatki",
 	popupNone: "Brak zdefiniowanych tagów",
-	tagTooltip: "Dodaj tag '%0'" });
+	tagTooltip: "Dodaj tag '%0'"
+});
 
 merge(config.messages, {
 	sizeTemplates: [
@@ -173,27 +174,32 @@ merge(config.messages, {
 		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
 		{ unit: 1024, template: "%0\u00a0KB" },
 		{ unit: 1, template: "%0\u00a0B" }
-	] });
+	]
+});
 
 merge(config.macros.search, {
 	label: "Szukaj",
 	prompt: "Szukaj w TiddlyWiki",
 	accessKey: "F",
 	successMsg: "Znaleziono %0 notatek pasujących do %1",
-	failureMsg: "Brak pasującej notatki %0" });
+	failureMsg: "Brak pasującej notatki %0"
+});
 
 merge(config.macros.tagging, {
 	label: "tagi: ",
 	labelNotTag: "brak taggów",
-	tooltip: "Lista notatek oznaczonych tagiem '%0'" });
+	tooltip: "Lista notatek oznaczonych tagiem '%0'"
+});
 
 merge(config.macros.timeline, {
 	// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	dateFormat: "DD MMM YYYY" });
+	dateFormat: "DD MMM YYYY"
+});
 
 merge(config.macros.allTags, {
 	tooltip: "Pokaż notatki z tagiem '%0'",
-	noTags: "Brak notatek z tagiem" });
+	noTags: "Brak notatek z tagiem"
+});
 
 config.macros.list.all.prompt = "Notatki w porządku alfabetycznym";
 config.macros.list.missing.prompt = "Notatki do których prowadzi jakiś link ale nie istnieją";
@@ -203,27 +209,32 @@ config.macros.list.touched.prompt = "Notatki które zostały lokalnie zmodyfikow
 
 merge(config.macros.closeAll, {
 	label: "Zamknij wszystkie",
-	prompt: "Zamyka wszystkie widoczne notatki (poza tymi które są edytowane)" });
+	prompt: "Zamyka wszystkie widoczne notatki (poza tymi które są edytowane)"
+});
 
 merge(config.macros.permaview, {
 	label: "Stały widok",
-	prompt: "Link otwierający wszystkie otwarte teraz notatki" });
+	prompt: "Link otwierający wszystkie otwarte teraz notatki"
+});
 
 merge(config.macros.saveChanges, {
 	label: "Zapisz zmiany",
 	prompt: "Zapisuje wszystkie notatki w TiddlyWiki",
-	accessKey: "S" });
+	accessKey: "S"
+});
 
 merge(config.macros.newTiddler, {
 	label: "Nowa notatka",
 	prompt: "Tworzy nową notatkę",
 	title: "Nowa Notatka",
-	accessKey: "N" });
+	accessKey: "N"
+});
 
 merge(config.macros.newJournal, {
 	label: "Nowa notatka dziennika",
 	prompt: "Tworzy nową notatkę z aktualną datą i godziną",
-	accessKey: "J" });
+	accessKey: "J"
+});
 
 merge(config.macros.options, {
 	wizardTitle: "Dostosuj opcje zaawansowane",
@@ -412,46 +423,55 @@ merge(config.macros.sync, {
 
 merge(config.commands.closeTiddler, {
 	text: "Zamknij",
-	tooltip: "Zamknij tą notatkę" });
+	tooltip: "Zamknij tą notatkę"
+});
 
 merge(config.commands.closeOthers, {
 	text: "Zamknij inne",
-	tooltip: "Zamyka wszystkie notatki oprócz tej" });
+	tooltip: "Zamyka wszystkie notatki oprócz tej"
+});
 
 merge(config.commands.editTiddler, {
 	text: "Edytuj",
 	tooltip: "Edytuj tę notatkę",
 	readOnlyText: "widok",
-	readOnlyTooltip: "Zobacz źródło notatki" });
+	readOnlyTooltip: "Zobacz źródło notatki"
+});
 
 merge(config.commands.saveTiddler, {
 	text: "Gotowe",
-	tooltip: "Zapisuje zmiany w tej notatce" });
+	tooltip: "Zapisuje zmiany w tej notatce"
+});
 
 merge(config.commands.cancelTiddler, {
 	text: "Anuluj",
 	tooltip: "Wyjdź nie zapisując zmian",
 	warning: "Porzucić zmiany w '%0'?",
 	readOnlyText: "gotowe",
-	readOnlyTooltip: "Powrót do normalnego widoku" });
+	readOnlyTooltip: "Powrót do normalnego widoku"
+});
 
 merge(config.commands.deleteTiddler, {
 	text: "Usuń",
 	tooltip: "Usuwa tą notatkę",
-	warning: "Chcesz usunąć '%0'?" });
+	warning: "Chcesz usunąć '%0'?"
+});
 
 merge(config.commands.permalink, {
 	text: "Stały widok",
-	tooltip: "Adres tej notatki" });
+	tooltip: "Adres tej notatki"
+});
 
 merge(config.commands.references, {
 	text: "Odwołania",
 	tooltip: "Pokazuje notatki które się odwołują do tej",
-	popupNone: "Brak odwołań" });
+	popupNone: "Brak odwołań"
+});
 
 merge(config.commands.jump, {
 	text: "Skocz",
-	tooltip: "Skacze do kolejnej otwartej notatki" });
+	tooltip: "Skacze do kolejnej otwartej notatki"
+});
 
 merge(config.commands.syncing, {
 	text: "Synchronizowanie",
@@ -461,7 +481,8 @@ merge(config.commands.syncing, {
 	captionUnSync: "Przerwij synchronizowanie tej notatki",
 	chooseServer: "Zsynchronizuj tę notatkę z serwerem:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  " });
+	notCurrServerMarker: "  "
+});
 
 merge(config.commands.fields, {
 	text: "Pola",
@@ -476,7 +497,8 @@ merge(config.commands.fields, {
 		],
 		buttons: [
 		]
-	} });
+	}
+});
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[SzybkiStart]]",
