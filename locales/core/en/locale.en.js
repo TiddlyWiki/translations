@@ -1,6 +1,6 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.6.5 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.7.2 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
@@ -25,6 +25,7 @@ if (config.options.txtUserName == 'YourName') // do not translate this line, but
 merge(config.tasks, {
 	// Since 2.6.3, action is not used (see 8790249); left here for backwards compatibility
 	save: { text: "save", tooltip: "Save your changes to this TiddlyWiki", action: saveChanges },
+	// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 	sync: { text: "sync", tooltip: "Synchronise changes with other TiddlyWiki files and servers", content: '<<sync>>' },
 	importTask: { text: "import", tooltip: "Import tiddlers and plugins from other TiddlyWiki files and servers", content: '<<importTiddlers>>' },
 	tweak: { text: "tweak", tooltip: "Tweak the appearance and behaviour of TiddlyWiki", content: '<<options>>' },
@@ -391,6 +392,7 @@ merge(config.macros.upgrade, {
 	step3Html: "You have cancelled the upgrade process"
 });
 
+// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
@@ -478,6 +480,7 @@ merge(config.commands.jump, {
 	tooltip: "Jump to another open tiddler"
 });
 
+// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 merge(config.commands.syncing, {
 	text: "syncing",
 	tooltip: "Control synchronisation of this tiddler with a server or external file",
