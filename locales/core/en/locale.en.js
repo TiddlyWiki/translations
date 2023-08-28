@@ -1,6 +1,6 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.6.4 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.6.5 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
@@ -330,6 +330,11 @@ merge(config.macros.importTiddlers, {
 	statusOpenWorkspace: "Opening the workspace",
 	statusGetTiddlerList: "Getting the list of available tiddlers",
 	errorGettingTiddlerList: "Error getting list of tiddlers, click Cancel to try again",
+	errorGettingTiddlerListHttp404: "Error retrieving tiddlers from url, please ensure the url exists. Click Cancel to try again.",
+	errorGettingTiddlerListHttp: "Error retrieving tiddlers from url, please " +
+		"ensure this url exists and is <a href='http://enable-cors.org/'>CORS</a> enabled",
+	errorGettingTiddlerListFile: "Error retrieving tiddlers from local file, " +
+		"please make sure the file is in the same directory as your TiddlyWiki. Click Cancel to try again.",
 	step3Title: "Step 3: Choose the tiddlers to import",
 	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Keep these tiddlers linked to this server so that you can synchronise subsequent changes</input><br><input type='checkbox' name='chkSave'>Save the details of this server in a 'systemServer' tiddler called:</input> <input type='text' size=25 name='txtSaveTiddler'>",
 	importLabel: "import",
