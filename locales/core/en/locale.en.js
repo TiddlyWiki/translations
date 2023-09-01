@@ -1,11 +1,11 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.2 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.3 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
 |Original Source|<if the translation is brought from outside https://github.com/TiddlyWiki/translations, you can mention it here>|
-|Version        |0.5.0|
+|Version        |0.5.1|
 |Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |Credits        |Template updates: Yakov Litvin|
@@ -35,27 +35,27 @@ merge(config.tasks, {
 
 // Options that can be set in the options panel and/or cookies
 merge(config.optionsDesc, {
-	txtUserName: "Username for signing your edits",
-	chkRegExpSearch: "Enable regular expressions for searches",
-	chkCaseSensitiveSearch: "Case-sensitive searching",
-	chkIncrementalSearch: "Incremental key-by-key searching",
 	chkAnimate: "Enable animations",
-	chkSaveBackups: "Keep backup file when saving changes",
 	chkAutoSave: "Automatically save changes",
-	chkGenerateAnRssFeed: "Generate an RSS feed when saving changes",
-	chkSaveEmptyTemplate: "Generate an empty template when saving changes",
-	chkOpenInNewWindow: "Open external links in a new window",
-	chkToggleLinks: "Clicking on links to open tiddlers causes them to close",
-	chkHttpReadOnly: "Hide editing features when viewed over HTTP",
-	chkForceMinorUpdate: "Don't update modifier username and date when editing tiddlers",
-	chkConfirmDelete: "Require confirmation before deleting tiddlers",
-	chkInsertTabs: "Use the tab key to insert tab characters instead of moving between fields",
 	txtBackupFolder: "Name of folder to use for backups",
+	chkCaseSensitiveSearch: "Case-sensitive searching",
+	chkConfirmDelete: "Require confirmation before deleting tiddlers",
+	txtFileSystemCharSet: "Default character set for saving changes (Firefox/Mozilla only)",
+	chkForceMinorUpdate: "Don't update modifier username and date when editing tiddlers",
+	chkGenerateAnRssFeed: "Generate an RSS feed when saving changes",
+	chkHttpReadOnly: "Hide editing features when viewed over HTTP",
+	chkIncrementalSearch: "Incremental key-by-key searching",
+	chkInsertTabs: "Use the tab key to insert tab characters instead of moving between fields",
 	txtMaxEditRows: "Maximum number of rows in edit boxes",
+	chkOpenInNewWindow: "Open external links in a new window",
+	chkRegExpSearch: "Enable regular expressions for searches",
 	chkRemoveExtraMarkers: "Replace unused transclusion markers with blanks",
+	chkSaveBackups: "Keep backup file when saving changes",
+	chkSaveEmptyTemplate: "Generate an empty template when saving changes",
 	txtTheme: "Name of the theme to use",
+	chkToggleLinks: "Clicking on links to open tiddlers causes them to close",
 	txtUpgradeCoreURI: "Custom URI to download TiddlyWiki core from (when upgrading)",
-	txtFileSystemCharSet: "Default character set for saving changes (Firefox/Mozilla only)"
+	txtUserName: "Username for signing your edits"
 });
 
 merge(config.messages, {
@@ -65,7 +65,7 @@ merge(config.messages, {
 	pluginForced: "Executed because forced via 'systemConfigForce' tag",
 	pluginVersionError: "Not executed because this plugin needs a newer version of TiddlyWiki",
 	nothingSelected: "Nothing is selected. You must select one or more items first",
-	savedSnapshotError: "It appears that this TiddlyWiki has been incorrectly saved. Please see http://www.tiddlywiki.com/#Download for details",
+	savedSnapshotError: "It appears that this TiddlyWiki has been incorrectly saved. Please see https://classic.tiddlywiki.com/#SaveUnpredictabilities for details",
 	subtitleUnknown: "(unknown)",
 	undefinedTiddlerToolTip: "The tiddler '%0' doesn't yet exist",
 	shadowedTiddlerToolTip: "The tiddler '%0' doesn't yet exist, but has a pre-defined shadow value",
@@ -550,7 +550,7 @@ merge(config.annotations, {
 	StyleSheetLayout: "This shadow tiddler contains CSS definitions related to the layout of page elements. ''DO NOT EDIT THIS TIDDLER'', instead make your changes in the StyleSheet shadow tiddler",
 	StyleSheetLocale: "This shadow tiddler contains CSS definitions related to the translation locale",
 	StyleSheetPrint: "This shadow tiddler contains CSS definitions for printing",
-	SystemSettings: "This tiddler is used to store configuration options for this TiddlyWiki document",
+	SystemSettings: "Options may be stored here using the slice notation (like {{{chkAutoSave: true}}} or {{{|txtUserName|The great inventor|}}})",
 	TabAll: "This shadow tiddler contains the contents of the 'All' tab in the right-hand sidebar",
 	TabMore: "This shadow tiddler contains the contents of the 'More' tab in the right-hand sidebar",
 	TabMoreMissing: "This shadow tiddler contains the contents of the 'Missing' tab in the right-hand sidebar",
