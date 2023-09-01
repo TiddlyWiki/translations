@@ -9,23 +9,23 @@ v2.9.4
 * [65977fe](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/65977fe) feat: add label element around 'Show unknown options'
 * [6990f19](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/6990f19), [2eb045f](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2eb045f), [d75345d](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/d75345d) codestyle: reduce line lengths in Lingo.js
 
-v2.9.3
-* [2611b86](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2611b86) .., sort options alphabetically
-* [97957e9](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/97957e9) update savedSnapshotError message
-* [89833e5](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/89833e5) improve annotation of SystemSettings
+v2.9.3 ([update example](https://github.com/TiddlyWiki/translations/commit/19a3c62))
+* [2611b86](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2611b86) Sort options alphabetically
+* [97957e9](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/97957e9) Update savedSnapshotError message
+* [89833e5](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/89833e5) Improve annotation of SystemSettings
 
 v2.9.2 ([update example](https://github.com/TiddlyWiki/translations/commit/f4747f5))
-* [2f83235](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2f83235) shorten mainSaved
-* [9f9ace2](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/9f9ace2), [172bebf](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/172bebf) introduce txtUpgradeCoreURI option to overwrite default URI for loading TW core when upgrading
+* [2f83235](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2f83235) Shorten mainSaved
+* [9f9ace2](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/9f9ace2), [172bebf](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/172bebf) Introduce txtUpgradeCoreURI option to overwrite default URI for loading TW core when upgrading
 
 v2.9.1 ([update example](https://github.com/TiddlyWiki/translations/commit/08f11c3))
-* [e957aa1](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/e957aa1) add option description for chkRemoveExtraMarkers
+* [e957aa1](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/e957aa1) Add option description for chkRemoveExtraMarkers
 
 v2.8.1-2.9.0
 * no changes
 
 v2.8.0 ([update example](https://github.com/TiddlyWiki/translations/commit/802a0f2))
-* [8bf8ca0](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8bf8ca0) download saving: add mainDownload, mainDownloadManual to config.messages
+* [8bf8ca0](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8bf8ca0) Download saving: add mainDownload, mainDownloadManual to config.messages
 
 v2.7.0-2.7.2
 * no changes
