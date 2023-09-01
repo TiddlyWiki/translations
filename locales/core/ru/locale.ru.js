@@ -1,8 +1,8 @@
 /***
 |Name            |RussianTranslationPlugin|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.1 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.1 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
-|Version         |0.10.0|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.2 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.2 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Version         |0.10.1|
 |Author          |vmunt|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
@@ -47,6 +47,7 @@ merge(config.optionsDesc, {
 	txtBackupFolder: "Имя папки для резервных копий",
 	txtMaxEditRows: "Максимальное количество строк в окне редактирования",
 	txtTheme: "Имя темы для использования",
+	txtUpgradeCoreURI: "Адрес (URL), с которого будет скачиваться TiddlyWiki при обновлении (пустой = адрес по умолчанию)",
 	txtFileSystemCharSet: "Кодировка символов в файле TiddlyWiki для сохранения изменений (только для Firefox/Mozilla)"
 });
 
@@ -73,7 +74,7 @@ merge(config.messages, {
 	rssFailed: "Не удалось сохранить файл с RSS-лентой",
 	emptySaved: "Пустой шаблон сохранён",
 	emptyFailed: "Не удалось сохранить файл с пустым шаблоном",
-	mainSaved: "Главный файл TiddlyWiki сохранён",
+	mainSaved: "TiddlyWiki сохранена",
 	mainDownload: "Сохранение TiddlyWiki через скачивание...",
 	mainDownloadManual: "КЛИКНИТЕ правой кнопкой здесь, чтобы скачать (сохранить) изменённую TiddlyWiki",
 	mainFailed: "Не удалось сохранить главный файл TiddlyWiki. Ваши изменения не сохранены",
