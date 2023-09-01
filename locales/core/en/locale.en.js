@@ -1,11 +1,11 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.1 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.2 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
 |Original Source|<if the translation is brought from outside https://github.com/TiddlyWiki/translations, you can mention it here>|
-|Version        |0.4.3|
+|Version        |0.5.0|
 |Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |Credits        |Template updates: Yakov Litvin|
@@ -54,6 +54,7 @@ merge(config.optionsDesc, {
 	txtMaxEditRows: "Maximum number of rows in edit boxes",
 	chkRemoveExtraMarkers: "Replace unused transclusion markers with blanks",
 	txtTheme: "Name of the theme to use",
+	txtUpgradeCoreURI: "Custom URI to download TiddlyWiki core from (when upgrading)",
 	txtFileSystemCharSet: "Default character set for saving changes (Firefox/Mozilla only)"
 });
 
@@ -80,7 +81,7 @@ merge(config.messages, {
 	rssFailed: "Failed to save RSS feed file",
 	emptySaved: "Empty template saved",
 	emptyFailed: "Failed to save empty template file",
-	mainSaved: "Main TiddlyWiki file saved",
+	mainSaved: "TiddlyWiki saved",
 	mainDownload: "Downloading/saving main TiddlyWiki file",
 	mainDownloadManual: "RIGHT CLICK HERE to download/save main TiddlyWiki file",
 	mainFailed: "Failed to save main TiddlyWiki file. Your changes have not been saved",
