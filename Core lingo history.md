@@ -14,34 +14,34 @@ v2.9.3
 * [97957e9](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/97957e9) update savedSnapshotError message
 * [89833e5](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/89833e5) improve annotation of SystemSettings
 
-v2.9.2
+v2.9.2 ([update example](https://github.com/TiddlyWiki/translations/commit/f4747f5))
 * [2f83235](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2f83235) shorten mainSaved
 * [9f9ace2](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/9f9ace2), [172bebf](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/172bebf) introduce txtUpgradeCoreURI option to overwrite default URI for loading TW core when upgrading
 
-v2.9.1 ([update example](https://github.com/TiddlyWiki/translations/commit/08f11c3987430dac4a3386f1841f051888faa5f6))
+v2.9.1 ([update example](https://github.com/TiddlyWiki/translations/commit/08f11c3))
 * [e957aa1](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/e957aa1) add option description for chkRemoveExtraMarkers
 
 v2.8.1-2.9.0
 * no changes
 
-v2.8.0 ([update example](https://github.com/TiddlyWiki/translations/commit/802a0f2fb156c527bc2f52b5a764b38be947b8f9))
+v2.8.0 ([update example](https://github.com/TiddlyWiki/translations/commit/802a0f2))
 * [8bf8ca0](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8bf8ca0) download saving: add mainDownload, mainDownloadManual to config.messages
 
 v2.7.0-2.7.2
 * no changes
 
-v2.6.6 ([update example](https://github.com/TiddlyWiki/translations/commit/fa5c60d4b0a17e0028933d770fc0c437352e1c41))
-* [e901015](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/e901015) Either remove lingo for sync (removed from core), or [keep](https://github.com/TiddlyWiki/translations/commit/fa5c60d4b0a17e0028933d770fc0c437352e1c41) it for backwards compatibility
+v2.6.6 ([update example](https://github.com/TiddlyWiki/translations/commit/fa5c60d))
+* [e901015](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/e901015) Either remove lingo for sync (removed from core), or [keep](https://github.com/TiddlyWiki/translations/commit/fa5c60d) it for backwards compatibility
 
-v2.6.5 ([update example](https://github.com/TiddlyWiki/translations/commit/4a5cb0abb4e25fad5d22e1fbfa0613690a688e4f))
+v2.6.5 ([update example](https://github.com/TiddlyWiki/translations/commit/4a5cb0a))
 * [6e74ae4](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/6e74ae4) Add error messages for importing
 
 v2.6.4
 * no changes
 
-v2.6.3 ([update example](https://github.com/TiddlyWiki/translations/commit/3afe0d0d95d416e61e5faaa3e65fac525227354a))
+v2.6.3 ([update example](https://github.com/TiddlyWiki/translations/commit/3afe0d0))
 * [9a3bf25](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/9a3bf25) Remove unnecessary escape characters
-* [8790249](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8790249) Either remove saveChanges action from config.tasks or [keep](https://github.com/TiddlyWiki/translations/commit/3afe0d0d95d416e61e5faaa3e65fac525227354a#diff-8dfb600fe28956a2928bdc29bb31f3c61ad12de0416eadebdebf3b226c1e841eR26) it for backwards compatibility
+* [8790249](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/8790249) Either remove saveChanges action from config.tasks or [keep](https://github.com/TiddlyWiki/translations/commit/3afe0d0#diff-8dfb600fe28956a2928bdc29bb31f3c61ad12de0416eadebdebf3b226c1e841eR26) it for backwards compatibility
 * [11aab93](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/11aab93) Add empty placeholder for the search macro
 
 v2.6.2
