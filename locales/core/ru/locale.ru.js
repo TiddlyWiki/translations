@@ -20,7 +20,8 @@ merge(config.tasks, {
 	save: { text: "сохранить", tooltip: "Сохранить изменения в эту TiddlyWiki", action: saveChanges },
 	// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 	sync: { text: "синхронизация", tooltip: "Синхронизировать изменения с другим файлом или сервером TiddlyWiki", content: '<<sync>>' },
-	importTask: { text: "импорт", tooltip: "Импортировать заметки и плагины из другого файла или с сервера TiddlyWiki", content: '<<importTiddlers>>' },
+	importTask: { text: "импорт", tooltip: "Импортировать заметки и плагины " +
+		"из другого файла или с сервера TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "настройка", tooltip: "Настроить TiddlyWiki", content: '<<options>>' },
 	upgrade: { text: "обновление", tooltip: "Обновить код ядра TiddlyWiki", content: '<<upgrade>>' },
 	plugins: { text: "плагины", tooltip: "Управление плагинами", content: '<<plugins>>' }
@@ -83,7 +84,8 @@ merge(config.messages, {
 	macroErrorDetails: "Ошибка при выполнении макроса <<%0>>:\n%1",
 	missingMacro: "Нет такого макроса",
 	overwriteWarning: "Заметка с именем '%0' уже существует. Нажмите OK для перезаписи её содержимого",
-	unsavedChangesWarning: "ВНИМАНИЕ! В TiddlyWiki есть несохранённые изменения\n\nНажмите OK для сохранения\nНажмите CANCEL, если изменения не нужны",
+	unsavedChangesWarning: "ВНИМАНИЕ! В TiddlyWiki есть несохранённые изменения\n\n" +
+		"Нажмите OK для сохранения\nНажмите CANCEL, если изменения не нужны",
 	confirmExit: "--------------------------------\n\nВ TiddlyWiki есть несохранённые изменения. Продолжив, вы потеряете эти изменения\n\n--------------------------------",
 	saveInstructions: "SaveChanges",
 	unsupportedTWFormat: "Неподдерживаемый формат TiddlyWiki '%0'",
@@ -147,7 +149,8 @@ merge(config.views.wikified, {
 });
 
 merge(config.views.editor, {
-	tagPrompt: "Введите метки, разделённые пробелами, в случае необходимости [[используйте двойные квадратные скобки|use double square brackets]], или добавьте существующие метки",
+	tagPrompt: "Введите метки, разделённые пробелами, в случае необходимости " +
+		"[[используйте двойные квадратные скобки|use double square brackets]], или добавьте существующие метки",
 	defaultText: "Введите текст для '%0'"
 });
 
@@ -306,14 +309,18 @@ merge(config.macros.importTiddlers, {
 	readOnlyWarning: "TiddlyWiki открыта только для чтения, поэтому добавить в неё что-либо невозможно. Попробуйте открыть её как файл (через обращение file://)",
 	wizardTitle: "Импорт заметок из другого файла или c сервера",
 	step1Title: "Шаг 1: Укажите сервер или файл TiddlyWiki",
-	step1Html: "Укажите тип сервера: <select name='selTypes'><option value=''>Выберите...</option></select><br>введите адрес или путь к файлу тут: <input type='text' size=50 name='txtPath'><br>...или найдите файл: <input type='file' size=50 name='txtBrowse'><br><hr>...или выберите заготовку: <select name='selFeeds'><option value=''>Выберите...</option></select>",
+	step1Html: "Укажите тип сервера: <select name='selTypes'><option value=''>Выберите...</option></select><br>" +
+		"введите адрес или путь к файлу тут: <input type='text' size=50 name='txtPath'><br>" +
+		"...или найдите файл: <input type='file' size=50 name='txtBrowse'><br><hr>" +
+		"...или выберите заготовку: <select name='selFeeds'><option value=''>Выберите...</option></select>",
 	openLabel: "открыть",
 	openPrompt: "Подключиться к этому файлу или серверу",
 	openError: "Возникли проблемы с получением файла TiddlyWiki", // v.2.6.0, removed in v.2.6.1
 	statusOpenHost: "Открытие узла",
 	statusGetWorkspaceList: "Получение списка доступных рабочих областей",
 	step2Title: "Шаг 2: Выберите рабочую область",
-	step2Html: "Введите имя рабочей области: <input type='text' size=50 name='txtWorkspace'><br>...или выберите рабочую область: <select name='selWorkspace'><option value=''>Выберите...</option></select>",
+	step2Html: "Введите имя рабочей области: <input type='text' size=50 name='txtWorkspace'><br>" +
+		"...или выберите рабочую область: <select name='selWorkspace'><option value=''>Выберите...</option></select>",
 	cancelLabel: "отмена",
 	cancelPrompt: "Отмена этого импорта",
 	statusOpenWorkspace: "Открытие рабочего пространства",
@@ -326,7 +333,10 @@ merge(config.macros.importTiddlers, {
 	errorGettingTiddlerListFile: "Не удалось получить заметки из выбранного файла. " +
 		"Пожалуйста, проверьте, что файл существует и находится в той же папке, что ваша TiddlyWiki. Нажмите Отмена, чтобы попробовать снова.",
 	step3Title: "Шаг 3: Выберите импортируемые заметки",
-	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Оставить эти заметки связанными с этим сервером для облегчения последующих синхронизаций</input><br><input type='checkbox' name='chkSave'>Сохранить параметры этого сервера в заметке с названием 'systemServer':</input> <input type='text' size=25 name='txtSaveTiddler'>",
+	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>" +
+		"Оставить эти заметки связанными с этим сервером для облегчения последующих синхронизаций</input><br>" +
+		"<input type='checkbox' name='chkSave'>Сохранить параметры этого сервера в заметке с названием 'systemServer':</input>" +
+		" <input type='text' size=25 name='txtSaveTiddler'>",
 	importLabel: "импорт",
 	importPrompt: "Импортировать эти заметки",
 	confirmOverwriteText: "Вы действительно хотите заменить эти заметки:\n\n%0",
@@ -338,8 +348,10 @@ merge(config.macros.importTiddlers, {
 	statusDoneImport: "Все заметки импортированы",
 	systemServerNamePattern: "%2 из %1",
 	systemServerNamePatternNoWorkspace: "%1",
-	confirmOverwriteSaveTiddler: "Заметка '%0' уже существует. Нажмите 'OK' для замены её на заметку с указанного сервера, или нажмите 'Cancel' для оставления её неизменной",
-	serverSaveTemplate: "|''Введите:''|%0|\n|''Адрес:''|%1|\n|''Рабочее пространство:''|%2|\n\nЭта заметка будет автоматически создана для записи параметров этого сервера",
+	confirmOverwriteSaveTiddler: "Заметка '%0' уже существует. Нажмите 'OK' для её замены " +
+		"на заметку с указанного сервера, или нажмите 'Cancel' для оставления её неизменной",
+	serverSaveTemplate: "|''Введите:''|%0|\n|''Адрес:''|%1|\n|''Рабочее пространство:''|%2|\n\n" +
+		"Эта заметка будет автоматически создана для записи параметров этого сервера",
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
@@ -355,12 +367,19 @@ merge(config.macros.importTiddlers, {
 merge(config.macros.upgrade, {
 	wizardTitle: "Обновление кода ядра TiddlyWiki",
 	step1Title: "Обновление или восстановление этой TiddlyWiki до последней версии",
-	step1Html: "Вы готовы обновить код ядра TiddlyWiki до последней версии (с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). Информационное наполнение этого файла будет сохранено.<br><br>Заметьте, что обновление кода ядра может вызвать конфликт с уже подключенными старыми плагинами. Если у Вас появились проблемы с обновлённым файлом, почитайте здесь: <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+	step1Html: "Вы готовы обновить код ядра TiddlyWiki до последней версии " +
+		"(с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
+		"Информационное наполнение этого файла будет сохранено.<br><br>" +
+		"Заметьте, что обновление кода ядра может вызвать конфликт с уже подключенными старыми плагинами. " +
+		"Если у Вас появились проблемы с обновлённым файлом, почитайте здесь: " +
+		"<a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
 	errorCantUpgrade: "Не могу обновить эту TiddlyWiki. Вы можете производить обновление TiddlyWiki-файлов, сохранённых только локально",
 	errorNotSaved: "Вы должны сохранить изменения, прежде чем производить обновление",
 	step2Title: "Подтвердите параметры обновления",
-	step2Html_downgrade: "У Вас получается ухудшение версии файла TiddlyWiki с версии %1 до версии %0.<br><br>Замена версии кода ядра на более раннюю не рекомендуется",
-	step2Html_restore: "Похоже, что эта TiddlyWiki уже использует последнюю версию кода ядра (%0).<br><br>Вы можете продолжить замену кода ядра в любом случае для того, чтобы быть уверенными, что код ядра не повреждён и не испорчен",
+	step2Html_downgrade: "У Вас получается ухудшение версии файла TiddlyWiki с версии %1 до версии %0.<br><br>" +
+		"Замена версии кода ядра на более раннюю не рекомендуется",
+	step2Html_restore: "Похоже, что эта TiddlyWiki уже использует последнюю версию кода ядра (%0).<br><br>" +
+		"Вы можете продолжить замену кода ядра в любом случае для того, чтобы быть уверенными, что код ядра не повреждён и не испорчен",
 	step2Html_upgrade: "Вы готовы обновить версию TiddlyWiki с %1 до %0?",
 	upgradeLabel: "обновление",
 	upgradePrompt: "Приготовьтесь к процессу обновления",
@@ -471,7 +490,9 @@ merge(config.commands.jump, {
 merge(config.commands.syncing, {
 	text: "синхронизация",
 	tooltip: "Управление синхронизацией этой заметки с сервером или внешним файлом",
-	currentlySyncing: "<div>Синхронизирую с помощью <span class='popupHighlight'>'%0'</span> с:</" + "div><div>хранилищем: <span class='popupHighlight'>%1</span></" + "div><div>рабочее пространство: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Синхронизирую с помощью <span class='popupHighlight'>'%0'</span> с:</div>" +
+		"<div>хранилищем: <span class='popupHighlight'>%1</span></div>" +
+		"<div>рабочим пространством: <span class='popupHighlight'>%2</span></div>",
 	notCurrentlySyncing: "Пока не синхронизировано",
 	captionUnSync: "Остановить синхронизацию этой заметки",
 	chooseServer: "Привести в соответствие эту заметку с другим сервером:",
@@ -499,9 +520,13 @@ merge(config.shadowTiddlers, {
 	SiteTitle: "Моя TiddlyWiki",
 	SiteSubtitle: "гипертекстовая записная книжка",
 	SiteUrl: "",
-	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD.0MM.YYYY" "journal">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "настройки \u00bb" "Изменение настроек TiddlyWiki">>',
-	SideBarTabs: '<<tabs txtMainTab "история" "История" TabTimeline "все" "Все заметки" TabAll "метки" "Все метки" TabTags "ещё" "Другие списки" TabMore>>',
-	TabMore: '<<tabs txtMoreTab "нет" "Отсутствующие заметки" TabMoreMissing "одиночки" "Потерянные заметки" TabMoreOrphans "служебные" "Служебные заметки" TabMoreShadowed>>'
+	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>>' +
+		'<<newJournal "DD.0MM.YYYY" "journal">><<saveChanges>><<slider ' +
+		'chkSliderOptionsPanel OptionsPanel "настройки \u00bb" "Изменение настроек TiddlyWiki">>',
+	SideBarTabs: '<<tabs txtMainTab "история" "История" TabTimeline ' +
+		'"все" "Все заметки" TabAll "метки" "Все метки" TabTags "ещё" "Другие списки" TabMore>>',
+	TabMore: '<<tabs txtMoreTab "нет" "Отсутствующие заметки" TabMoreMissing ' +
+		'"одиночки" "Потерянные заметки" TabMoreOrphans "служебные" "Служебные заметки" TabMoreShadowed>>'
 });
 
 merge(config.annotations, {
@@ -524,9 +549,11 @@ merge(config.annotations, {
 	SiteSubtitle: "Эта служебная заметка содержит вторую часть заголовка страницы",
 	SiteTitle: "Эта служебная заметка содержит первую часть заголовка страницы",
 	SiteUrl: "В эту служебную заметку должен быть занесён полный URL публикации этой TiddlyWiki",
-	StyleSheetColors: "Эта служебная заметка содержит CSS-описания, относящиеся к цветам элементов страницы. ''НЕ ИЗМЕНЯЙТЕ ЭТУ ЗАМЕТКУ''. Все изменения делайте в служебной заметке StyleSheet",
+	StyleSheetColors: "Эта служебная заметка содержит CSS-описания, относящиеся к цветам элементов страницы. " +
+		"''НЕ ИЗМЕНЯЙТЕ ЭТУ ЗАМЕТКУ''. Все изменения делайте в служебной заметке StyleSheet",
 	StyleSheet: "Эта заметка может содержать Ваши определения и изменения стилей CSS",
-	StyleSheetLayout: "Эта служебная заметка содержит СSS-описания, относящиеся к расположению элементов страниц.''НЕ ИЗМЕНЯЙТЕ ЭТУ ЗАМЕТКУ''. Все изменения делайте в служебной заметке StyleSheet",
+	StyleSheetLayout: "Эта служебная заметка содержит СSS-описания, относящиеся к расположению элементов страниц. " +
+		"''НЕ ИЗМЕНЯЙТЕ ЭТУ ЗАМЕТКУ''. Все изменения делайте в служебной заметке StyleSheet",
 	StyleSheetLocale: "Эта служебная заметка содержит CSS-описания, относящиеся к переводу на местный язык",
 	StyleSheetPrint: "Эта служебная заметка содержит CSS-описания для печати",
 	SystemSettings: "Параметры настройки можно сохранять здесь, используя разметку slices " +
