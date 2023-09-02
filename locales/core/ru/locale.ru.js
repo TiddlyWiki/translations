@@ -1,8 +1,8 @@
 /***
 |Name            |RussianTranslationPlugin|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.2 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.2 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
-|Version         |0.10.1|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.3 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.3 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Version         |0.10.2|
 |Author          |vmunt|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
@@ -28,27 +28,27 @@ merge(config.tasks, {
 
 // Options that can be set in the options panel and/or cookies
 merge(config.optionsDesc, {
-	txtUserName: "Имя пользователя для подписывания ваших правок",
-	chkRegExpSearch: "Включить поиск с помощью регулярных выражений",
-	chkCaseSensitiveSearch: "Регистрозависимый поиск",
-	chkIncrementalSearch: "Последовательный поиск (слово-за-словом)",
 	chkAnimate: "Разрешить анимацию",
-	chkSaveBackups: "Сделать резервную копию при сохранении изменений",
 	chkAutoSave: "Автоматическое сохранение изменений",
-	chkGenerateAnRssFeed: "Генерировать RSS-ленту при сохранении изменений",
-	chkSaveEmptyTemplate: "Генерировать пустой шаблон при сохранении изменений",
-	chkOpenInNewWindow: "Открывать внешние ссылки в новом окне",
-	chkToggleLinks: "Нажатие на ссылках для открытия заметок также и закрывает их",
-	chkHttpReadOnly: "Скрывать возможности редактирования при обращении через протокол HTTP",
-	chkForceMinorUpdate: "Не обновлять автора изменений и дату редактирования заметок",
-	chkConfirmDelete: "Спрашивать подтверждение при удалении заметок",
-	chkInsertTabs: "При нажатии табуляции вставлять символ табуляции вместо перехода между полями ввода",
-	chkRemoveExtraMarkers: "Скрыть неиспользованные маркеры вставки ($1, $2 и т.д. – при использовании макроса tiddler)",
 	txtBackupFolder: "Имя папки для резервных копий",
+	chkCaseSensitiveSearch: "Регистрозависимый поиск",
+	chkConfirmDelete: "Спрашивать подтверждение при удалении заметок",
+	txtFileSystemCharSet: "Кодировка символов в файле TiddlyWiki для сохранения изменений (только для Firefox/Mozilla)",
+	chkForceMinorUpdate: "Не обновлять автора изменений и дату редактирования заметок",
+	chkGenerateAnRssFeed: "Генерировать RSS-ленту при сохранении изменений",
+	chkHttpReadOnly: "Скрывать возможности редактирования при обращении через протокол HTTP",
+	chkIncrementalSearch: "Последовательный поиск (слово-за-словом)",
+	chkInsertTabs: "При нажатии табуляции вставлять символ табуляции вместо перехода между полями ввода",
 	txtMaxEditRows: "Максимальное количество строк в окне редактирования",
+	chkOpenInNewWindow: "Открывать внешние ссылки в новом окне",
+	chkRegExpSearch: "Включить поиск с помощью регулярных выражений",
+	chkRemoveExtraMarkers: "Скрыть неиспользованные маркеры вставки ($1, $2 и т.д. – при использовании макроса tiddler)",
+	chkSaveBackups: "Сделать резервную копию при сохранении изменений",
+	chkSaveEmptyTemplate: "Генерировать пустой шаблон при сохранении изменений",
 	txtTheme: "Имя темы для использования",
+	chkToggleLinks: "Нажатие на ссылках для открытия заметок также и закрывает их",
 	txtUpgradeCoreURI: "Адрес (URL), с которого будет скачиваться TiddlyWiki при обновлении (пустой = адрес по умолчанию)",
-	txtFileSystemCharSet: "Кодировка символов в файле TiddlyWiki для сохранения изменений (только для Firefox/Mozilla)"
+	txtUserName: "Имя пользователя для подписывания ваших правок"
 });
 
 merge(config.messages, {
@@ -58,7 +58,8 @@ merge(config.messages, {
 	pluginForced: "Действие выполнено принудительно согласно установленной метке 'systemConfigForce'",
 	pluginVersionError: "Плагин не запущен, так как разработан для более новой версии TiddlyWiki",
 	nothingSelected: "Ничего не выбрано. Сначала вы должны выбрать один или несколько элементов",
-	savedSnapshotError: "Похоже, что эта TiddlyWiki была сохранена с ошибкой. Обратитесь к http://www.tiddlywiki.com/#Download за более детальной информацией",
+	savedSnapshotError: "Похоже, что эта TiddlyWiki была сохранена неверно. " +
+		"Детали можно узнать на странице https://classic.tiddlywiki.com/#SaveUnpredictabilities",
 	subtitleUnknown: "(неизвестно)",
 	undefinedTiddlerToolTip: "Заметка '%0' пока не существует",
 	shadowedTiddlerToolTip: "Заметка '%0' пока не создана, но имеет предопределённое служебное значение",
@@ -528,7 +529,8 @@ merge(config.annotations, {
 	StyleSheetLayout: "Эта служебная заметка содержит СSS-описания, относящиеся к расположению элементов страниц.''НЕ ИЗМЕНЯЙТЕ ЭТУ ЗАМЕТКУ''. Все изменения делайте в служебной заметке StyleSheet",
 	StyleSheetLocale: "Эта служебная заметка содержит CSS-описания, относящиеся к переводу на местный язык",
 	StyleSheetPrint: "Эта служебная заметка содержит CSS-описания для печати",
-	SystemSettings: "Эта заметка используется для хранения параметров настройки этой TiddlyWiki",
+	SystemSettings: "Параметры настройки можно сохранять здесь, используя разметку slices " +
+		"(например, {{{chkAutoSave: true}}} или {{{|txtUserName|Великий изобретатель|}}})",
 	TabAll: "Эта служебная заметка содержит начинку закладки 'Все' на боковой панели",
 	TabMore: "Эта служебная заметка содержит начинку закладки 'Ещё' на боковой панели",
 	TabMoreMissing: "Эта служебная заметка содержит начинку закладки 'Нет' на боковой панели",
