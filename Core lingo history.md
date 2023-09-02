@@ -4,13 +4,16 @@ Changes in Lingo.js are shown below for each version.
 Note that some commits have changes in other files;
 some only have changes of codestyle which may guide you, but they don't affect functionality.
 
-v2.9.4
-* [edcd6b3](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/edcd6b3) feat: support async loading in saving (disabled by default)
-* [65977fe](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/65977fe) feat: add label element around 'Show unknown options'
-* [6990f19](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/6990f19), [2eb045f](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2eb045f), [d75345d](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/d75345d) codestyle: reduce line lengths in Lingo.js
+v2.9.4 (update examples: [main](https://github.com/TiddlyWiki/translations/commit/2a2ee7c), [optional codestyle update](https://github.com/TiddlyWiki/translations/commit/bf64a6d))
+* [edcd6b3](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/edcd6b3) Add description for chkPreventAsyncSaving
+* [65977fe](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/65977fe) Update UI in step1Html for options macro
+* [6990f19](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/6990f19#diff-9aa6abd771e6f878f084695b64c9549f38348152cd66901c60304313df6ec5ce), [2eb045f](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2eb045f), [d75345d](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/d75345d) codestyle: reduce line lengths in Lingo.js
+  * Note: this is an optional update, it makes code more readable, but doesn't affect the translation itself
+
 
 v2.9.3 ([update example](https://github.com/TiddlyWiki/translations/commit/19a3c62))
 * [2611b86](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2611b86) Sort options alphabetically
+  * Note: this is an optional update, it makes the options list easier to look through, but doesn't affect the translation itself
 * [97957e9](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/97957e9) Update savedSnapshotError message
 * [89833e5](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/89833e5) Improve annotation of SystemSettings
 
