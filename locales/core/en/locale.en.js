@@ -1,11 +1,11 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.3 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.4 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
 |Original Source|<if the translation is brought from outside https://github.com/TiddlyWiki/translations, you can mention it here>|
-|Version        |0.5.1|
+|Version        |0.5.2|
 |Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |Credits        |Template updates: Yakov Litvin|
@@ -49,6 +49,7 @@ merge(config.optionsDesc, {
 	chkInsertTabs: "Use the tab key to insert tab characters instead of moving between fields",
 	txtMaxEditRows: "Maximum number of rows in edit boxes",
 	chkOpenInNewWindow: "Open external links in a new window",
+	chkPreventAsyncSaving: "Disable attempting async saving (may be needed by old plugins)",
 	chkRegExpSearch: "Enable regular expressions for searches",
 	chkRemoveExtraMarkers: "Replace unused transclusion markers with blanks",
 	chkSaveBackups: "Keep backup file when saving changes",
@@ -245,7 +246,8 @@ merge(config.macros.newJournal, {
 merge(config.macros.options, {
 	wizardTitle: "Tweak advanced options",
 	step1Title: "These options are saved in cookies in your browser",
-	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Show unknown options</input>",
+	step1Html: "<input type='hidden' name='markList'></input><br>" +
+		"<label><input type='checkbox' checked='false' name='chkUnknown'>Show unknown options</label>",
 	unknownDescription: "//(unknown)//",
 	listViewTemplate: {
 		columns: [
