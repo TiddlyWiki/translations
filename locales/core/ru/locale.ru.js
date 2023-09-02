@@ -1,8 +1,8 @@
 /***
 |Name            |RussianTranslationPlugin|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.3 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.3 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
-|Version         |0.10.2|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.4 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.4 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Version         |0.10.3|
 |Author          |vmunt|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
@@ -42,6 +42,7 @@ merge(config.optionsDesc, {
 	chkInsertTabs: "При нажатии табуляции вставлять символ табуляции вместо перехода между полями ввода",
 	txtMaxEditRows: "Максимальное количество строк в окне редактирования",
 	chkOpenInNewWindow: "Открывать внешние ссылки в новом окне",
+	chkPreventAsyncSaving: "Не использовать асинхронное сохранение (может быть нужно для старых плагинов)",
 	chkRegExpSearch: "Включить поиск с помощью регулярных выражений",
 	chkRemoveExtraMarkers: "Скрыть неиспользованные маркеры вставки ($1, $2 и т.д. – при использовании макроса tiddler)",
 	chkSaveBackups: "Сделать резервную копию при сохранении изменений",
@@ -232,7 +233,8 @@ merge(config.macros.newJournal, {
 merge(config.macros.options, {
 	wizardTitle: "Расширенные пункты настройки",
 	step1Title: "Эти настройки ваша программа просмотра сохраняет с помощью cookies",
-	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Показать настройки без описания</input>",
+	step1Html: "<input type='hidden' name='markList'></input><br>" +
+		"<label><input type='checkbox' checked='false' name='chkUnknown'>Показать настройки без описания</label>",
 	unknownDescription: "//(unknown)//",
 	listViewTemplate: {
 		columns: [
