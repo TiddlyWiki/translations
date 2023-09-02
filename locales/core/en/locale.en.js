@@ -27,7 +27,8 @@ merge(config.tasks, {
 	save: { text: "save", tooltip: "Save your changes to this TiddlyWiki", action: saveChanges },
 	// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 	sync: { text: "sync", tooltip: "Synchronise changes with other TiddlyWiki files and servers", content: '<<sync>>' },
-	importTask: { text: "import", tooltip: "Import tiddlers and plugins from other TiddlyWiki files and servers", content: '<<importTiddlers>>' },
+	importTask: { text: "import", tooltip: "Import tiddlers and plugins from " +
+		"other TiddlyWiki files and servers", content: '<<importTiddlers>>' },
 	tweak: { text: "tweak", tooltip: "Tweak the appearance and behaviour of TiddlyWiki", content: '<<options>>' },
 	upgrade: { text: "upgrade", tooltip: "Upgrade TiddlyWiki core code", content: '<<upgrade>>' },
 	plugins: { text: "plugins", tooltip: "Manage installed plugins", content: '<<plugins>>' }
@@ -323,13 +324,17 @@ merge(config.macros.importTiddlers, {
 	readOnlyWarning: "You cannot import into a read-only TiddlyWiki file. Try opening it from a file:// URL",
 	wizardTitle: "Import tiddlers from another file or server",
 	step1Title: "Step 1: Locate the server or TiddlyWiki file",
-	step1Html: "Specify the type of the server: <select name='selTypes'><option value=''>Choose...</option></select><br>Enter the URL or pathname here: <input type='text' size=50 name='txtPath'><br>...or browse for a file: <input type='file' size=50 name='txtBrowse'><br><hr>...or select a pre-defined feed: <select name='selFeeds'><option value=''>Choose...</option></select>",
+	step1Html: "Specify the type of the server: <select name='selTypes'><option value=''>Choose...</option></select><br>" +
+		"Enter the URL or pathname here: <input type='text' size=50 name='txtPath'><br>" +
+		"...or browse for a file: <input type='file' size=50 name='txtBrowse'><br><hr>" +
+		"...or select a pre-defined feed: <select name='selFeeds'><option value=''>Choose...</option></select>",
 	openLabel: "open",
 	openPrompt: "Open the connection to this file or server",
 	statusOpenHost: "Opening the host",
 	statusGetWorkspaceList: "Getting the list of available workspaces",
 	step2Title: "Step 2: Choose the workspace",
-	step2Html: "Enter a workspace name: <input type='text' size=50 name='txtWorkspace'><br>...or select a workspace: <select name='selWorkspace'><option value=''>Choose...</option></select>",
+	step2Html: "Enter a workspace name: <input type='text' size=50 name='txtWorkspace'><br>" +
+		"...or select a workspace: <select name='selWorkspace'><option value=''>Choose...</option></select>",
 	cancelLabel: "cancel",
 	cancelPrompt: "Cancel this import",
 	statusOpenWorkspace: "Opening the workspace",
@@ -341,7 +346,10 @@ merge(config.macros.importTiddlers, {
 	errorGettingTiddlerListFile: "Error retrieving tiddlers from local file, " +
 		"please make sure the file is in the same directory as your TiddlyWiki. Click Cancel to try again.",
 	step3Title: "Step 3: Choose the tiddlers to import",
-	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Keep these tiddlers linked to this server so that you can synchronise subsequent changes</input><br><input type='checkbox' name='chkSave'>Save the details of this server in a 'systemServer' tiddler called:</input> <input type='text' size=25 name='txtSaveTiddler'>",
+	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>" +
+		"Keep these tiddlers linked to this server so that you can synchronise subsequent changes</input><br>" +
+		"<input type='checkbox' name='chkSave'>Save the details of this server in a 'systemServer' tiddler called:</input>" +
+		" <input type='text' size=25 name='txtSaveTiddler'>",
 	importLabel: "import",
 	importPrompt: "Import these tiddlers",
 	confirmOverwriteText: "Are you sure you want to overwrite these tiddlers:\n\n%0",
@@ -353,8 +361,10 @@ merge(config.macros.importTiddlers, {
 	statusDoneImport: "All tiddlers imported",
 	systemServerNamePattern: "%2 on %1",
 	systemServerNamePatternNoWorkspace: "%1",
-	confirmOverwriteSaveTiddler: "The tiddler '%0' already exists. Click 'OK' to overwrite it with the details of this server, or 'Cancel' to leave it unchanged",
-	serverSaveTemplate: "|''Type:''|%0|\n|''URL:''|%1|\n|''Workspace:''|%2|\n\nThis tiddler was automatically created to record the details of this server",
+	confirmOverwriteSaveTiddler: "The tiddler '%0' already exists. Click 'OK' " +
+		"to overwrite it with the details of this server, or 'Cancel' to leave it unchanged",
+	serverSaveTemplate: "|''Type:''|%0|\n|''URL:''|%1|\n|''Workspace:''|%2|\n\n" +
+		"This tiddler was automatically created to record the details of this server",
 	serverSaveModifier: "(System)",
 	listViewTemplate: {
 		columns: [
@@ -371,12 +381,18 @@ merge(config.macros.importTiddlers, {
 merge(config.macros.upgrade, {
 	wizardTitle: "Upgrade TiddlyWiki core code",
 	step1Title: "Update or repair this TiddlyWiki to the latest release",
-	step1Html: "You are about to upgrade to the latest release of the TiddlyWiki core code (from <a href='%0' class='externalLink' target='_blank'>%1</a>). Your content will be preserved across the upgrade.<br><br>Note that core upgrades have been known to interfere with older plugins. If you run into problems with the upgraded file, see <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+	step1Html: "You are about to upgrade to the latest release of the TiddlyWiki core code " +
+		"(from <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
+		"Your content will be preserved across the upgrade.<br><br>" +
+		"Note that core upgrades have been known to interfere with older plugins. " +
+		"If you run into problems with the upgraded file, " +
+		"see <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
 	errorCantUpgrade: "Unable to upgrade this TiddlyWiki. You can only perform upgrades on TiddlyWiki files stored locally",
 	errorNotSaved: "You must save changes before you can perform an upgrade",
 	step2Title: "Confirm the upgrade details",
 	step2Html_downgrade: "You are about to downgrade to TiddlyWiki version %0 from %1.<br><br>Downgrading to an earlier version of the core code is not recommended",
-	step2Html_restore: "This TiddlyWiki appears to be already using the latest version of the core code (%0).<br><br>You can continue to upgrade anyway to ensure that the core code hasn't been corrupted or damaged",
+	step2Html_restore: "This TiddlyWiki appears to be already using the latest version of the core code (%0).<br><br>" +
+		"You can continue to upgrade anyway to ensure that the core code hasn't been corrupted or damaged",
 	step2Html_upgrade: "You are about to upgrade to TiddlyWiki version %0 from %1",
 	upgradeLabel: "upgrade",
 	upgradePrompt: "Prepare for the upgrade process",
@@ -488,7 +504,9 @@ merge(config.commands.jump, {
 merge(config.commands.syncing, {
 	text: "syncing",
 	tooltip: "Control synchronisation of this tiddler with a server or external file",
-	currentlySyncing: "<div>Currently syncing via <span class='popupHighlight'>'%0'</span> to:</" + "div><div>host: <span class='popupHighlight'>%1</span></" + "div><div>workspace: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Currently syncing via <span class='popupHighlight'>'%0'</span> to:</div>" +
+		"<div>host: <span class='popupHighlight'>%1</span></div>" +
+		"<div>workspace: <span class='popupHighlight'>%2</span></div>",
 	notCurrentlySyncing: "Not currently syncing",
 	captionUnSync: "Stop synchronising this tiddler",
 	chooseServer: "Synchronise this tiddler with another server:",
@@ -520,7 +538,8 @@ merge(config.shadowTiddlers, {
 	SiteSubtitle: "a reusable non-linear personal web notebook",
 	SiteUrl: "",
 	OptionsPanel: "These Interface Options for customising TiddlyWiki are saved in your browser\n\nYour username for signing your edits. Write it as a WikiWord (eg JoeBloggs)\n<<option txtUserName>>\n\n<<option chkSaveBackups>> Save backups\n<<option chkAutoSave>> Auto save\n<<option chkRegExpSearch>> Regexp search\n<<option chkCaseSensitiveSearch>> Case sensitive search\n<<option chkAnimate>> Enable animations\n\n----\nAlso see [[TranslatedAdvancedOptions|AdvancedOptions]]",
-	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY" "journal">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "options \u00bb" "Change TiddlyWiki advanced options">>',
+	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY" "journal">>' +
+		'<<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "options \u00bb" "Change TiddlyWiki advanced options">>',
 	SideBarTabs: '<<tabs txtMainTab "Timeline" "Timeline" TabTimeline "All" "All tiddlers" TabAll "Tags" "All tags" TabTags "More" "More lists" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "Missing" "Missing tiddlers" TabMoreMissing "Orphans" "Orphaned tiddlers" TabMoreOrphans "Shadowed" "Shadowed tiddlers" TabMoreShadowed>>'
 });
@@ -545,9 +564,11 @@ merge(config.annotations, {
 	SiteSubtitle: "This shadow tiddler is used as the second part of the page title",
 	SiteTitle: "This shadow tiddler is used as the first part of the page title",
 	SiteUrl: "This shadow tiddler should be set to the full target URL for publication",
-	StyleSheetColors: "This shadow tiddler contains CSS definitions related to the color of page elements. ''DO NOT EDIT THIS TIDDLER'', instead make your changes in the StyleSheet shadow tiddler",
+	StyleSheetColors: "This shadow tiddler contains CSS definitions related to the color of page elements. " +
+		"''DO NOT EDIT THIS TIDDLER'', instead make your changes in the StyleSheet shadow tiddler",
 	StyleSheet: "This tiddler can contain custom CSS definitions",
-	StyleSheetLayout: "This shadow tiddler contains CSS definitions related to the layout of page elements. ''DO NOT EDIT THIS TIDDLER'', instead make your changes in the StyleSheet shadow tiddler",
+	StyleSheetLayout: "This shadow tiddler contains CSS definitions related to the layout of page elements. " +
+		"''DO NOT EDIT THIS TIDDLER'', instead make your changes in the StyleSheet shadow tiddler",
 	StyleSheetLocale: "This shadow tiddler contains CSS definitions related to the translation locale",
 	StyleSheetPrint: "This shadow tiddler contains CSS definitions for printing",
 	SystemSettings: "Options may be stored here using the slice notation (like {{{chkAutoSave: true}}} or {{{|txtUserName|The great inventor|}}})",
