@@ -1,13 +1,14 @@
 /***
-|Name        |JapaneseTranslationPlugin|
-|Description |Translation of TiddlyWiki into Japanese|
-|Author      |OGOSHI Masayuki &lt;ogoshima@gmail.com&gt;|
-|Source      |http://ogoshi.tiddlyspot.com/#JapaneseTranslationPlugin|
-|Version     |0.4.2|
-|~CoreVersion|2.6.0|
-|Date        |Apr 29, 2010|
-|License     |[[Creative Commons Attribution-ShareAlike 2.1 Japan |http://creativecommons.org/licenses/by-sa/2.1/jp/]]|
-|            |ライセンスは英語版のCCライセンスに準じる日本語版の CC-by-SA 2.1 ライセンスとします。|
+|Name           |JapaneseTranslationPlugin|
+|Description    |Translation of TiddlyWiki into Japanese|
+|Author         |OGOSHI Masayuki &lt;ogoshima@gmail.com&gt;|
+|Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ja/locale.ja.js|
+|Original Source|http://ogoshi.tiddlyspot.com/#JapaneseTranslationPlugin|
+|Version        |0.4.2|
+|~CoreVersion   |2.6.0|
+|Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
+|License        |[[Creative Commons Attribution-ShareAlike 2.1 Japan |http://creativecommons.org/licenses/by-sa/2.1/jp/]]|
+|               |ライセンスは英語版のCCライセンスに準じる日本語版の CC-by-SA 2.1 ライセンスとします。|
 TiddlyWiki を日本語化するプラグイン。TiddlyWiki Version 2.6 上で動作を確認しました。
 ***/
 //{{{
