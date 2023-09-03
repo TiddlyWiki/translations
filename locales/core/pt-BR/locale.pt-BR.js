@@ -5,16 +5,11 @@
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/pt-BR/locale.pt-BR.js|
 |Version       |0.4.3|
 |~CoreVersion  |2.6.0|
-|Date          |Jan 13, 2012|
 |Feedback      |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |Credits       |Based on version 2.6 pt-PT by Paulo Soares|
 |License       |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "pt-BR"; // W3C language tag

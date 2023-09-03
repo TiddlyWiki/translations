@@ -6,14 +6,9 @@
 |Empty greek tiddlywiki|http://spyros.kroustalakis.googlepages.com/empty_gr.html |
 |Version               |1.0.0|
 |~CoreVersion          |2.2|
-|Date                  |May 6, 2007|
 |Feedback              |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "el"; // W3C language tag

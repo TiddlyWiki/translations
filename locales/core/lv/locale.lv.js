@@ -6,15 +6,10 @@
 |Original Source|http://www.webdizains.com/tw/|
 |Version        |0.3.6|
 |~CoreVersion   |2.2|
-|Date           |Jul 6, 2007|
 |Feedback       |Lūdzu, komentējiet iekš https://github.com/TiddlyWiki/translations/issues vai https://groups.google.com/g/tiddlywikiclassic|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "lv"; // W3C language tag

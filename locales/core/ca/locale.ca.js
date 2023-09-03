@@ -6,15 +6,10 @@
 |Original Source|projectes.lafarga.cat/projects/tiddlywiki/downloads ([[archived|http://web.archive.org/web/20110907055534/https://projectes.lafarga.cat/projects/tiddlywiki/downloads]])|
 |Version        |0.4.0|
 |~CoreVersion   |2.5.2|
-|Date           |Apr 11, 2010|
 |Feedback       |Agrairem els vostres comentaris a https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |License        |[[BSD open source license]]|
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "ca"; // W3C language tag

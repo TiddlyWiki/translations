@@ -5,15 +5,10 @@
 |Source       |https://github.com/TiddlyWiki/translations/blob/master/locales/core/cs/locale.cs.js|
 |Version      |0.3.7|
 |~CoreVersion |2.4.0|
-|Date         |Jul 6, 2007|
 |Feedback     |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "cs"; // W3C language tag

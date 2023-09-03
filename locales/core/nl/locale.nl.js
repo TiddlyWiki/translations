@@ -5,7 +5,6 @@
 |''Source''          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/nl/locale.nl.js|
 |''Version''         |0.4.1|
 |''~CoreVersion''    |2.6.0|
-|''Date''            |April 13, 2010|
 |''Version history:''|This version is applicable to all ~TiddlyWikis as of version 2.4.0 until further notice.|
 | June 20, 2007 v0.2.0     |First draft translation in Dutch based on Core-version 2.2 of "locale.en.js" (v0.3.3/v0.3.5).|
 | June 24, 2007 v0.2.1     |Workaround implemented for the translation problem as described in Ticket #217. Translations for shadow-tiddlers "~GettingStarted" (~HierBeginnen)  and "~OptionsPanel" added for this translation.|
@@ -22,11 +21,7 @@
 |''License''         |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]]|
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
-//-- Strings in "double quotes" should be translated (except for "DD MMM YYYY"); strings in 'single quotes' should be left alone
+// Strings in "double quotes" should be translated (except for "DD MMM YYYY"); strings in 'single quotes' should be left alone
 
 config.locale = "nl"; // W3C language tag
 

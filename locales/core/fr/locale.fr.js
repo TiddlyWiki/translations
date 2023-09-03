@@ -1,8 +1,7 @@
 /***
-|Name                        |locale.fr|
+|Name                        |FrenchTranslationPlugin|
 |Description                 |Translation of TiddlyWiki into French|
 |Version                     |0.0.7|
-|Date                        |Jun 20, 2007|
 |Source                      |https://github.com/TiddlyWiki/translations/blob/master/locales/core/fr/locale.fr.js|
 |Original Source             |TiddlyWikiFR.bidix.info ([[archived|https://web.archive.org/web/20080209235731/http://tiddlywikifr.bidix.info/]])|
 |Fichier de base "empty.html"|?? (c'était http://TiddlyWikiFR.bidix.info/empty.fr-FR.html)|
@@ -11,8 +10,7 @@
 |Comments                    |Merci de faire vos commentaires à http://groups.google.fr/group/TiddlyWikiFR |
 |License                     |[[BSD open source license|http://tiddlywiki.bidix.info/#%5B%5BBSD%20open%20source%20license%5D%5D ]]|
 |~CoreVersion                |2.2.0|
-***/
-/***
+
 Je suis reparti du fichier officiel locale.en.js en intégrant la traduction de Jacques Turbé http://avm.free.fr//TiddlyWiki-fr.html et en reprenant les mêmes choix de traduction.
 
 Après discussion avec Jacques Turbé nous avons retenu :
@@ -34,11 +32,6 @@ Avec la version 2.1.0 de TiddlyWiki apparaissent deux nouvelles fonctions intég
 ***/
 
 //{{{
-
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "fr"; // W3C language tag

@@ -5,7 +5,6 @@
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ko/locale.ko.js|
 |Original Source|http://snooey.net/tiddlywiki/locale.ko.js, http://snooey.net/tiddlywiki/#KoreanTranslationPlugin|
 |Version        |0.6.0|
-|Date           |Sep 13, 2010|
 |Comments       |If you have suggestion about this translation, please make comments at http://blog.snooey.net/guestbook/ or mail to me |
 |               |another suggestion, please make comments at http://groups.google.co.uk/group/TiddlyWikiDev |
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
@@ -17,7 +16,6 @@
 |코드 저장소|https://github.com/TiddlyWiki/translations/blob/master/locales/core/ko/locale.ko.js|
 |소스      |http://snooey.net/tiddlywiki/locale.ko.js, http://snooey.net/tiddlywiki/#KoreanTranslationPlugin|
 |버전      |0.6.0|
-|날짜      |2010년 9월 13일|
 |덧글      |이 번역에 대한 제안이 있으신 경우, http://blog.snooey.net/guestbook/ 또는 제게 메일을 보내주십시요. |
 |          |다른 제안은 http://groups.google.co.uk/group/TiddlyWikiDev으로 보내주십시요. |
 |라이센스  |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
