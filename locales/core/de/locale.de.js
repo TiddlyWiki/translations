@@ -1,11 +1,11 @@
 /***
 |Name           |GermanTranslationPlugin|
 |Description    |German Translation for TiddlyWiki|
+|Beschreibung   |Deutsche Übersetzung von TiddlyWiki|
 |Author         |BesimKaradeniz (besim (at) karadeniz (dot) de)|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/de/locale.de.js|
 |Original Source|~TiddlyWikiDeutsch ([[archived|https://web.archive.org/web/20210413032403/https://karadeniz.de/tiddlywiki/]])|
-|Version        |2.6.2|
-|~CoreVersion   |2.6.2|
+|Version        |2.6.4|
 |Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -18,7 +18,7 @@ if (config.options.txtUserName == "YourName")
 	merge(config.options, { txtUserName: "IhrName" });
 
 merge(config.tasks, {
-	save: { text: "speichern", tooltip: "Änderungen in dieses TiddlyWiki speichern", action: saveChanges },
+	save: { text: "speichern", tooltip: "Änderungen in dieses TiddlyWiki speichern" },
 	sync: { text: "synchronisieren", tooltip: "Änderungen mit anderen TiddlyWiki-Dateien und Servern synchronisieren", content: '<<sync>>' },
 	importTask: { text: "importieren", tooltip: "Tiddler und Plugins aus anderen TiddlyWiki-Dateien und Servern importieren", content: '<<importTiddlers>>' },
 	tweak: { text: "optimieren", tooltip: "Erscheinungsbild und Reaktion des TiddlyWiki optimieren", content: '<<options>>' },
@@ -173,6 +173,7 @@ merge(config.messages, {
 merge(config.macros.search, {
 	label: "suchen",
 	prompt: "Dieses TiddlyWiki durchsuchen",
+	placeholder: "",
 	accessKey: "F",
 	successMsg: "%0 Tiddler gefunden, die %1 enthalten",
 	failureMsg: "Keine Tiddler gefunden, die %0 enthalten"
