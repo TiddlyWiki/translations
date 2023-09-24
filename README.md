@@ -90,7 +90,7 @@ Please start by announcing this in the community (see the link above) or in an i
 4. Set `config.locale` for your language (like `pl` for Polish) so that browsers will recognize it
    (and, for instance, make correct autotranslations when somebody needs them).
    - That should be an [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) (BCP47); you can look it up, for instance,
-     [here](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) (using search).
+     [here](https://www.iana.org/assignments/language-subtag-registry) or [here](http://www.loc.gov/standards/iso639-2/php/code_list.php) (using search).
    - Note: After the plugin applies the locale, another save and reload is needed to get it into effect.
 5. Update the metadata on the top of the translation:
    - translate `<Description>`,
@@ -110,13 +110,9 @@ Please start by announcing this in the community (see the link above) or in an i
 8. Optionally, announce your work to those potentially interested, including those to whom you'd like to promote TW
    and the community (see the link above).
 
-Useful links
-------------
+If you want to learn more about language tags
+---------------------------------------------
 
 [W3C Internationalization Best Practices](http://www.w3.org/TR/i18n-html-tech-lang/)
 
 http://www.w3.org/International/articles/language-tags/Overview.en.php
-
-http://www.loc.gov/standards/iso639-2/php/code_list.php
-
-http://www.iana.org/assignments/language-subtag-registry
