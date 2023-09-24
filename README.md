@@ -1,7 +1,26 @@
 Translating TiddlyWiki
 ======================
 
-Are you you thinking of writing a translation for TiddlyWiki? That is fantastic: it will make a real difference to the community. This page is here to get you going.
+This repository contains translations for TiddlyWiki 2.x.
+
+Available translations
+----------------------
+
+To see if the language you want is available, either look through [locales/core](./locales/core)
+or use [ExtensionsExplorerPlugin](https://github.com/YakovL/TiddlyWiki_ExtensionsExplorerPlugin)
+and the Translations collection in the Central collection.
+
+To install a translation, either use ExtensionsExplorerPlugin or create a plugin tiddler
+(tagged `systemConfg`) and put the content of `locale.xx.js` file to the plugin text, save, and reload
+(note: the full installation will be complete after another save and reload).
+For instance, German translation can be found in [locales/core/de/locale.de.js](./locales/core/de/locale.de.js).
+
+Contributing
+------------
+
+Are you you thinking of writing a translation for TiddlyWiki?
+That is fantastic: it will make a real difference to the community.
+This page is here to get you going.
 
 If you have any questions you would like addressed, please please ask at https://groups.google.com/group/TiddlyWikiClassic.
 
