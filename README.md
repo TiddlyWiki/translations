@@ -62,7 +62,7 @@ How to update a translation
       - if something is missing (like changes for early TW versions), please ask for assistance (see the link above);
    - compare the translation with the [English template](./locales/core/en/locale.en.js) or with [other translations](./locales/core/):
      find missing strings, update structure, reuse best practices.
-5. Once you're happy with the result, [create a pull request or an issue](https://classic.tiddlywiki.com/dev/docs_from_TiddlyWikiDev.tiddlyspace.com.html#Using%20git%20and%20GitHub) suggesting your changes in this repository.
+5. Once you're happy with the result, [create a pull request or an issue](https://classic.tiddlywiki.com/dev/docs_from_TiddlyWikiDev.tiddlyspace.com.html#%5B%5BUsing%20git%20and%20GitHub%5D%5D) suggesting your changes in this repository.
    - It's usually better to start small (especially for PRs): say, propose an update from 2.6.2 to 2.6.3 instead of 2.9.4.
      Once your first PR is accepted (which will be faster for a small change), you can go on confidently.
 
@@ -99,7 +99,7 @@ Please start by announcing this in the community (see the link above) or in an i
    - any other info that you see as important to add.
    - Optionally, you can also translate some comments that may help further contributors to update the translation
      (like those indicating which strings should be translated and which should not).
-6. [Сreate a pull request or an issue](https://classic.tiddlywiki.com/dev/docs_from_TiddlyWikiDev.tiddlyspace.com.html#Using%20git%20and%20GitHub)
+6. [Сreate a pull request or an issue](https://classic.tiddlywiki.com/dev/docs_from_TiddlyWikiDev.tiddlyspace.com.html#%5B%5BUsing%20git%20and%20GitHub%5D%5D)
    with your translation as early as possible: usually, it's a good idea to do so after the steps above,
    so that you get assistance and feedback early and hence don't reiterate things much.
    - If you create a PR, the translation filename should be that specified in `Source`.
