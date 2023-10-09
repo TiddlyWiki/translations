@@ -4,6 +4,7 @@
 |PluginVersion|0.6.4|
 |Version      |1.0.0|
 |Requires     |ExtensionsExplorerPlugin|
+|Source       |https://github.com/TiddlyWiki/translations/blob/master/locales/extensions/ExtensionsManagerPlugin/locale.de.js|
 ***/
 //{{{
 merge(config.macros.extensionsExplorer.lingo, {
