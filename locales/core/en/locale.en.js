@@ -1,11 +1,11 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.9.4 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.10.0 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
 |Original Source|<if the translation is brought from outside https://github.com/TiddlyWiki/translations, you can mention it here>|
-|Version        |0.5.2|
+|Version        |0.5.3|
 |Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |Credits        |Template updates: Yakov Litvin|
@@ -379,12 +379,13 @@ merge(config.macros.importTiddlers, {
 merge(config.macros.upgrade, {
 	wizardTitle: "Upgrade TiddlyWiki core code",
 	step1Title: "Update or repair this TiddlyWiki to the latest release",
-	step1Html: "You are about to upgrade to the latest release of the TiddlyWiki core code " +
+	step1Html: "You are about to upgrade TiddlyWiki core to the latest release " +
 		"(from <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
 		"Your content will be preserved across the upgrade.<br><br>" +
 		"Note that core upgrades have been known to interfere with older plugins. " +
-		"If you run into problems with the upgraded file, " +
-		"see <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+		"If you run into problems with upgrading, read how to handle them " +
+		"<a href='" + (config.macros.upgrade.docsUrl ? '%2' : 'https://classic.tiddlywiki.com/#HowToUpgrade') +
+		"' class='externalLink' target='_blank'>here</a>.",
 	errorCantUpgrade: "Unable to upgrade this TiddlyWiki. You can only perform upgrades on TiddlyWiki files stored locally",
 	errorNotSaved: "You must save changes before you can perform an upgrade",
 	step2Title: "Confirm the upgrade details",
@@ -397,6 +398,11 @@ merge(config.macros.upgrade, {
 	statusPreparingBackup: "Preparing backup",
 	statusSavingBackup: "Saving backup file",
 	errorSavingBackup: "There was a problem saving the backup file",
+	errorVerifyingBackup: "Failed to verify the backup was saved. " +
+		"This is either because it wasn't saved to the moment of the check or " +
+		"loading file doesn't work with your saver (and it is needed for " +
+		"the next step of upgrading). To upgrade your TiddlyWiki, you can use " +
+		"other methods listed at <a href='%0' class='externalLink' target='_blank'>%0</a>",
 	statusLoadingCore: "Loading core code",
 	errorLoadingCore: "Error loading the core code",
 	errorCoreFormat: "Error with the new core code",
@@ -530,6 +536,12 @@ merge(config.commands.fields, {
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[TranslatedGettingStarted]]",
+	GettingStarted: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n" +
+		"* [[SiteTitle]] & [[SiteSubtitle]]: The title and subtitle of the site, as shown above " +
+			"(after saving, they will also appear in the browser title bar)\n" +
+		"* [[MainMenu]]: The menu (usually on the left)\n" +
+		"* [[DefaultTiddlers]]: Contains the names of the tiddlers that you want to appear when the ~TiddlyWiki is opened\n" +
+		"You'll also need to enter your username for signing your edits: <<option txtUserName>>",
 	MainMenu: "[[TranslatedGettingStarted]]\n\n\n^^~TiddlyWiki version <<version>>\n� 2010 [[UnaMesa|http://www.unamesa.org/]]^^",
 	TranslatedGettingStarted: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n* SiteTitle & SiteSubtitle: The title and subtitle of the site, as shown above (after saving, they will also appear in the browser title bar)\n* MainMenu: The menu (usually on the left)\n* DefaultTiddlers: Contains the names of the tiddlers that you want to appear when the TiddlyWiki is opened\nYou'll also need to enter your username for signing your edits: <<option txtUserName>>",
 	SiteTitle: "My TiddlyWiki",
