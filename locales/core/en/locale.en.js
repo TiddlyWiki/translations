@@ -534,16 +534,17 @@ merge(config.commands.fields, {
 	}
 });
 
+var gettingStartedTitle = "GettingStarted";
+
 merge(config.shadowTiddlers, {
-	DefaultTiddlers: "[[TranslatedGettingStarted]]",
-	GettingStarted: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n" +
+	DefaultTiddlers: '[[' + gettingStartedTitle + ']]',
+	[gettingStartedTitle]: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n" +
 		"* [[SiteTitle]] & [[SiteSubtitle]]: The title and subtitle of the site, as shown above " +
 			"(after saving, they will also appear in the browser title bar)\n" +
 		"* [[MainMenu]]: The menu (usually on the left)\n" +
 		"* [[DefaultTiddlers]]: Contains the names of the tiddlers that you want to appear when the ~TiddlyWiki is opened\n" +
 		"You'll also need to enter your username for signing your edits: <<option txtUserName>>",
-	MainMenu: "[[TranslatedGettingStarted]]\n\n\n^^~TiddlyWiki version <<version>>\n� 2010 [[UnaMesa|http://www.unamesa.org/]]^^",
-	TranslatedGettingStarted: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n* SiteTitle & SiteSubtitle: The title and subtitle of the site, as shown above (after saving, they will also appear in the browser title bar)\n* MainMenu: The menu (usually on the left)\n* DefaultTiddlers: Contains the names of the tiddlers that you want to appear when the TiddlyWiki is opened\nYou'll also need to enter your username for signing your edits: <<option txtUserName>>",
+	MainMenu: "[[" + gettingStartedTitle + "]]\n\n~TiddlyWiki version <<version>>",
 	SiteTitle: "My TiddlyWiki",
 	SiteSubtitle: "a reusable non-linear personal web notebook",
 	SiteUrl: "",
