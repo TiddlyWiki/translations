@@ -1,6 +1,6 @@
 /***
 |Name           |zh-HansTranslationPlugin|
-|Description    |Translation of TiddlyWiki into Simply Chinese|
+|Description    |Translation of TiddlyWiki into Simplified Chinese|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/zh-Hans/locale.zh-Hans.js|
 |Original Source|http://tiddlywiki-zh.googlecode.com/svn/trunk/|
 |Author         |BramChen (bram.chen (at) gmail (dot) com)|
