@@ -4,6 +4,10 @@ Changes in Lingo.js are shown below for each version.
 Note that some commits have changes in other files;
 some only have changes of codestyle which may guide you, but they don't affect functionality.
 
+v2.10.1
+* [2b21dbd](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/2b21dbdc2893d6684a02a0b9340717cf71d9b336) update the upgrade wizard (`config.tasks.upgrade`, `config.macros.upgrade.wizardTitle`, `.step1Title`)
+* [e0d20ec](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/e0d20ec3fcbecbc5d006304de5cbb58ab4f60259) update the GettingStarted shadow
+
 v2.10.0 ([update example](https://github.com/TiddlyWiki/translations/commit/7371ff4), [make title "GettingStarted" easily translatable](https://github.com/TiddlyWiki/translations/commit/832dee8))
 * [20ec30c](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/20ec30c57095d689ed2c9b9c892def79a846dcb3) remove an extra link in GettingStarted
 * [49da59f](https://github.com/TiddlyWiki/TiddlyWikiClassic/commit/49da59ffa69cea59b6c911b60fa47bdd23a5e480) add `errorVerifyingBackup` to `config.macros.upgrade`
