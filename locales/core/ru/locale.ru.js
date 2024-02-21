@@ -1,9 +1,9 @@
 /***
 |Name            |RussianTranslationPlugin|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.9.4 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.9.4 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
-|Version         |0.10.3|
-|Author          |vmunt|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.10.0 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.10.0 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Version         |0.11.0|
+|Author          |vmunt, Yakov Litvin|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
 |Feedback        |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
@@ -369,12 +369,13 @@ merge(config.macros.importTiddlers, {
 merge(config.macros.upgrade, {
 	wizardTitle: "Обновление кода ядра TiddlyWiki",
 	step1Title: "Обновление или восстановление этой TiddlyWiki до последней версии",
-	step1Html: "Вы готовы обновить код ядра TiddlyWiki до последней версии " +
+	step1Html: "Вы собираетесь обновить ядро TiddlyWiki до последней версии " +
 		"(с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
-		"Информационное наполнение этого файла будет сохранено.<br><br>" +
+		"Ваши тексты и данные будут сохранены.<br><br>" +
 		"Заметьте, что обновление кода ядра может вызвать конфликт с уже подключенными старыми плагинами. " +
-		"Если у Вас появились проблемы с обновлённым файлом, почитайте здесь: " +
-		"<a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+		"Если у Вас проблемы с обновлением, посмотрите возможные решения " +
+		"<a href='" + (config.macros.upgrade.docsUrl ? '%2' : 'https://classic.tiddlywiki.com/#HowToUpgrade') +
+		"' class='externalLink' target='_blank'>тут</a>.",
 	errorCantUpgrade: "Не могу обновить эту TiddlyWiki. Вы можете производить обновление TiddlyWiki-файлов, сохранённых только локально",
 	errorNotSaved: "Вы должны сохранить изменения, прежде чем производить обновление",
 	step2Title: "Подтвердите параметры обновления",
@@ -388,6 +389,11 @@ merge(config.macros.upgrade, {
 	statusPreparingBackup: "Делается резервная копия",
 	statusSavingBackup: "Сохраняется резервная копия",
 	errorSavingBackup: "Возникла проблема с сохранением файла резервной копии",
+	errorVerifyingBackup: "Не удалось проверить резервную копию. Либо она " +
+		"не была сохранена на момент проверки, либо загрузка файла не работает " +
+		"в вашем браузере/saver/сервере (но необходима для обновления). " +
+		"Чтобы обновить TiddlyWiki, вы можете использовать методы, перечисленные " +
+		"<a href='%0' class='externalLink' target='_blank'>тут</a>",
 	statusLoadingCore: "Загрузка кода ядра",
 	errorLoadingCore: "Ошибка при загрузке кода ядра",
 	errorCoreFormat: "Ошибка в новом коде ядра",
@@ -516,9 +522,11 @@ merge(config.commands.fields, {
 	}
 });
 
+var gettingStartedTitle = "GettingStarted";
+
 merge(config.shadowTiddlers, {
-	DefaultTiddlers: "[[GettingStarted]]",
-	MainMenu: "[[GettingStarted]]",
+	DefaultTiddlers: '[[' + gettingStartedTitle + ']]',
+	MainMenu: "[[" + gettingStartedTitle + "]]\n\n~TiddlyWiki version <<version>>",
 	SiteTitle: "Моя TiddlyWiki",
 	SiteSubtitle: "гипертекстовая записная книжка",
 	SiteUrl: "",
@@ -536,7 +544,7 @@ merge(config.annotations, {
 	ColorPalette: "Значения из этой служебной заметки определяют цветовую схему пользовательского интерфейса TiddlyWiki",
 	DefaultTiddlers: "Заметки, перечисленные здесь автоматически будут открываться при каждом запуске TiddlyWiki",
 	EditTemplate: "Шаблон HTML в этой служебной заметке определяет, как заметки будут выглядеть, пока они редактируются",
-	GettingStarted: "Эта служебная заметка содержит инструкции по начальному использованию",
+	[gettingStartedTitle]: "Эта служебная заметка рассказывает, как начать работу с TiddlyWiki",
 	ImportTiddlers: "Эта служебная заметка обеспечивает доступ к импортированным заметкам",
 	MainMenu: "Эта служебная заметка используется для хранения содержимого главного меню (//обычно отображается в левой колонке экрана//)",
 	MarkupPreHead: "Эта заметка вставляется в начало раздела <head> этого HTML-файла c TiddlyWiki",
