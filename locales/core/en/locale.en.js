@@ -568,7 +568,7 @@ merge(config.annotations, {
 	ColorPalette: "These values in this shadow tiddler determine the colour scheme of the ~TiddlyWiki user interface",
 	DefaultTiddlers: "The tiddlers listed in this shadow tiddler will be automatically displayed when ~TiddlyWiki starts up",
 	EditTemplate: "The HTML template in this shadow tiddler determines how tiddlers look while they are being edited",
-	GettingStarted: "This shadow tiddler provides basic usage instructions",
+	[gettingStartedTitle]: "This shadow tiddler provides basic usage instructions",
 	ImportTiddlers: "This shadow tiddler provides access to importing tiddlers",
 	MainMenu: "This shadow tiddler is used as the contents of the main menu in the left-hand column of the screen",
 	MarkupPreHead: "This tiddler is inserted at the top of the <head> section of the TiddlyWiki HTML file",
