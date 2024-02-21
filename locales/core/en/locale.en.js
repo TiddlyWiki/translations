@@ -26,7 +26,7 @@ merge(config.tasks, {
 	importTask: { text: "import", tooltip: "Import tiddlers and plugins from " +
 		"other TiddlyWiki files and servers", content: '<<importTiddlers>>' },
 	tweak: { text: "tweak", tooltip: "Tweak the appearance and behaviour of TiddlyWiki", content: '<<options>>' },
-	upgrade: { text: "upgrade", tooltip: "Upgrade TiddlyWiki core code", content: '<<upgrade>>' },
+	upgrade: { text: "upgrade", tooltip: "Upgrade TiddlyWiki core", content: '<<upgrade>>' },
 	plugins: { text: "plugins", tooltip: "Manage installed plugins", content: '<<plugins>>' }
 });
 
@@ -377,8 +377,8 @@ merge(config.macros.importTiddlers, {
 });
 
 merge(config.macros.upgrade, {
-	wizardTitle: "Upgrade TiddlyWiki core code",
-	step1Title: "Update or repair this TiddlyWiki to the latest release",
+	wizardTitle: "Upgrade TiddlyWiki",
+	step1Title: "Update or repair TiddlyWiki core to the latest release",
 	step1Html: "You are about to upgrade TiddlyWiki core to the latest release " +
 		"(from <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
 		"Your content will be preserved across the upgrade.<br><br>" +
@@ -538,12 +538,20 @@ var gettingStartedTitle = "GettingStarted";
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: '[[' + gettingStartedTitle + ']]',
-	[gettingStartedTitle]: "To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:\n" +
-		"* [[SiteTitle]] & [[SiteSubtitle]]: The title and subtitle of the site, as shown above " +
-			"(after saving, they will also appear in the browser title bar)\n" +
-		"* [[MainMenu]]: The menu (usually on the left)\n" +
-		"* [[DefaultTiddlers]]: Contains the names of the tiddlers that you want to appear when the ~TiddlyWiki is opened\n" +
-		"You'll also need to enter your username for signing your edits: <<option txtUserName>>",
+	[gettingStartedTitle]: "When getting started, you may want to:\n" +
+		"* Set your username for signing your edits: <<option txtUserName>>\n" +
+		"* Change the page [[title|SiteTitle]] (now \"<<tiddler SiteTitle>>\") and " +
+			"[[subtitle|SiteSubtitle]] (now \"<<tiddler SiteSubtitle>>\"); they also set the browser tab title\n" +
+		"* Create a tiddler where your content \"starts\"\n" +
+		"** Use the button on the sidebar or [[link|My first tiddler]] it here, " +
+			"follow the link, edit, and click \"done\"\n" +
+		"** It will be shown in the Timeline (usually on the right), " +
+			"but you may want to link it in the MainMenu (usually on the left)\n" +
+		"** and/or make it open when the ~TiddlyWiki is opened by editing the list of " +
+			"[[DefaultTiddlers]] (separate links with spaces or linebreaks)\n" +
+		"* Save your ~TiddlyWiki\n" +
+		"** Although \"download saving\" works in any browser, it's not that convenient, " +
+			"so you'll probably want to use [[a dedicated saver|https://classic.tiddlywiki.com/#%5B%5BSetting up saving%5D%5D]]",
 	MainMenu: "[[" + gettingStartedTitle + "]]\n\n~TiddlyWiki version <<version>>",
 	SiteTitle: "My TiddlyWiki",
 	SiteSubtitle: "a reusable non-linear personal web notebook",
