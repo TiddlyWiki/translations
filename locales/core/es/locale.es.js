@@ -7,8 +7,7 @@
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
 |Versión       |0.4.2|
-|~VersiónNúcleo|2.6.0|
-|Fecha         |October 2, 2010|
+|~VersiónNúcleo|2.6.1|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
