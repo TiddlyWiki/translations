@@ -1,8 +1,8 @@
 /***
 |Name            |RussianTranslationPlugin|
-|Description     |Russian translation of TiddlyWiki. Supports core up to 2.10.0 (for later versions, some bits may be missing or inaccurate)|
-|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.10.0 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
-|Version         |0.11.0|
+|Description     |Russian translation of TiddlyWiki. Supports core up to 2.10.1 (for later versions, some bits may be missing or inaccurate)|
+|Описание        |Русификация TiddlyWiki. Поддерживает ядро до 2.10.1 включительно (в более поздних версиях переводы некоторых строк могут отсутствовать или устареть)|
+|Version         |0.11.1|
 |Author          |vmunt, Yakov Litvin|
 |Source          |https://github.com/TiddlyWiki/translations/blob/master/locales/core/ru/locale.ru.js|
 |Original Source |vmunt.dyndns.org ([[archived|https://web.archive.org/web/20130130043044/http://vmunt.dyndns.org/]])|
@@ -23,7 +23,7 @@ merge(config.tasks, {
 	importTask: { text: "импорт", tooltip: "Импортировать заметки и плагины " +
 		"из другого файла или с сервера TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "настройка", tooltip: "Настроить TiddlyWiki", content: '<<options>>' },
-	upgrade: { text: "обновление", tooltip: "Обновить код ядра TiddlyWiki", content: '<<upgrade>>' },
+	upgrade: { text: "обновление", tooltip: "Обновить ядро TiddlyWiki", content: '<<upgrade>>' },
 	plugins: { text: "плагины", tooltip: "Управление плагинами", content: '<<plugins>>' }
 });
 
@@ -367,8 +367,8 @@ merge(config.macros.importTiddlers, {
 });
 
 merge(config.macros.upgrade, {
-	wizardTitle: "Обновление кода ядра TiddlyWiki",
-	step1Title: "Обновление или восстановление этой TiddlyWiki до последней версии",
+	wizardTitle: "Обновление TiddlyWiki",
+	step1Title: "Обновление или восстановление ядра этой TiddlyWiki до последней версии",
 	step1Html: "Вы собираетесь обновить ядро TiddlyWiki до последней версии " +
 		"(с адреса <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
 		"Ваши тексты и данные будут сохранены.<br><br>" +
@@ -522,10 +522,28 @@ merge(config.commands.fields, {
 	}
 });
 
-var gettingStartedTitle = "GettingStarted";
+var gettingStartedTitle = "Начало работы";
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: '[[' + gettingStartedTitle + ']]',
+	[gettingStartedTitle]: "Для начала работы вам может понадобиться:\n" +
+		"* Задать свое имя (им подписываются записи): <<option txtUserName>>\n" +
+		"* Изменить [[заголовок|SiteTitle]] (сейчас \"<<tiddler SiteTitle>>\") и " +
+			"[[подзаголовок|SiteSubtitle]] (сейчас \"<<tiddler SiteSubtitle>>\"); " +
+			"они также определяют заголовок вкладки браузера\n" +
+		"* Создать \"стартовую\" заметку\n" +
+		"** Используйте кнопку на боковой панели (\"" + config.macros.newTiddler.label +
+			"\") или добавьте [[ссылку|Моя первая заметка]] тут, перейдите по ней, " +
+			"отредактируйте; и нажмите \""+ config.commands.saveTiddler.text +"\"\n" +
+		"** Она отобразится в истории (она обычно справа), но вы также можете добавить " +
+			"ссылку в MainMenu (оно обычно слева)\n" +
+		"** и/или настроить, чтобы она открывалась при входе в ~TiddlyWiki – " +
+			"отредактировав список в [[DefaultTiddlers]] " +
+			"(разделяйте ссылки пробелами или переносами строки)\n" +
+		"* Сохранить вашу ~TiddlyWiki\n" +
+		"** Хотя \"сохранение скачиванием\" работает в любом браузере, оно не так удобно, "+
+			"поэтому вам, вероятно, захочется использовать одно из [[средств для быстрого " +
+			"сохранения|https://classic.tiddlywiki.com/#%5B%5BSetting up saving%5D%5D]]",
 	MainMenu: "[[" + gettingStartedTitle + "]]\n\n~TiddlyWiki version <<version>>",
 	SiteTitle: "Моя TiddlyWiki",
 	SiteSubtitle: "гипертекстовая записная книжка",
@@ -541,11 +559,11 @@ merge(config.shadowTiddlers, {
 
 merge(config.annotations, {
 	AdvancedOptions: "Эта служебная заметка обеспечивает доступ к некоторым дополнительным настройкам",
-	ColorPalette: "Значения из этой служебной заметки определяют цветовую схему пользовательского интерфейса TiddlyWiki",
-	DefaultTiddlers: "Заметки, перечисленные здесь автоматически будут открываться при каждом запуске TiddlyWiki",
+	ColorPalette: "Значения из этой служебной заметки определяют цветовую схему пользовательского интерфейса ~TiddlyWiki",
+	DefaultTiddlers: "Заметки, перечисленные здесь автоматически будут открываться при каждом запуске ~TiddlyWiki",
 	EditTemplate: "Шаблон HTML в этой служебной заметке определяет, как заметки будут выглядеть, пока они редактируются",
-	[gettingStartedTitle]: "Эта служебная заметка рассказывает, как начать работу с TiddlyWiki",
-	ImportTiddlers: "Эта служебная заметка обеспечивает доступ к импортированным заметкам",
+	[gettingStartedTitle]: "Эта служебная заметка рассказывает, как начать работу с ~TiddlyWiki",
+	ImportTiddlers: "Эта служебная заметка обеспечивает доступ к импорту заметок",
 	MainMenu: "Эта служебная заметка используется для хранения содержимого главного меню (//обычно отображается в левой колонке экрана//)",
 	MarkupPreHead: "Эта заметка вставляется в начало раздела <head> этого HTML-файла c TiddlyWiki",
 	MarkupPostHead: "Эта заметка вставляется в конец раздела <head> этого HTML-файла c TiddlyWiki",
