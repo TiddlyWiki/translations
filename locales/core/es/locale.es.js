@@ -6,16 +6,12 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.4.3|
-|~VersiónNúcleo|2.6.2|
+|Versión       |0.4.4|
+|~VersiónNúcleo|2.6.3|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
 //{{{
-//--
-//-- Translateable strings
-//--
-
 // Strings in "double quotes" should be translated; strings in 'single quotes' should be left alone
 
 config.locale = "es"; // W3C language tag
@@ -24,6 +20,7 @@ if (config.options.txtUserName == 'YourName') // do not translate this line, but
 	merge(config.options, { txtUserName: "SuNombre" });
 
 merge(config.tasks, {
+	// Since 2.6.3, action is not used (see 8790249); left here for backwards compatibility
 	save: { text: "guardar", tooltip: "Guardar los cambios hechos en este TiddlyWiki", action: saveChanges },
 	sync: { text: "sincronizar", tooltip: "Sincronizar los cambios hechos con otros servidores y archivos TiddlyWiki", content: '<<sync>>' },
 	importTask: { text: "importar", tooltip: "Importar tiddlers y plugins de otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>' },
@@ -79,8 +76,8 @@ merge(config.messages, {
 	emptyFailed: "Error al guardar la plantilla en blanco",
 	mainSaved: "Archivo principal TiddlyWiki guardado",
 	mainFailed: "Error al guardar el archivo principal TiddlyWiki. Los cambios no se han guardado",
-	macroError: "Error en la macro <<\%0>>",
-	macroErrorDetails: "Error mientras se ejecutaba la macro <<\%0>>:\n%1",
+	macroError: "Error en la macro <<%0>>",
+	macroErrorDetails: "Error mientras se ejecutaba la macro <<%0>>:\n%1",
 	missingMacro: "No existe esa macro",
 	overwriteWarning: "Un tiddler llamado '%0' ya existe. Elija OK si quiere sobrescribirlo",
 	unsavedChangesWarning: "¡ATENCIÓN! Hay cambios sin guardar en  TiddlyWiki\n\nElija OK para guardarlos\nElija CANCELAR para descartarlos",
@@ -169,6 +166,7 @@ merge(config.messages, {
 merge(config.macros.search, {
 	label: "búsqueda",
 	prompt: "Búsqueda en este TiddlyWiki",
+	placeholder: "",
 	accessKey: "F",
 	successMsg: "%0 tiddlers encontrados que concuerden con %1",
 	failureMsg: "No hay tiddlers que concuerden con %0" });
