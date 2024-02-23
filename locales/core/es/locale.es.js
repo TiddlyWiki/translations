@@ -6,8 +6,8 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.4.4|
-|~VersiónNúcleo|2.6.3|
+|Versión       |0.4.5|
+|~VersiónNúcleo|2.6.5|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -303,6 +303,13 @@ merge(config.macros.importTiddlers, {
 	statusOpenWorkspace: "Accediendo al espacio de trabajo",
 	statusGetTiddlerList: "Obteniendo el listado de tiddlers disponibles",
 	errorGettingTiddlerList: "Error al obtener la lista de tiddlers, pulsa Cancelar para intentarlo de nuevo",
+	errorGettingTiddlerListHttp404: "Error al obtener tiddlers de la URL, " +
+		"asegúrese de que esta URL exista. Pulsa Cancelar para intentarlo de nuevo.",
+	errorGettingTiddlerListHttp: "Error al obtener tiddlers de la URL, " +
+		"asegúrese de que esta URL exista y tenga <a href='http://enable-cors.org/'>CORS</a> habilitado",
+	errorGettingTiddlerListFile: "Error al obtener tiddlers del archivo local, " +
+		"asegúrese de que esta archivo esté en el mismo directorio que su TiddlyWiki. " +
+		"Pulsa Cancelar para intentarlo de nuevo.",
 	step3Title: "Tercer paso: Elegir los tiddlers que quiere importar",
 	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Mantener estos tiddlers enlazados a este servidor para poder sincronizar los cambios posteriores</input><br><input type='checkbox' name='chkSave'>Guardar los datos de este servidor en un tiddler con etiqueta 'systemServer' cuyo nombre será:</input> <input type='text' size=25 name='txtSaveTiddler'>",
 	importLabel: "importar",
@@ -396,46 +403,55 @@ merge(config.macros.sync, {
 
 merge(config.commands.closeTiddler, {
 	text: "cerrar",
-	tooltip: "Cerrar este tiddler" });
+	tooltip: "Cerrar este tiddler"
+});
 
 merge(config.commands.closeOthers, {
 	text: "cerrar otros",
-	tooltip: "Cerrar todos los otros tiddlers" });
+	tooltip: "Cerrar todos los otros tiddlers"
+});
 
 merge(config.commands.editTiddler, {
 	text: "editar",
 	tooltip: "Editar este tiddler",
 	readOnlyText: "ver",
-	readOnlyTooltip: "Ver el código de este tiddler" });
+	readOnlyTooltip: "Ver el código de este tiddler"
+});
 
 merge(config.commands.saveTiddler, {
 	text: "hecho",
-	tooltip: "Guardar los cambios hechos en este tiddler" });
+	tooltip: "Guardar los cambios hechos en este tiddler"
+});
 
 merge(config.commands.cancelTiddler, {
 	text: "cancelar",
 	tooltip: "Cancelar los cambios hechos en este tiddler",
 	warning: "¿Está seguro que quiere salir sin guardar los cambios en '%0'?",
 	readOnlyText: "hecho",
-	readOnlyTooltip: "Vista normal de este tiddler" });
+	readOnlyTooltip: "Vista normal de este tiddler"
+});
 
 merge(config.commands.deleteTiddler, {
 	text: "borrar",
 	tooltip: "Borrar este tiddler",
-	warning: "¿Está seguro de que quiere borrar '%0'?" });
+	warning: "¿Está seguro de que quiere borrar '%0'?"
+});
 
 merge(config.commands.permalink, {
 	text: "enlacepermanente",
-	tooltip: "Enlace permanente para este tiddler" });
+	tooltip: "Enlace permanente para este tiddler"
+});
 
 merge(config.commands.references, {
 	text: "referencias",
 	tooltip: "Mostrar tiddlers que enlazan con éste",
-	popupNone: "Sin referencias" });
+	popupNone: "Sin referencias"
+});
 
 merge(config.commands.jump, {
 	text: "ir a",
-	tooltip: "Ir a otro tiddler abierto" });
+	tooltip: "Ir a otro tiddler abierto"
+});
 
 merge(config.commands.syncing, {
 	text: "sinc",
