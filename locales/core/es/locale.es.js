@@ -1,13 +1,13 @@
 /***
 |Nombre        |ComplementoTraducciónEspañol|
 |Descripción   |Traducción de TiddlyWiki al español|
-|Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com)|
+|Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com); Yakov Litvin|
 |Correcciónes  |Dave Gifford y Ton van Rooijen (giff (at) giffmex (dot) org / tonsweb (at) xs4all (dot) nl)|
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.4.2|
-|~VersiónNúcleo|2.6.1|
+|Versión       |0.4.3|
+|~VersiónNúcleo|2.6.2|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -228,7 +228,8 @@ merge(config.macros.options, {
 		],
 		rowClasses: [
 			{ className: 'lowlight', field: 'lowlight' }
-		] }
+		]
+	}
 });
 
 merge(config.macros.plugins, {
@@ -259,7 +260,20 @@ merge(config.macros.plugins, {
 		rowClasses: [
 			{ className: 'error', field: 'error' },
 			{ className: 'warning', field: 'warning' }
-		] }
+		]
+	}
+});
+merge(config.macros.plugins.listViewTemplateReadOnly, {
+	columns: [
+		{ name: 'Tiddler', field: 'tiddler', title: "Tiddler", type: 'Tiddler' },
+		{ name: 'Description', field: 'Description', title: "Descripción", type: 'String' },
+		{ name: 'Version', field: 'Version', title: "Versión", type: 'String' },
+		{ name: 'Size', field: 'size', tiddlerLink: 'size', title: "Tamaño", type: 'Size' },
+		{ name: 'Executed', field: 'executed', title: "Cargado", type: 'Boolean', trueText: "Si", falseText: "No" },
+		{ name: 'Startup Time', field: 'startupTime', title: "Al inicio", type: 'String' },
+		{ name: 'Error', field: 'error', title: "Estado", type: 'Boolean', trueText: "Error", falseText: "OK" },
+		{ name: 'Log', field: 'log', title: "Registro", type: 'StringList' }
+	]
 });
 
 merge(config.macros.toolbar, {
@@ -315,7 +329,8 @@ merge(config.macros.importTiddlers, {
 			{ name: 'Tags', field: 'tags', title: "Etiquetas", type: 'Tags' }
 		],
 		rowClasses: [
-		] }
+		]
+	}
 });
 
 merge(config.macros.upgrade, {
@@ -361,7 +376,8 @@ merge(config.macros.sync, {
 		],
 		buttons: [
 			{ caption: "Sincronizar estos tiddlers", name: 'sync' }
-		] },
+		]
+	},
 	wizardTitle: "Sincronizar con servidores externos y archivos",
 	step1Title: "Elija los tiddlers que quieres sincronizar",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
@@ -445,11 +461,13 @@ merge(config.commands.fields, {
 		rowClasses: [
 		],
 		buttons: [
-		] } });
+		]
+	}
+});
 
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[ParaEmpezar]]",
-	MainMenu: "[[ParaEmpezar]]\n\n\n^^~TiddlyWiki versión <<version>>\n© 2010 [[UnaMesa|http://www.unamesa.org/]]^^",
+	MainMenu: "[[ParaEmpezar]]\n\n\n^^~TiddlyWiki versión <<version>>",
 	ParaEmpezar: "Para empezar con este archivo TiddlyWiki vacío, necesitará modificar los siguientes tiddlers (en este contexto podemos entender que un tiddler es un artículo):\n* SiteTitle & SiteSubtitle: El título y subtítulo del sitio, como se muestra arriba (tras guardalo, también aparecerá en el título de la ventana del navegador)\n* MainMenu: El menú (normalmente a la izquierda)\n* DefaultTiddlers: Contiene los nombres de los tiddlers que por defecto quiere que se muestren cuando TiddlyWiki se abre\nTambién debería cambiar el nombre de usuario con el que firmará sus escritos: <<option txtUserName>>",
 	SiteTitle: "Mi TiddlyWiki",
 	SiteSubtitle: "un diario web personal, reutilizable y no lineal",
@@ -485,6 +503,7 @@ merge(config.annotations, {
 	StyleSheetLayout: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la distribución de los elementos de la página. ''NO EDITE ESTE TIDDLER'', si quiere hacer alguna modificación hágalo en el tiddler oculto StyleSheet",
 	StyleSheetLocale: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la traducción al idioma local",
 	StyleSheetPrint: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la impresión",
+	SystemSettings: "Este tiddler oculto se utiliza para almacenar las opciones de configuración",
 	TabAll: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Todo' de la barra de la derecha",
 	TabMore: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Más' de la barra de la derecha",
 	TabMoreMissing: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Perdidos' de la barra de la derecha",
