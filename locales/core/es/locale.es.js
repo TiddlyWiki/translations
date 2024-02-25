@@ -6,8 +6,8 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.4.5|
-|~VersiónNúcleo|2.6.5|
+|Versión       |0.4.6|
+|~VersiónNúcleo|2.7.2|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -22,6 +22,7 @@ if (config.options.txtUserName == 'YourName') // do not translate this line, but
 merge(config.tasks, {
 	// Since 2.6.3, action is not used (see 8790249); left here for backwards compatibility
 	save: { text: "guardar", tooltip: "Guardar los cambios hechos en este TiddlyWiki", action: saveChanges },
+	// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 	sync: { text: "sincronizar", tooltip: "Sincronizar los cambios hechos con otros servidores y archivos TiddlyWiki", content: '<<sync>>' },
 	importTask: { text: "importar", tooltip: "Importar tiddlers y plugins de otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "configurar", tooltip: "Cambiar la apariencia y comportamiento de TiddlyWiki", content: '<<options>>' },
@@ -366,6 +367,7 @@ merge(config.macros.upgrade, {
 	step3Html: "Ha cancelado el proceso de actualización"
 });
 
+// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 merge(config.macros.sync, {
 	listViewTemplate: {
 		columns: [
@@ -453,15 +455,19 @@ merge(config.commands.jump, {
 	tooltip: "Ir a otro tiddler abierto"
 });
 
+// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 merge(config.commands.syncing, {
 	text: "sinc",
 	tooltip: "Controlar la sincronización de este tiddler con un servidor o archivo externo",
-	currentlySyncing: "<div>Sincronizando ahora mediante  <span class='popupHighlight'>'%0'</span> a:</" + "div><div>anfitrión: <span class='popupHighlight'>%1</span></" + "div><div>espacio de trabajo: <span class='popupHighlight'>%2</span></" + "div>", // Note escaping of closing <div> tag
+	currentlySyncing: "<div>Sincronizando ahora mediante  <span class='popupHighlight'>'%0'</span> a:</div>" +
+		"<div>anfitrión: <span class='popupHighlight'>%1</span></div>" +
+		"<div>espacio de trabajo: <span class='popupHighlight'>%2</span></div>",
 	notCurrentlySyncing: "Ahora no se está sincronizando",
 	captionUnSync: "Parar la sincronización para este tiddler",
 	chooseServer: "Sincronizar este tiddler con otro servidor:",
 	currServerMarker: "\u25cf ",
-	notCurrServerMarker: "  " });
+	notCurrServerMarker: "  "
+});
 
 merge(config.commands.fields, {
 	text: "apartados",
