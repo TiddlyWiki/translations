@@ -7,7 +7,7 @@
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
 |Versión       |0.4.6|
-|~VersiónNúcleo|2.7.2|
+|~VersiónNúcleo|2.9.0|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -76,6 +76,8 @@ merge(config.messages, {
 	emptySaved: "Plantilla en blanco guardada",
 	emptyFailed: "Error al guardar la plantilla en blanco",
 	mainSaved: "Archivo principal TiddlyWiki guardado",
+	mainDownload: "Descargando/guardando archivo principal de TiddlyWiki",
+	mainDownloadManual: "HAGA CLIC DERECHO AQUÍ para descargar/guardar archivo principal de TiddlyWiki",
 	mainFailed: "Error al guardar el archivo principal TiddlyWiki. Los cambios no se han guardado",
 	macroError: "Error en la macro <<%0>>",
 	macroErrorDetails: "Error mientras se ejecutaba la macro <<%0>>:\n%1",
