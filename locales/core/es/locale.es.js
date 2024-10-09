@@ -7,7 +7,7 @@
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
 |Versión       |0.4.6|
-|~VersiónNúcleo|2.9.0|
+|~VersiónNúcleo|2.9.1|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -49,6 +49,7 @@ merge(config.optionsDesc, {
 	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
 	txtBackupFolder: "Nombre del directorio en que se guardan las copias de seguridad",
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
+	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
 	txtTheme: "Nombre de tema para utilizar",
 	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)" });
 
