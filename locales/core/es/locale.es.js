@@ -6,8 +6,8 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.5.0|
-|~VersiónNúcleo|2.9.2|
+|Versión       |0.5.1|
+|~VersiónNúcleo|2.9.3|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -32,27 +32,28 @@ merge(config.tasks, {
 
 // Options that can be set in the options panel and/or cookies
 merge(config.optionsDesc, {
+	chkAnimate: "Activar animaciones",
+	chkAutoSave: "Guardar automáticamente los cambios",
+	txtBackupFolder: "Nombre del directorio en que se guardan las copias de seguridad",
+	chkCaseSensitiveSearch: "Distinguir mayúscula/minúscula en la búsqueda",
+	chkConfirmDelete: "Preguntar antes de borrar un tiddler",
 	txtUserName: "Nombre de usuario con el que firmará lo editado",
 	chkRegExpSearch: "Permitir expresiones regulares en la búsqueda",
-	chkCaseSensitiveSearch: "Distinguir mayúscula/minúscula en la búsqueda",
 	chkIncrementalSearch: "Búsqueda incremental letra a letra",
-	chkAnimate: "Activar animaciones",
 	chkSaveBackups: "Mantener la copia de seguridad cuando se guardan los cambios",
-	chkAutoSave: "Guardar automáticamente los cambios",
 	chkGenerateAnRssFeed: "Crear una noticia RSS cuando se guardan los cambios",
 	chkSaveEmptyTemplate: "Crear una plantilla vacía cuando se guardan los cambios",
 	chkOpenInNewWindow: "Abrir los enlaces externos en una nueva ventana",
 	chkToggleLinks: "Al pulsar sobre un enlace de un tiddler, éste se cierra",
 	chkHttpReadOnly: "Ocultar la edición cuando se muestra en HTTP",
 	chkForceMinorUpdate: "No cambiar el nombre de usuario y fecha cuando se edita un tiddler",
-	chkConfirmDelete: "Preguntar antes de borrar un tiddler",
 	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
-	txtBackupFolder: "Nombre del directorio en que se guardan las copias de seguridad",
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
 	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
 	txtTheme: "Nombre de tema para utilizar",
 	txtUpgradeCoreURI: "URI personalizada para descargar el núcleo de TiddlyWiki (al actualizar)",
-	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)" });
+	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)"
+});
 
 merge(config.messages, {
 	customConfigError: "Hubo problemas al cargar los complementos. Mire el Gestor de Complementos para más detalles",
@@ -61,7 +62,7 @@ merge(config.messages, {
 	pluginForced: "Ejecutado porque lo fuerza la etiqueta 'systemConfigForce'",
 	pluginVersionError: "No ejecutado porque este complemento necesita una versión más moderna de TiddlyWiki",
 	nothingSelected: "No hay nada seleccionado. Debe marcar uno o más primero",
-	savedSnapshotError: "Parece que este TiddlyWiki se ha guardado incorrectamente. Por favor mire http://www.tiddlywiki.com/#Download para más detalles",
+	savedSnapshotError: "Parece que este TiddlyWiki se ha guardado incorrectamente. Por favor mire https://classic.tiddlywiki.com/#SaveUnpredictabilities para más detalles",
 	subtitleUnknown: "(desconocido)",
 	undefinedTiddlerToolTip: "El tiddler '%0' no existe todavía",
 	shadowedTiddlerToolTip: "El tiddler '%0' no existe todavía, pero tiene un valor oculto definido previamente",
@@ -96,11 +97,13 @@ merge(config.messages, {
 	fieldCannotBeChanged: "El apartado '%0' no se puede cambiar",
 	loadingMissingTiddler: "Intentando descargar el tiddler '%0' desde el servidor '%1' en:\n\n'%2' en el espacio de trabajo '%3'",
 	upgradeDone: "Actualización a la versión %0 completada\n\nPulse 'OK' para cargar la nueva versión de TiddlyWiki",
-	invalidCookie: "Cookie no válido '%0'" });
+	invalidCookie: "Cookie no válido '%0'"
+});
 
 merge(config.messages.messageClose, {
 	text: "cerrar",
-	tooltip: "cerrar el mensaje" });
+	tooltip: "cerrar el mensaje"
+});
 
 config.messages.backstage = {
 	open: { text: "bastidores", tooltip: "Acceder a bastidores para gestionar TiddlyWiki" },
@@ -140,24 +143,28 @@ merge(config.views.wikified.tag, {
 	tooltip: "Mostrar tiddlers que tengan la etiqueta '%0'",
 	openAllText: "Abrir todos",
 	openAllTooltip: "Abrir todos estos tiddlers",
-	popupNone: "No abrir tiddlers que tengan por etiqueta '%0'" });
+	popupNone: "No abrir tiddlers que tengan por etiqueta '%0'"
+});
 
 merge(config.views.wikified, {
 	defaultText: "El tiddler '%0' no existe todavía. Haga doble click para crearlo",
 	defaultModifier: "(perdido)",
 	shadowModifier: "(tiddler oculto interno)",
 	dateFormat: "DD MMM YYYY", // use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
-	createdPrompt: "creado" });
+	createdPrompt: "creado"
+});
 
 merge(config.views.editor, {
 	tagPrompt: "Escriba etiquetas separadas por espacios, [[use dobles corchetes]] si es necesario, o añada alguna existente",
-	defaultText: "Escriba el texto para '%0'" });
+	defaultText: "Escriba el texto para '%0'"
+});
 
 merge(config.views.editor.tagChooser, {
 	text: "etiquetas",
 	tooltip: "Elija etiquetas ya existentes para añadirlas a este artículo",
 	popupNone: "No hay etiquetas definidas",
-	tagTooltip: "Añadir la etiqueta '%0'" });
+	tagTooltip: "Añadir la etiqueta '%0'"
+});
 
 merge(config.messages, {
 	sizeTemplates:
@@ -186,7 +193,8 @@ merge(config.macros.timeline, {
 
 merge(config.macros.allTags, {
 	tooltip: "Mostrar los tiddlers etiquetados con '%0'",
-	noTags: "No hay tiddlers sin etiquetas" });
+	noTags: "No hay tiddlers sin etiquetas"
+});
 
 config.macros.list.all.prompt = "Todos los tiddlers ordenados alfabéticamente";
 config.macros.list.missing.prompt = "Tiddlers que tienen enlaces a ellos pero no están definidos";
@@ -196,27 +204,32 @@ config.macros.list.touched.prompt = "Tiddlers que no han sido modificados localm
 
 merge(config.macros.closeAll, {
 	label: "cerrar todo",
-	prompt: "Cerrar todos los tiddlers mostrados (excepto los que estén siendo editados)" });
+	prompt: "Cerrar todos los tiddlers mostrados (excepto los que estén siendo editados)"
+});
 
 merge(config.macros.permaview, {
 	label: "vistapermanente",
-	prompt: "Enlazar con una URL que recoge todos los tiddlers mostrados actualmente" });
+	prompt: "Enlazar con una URL que recoge todos los tiddlers mostrados actualmente"
+});
 
 merge(config.macros.saveChanges, {
 	label: "guardar cambios",
 	prompt: "Guardar todos los tiddlers editados previamente",
-	accessKey: "S" });
+	accessKey: "S"
+});
 
 merge(config.macros.newTiddler, {
 	label: "nuevo tiddler",
 	prompt: "Crear un nuevo tiddler",
 	title: "Nuevo Tiddler",
-	accessKey: "N" });
+	accessKey: "N"
+});
 
 merge(config.macros.newJournal, {
 	label: "nuevo tiddler con fecha de hoy",
 	prompt: "Crear un nuevo tiddler con la fecha y hora actual",
-	accessKey: "J" });
+	accessKey: "J"
+});
 
 merge(config.macros.options, {
 	wizardTitle: "Configurar opciones avanzadas",
@@ -527,7 +540,7 @@ merge(config.annotations, {
 	StyleSheetLayout: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la distribución de los elementos de la página. ''NO EDITE ESTE TIDDLER'', si quiere hacer alguna modificación hágalo en el tiddler oculto StyleSheet",
 	StyleSheetLocale: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la traducción al idioma local",
 	StyleSheetPrint: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la impresión",
-	SystemSettings: "Este tiddler oculto se utiliza para almacenar las opciones de configuración",
+	SystemSettings: "Las opciones de configuración se pueden almacenar aquí usando la notación de segmento (como {{{chkAutoSave: true}}} o {{{|txtUserName|El gran inventor|}}})",
 	TabAll: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Todo' de la barra de la derecha",
 	TabMore: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Más' de la barra de la derecha",
 	TabMoreMissing: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Perdidos' de la barra de la derecha",
