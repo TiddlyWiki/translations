@@ -6,7 +6,7 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.5.1|
+|Versión       |0.5.2|
 |~VersiónNúcleo|2.9.3|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
@@ -371,12 +371,19 @@ merge(config.macros.importTiddlers, {
 merge(config.macros.upgrade, {
 	wizardTitle: "Actualizar el código del núcleo de TiddlyWiki",
 	step1Title: "Actualizar o reparar TiddlyWiki a la última versión",
-	step1Html: "Está a punto de actualizar el código del núcleo de TiddlyWiki ala última versión (desde <a href='%0' class='externalLink' target='_blank'>%1</a>). El contenido de TiddlyWiki permanecerá tras la actualización.<br><br>Las actualizaciones del núcleo interfieren con complementos antiguos. Si tiene problemas tras la actualización, mire <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+	step1Html: "Está a punto de actualizar el código del núcleo de TiddlyWiki ala última versión " +
+		"(desde <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
+		"El contenido de TiddlyWiki permanecerá tras la actualización.<br><br>" +
+		"Las actualizaciones del núcleo interfieren con complementos antiguos. " +
+		"Si tiene problemas tras la actualización, " +
+		"mire <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
 	errorCantUpgrade: "No se puede actualizar. Sólo se pueden actualizar archivos TiddlyWiki que estén guardados localmente (disco duro, etc.)",
 	errorNotSaved: "Debe guardar los cambios antes de poder actualizar",
 	step2Title: "Confirmar los detalles de la actualización",
-	step2Html_downgrade: "Está a punto de retroceder en su versión de TilldyWiki, pasará a la versión anterior %0 desde %1.<br><br>Retroceder a una versión anterior del núcleo no es recomendable",
-	step2Html_restore: "Este archivo TiddlyWiki parece que usa la última versión disponible del núcleo (%0).<br><br>Puede seguir con la actualización si quiere asegurarse que su núcleo no está estropeado o dañado",
+	step2Html_downgrade: "Está a punto de retroceder en su versión de TilldyWiki, pasará a la versión anterior %0 desde %1.<br><br>" +
+		"Retroceder a una versión anterior del núcleo no es recomendable",
+	step2Html_restore: "Este archivo TiddlyWiki parece que usa la última versión disponible del núcleo (%0).<br><br>" +
+		"Puede seguir con la actualización si quiere asegurarse que su núcleo no está estropeado o dañado",
 	step2Html_upgrade: "Está a punto de actualizar TiddlyWiki a la versión %0 desde %1",
 	upgradeLabel: "actualizar",
 	upgradePrompt: "Preparándose para el proceso de actualización",
@@ -521,8 +528,13 @@ merge(config.shadowTiddlers, {
 	SiteTitle: "Mi TiddlyWiki",
 	SiteSubtitle: "un diario web personal, reutilizable y no lineal",
 	SiteUrl: "",
-	OptionsPanel: "Estas opciones personales de visualización de TiddlyWiki se guardan en el navegador\n\nSu nombre de usuario con el que firmará tus escritos. Escríbalo como si fuera una PalabraWiki (ej JuanEscribió)\n<<option txtUserName>>\n\n<<option chkSaveBackups>> Guardar copia de seguridad\n<<option chkAutoSave>> Autoguardado\n<<option chkRegExpSearch>> Búscar expresiones regulares\n<<option chkCaseSensitiveSearch>> Buscar distinguiendo mayúsculas\n<<option chkAnimate>> Permitir animaciones\n\n----\nMirar también las [[OpcionesAvanzadas|AdvancedOptions]]",
-	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">><<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "opciones \u00bb" "Cambiar las opciones avanzadas de TiddlyWiki">>',
+	OptionsPanel: "Estas opciones personales de visualización de TiddlyWiki se guardan en el navegador\n\n" +
+		"Su nombre de usuario con el que firmará tus escritos. Escríbalo como si fuera una PalabraWiki (ej JuanEscribió)\n" +
+		"<<option txtUserName>>\n\n<<option chkSaveBackups>> Guardar copia de seguridad\n<<option chkAutoSave>> Autoguardado\n" +
+		"<<option chkRegExpSearch>> Búscar expresiones regulares\n<<option chkCaseSensitiveSearch>> Buscar distinguiendo mayúsculas\n" +
+		"<<option chkAnimate>> Permitir animaciones\n\n----\nMirar también las [[OpcionesAvanzadas|AdvancedOptions]]",
+	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">>' +
+		'<<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "opciones \u00bb" "Cambiar las opciones avanzadas de TiddlyWiki">>',
 	SideBarTabs: '<<tabs txtMainTab "Historial" "Historial" TabTimeline "Todo" "Todos los tiddlers" TabAll "Etiquetas" "Todas las etiquetas" TabTags "Más" "Más listados" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "Perdidos" "Tiddlers perdidos" TabMoreMissing "Huérfanos" "Tiddlers huérfanos" TabMoreOrphans "Ocultos" "Tiddlers ocultos" TabMoreShadowed>>'
 });
@@ -547,9 +559,11 @@ merge(config.annotations, {
 	SiteSubtitle: "Este tiddler oculto contiene la segunda parte del título de la página",
 	SiteTitle: "Este tiddler oculto contiene la primera parte del título de la página",
 	SiteUrl: "Este tiddler oculto debería contener la dirección completa URL en la que se publica",
-	StyleSheetColours: "Este tiddler oculto contiene las definiciones para CSS relacionadas con el color de los elementos de la página",
+	StyleSheetColours: "Este tiddler oculto contiene las definiciones para CSS relacionadas con el color de los elementos de la página" +
+		"''NO EDITE ESTE TIDDLER'', si quiere hacer alguna modificación hágalo en el tiddler oculto StyleSheet",
 	StyleSheet: "En este tiddler oculto se pueden poner definiciones para CSS personales",
-	StyleSheetLayout: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la distribución de los elementos de la página. ''NO EDITE ESTE TIDDLER'', si quiere hacer alguna modificación hágalo en el tiddler oculto StyleSheet",
+	StyleSheetLayout: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la distribución de los elementos de la página. " +
+		"''NO EDITE ESTE TIDDLER'', si quiere hacer alguna modificación hágalo en el tiddler oculto StyleSheet",
 	StyleSheetLocale: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la traducción al idioma local",
 	StyleSheetPrint: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la impresión",
 	SystemSettings: "Las opciones de configuración se pueden almacenar aquí usando la notación de segmento (como {{{chkAutoSave: true}}} o {{{|txtUserName|El gran inventor|}}})",
