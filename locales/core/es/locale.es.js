@@ -24,7 +24,8 @@ merge(config.tasks, {
 	save: { text: "guardar", tooltip: "Guardar los cambios hechos en este TiddlyWiki", action: saveChanges },
 	// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
 	sync: { text: "sincronizar", tooltip: "Sincronizar los cambios hechos con otros servidores y archivos TiddlyWiki", content: '<<sync>>' },
-	importTask: { text: "importar", tooltip: "Importar tiddlers y plugins de otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>' },
+	importTask: { text: "importar", tooltip: "Importar tiddlers y plugins de " +
+		"otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "configurar", tooltip: "Cambiar la apariencia y comportamiento de TiddlyWiki", content: '<<options>>' },
 	upgrade: { text: "actualizar", tooltip: "Actualizar el código del núcleo de TiddlyWiki", content: '<<upgrade>>' },
 	plugins: { text: "complementos", tooltip: "Gestionar los complementos instalados", content: '<<plugins>>' }
@@ -37,19 +38,19 @@ merge(config.optionsDesc, {
 	txtBackupFolder: "Nombre del directorio en que se guardan las copias de seguridad",
 	chkCaseSensitiveSearch: "Distinguir mayúscula/minúscula en la búsqueda",
 	chkConfirmDelete: "Preguntar antes de borrar un tiddler",
-	chkRegExpSearch: "Permitir expresiones regulares en la búsqueda",
 	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)",
 	chkForceMinorUpdate: "No cambiar el nombre de usuario y fecha cuando se edita un tiddler",
 	chkGenerateAnRssFeed: "Crear una noticia RSS cuando se guardan los cambios",
 	chkHttpReadOnly: "Ocultar la edición cuando se muestra en HTTP",
 	chkIncrementalSearch: "Búsqueda incremental letra a letra",
 	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
+	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
+	chkOpenInNewWindow: "Abrir los enlaces externos en una nueva ventana",
+	chkRegExpSearch: "Permitir expresiones regulares en la búsqueda",
+	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
 	chkSaveBackups: "Mantener la copia de seguridad cuando se guardan los cambios",
 	chkSaveEmptyTemplate: "Crear una plantilla vacía cuando se guardan los cambios",
-	chkOpenInNewWindow: "Abrir los enlaces externos en una nueva ventana",
 	chkToggleLinks: "Al pulsar sobre un enlace de un tiddler, éste se cierra",
-	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
-	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
 	txtTheme: "Nombre de tema para utilizar",
 	txtUpgradeCoreURI: "URI personalizada para descargar el núcleo de TiddlyWiki (al actualizar)",
 	txtUserName: "Nombre de usuario con el que firmará lo editado"
@@ -311,13 +312,17 @@ merge(config.macros.importTiddlers, {
 	readOnlyWarning: "No puede importar a un archivo TiddlyWiki de sólo lectura. Pruebe a abrirlo desde un archivo:// URL",
 	wizardTitle: "Importar tiddlers de otro archivo o servidor",
 	step1Title: "Primer paso: Localice el servidor o el archivo TiddlyWiki",
-	step1Html: "Indique el tipo de servidor: <select name='selTypes'><option value=''>Elija...</option></select><br>Escriba la URL o la ruta aquí: <input type='text' size=50 name='txtPath'><br>...o navegue hasta un archivo: <input type='file' size=50 name='txtBrowse'><br><hr>...o elija una fuente predefinida: <select name='selFeeds'><option value=''>Elige...</option></select>",
+	step1Html: "Indique el tipo de servidor: <select name='selTypes'><option value=''>Elija...</option></select><br>" +
+		"Escriba la URL o la ruta aquí: <input type='text' size=50 name='txtPath'><br>" +
+		"...o navegue hasta un archivo: <input type='file' size=50 name='txtBrowse'><br><hr>" +
+		"...o elija una fuente predefinida: <select name='selFeeds'><option value=''>Elige...</option></select>",
 	openLabel: "abrir",
 	openPrompt: "Abrir la conexión a este archivo o servidor",
 	statusOpenHost: "Accediendo al anfitrión",
 	statusGetWorkspaceList: "Obteniendo el listado de espacios de trabajo",
 	step2Title: "Segundo paso: Elegir el espacio de trabajo",
-	step2Html: "Escriba el nombre de un espacio de trabajo: <input type='text' size=50 name='txtWorkspace'><br>...o seleccione uno: <select name='selWorkspace'><option value=''>Elegir...</option></select>",
+	step2Html: "Escriba el nombre de un espacio de trabajo: <input type='text' size=50 name='txtWorkspace'><br>" +
+		"...o seleccione uno: <select name='selWorkspace'><option value=''>Elegir...</option></select>",
 	cancelLabel: "cancelar",
 	cancelPrompt: "Cancelar esta importación",
 	statusOpenWorkspace: "Accediendo al espacio de trabajo",
@@ -331,7 +336,10 @@ merge(config.macros.importTiddlers, {
 		"asegúrese de que esta archivo esté en el mismo directorio que su TiddlyWiki. " +
 		"Pulsa Cancelar para intentarlo de nuevo.",
 	step3Title: "Tercer paso: Elegir los tiddlers que quiere importar",
-	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>Mantener estos tiddlers enlazados a este servidor para poder sincronizar los cambios posteriores</input><br><input type='checkbox' name='chkSave'>Guardar los datos de este servidor en un tiddler con etiqueta 'systemServer' cuyo nombre será:</input> <input type='text' size=25 name='txtSaveTiddler'>",
+	step3Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='true' name='chkSync'>" +
+		"Mantener estos tiddlers enlazados a este servidor para poder sincronizar los cambios posteriores</input><br>" +
+		"<input type='checkbox' name='chkSave'>Guardar los datos de este servidor en un tiddler con etiqueta 'systemServer' cuyo nombre será:</input>" +
+		" <input type='text' size=25 name='txtSaveTiddler'>",
 	importLabel: "importar",
 	importPrompt: "Importar estos tiddlers",
 	confirmOverwriteText: "¿Está seguro de que quiere sobrescribir estos tiddlers:\n\n%0?",
@@ -343,8 +351,10 @@ merge(config.macros.importTiddlers, {
 	statusDoneImport: "Todos los tiddlers se importaron",
 	systemServerNamePattern: "%2 en %1",
 	systemServerNamePatternNoWorkspace: "%1",
-	confirmOverwriteSaveTiddler: "El tiddler '%0' ya existe. Pulse en 'OK' para sobrescribirlo con el que hay en este servidor, o 'Cancel' para dejarlo sin modificar",
-	serverSaveTemplate: "|''Tipo:''|%0|\n|''URL:''|%1|\n|''Espacio de trabajo:''|%2|\n\nEste tiddler se creó automáticamente para recoger todos los datos de este servidor",
+	confirmOverwriteSaveTiddler: "El tiddler '%0' ya existe. Pulse en 'OK' " +
+		"para sobrescribirlo con el que hay en este servidor, o 'Cancel' para dejarlo sin modificar",
+	serverSaveTemplate: "|''Tipo:''|%0|\n|''URL:''|%1|\n|''Espacio de trabajo:''|%2|\n\n" +
+		"Este tiddler se creó automáticamente para recoger todos los datos de este servidor",
 	serverSaveModifier: "(Sistema)",
 	listViewTemplate: {
 		columns: [
