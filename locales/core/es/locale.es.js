@@ -6,8 +6,8 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.4.6|
-|~VersiónNúcleo|2.9.1|
+|Versión       |0.5.0|
+|~VersiónNúcleo|2.9.2|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -51,6 +51,7 @@ merge(config.optionsDesc, {
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
 	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
 	txtTheme: "Nombre de tema para utilizar",
+	txtUpgradeCoreURI: "URI personalizada para descargar el núcleo de TiddlyWiki (al actualizar)",
 	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)" });
 
 merge(config.messages, {
@@ -76,7 +77,7 @@ merge(config.messages, {
 	rssFailed: "Error al guardar la noticia RSS",
 	emptySaved: "Plantilla en blanco guardada",
 	emptyFailed: "Error al guardar la plantilla en blanco",
-	mainSaved: "Archivo principal TiddlyWiki guardado",
+	mainSaved: "TiddlyWiki guardado",
 	mainDownload: "Descargando/guardando archivo principal de TiddlyWiki",
 	mainDownloadManual: "HAGA CLIC DERECHO AQUÍ para descargar/guardar archivo principal de TiddlyWiki",
 	mainFailed: "Error al guardar el archivo principal TiddlyWiki. Los cambios no se han guardado",
