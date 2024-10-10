@@ -37,22 +37,22 @@ merge(config.optionsDesc, {
 	txtBackupFolder: "Nombre del directorio en que se guardan las copias de seguridad",
 	chkCaseSensitiveSearch: "Distinguir mayúscula/minúscula en la búsqueda",
 	chkConfirmDelete: "Preguntar antes de borrar un tiddler",
-	txtUserName: "Nombre de usuario con el que firmará lo editado",
 	chkRegExpSearch: "Permitir expresiones regulares en la búsqueda",
-	chkIncrementalSearch: "Búsqueda incremental letra a letra",
-	chkSaveBackups: "Mantener la copia de seguridad cuando se guardan los cambios",
+	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)",
+	chkForceMinorUpdate: "No cambiar el nombre de usuario y fecha cuando se edita un tiddler",
 	chkGenerateAnRssFeed: "Crear una noticia RSS cuando se guardan los cambios",
+	chkHttpReadOnly: "Ocultar la edición cuando se muestra en HTTP",
+	chkIncrementalSearch: "Búsqueda incremental letra a letra",
+	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
+	chkSaveBackups: "Mantener la copia de seguridad cuando se guardan los cambios",
 	chkSaveEmptyTemplate: "Crear una plantilla vacía cuando se guardan los cambios",
 	chkOpenInNewWindow: "Abrir los enlaces externos en una nueva ventana",
 	chkToggleLinks: "Al pulsar sobre un enlace de un tiddler, éste se cierra",
-	chkHttpReadOnly: "Ocultar la edición cuando se muestra en HTTP",
-	chkForceMinorUpdate: "No cambiar el nombre de usuario y fecha cuando se edita un tiddler",
-	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
 	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
 	txtTheme: "Nombre de tema para utilizar",
 	txtUpgradeCoreURI: "URI personalizada para descargar el núcleo de TiddlyWiki (al actualizar)",
-	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)"
+	txtUserName: "Nombre de usuario con el que firmará lo editado"
 });
 
 merge(config.messages, {
@@ -167,13 +167,13 @@ merge(config.views.editor.tagChooser, {
 });
 
 merge(config.messages, {
-	sizeTemplates:
-		[
-			{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
-			{ unit: 1024 * 1024, template: "%0\u00a0MB" },
-			{ unit: 1024, template: "%0\u00a0KB" },
-			{ unit: 1, template: "%0\u00a0B" }
-		] });
+	sizeTemplates: [
+		{ unit: 1024 * 1024 * 1024, template: "%0\u00a0GB" },
+		{ unit: 1024 * 1024, template: "%0\u00a0MB" },
+		{ unit: 1024, template: "%0\u00a0KB" },
+		{ unit: 1, template: "%0\u00a0B" }
+	]
+});
 
 merge(config.macros.search, {
 	label: "búsqueda",
@@ -181,12 +181,14 @@ merge(config.macros.search, {
 	placeholder: "",
 	accessKey: "F",
 	successMsg: "%0 tiddlers encontrados que concuerden con %1",
-	failureMsg: "No hay tiddlers que concuerden con %0" });
+	failureMsg: "No hay tiddlers que concuerden con %0"
+});
 
 merge(config.macros.tagging, {
 	label: "etiquetado: ",
 	labelNotTag: "Sin etiquetas",
-	tooltip: "Listado de tiddlers etiquetados con '%0'" });
+	tooltip: "Listado de tiddlers etiquetados con '%0'"
+});
 
 merge(config.macros.timeline, {
 	dateFormat: "DD MMM YYYY" });// use this to change the date format for your locale, eg "YYYY MMM DD", do not translate the Y, M or D
