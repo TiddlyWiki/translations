@@ -7,7 +7,7 @@
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
 |Versión       |0.5.2|
-|~VersiónNúcleo|2.9.3|
+|~VersiónNúcleo|2.9.4|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -46,6 +46,7 @@ merge(config.optionsDesc, {
 	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
 	chkOpenInNewWindow: "Abrir los enlaces externos en una nueva ventana",
+	chkPreventAsyncSaving: "No intente guardado asíncrono (puede ser necesario para complementos antiguos)",
 	chkRegExpSearch: "Permitir expresiones regulares en la búsqueda",
 	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
 	chkSaveBackups: "Mantener la copia de seguridad cuando se guardan los cambios",
@@ -237,7 +238,8 @@ merge(config.macros.newJournal, {
 merge(config.macros.options, {
 	wizardTitle: "Configurar opciones avanzadas",
 	step1Title: "Estas opciones se guardarán en una cookie en su navegador",
-	step1Html: "<input type='hidden' name='markList'></input><br><input type='checkbox' checked='false' name='chkUnknown'>Mostrar opciones desconocidas</input>",
+	step1Html: "<input type='hidden' name='markList'></input><br>" +
+		"<input type='checkbox' checked='false' name='chkUnknown'>Mostrar opciones desconocidas</input>",
 	unknownDescription: "//(desconocido)//",
 	listViewTemplate: {
 		columns: [
