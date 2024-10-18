@@ -6,8 +6,8 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.5.2|
-|~VersiónNúcleo|2.9.4|
+|Versión       |0.5.3|
+|~VersiónNúcleo|2.10.0|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -373,12 +373,13 @@ merge(config.macros.importTiddlers, {
 merge(config.macros.upgrade, {
 	wizardTitle: "Actualizar el código del núcleo de TiddlyWiki",
 	step1Title: "Actualizar o reparar TiddlyWiki a la última versión",
-	step1Html: "Está a punto de actualizar el código del núcleo de TiddlyWiki ala última versión " +
+	step1Html: "Está a punto de actualizar el núcleo de TiddlyWiki ala última versión " +
 		"(desde <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
 		"El contenido de TiddlyWiki permanecerá tras la actualización.<br><br>" +
 		"Las actualizaciones del núcleo interfieren con complementos antiguos. " +
-		"Si tiene problemas tras la actualización, " +
-		"mire <a href='http://www.tiddlywiki.org/wiki/CoreUpgrades' class='externalLink' target='_blank'>http://www.tiddlywiki.org/wiki/CoreUpgrades</a>",
+		"Si tiene problemas con la actualización, lea cómo solucionarlos " +
+		"<a href='" + (config.macros.upgrade.docsUrl ? '%2' : 'https://classic.tiddlywiki.com/#HowToUpgrade') +
+		"' class='externalLink' target='_blank'>aquí</a>.",
 	errorCantUpgrade: "No se puede actualizar. Sólo se pueden actualizar archivos TiddlyWiki que estén guardados localmente (disco duro, etc.)",
 	errorNotSaved: "Debe guardar los cambios antes de poder actualizar",
 	step2Title: "Confirmar los detalles de la actualización",
@@ -392,6 +393,11 @@ merge(config.macros.upgrade, {
 	statusPreparingBackup: "Preparando la copia de seguridad",
 	statusSavingBackup: "Guardando la copia de seguridad",
 	errorSavingBackup: "Hubo poblemas al guardar la copia de seguridad",
+	errorVerifyingBackup: "No se pudo verificar que se guardó la copia de seguridad. " +
+		"Esto se debe a que no se guardó en el momento de la verificación o " +
+		"a que cargar archivos no funciona con su método de guardado (y es necesario para " +
+		"el siguiente paso de la actualización). Para actualizar su TiddlyWiki, puede usar " +
+		"otros métodos enumerados en <a href='%0' class='externalLink' target='_blank'>%0</a>",
 	statusLoadingCore: "Cargando el código del núcleo",
 	errorLoadingCore: "Error al cargar el código del núcleo",
 	errorCoreFormat: "Error con el código del nuevo núcleo",
@@ -526,7 +532,12 @@ merge(config.commands.fields, {
 merge(config.shadowTiddlers, {
 	DefaultTiddlers: "[[ParaEmpezar]]",
 	MainMenu: "[[ParaEmpezar]]\n\n\n^^~TiddlyWiki versión <<version>>",
-	ParaEmpezar: "Para empezar con este archivo TiddlyWiki vacío, necesitará modificar los siguientes tiddlers (en este contexto podemos entender que un tiddler es un artículo):\n* SiteTitle & SiteSubtitle: El título y subtítulo del sitio, como se muestra arriba (tras guardalo, también aparecerá en el título de la ventana del navegador)\n* MainMenu: El menú (normalmente a la izquierda)\n* DefaultTiddlers: Contiene los nombres de los tiddlers que por defecto quiere que se muestren cuando TiddlyWiki se abre\nTambién debería cambiar el nombre de usuario con el que firmará sus escritos: <<option txtUserName>>",
+	ParaEmpezar: "Para empezar con este archivo TiddlyWiki vacío, necesitará modificar los siguientes tiddlers (en este contexto podemos entender que un tiddler es un artículo):\n" +
+		"* SiteTitle & SiteSubtitle: El título y subtítulo del sitio, como se muestra arriba " +
+			"(tras guardalo, también aparecerá en el título de la ventana del navegador)\n" +
+		"* MainMenu: El menú (normalmente a la izquierda)\n" +
+		"* DefaultTiddlers: Contiene los nombres de los tiddlers que por defecto quiere que se muestren cuando TiddlyWiki se abre\n" +
+		"También debería cambiar el nombre de usuario con el que firmará sus escritos: <<option txtUserName>>",
 	SiteTitle: "Mi TiddlyWiki",
 	SiteSubtitle: "un diario web personal, reutilizable y no lineal",
 	SiteUrl: "",
