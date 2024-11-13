@@ -6,8 +6,8 @@
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
-|Versión       |0.5.3|
-|~VersiónNúcleo|2.10.0|
+|Versión       |0.5.4|
+|~VersiónNúcleo|2.10.1|
 |Comentarios   |Por favor deje sus comentarios en https://github.com/TiddlyWiki/translations/issues o https://groups.google.com/g/tiddlywikiclassic|
 |Licencia      |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 ***/
@@ -27,7 +27,7 @@ merge(config.tasks, {
 	importTask: { text: "importar", tooltip: "Importar tiddlers y plugins de " +
 		"otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "configurar", tooltip: "Cambiar la apariencia y comportamiento de TiddlyWiki", content: '<<options>>' },
-	upgrade: { text: "actualizar", tooltip: "Actualizar el código del núcleo de TiddlyWiki", content: '<<upgrade>>' },
+	upgrade: { text: "actualizar", tooltip: "Actualizar el núcleo de TiddlyWiki", content: '<<upgrade>>' },
 	plugins: { text: "complementos", tooltip: "Gestionar los complementos instalados", content: '<<plugins>>' }
 });
 
@@ -371,8 +371,8 @@ merge(config.macros.importTiddlers, {
 });
 
 merge(config.macros.upgrade, {
-	wizardTitle: "Actualizar el código del núcleo de TiddlyWiki",
-	step1Title: "Actualizar o reparar TiddlyWiki a la última versión",
+	wizardTitle: "Actualizar TiddlyWiki",
+	step1Title: "Actualizar o reparar el núcleo de TiddlyWiki a la última versión",
 	step1Html: "Está a punto de actualizar el núcleo de TiddlyWiki ala última versión " +
 		"(desde <a href='%0' class='externalLink' target='_blank'>%1</a>). " +
 		"El contenido de TiddlyWiki permanecerá tras la actualización.<br><br>" +
@@ -529,15 +529,26 @@ merge(config.commands.fields, {
 	}
 });
 
+var gettingStartedTitle = "ParaEmpezar";
+
 merge(config.shadowTiddlers, {
-	DefaultTiddlers: "[[ParaEmpezar]]",
-	MainMenu: "[[ParaEmpezar]]\n\n\n^^~TiddlyWiki versión <<version>>",
-	ParaEmpezar: "Para empezar con este archivo TiddlyWiki vacío, necesitará modificar los siguientes tiddlers (en este contexto podemos entender que un tiddler es un artículo):\n" +
-		"* SiteTitle & SiteSubtitle: El título y subtítulo del sitio, como se muestra arriba " +
-			"(tras guardalo, también aparecerá en el título de la ventana del navegador)\n" +
-		"* MainMenu: El menú (normalmente a la izquierda)\n" +
-		"* DefaultTiddlers: Contiene los nombres de los tiddlers que por defecto quiere que se muestren cuando TiddlyWiki se abre\n" +
-		"También debería cambiar el nombre de usuario con el que firmará sus escritos: <<option txtUserName>>",
+	DefaultTiddlers: "[[" + gettingStartedTitle + "]]",
+	MainMenu: "[[" + gettingStartedTitle + "]]\n\n\n^^~TiddlyWiki versión <<version>>",
+	[gettingStartedTitle]: "Al comenzar, quizás quieras:\n" +
+		"* Configurar tu nombre de usuario para atribuir tus ediciones: <<option txtUserName>>\n" +
+		"* Cambiar el [[título|SiteTitle]] de la página (ahora \"<<tiddler SiteTitle>>\") y " +
+			"el [[subtítulo|SiteSubtitle]] (ahora \"<<tiddler SiteSubtitle>>\"); " +
+			"también configuran el título de la pestaña del navegador\n" +
+		"* Crear un tiddler donde tu contenido \"comience\"\n" + 
+		"** Usa el botón en la barra lateral o [[enlaza|Mi primer tiddler]] aquí, " +
+			"sigue el enlace, edítalo y haz clic en \"hecho\"\n" + // config.commands.saveTiddler.text
+		"** Se mostrará en la pestaña Historial (normalmente a la derecha), " + // from config.shadowTiddlers.SideBarTabs
+			"pero tal vez quieras enlazarlo en el MainMenu (normalmente a la izquierda)\n" + // translate MainMenu?
+		"** y/o hacer que se abra cuando ~TiddlyWiki se abra editando la lista de " +
+			"[[DefaultTiddlers]] (separando los enlaces con espacios o saltos de línea)\n" +
+		"* Guardar tu ~TiddlyWiki\n" +
+		"** Aunque \"guardar como descarga\" funciona en cualquier navegador, no es tan conveniente, " +
+			"por lo que probablemente quieras usar [[un guardador dedicado|https://classic.tiddlywiki.com/#%5B%5BSetting up saving%5D%5D]]",
 	SiteTitle: "Mi TiddlyWiki",
 	SiteSubtitle: "un diario web personal, reutilizable y no lineal",
 	SiteUrl: "",
@@ -557,7 +568,7 @@ merge(config.annotations, {
 	ColorPalette: "Los valores en este tiddler oculto configuran el esquema de colores de la interfaz de ~TiddlyWiki",
 	DefaultTiddlers: "Los tiddlers listados en este tiddler oculto son que se mostrarán por defecto cuando se abre ~TiddlyWiki",
 	EditTemplate: "La plantilla HTML en este tiddler oculto indica cómo se muestran los tiddlers mientras se editan",
-	GettingStarted: "Este tiddler oculto contiene las instrucciones básicas de utilización",
+	[gettingStartedTitle]: "Este tiddler oculto contiene las instrucciones básicas de utilización",
 	ImportTiddlers: "Este tiddler oculto permite acceder a los tiddlers que se están importando",
 	MainMenu: "Este tiddler oculto contiene los apartados que se muestran en el menú principal de la columna de la izquierda de la pantalla",
 	MarkupPreHead: "Este tiddler se inserta al principio de la sección <head> del archivo HTML de TiddlyWiki",
