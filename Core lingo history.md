@@ -4,7 +4,7 @@ Changes in Lingo.js are shown below for each version.
 Note that some commits have changes in other files;
 some only have changes of codestyle which may guide you, but they don't affect functionality.
 
-v2.10.2
+v2.10.2 ([update example](https://github.com/TiddlyWiki/translations/commit/45d8497))
 * [9692fef](https://github.com/TiddlyWiki/TiddlyWiki/commit/9692fef) a minor amendment in [[GettingStarted]]
 
 v2.10.1 ([update example](https://github.com/TiddlyWiki/translations/commit/1292aaa))
