@@ -1,11 +1,11 @@
 /***
 |Name           |EnglishTranslationPlugin|
-|Description    |Translation of TiddlyWiki into English. Supports core up to 2.10.1 (for later versions, some bits may be missing or inaccurate)|
+|Description    |Translation of TiddlyWiki into English. Supports core up to 2.10.2 (for later versions, some bits may be missing or inaccurate)|
 |<Description>  |<translated version of Description to help users who don't know English well. I.e., for Italian, it should be "Descrizione": "italiano Traduzione di TiddlyWiki. [...]">|
 |Source         |https://github.com/TiddlyWiki/translations/blob/master/locales/core/en/locale.en.js|
 |Author         |MartinBudden (mjbudden (at) gmail (dot) com)|
 |Original Source|<if the translation is brought from outside https://github.com/TiddlyWiki/translations, you can mention it here>|
-|Version        |0.5.4|
+|Version        |0.5.5|
 |Feedback       |Please comment, ask, and suggest at https://github.com/TiddlyWiki/translations/issues (and at https://groups.google.com/g/tiddlywikiclassic if you need to draw more attention)|
 |License        |[[Creative Commons Attribution-ShareAlike 3.0 License|http://creativecommons.org/licenses/by-sa/3.0/]] |
 |Credits        |Template updates: Yakov Litvin|
@@ -550,7 +550,7 @@ merge(config.shadowTiddlers, {
 		"** and/or make it open when the ~TiddlyWiki is opened by editing the list of " +
 			"[[DefaultTiddlers]] (separate links with spaces or linebreaks)\n" +
 		"* Save your ~TiddlyWiki\n" +
-		"** Although \"download saving\" works in any browser, it's not that convenient, " +
+		"** Although \"download saving\" works in any browser, it may be not that convenient, " +
 			"so you'll probably want to use [[a dedicated saver|https://classic.tiddlywiki.com/#%5B%5BSetting up saving%5D%5D]]",
 	MainMenu: "[[" + gettingStartedTitle + "]]\n\n~TiddlyWiki version <<version>>",
 	SiteTitle: "My TiddlyWiki",
