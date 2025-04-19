@@ -1,7 +1,7 @@
 /***
 |Nombre        |ComplementoTraducciónEspañol|
 |Descripción   |Traducción de TiddlyWiki al español|
-|Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com); Yakov Litvin|
+|Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com); Yakov Litvin, Alfonso Arciniega|
 |Correcciónes  |Dave Gifford y Ton van Rooijen (giff (at) giffmex (dot) org / tonsweb (at) xs4all (dot) nl)|
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
@@ -472,7 +472,7 @@ merge(config.commands.saveTiddler, {
 merge(config.commands.cancelTiddler, {
 	text: "cancelar",
 	tooltip: "Cancelar los cambios hechos en este tiddler",
-	warning: "¿Está seguro que quiere salir sin guardar los cambios en '%0'?",
+	warning: "¿Está seguro que quiere abandonar los cambios en '%0'?",
 	readOnlyText: "hecho",
 	readOnlyTooltip: "Vista normal de este tiddler"
 });
