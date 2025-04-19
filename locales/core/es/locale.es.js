@@ -1,8 +1,8 @@
 /***
 |Nombre        |ComplementoTraducciónEspañol|
 |Descripción   |Traducción de TiddlyWiki al español|
-|Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com); Yakov Litvin, Alfonso Arciniega|
-|Correcciónes  |Dave Gifford y Ton van Rooijen (giff (at) giffmex (dot) org / tonsweb (at) xs4all (dot) nl)|
+|Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com); Yakov Litvin|
+|Correcciónes  |Dave Gifford y Ton van Rooijen (giff (at) giffmex (dot) org / tonsweb (at) xs4all (dot) nl), Alfonso Arciniega|
 |Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
@@ -429,21 +429,21 @@ merge(config.macros.sync, {
 			{ caption: "Sincronizar estos tiddlers", name: 'sync' }
 		]
 	},
-	wizardTitle: "Sincronizar con servidores externos y archivos",
+	wizardTitle: "Sincronizar con servidores y archivos externos",
 	step1Title: "Elija los tiddlers que quieres sincronizar",
 	step1Html: "<input type='hidden' name='markList'></input>", // DO NOT TRANSLATE
 	syncLabel: "sinc",
 	syncPrompt: "Sincronizar estos tiddlers",
-	hasChanged: "Modificado mientras no estaba desconectado",
+	hasChanged: "Modificado mientras estaba desconectado",
 	hasNotChanged: "Sin cambios mientras estaba desconectado",
 	syncStatusList: {
 		none: { text: "...", display: null, className: 'notChanged' },
 		changedServer: { text: "Modificado en el servidor", display: null, className: 'changedServer' },
 		changedLocally: { text: "Modificado mientras estaba desconectado", display: null, className: 'changedLocally' },
 		changedBoth: { text: "Modificado mientras estaba desconectado y también en el servidor", display: null, className: 'changedBoth' },
-		notFound: { text: "No está en el servidor", display: null, className: 'notFound' },
+		notFound: { text: "No se encontró en el servidor", display: null, className: 'notFound' },
 		putToServer: { text: "Guardada la actualización en el servidor", display: null, className: 'putToServer' },
-		gotFromServer: { text: "Actualización obtenida del servidor", display: null, className: 'gotFromServer' }
+		gotFromServer: { text: "Actualización recuperada del servidor", display: null, className: 'gotFromServer' }
 	}
 });
 
@@ -507,7 +507,7 @@ merge(config.commands.syncing, {
 		"<div>anfitrión: <span class='popupHighlight'>%1</span></div>" +
 		"<div>espacio de trabajo: <span class='popupHighlight'>%2</span></div>",
 	notCurrentlySyncing: "Ahora no se está sincronizando",
-	captionUnSync: "Parar la sincronización para este tiddler",
+	captionUnSync: "Parar la sincronización de este tiddler",
 	chooseServer: "Sincronizar este tiddler con otro servidor:",
 	currServerMarker: "\u25cf ",
 	notCurrServerMarker: "  "
