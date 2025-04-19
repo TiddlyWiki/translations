@@ -3,7 +3,6 @@
 |Descripción   |Traducción de TiddlyWiki al español|
 |Autores       |Sergio González y Pedro Domínguez (sgm214 (at) gmail (dot) com / alpedro (at) hotmail (dot) com); Yakov Litvin|
 |Correcciónes  |Dave Gifford y Ton van Rooijen (giff (at) giffmex (dot) org / tonsweb (at) xs4all (dot) nl), Alfonso Arciniega|
-|Fuente        |http://www.ton-van-rooijen.nl/TW/locale042.es.js |
 |Source        |https://github.com/TiddlyWiki/translations/blob/master/locales/core/es/locale.es.js|
 |Código        |~|
 |Versión       |0.5.4|
@@ -99,17 +98,17 @@ merge(config.messages, {
 	fieldCannotBeChanged: "El apartado '%0' no se puede cambiar",
 	loadingMissingTiddler: "Intentando descargar el tiddler '%0' desde el servidor '%1' en:\n\n'%2' en el espacio de trabajo '%3'",
 	upgradeDone: "Actualización a la versión %0 completada\n\nPulse 'OK' para cargar la nueva versión de TiddlyWiki",
-	invalidCookie: "Cookie no válido '%0'"
+	invalidCookie: "La Cookie '%0'es inválida"
 });
 
 merge(config.messages.messageClose, {
 	text: "cerrar",
-	tooltip: "cerrar el mensaje"
+	tooltip: "cerrar este mensaje"
 });
 
 config.messages.backstage = {
-	open: { text: "bastidores", tooltip: "Acceder a bastidores para gestionar TiddlyWiki" },
-	close: { text: "cerrar", tooltip: "Salir de bastidores" },
+	open: { text: "bastidores", tooltip: "Acceder a los bastidores para gestionar TiddlyWiki" },
+	close: { text: "cerrar", tooltip: "Salir de los bastidores" },
 	prompt: "bastidores: ",
 	decal: {
 		edit: { text: "editar", tooltip: "Editar el tiddler '%0'" }
@@ -141,11 +140,11 @@ merge(config.messages.tiddlerPopup, {
 merge(config.views.wikified.tag, {
 	labelNoTags: "sin etiquetas",
 	labelTags: "etiquetas: ",
-	openTag: "Abrir etiqueta '%0'",
-	tooltip: "Mostrar tiddlers que tengan la etiqueta '%0'",
+	openTag: "Abrir la etiqueta '%0'",
+	tooltip: "Mostrar los tiddlers que tengan la etiqueta '%0'",
 	openAllText: "Abrir todos",
 	openAllTooltip: "Abrir todos estos tiddlers",
-	popupNone: "No abrir tiddlers que tengan por etiqueta '%0'"
+	popupNone: "No existen otros tiddlers que tengan la etiqueta '%0'"
 });
 
 merge(config.views.wikified, {
