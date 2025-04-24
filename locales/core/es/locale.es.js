@@ -120,19 +120,19 @@ config.messages.listView = {
 	previewUnavailable: "(Vista previa no disponible)"
 };
 
-config.messages.dates.months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-config.messages.dates.days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
-config.messages.dates.shortMonths = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
-config.messages.dates.shortDays = ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"];
-// suffixes for dates, eg "1ro","2do","3ro"..."30ro","31ro"
+config.messages.dates.months = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+config.messages.dates.days = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+config.messages.dates.shortMonths = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+config.messages.dates.shortDays = ["dom", "lun", "mar", "mié", "jue", "vie", "sab"];
+// suffixes for dates, eg "1ro","2do","3ro"..."30mo","31ro"
 config.messages.dates.daySuffixes = [
 	"ro", "do", "ro", "to", "to", "to", "mo", "vo", "no", "mo",
 	"ro", "do", "ro", "to", "to", "to", "mo", "vo", "no", "mo",
 	"ro", "do", "ro", "to", "to", "to", "mo", "vo", "no", "mo",
 	"ro"
 ];
-config.messages.dates.am = "am";
-config.messages.dates.pm = "pm";
+config.messages.dates.am = "a. m.";
+config.messages.dates.pm = "p. m.";
 
 merge(config.messages.tiddlerPopup, {
 });
