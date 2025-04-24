@@ -20,11 +20,11 @@ if (config.options.txtUserName == 'YourName') // do not translate this line, but
 
 merge(config.tasks, {
 	// Since 2.6.3, action is not used (see 8790249); left here for backwards compatibility
-	save: { text: "guardar", tooltip: "Guardar los cambios hechos en este TiddlyWiki", action: saveChanges },
+	save: { text: "guardar", tooltip: "Guardar sus cambios hechos a este TiddlyWiki", action: saveChanges },
 	// Since 2.6.6, sync is not used (see e901015); left here for backwards compatibility
-	sync: { text: "sincronizar", tooltip: "Sincronizar los cambios hechos con otros servidores y archivos TiddlyWiki", content: '<<sync>>' },
+	sync: { text: "sincronizar", tooltip: "Sincronizar los cambios hechos con otros servidores y archivos de TiddlyWiki", content: '<<sync>>' },
 	importTask: { text: "importar", tooltip: "Importar tiddlers y plugins de " +
-		"otros servidores y archivos TiddlyWiki", content: '<<importTiddlers>>' },
+		"otros servidores y archivos de TiddlyWiki", content: '<<importTiddlers>>' },
 	tweak: { text: "configurar", tooltip: "Cambiar la apariencia y comportamiento de TiddlyWiki", content: '<<options>>' },
 	upgrade: { text: "actualizar", tooltip: "Actualizar el núcleo de TiddlyWiki", content: '<<upgrade>>' },
 	plugins: { text: "complementos", tooltip: "Gestionar los complementos instalados", content: '<<plugins>>' }
@@ -32,19 +32,19 @@ merge(config.tasks, {
 
 // Options that can be set in the options panel and/or cookies
 merge(config.optionsDesc, {
-	chkAnimate: "Activar animaciones",
+	chkAnimate: "Activar las animaciones",
 	chkAutoSave: "Guardar automáticamente los cambios",
 	txtBackupFolder: "Nombre del directorio en que se guardan las copias de seguridad",
-	chkCaseSensitiveSearch: "Distinguir mayúscula/minúscula en la búsqueda",
-	chkConfirmDelete: "Preguntar antes de borrar un tiddler",
+	chkCaseSensitiveSearch: "Distinguir mayúsculas y minúsculas en la búsqueda",
+	chkConfirmDelete: "Requiere confirmación antes de borrar un tiddler",
 	txtFileSystemCharSet: "Juego de caracteres por defecto para guardar los cambios (sólo Firefox/Mozilla)",
-	chkForceMinorUpdate: "No cambiar el nombre de usuario y fecha cuando se edita un tiddler",
+	chkForceMinorUpdate: "No cambiar el nombre del usuario y la fecha cuando se edita un tiddler",
 	chkGenerateAnRssFeed: "Crear una noticia RSS cuando se guardan los cambios",
 	chkHttpReadOnly: "Ocultar la edición cuando se muestra en HTTP",
-	chkIncrementalSearch: "Búsqueda incremental letra a letra",
+	chkIncrementalSearch: "Búsqueda incremental de letra por letra",
 	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
-	chkOpenInNewWindow: "Abrir los enlaces externos en una nueva ventana",
+	chkOpenInNewWindow: "Abrir los enlaces externos en una ventana nueva",
 	chkPreventAsyncSaving: "No intente guardado asíncrono (puede ser necesario para complementos antiguos)",
 	chkRegExpSearch: "Permitir expresiones regulares en la búsqueda",
 	chkRemoveExtraMarkers: "Reemplazar los marcadores de transclusión no utilizados con espacios en blanco",
@@ -82,14 +82,14 @@ merge(config.messages, {
 	mainSaved: "TiddlyWiki guardado",
 	mainDownload: "Descargando/guardando archivo principal de TiddlyWiki",
 	mainDownloadManual: "HAGA CLIC DERECHO AQUÍ para descargar/guardar archivo principal de TiddlyWiki",
-	mainFailed: "Error al guardar el archivo principal TiddlyWiki. Los cambios no se han guardado",
+	mainFailed: "Error al guardar el archivo principal TiddlyWiki. Sus cambios no se han guardado",
 	macroError: "Error en la macro <<%0>>",
 	macroErrorDetails: "Error mientras se ejecutaba la macro <<%0>>:\n%1",
-	missingMacro: "No existe esa macro",
+	missingMacro: "No existe esta macro",
 	overwriteWarning: "Un tiddler llamado '%0' ya existe. Elija OK si quiere sobrescribirlo",
 	unsavedChangesWarning: "¡ATENCIÓN! Hay cambios sin guardar en  TiddlyWiki\n\nElija OK para guardarlos\nElija CANCELAR para descartarlos",
 	confirmExit: "--------------------------------\n\nHay cambios sin guardar en TiddlyWiki. Si prosigue perderá los cambios\n\n--------------------------------",
-	saveInstructions: "Guardar Cambios",
+	saveInstructions: "Guardar los cambios",
 	unsupportedTWFormat: "Formato de TiddlyWiki no soportado '%0'",
 	tiddlerSaveError: "Error al guardar el tiddler '%0'",
 	tiddlerLoadError: "Error al cargar el tiddler '%0'",
