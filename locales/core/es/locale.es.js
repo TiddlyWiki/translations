@@ -188,7 +188,7 @@ merge(config.macros.search, {
 merge(config.macros.tagging, {
 	label: "etiquetado: ",
 	labelNotTag: "Sin etiquetas",
-	tooltip: "Listado de tiddlers etiquetados con '%0'"
+	tooltip: "Lista de tiddlers etiquetados con '%0'"
 });
 
 merge(config.macros.timeline, {
@@ -379,14 +379,14 @@ merge(config.macros.upgrade, {
 		"Si tiene problemas con la actualización, lea cómo solucionarlos " +
 		"<a href='" + (config.macros.upgrade.docsUrl ? '%2' : 'https://classic.tiddlywiki.com/#HowToUpgrade') +
 		"' class='externalLink' target='_blank'>aquí</a>.",
-	errorCantUpgrade: "No se puede actualizar. Sólo se pueden actualizar archivos TiddlyWiki que estén guardados localmente (disco duro, etc.)",
+	errorCantUpgrade: "Este TiddlyWiki no se puede actualizar. Sólo se pueden actualizar archivos TiddlyWiki que estén guardados localmente",
 	errorNotSaved: "Debe guardar los cambios antes de poder actualizar",
 	step2Title: "Confirmar los detalles de la actualización",
 	step2Html_downgrade: "Está a punto de retroceder en su versión de TilldyWiki, pasará a la versión anterior %0 desde %1.<br><br>" +
 		"Retroceder a una versión anterior del núcleo no es recomendable",
 	step2Html_restore: "Este archivo TiddlyWiki parece que usa la última versión disponible del núcleo (%0).<br><br>" +
 		"Puede seguir con la actualización si quiere asegurarse que su núcleo no está estropeado o dañado",
-	step2Html_upgrade: "Está a punto de actualizar TiddlyWiki a la versión %0 desde %1",
+	step2Html_upgrade: "Está a punto de actualizar el TiddlyWiki a la versión %0 desde la versión %1",
 	upgradeLabel: "actualizar",
 	upgradePrompt: "Preparándose para el proceso de actualización",
 	statusPreparingBackup: "Preparando la copia de seguridad",
@@ -558,7 +558,7 @@ merge(config.shadowTiddlers, {
 		"<<option chkAnimate>> Permitir animaciones\n\n----\nMirar también las [[OpcionesAvanzadas|AdvancedOptions]]",
 	SideBarOptions: '<<search>><<closeAll>><<permaview>><<newTiddler>><<newJournal "DD MMM YYYY">>' +
 		'<<saveChanges>><<slider chkSliderOptionsPanel OptionsPanel "opciones \u00bb" "Cambiar las opciones avanzadas de TiddlyWiki">>',
-	SideBarTabs: '<<tabs txtMainTab "Historial" "Historial" TabTimeline "Todo" "Todos los tiddlers" TabAll "Etiquetas" "Todas las etiquetas" TabTags "Más" "Más listados" TabMore>>',
+	SideBarTabs: '<<tabs txtMainTab "Historial" "Historial" TabTimeline "Todo" "Todos los tiddlers" TabAll "Etiquetas" "Todas las etiquetas" TabTags "Más" "Más listas" TabMore>>',
 	TabMore: '<<tabs txtMoreTab "Perdidos" "Tiddlers perdidos" TabMoreMissing "Huérfanos" "Tiddlers huérfanos" TabMoreOrphans "Ocultos" "Tiddlers ocultos" TabMoreShadowed>>'
 });
 
