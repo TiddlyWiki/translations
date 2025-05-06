@@ -582,14 +582,14 @@ merge(config.annotations, {
 	SiteSubtitle: "Este tiddler oculto contiene la segunda parte del título de la página",
 	SiteTitle: "Este tiddler oculto contiene la primera parte del título de la página",
 	SiteUrl: "Este tiddler oculto debería contener la dirección completa URL en la que se publica",
-	StyleSheetColours: "Este tiddler oculto contiene las definiciones para CSS relacionadas con el color de los elementos de la página" +
+	StyleSheetColours: "Este tiddler oculto contiene las definiciones CSS relacionadas con el color de los elementos de la página" +
 		"''NO EDITE ESTE TIDDLER'', si quiere hacer alguna modificación hágalo en el tiddler oculto StyleSheet",
-	StyleSheet: "En este tiddler oculto se pueden poner definiciones para CSS personales",
-	StyleSheetLayout: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la distribución de los elementos de la página. " +
+	StyleSheet: "En este tiddler oculto se pueden poner definiciones CSS personales",
+	StyleSheetLayout: "Este tiddler oculto contiene las definiciones CSS relacionadas con la distribución de los elementos de la página. " +
 		"''NO EDITE ESTE TIDDLER'', si quiere hacer alguna modificación hágalo en el tiddler oculto StyleSheet",
-	StyleSheetLocale: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la traducción al idioma local",
-	StyleSheetPrint: "Este tiddler oculto contiene las definiciones para CSS relacionadas con la impresión",
-	SystemSettings: "Las opciones de configuración se pueden almacenar aquí usando la notación de segmento (como {{{chkAutoSave: true}}} o {{{|txtUserName|El gran inventor|}}})",
+	StyleSheetLocale: "Este tiddler oculto contiene las definiciones CSS relacionadas con la traducción al idioma local",
+	StyleSheetPrint: "Este tiddler oculto contiene las definiciones CSS relacionadas con la impresión",
+	SystemSettings: "Las opciones de configuración se pueden almacenar aquí usando la notación de segmento (tal como {{{chkAutoSave: true}}} o {{{|txtUserName|El gran inventor|}}})",
 	TabAll: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Todo' de la barra de la derecha",
 	TabMore: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Más' de la barra de la derecha",
 	TabMoreMissing: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Perdidos' de la barra de la derecha",
@@ -597,8 +597,8 @@ merge(config.annotations, {
 	TabMoreShadowed: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Ocultos' de la barra de la derecha",
 	TabTags: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Etiquetas' de la barra de la derecha",
 	TabTimeline: "Este tiddler oculto contiene todo lo que hay en la pestaña 'Historial' de la barra de la derecha",
-	ToolbarCommands: "Este tiddler oculto indica los comandos que deben mostrarse en la barra de herramientas de cualquier tiddler",
-	ViewTemplate: "Este tiddler oculto contiene la plantilla HTML que indica cómo se muestran los tiddlers"
+	ToolbarCommands: "Este tiddler oculto determina los comandos que deben mostrarse en la barra de herramientas de cualquier tiddler",
+	ViewTemplate: "Este tiddler oculto contiene la plantilla HTML que determina cómo se muestran los tiddlers"
 });
 
 //}}}
