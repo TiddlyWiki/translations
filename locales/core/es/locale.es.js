@@ -207,7 +207,7 @@ config.macros.list.touched.prompt = "Tiddlers que no han sido modificados localm
 
 merge(config.macros.closeAll, {
 	label: "cerrar todo",
-	prompt: "Cerrar todos los tiddlers mostrados (excepto los que estén siendo editados)"
+	prompt: "Cerrar todos los tiddlers mostrados (excepto los que están siendo editados)"
 });
 
 merge(config.macros.permaview, {
@@ -229,7 +229,7 @@ merge(config.macros.newTiddler, {
 });
 
 merge(config.macros.newJournal, {
-	label: "nuevo tiddler con fecha de hoy",
+	label: "nuevo tiddler diario",
 	prompt: "Crear un nuevo tiddler con la fecha y hora actual",
 	accessKey: "J"
 });
@@ -262,7 +262,7 @@ merge(config.macros.plugins, {
 	removeLabel: "quitar la etiqueta de systemConfig",
 	removePrompt: "Quitar la etiqueta systemConfig",
 	deleteLabel: "borrar",
-	deletePrompt: "Borrar estos artículos para siempre",
+	deletePrompt: "Borrar estos tiddlers para siempre",
 	listViewTemplate: {
 		columns: [
 			{ name: 'Selected', field: 'Selected', rowName: 'title', type: 'Selector' },
@@ -347,7 +347,7 @@ merge(config.macros.importTiddlers, {
 	step4Title: "Cuarto paso: Importar %0 tiddler(s)",
 	step4Html: "<input type='hidden' name='markReport'></input>", // DO NOT TRANSLATE
 	doneLabel: "hecho",
-	donePrompt: "Cerrar el asistente",
+	donePrompt: "Cerrar este asistente",
 	statusDoingImport: "Importando tiddlers",
 	statusDoneImport: "Todos los tiddlers se importaron",
 	systemServerNamePattern: "%2 en %1",
@@ -515,7 +515,7 @@ merge(config.commands.syncing, {
 merge(config.commands.fields, {
 	text: "campos",
 	tooltip: "Mostrar los campos extras de este tiddler",
-	emptyText: "No hay campos extras para este tiddler",
+	emptyText: "No hay campos extras en este tiddler",
 	listViewTemplate: {
 		columns: [
 			{ name: 'Field', field: 'field', title: "Campo", type: 'String' },
