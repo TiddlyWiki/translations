@@ -42,7 +42,7 @@ merge(config.optionsDesc, {
 	chkGenerateAnRssFeed: "Crear una noticia RSS cuando se guardan los cambios",
 	chkHttpReadOnly: "Ocultar la edición cuando se muestra en HTTP",
 	chkIncrementalSearch: "Búsqueda incremental de letra por letra",
-	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre apartados",
+	chkInsertTabs: "Usar el tabulador para crear texto en columnas en vez de servir para moverse entre campos",
 	txtMaxEditRows: "Número máximo de filas en los recuadros de edición",
 	chkOpenInNewWindow: "Abrir los enlaces externos en una ventana nueva",
 	chkPreventAsyncSaving: "No intente guardado asíncrono (puede ser necesario para complementos antiguos)",
@@ -94,8 +94,8 @@ merge(config.messages, {
 	tiddlerSaveError: "Hubo un error al guardar el tiddler '%0'",
 	tiddlerLoadError: "Hubo un error al cargar el tiddler '%0'",
 	wrongSaveFormat: "No se puede guardar en el formato '%0'. Usando el formato estandar para guardarlo.",
-	invalidFieldName: "Nombre de apartado no válido %0",
-	fieldCannotBeChanged: "El apartado '%0' no se puede cambiar",
+	invalidFieldName: "Nombre de campo no válido %0",
+	fieldCannotBeChanged: "El campo '%0' no se puede cambiar",
 	loadingMissingTiddler: "Intentando descargar el tiddler '%0' desde el servidor '%1' en:\n\n'%2' en el espacio de trabajo '%3'",
 	upgradeDone: "Actualización a la versión %0 completada\n\nPulse 'OK' para cargar la nueva versión de TiddlyWiki",
 	invalidCookie: "La Cookie '%0'es inválida"
@@ -298,7 +298,7 @@ merge(config.macros.plugins.listViewTemplateReadOnly, {
 
 merge(config.macros.toolbar, {
 	moreLabel: "más",
-	morePrompt: "Mostrar más comandos",
+	morePrompt: "Mostrar comandos adicionales",
 	lessLabel: "menos",
 	lessPrompt: "Ocultar comandos adicionales",
 	separator: "|"
@@ -513,12 +513,12 @@ merge(config.commands.syncing, {
 });
 
 merge(config.commands.fields, {
-	text: "apartados",
-	tooltip: "Mostrar los apartados extras de este tiddler",
-	emptyText: "No hay apartados extras para este tiddler",
+	text: "campos",
+	tooltip: "Mostrar los campos extras de este tiddler",
+	emptyText: "No hay campos extras para este tiddler",
 	listViewTemplate: {
 		columns: [
-			{ name: 'Field', field: 'field', title: "Apartado", type: 'String' },
+			{ name: 'Field', field: 'field', title: "Campo", type: 'String' },
 			{ name: 'Value', field: 'value', title: "Valor", type: 'String' }
 		],
 		rowClasses: [
