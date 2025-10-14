@@ -11,7 +11,7 @@ or use [ExtensionsExplorerPlugin](https://github.com/YakovL/TiddlyWiki_Extension
 and the Translations collection in the Central collection.
 
 To install a translation, either use ExtensionsExplorerPlugin or create a plugin tiddler
-(tagged `systemConfg`) and put the content of `locale.xx.js` file to the plugin text, save, and reload
+(tagged `systemConfig`) and put the content of `locale.xx.js` file to the plugin text, save, and reload
 (note: the full installation will be complete after another save and reload).
 For instance, German translation can be found in [locales/core/de/locale.de.js](./locales/core/de/locale.de.js).
 
